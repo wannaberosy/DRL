@@ -23,10 +23,10 @@ def test_qwen_api():
         print("❌ 未找到 DASHSCOPE_API_KEY 环境变量")
         print("\n请设置环境变量：")
         print("  方法1: 在 .env 文件中添加：")
-        print("    DASHSCOPE_API_KEY=sk-f077b12307594060b76bb1e94264ee2b")
+        print("    DASHSCOPE_API_KEY=")
         print("  方法2: 在命令行中设置：")
-        print("    Windows: $env:DASHSCOPE_API_KEY='sk-f077b12307594060b76bb1e94264ee2b'")
-        print("    Linux/Mac: export DASHSCOPE_API_KEY='sk-f077b12307594060b76bb1e94264ee2b'")
+        print("    Windows: $env:DASHSCOPE_API_KEY=''")
+        print("    Linux/Mac: export DASHSCOPE_API_KEY=''")
         return False
     
     print(f"✅ 找到 DASHSCOPE_API_KEY: {api_key[:10]}...")

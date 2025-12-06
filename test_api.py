@@ -39,9 +39,7 @@ else:
     print("✗ 错误: 未找到 DEEPSEEK_API_KEY")
     print("\n请使用以下方法之一设置 API Key:")
     print("1. 在 PowerShell 中设置环境变量:")
-    print('   $env:DEEPSEEK_API_KEY="sk-f5985088a1074af794d88636163df7d2"')
-    print("\n2. 在项目根目录创建 .env 文件，内容为:")
-    print("   DEEPSEEK_API_KEY=sk-f5985088a1074af794d88636163df7d2")
+    print("\n2. 在项目根目录创建 .env 文件")
     exit(1)
 
 
