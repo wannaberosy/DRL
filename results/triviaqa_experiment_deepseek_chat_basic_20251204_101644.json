@@ -1,0 +1,1948 @@
+{
+  "config": {
+    "num_problems": 20,
+    "max_iterations": 10,
+    "model": "deepseek-chat",
+    "n_generate": 3,
+    "n_evaluate": 1,
+    "api_provider": "deepseek",
+    "split": "dev",
+    "start_idx": 0,
+    "env_backend": "dataset",
+    "dataset_type": "t",
+    "dataset_name": "TriviaQA",
+    "use_tree_search": false,
+    "tree_m": null,
+    "tree_n": null,
+    "tree_l": null,
+    "tree_k": null,
+    "tree_expand_mode": null,
+    "tree_reward_mode": null,
+    "mcts_num_simulations": null,
+    "mcts_use_value_function": null,
+    "mcts_use_rollout": null,
+    "demo_mode": true
+  },
+  "react_results": [
+    {
+      "question": "What type of creature is a margay?",
+      "ground_truth": "cat",
+      "success": false,
+      "answer": "incorrect answer for What type of creature is a mar",
+      "history": [
+        {
+          "iteration": 1,
+          "thought": "Thought: I need to find information about what type of creature is a margay?. Let me search for relevant entities.",
+          "state": "Question: What type of creature is a margay?\n",
+          "action": "search[What]",
+          "observation": "Found information about What. Need more information.",
+          "reward": 0
+        },
+        {
+          "iteration": 2,
+          "thought": "Thought 2: Analyzing the information. Need to gather more details.",
+          "state": "Question: What type of creature is a margay?\nThought 1: Thought: I need to find information about what type of creature is a margay?. Let me search for relevant entities.\nAction 1: search[What]\nObservation 1: Found information about What. Need more information.",
+          "action": "lookup[keyword]",
+          "observation": "Observation 2: Continuing search...",
+          "reward": 0
+        },
+        {
+          "iteration": 3,
+          "thought": "Thought 3: Analyzing the information. Need to gather more details.",
+          "state": "Question: What type of creature is a margay?\nThought 1: Thought: I need to find information about what type of creature is a margay?. Let me search for relevant entities.\nAction 1: search[What]\nObservation 1: Found information about What. Need more information.\nThought 2: Thought 2: Analyzing the information. Need to gather more details.\nAction 2: lookup[keyword]\nObservation 2: Observation 2: Continuing search...",
+          "action": "think[continue reasoning]",
+          "observation": "Observation 3: Continuing search...",
+          "reward": 0
+        },
+        {
+          "iteration": 4,
+          "thought": "Thought 4: Analyzing the information. Need to gather more details.",
+          "state": "Question: What type of creature is a margay?\nThought 1: Thought: I need to find information about what type of creature is a margay?. Let me search for relevant entities.\nAction 1: search[What]\nObservation 1: Found information about What. Need more information.\nThought 2: Thought 2: Analyzing the information. Need to gather more details.\nAction 2: lookup[keyword]\nObservation 2: Observation 2: Continuing search...\nThought 3: Thought 3: Analyzing the information. Need to gather more details.\nAction 3: think[continue reasoning]\nObservation 3: Observation 3: Continuing search...",
+          "action": "think[continue reasoning]",
+          "observation": "Observation 4: Continuing search...",
+          "reward": 0
+        },
+        {
+          "iteration": 5,
+          "thought": "Thought 5: Analyzing the information. Need to gather more details.",
+          "state": "Question: What type of creature is a margay?\nThought 1: Thought: I need to find information about what type of creature is a margay?. Let me search for relevant entities.\nAction 1: search[What]\nObservation 1: Found information about What. Need more information.\nThought 2: Thought 2: Analyzing the information. Need to gather more details.\nAction 2: lookup[keyword]\nObservation 2: Observation 2: Continuing search...\nThought 3: Thought 3: Analyzing the information. Need to gather more details.\nAction 3: think[continue reasoning]\nObservation 3: Observation 3: Continuing search...\nThought 4: Thought 4: Analyzing the information. Need to gather more details.\nAction 4: think[continue reasoning]\nObservation 4: Observation 4: Continuing search...",
+          "action": "search[entity]",
+          "observation": "Observation 5: Continuing search...",
+          "reward": 0
+        },
+        {
+          "iteration": 5,
+          "thought": "Thought 5: Unable to find the correct answer. Providing best guess.",
+          "state": "Question: What type of creature is a margay?\nThought 1: Thought: I need to find information about what type of creature is a margay?. Let me search for relevant entities.\nAction 1: search[What]\nObservation 1: Found information about What. Need more information.\nThought 2: Thought 2: Analyzing the information. Need to gather more details.\nAction 2: lookup[keyword]\nObservation 2: Observation 2: Continuing search...\nThought 3: Thought 3: Analyzing the information. Need to gather more details.\nAction 3: think[continue reasoning]\nObservation 3: Observation 3: Continuing search...\nThought 4: Thought 4: Analyzing the information. Need to gather more details.\nAction 4: think[continue reasoning]\nObservation 4: Observation 4: Continuing search...\nThought 5: Thought 5: Analyzing the information. Need to gather more details.\nAction 5: search[entity]\nObservation 5: Observation 5: Continuing search...",
+          "action": "finish[incorrect answer for What type of creature is a mar]",
+          "observation": "Episode finished, reward = 0\n",
+          "reward": 0
+        },
+        {
+          "iteration": 5,
+          "status": "failed",
+          "answer": "incorrect answer for What type of creature is a mar",
+          "ground_truth": "cat"
+        }
+      ]
+    },
+    {
+      "question": "Although mostly associated with Manchester in which other part of the UK were the Gibb Brothers born?",
+      "ground_truth": "Isle of Man",
+      "success": true,
+      "answer": "Isle of Man",
+      "history": [
+        {
+          "iteration": 1,
+          "thought": "Thought: I need to find information about although mostly associated with manchester in which other part of the uk were the gibb brothers born?. Let me search for relevant entities.",
+          "state": "Question: Although mostly associated with Manchester in which other part of the UK were the Gibb Brothers born?\n",
+          "action": "search[Although]",
+          "observation": "Found information about Although. The answer appears to be Isle of Man.",
+          "reward": 0
+        },
+        {
+          "iteration": 2,
+          "thought": "Thought 2: Analyzing the information. Need to gather more details.",
+          "state": "Question: Although mostly associated with Manchester in which other part of the UK were the Gibb Brothers born?\nThought 1: Thought: I need to find information about although mostly associated with manchester in which other part of the uk were the gibb brothers born?. Let me search for relevant entities.\nAction 1: search[Although]\nObservation 1: Found information about Although. The answer appears to be Isle of Man.",
+          "action": "lookup[keyword]",
+          "observation": "Observation 2: Continuing search...",
+          "reward": 0
+        },
+        {
+          "iteration": 3,
+          "thought": "Thought 3: Analyzing the information. Need to gather more details.",
+          "state": "Question: Although mostly associated with Manchester in which other part of the UK were the Gibb Brothers born?\nThought 1: Thought: I need to find information about although mostly associated with manchester in which other part of the uk were the gibb brothers born?. Let me search for relevant entities.\nAction 1: search[Although]\nObservation 1: Found information about Although. The answer appears to be Isle of Man.\nThought 2: Thought 2: Analyzing the information. Need to gather more details.\nAction 2: lookup[keyword]\nObservation 2: Observation 2: Continuing search...",
+          "action": "search[entity]",
+          "observation": "Observation 3: Continuing search...",
+          "reward": 0
+        },
+        {
+          "iteration": 4,
+          "thought": "Thought: Based on the information gathered, the answer is Isle of Man.",
+          "state": "Question: Although mostly associated with Manchester in which other part of the UK were the Gibb Brothers born?\nThought 1: Thought: I need to find information about although mostly associated with manchester in which other part of the uk were the gibb brothers born?. Let me search for relevant entities.\nAction 1: search[Although]\nObservation 1: Found information about Although. The answer appears to be Isle of Man.\nThought 2: Thought 2: Analyzing the information. Need to gather more details.\nAction 2: lookup[keyword]\nObservation 2: Observation 2: Continuing search...\nThought 3: Thought 3: Analyzing the information. Need to gather more details.\nAction 3: search[entity]\nObservation 3: Observation 3: Continuing search...",
+          "action": "finish[Isle of Man]",
+          "observation": "Episode finished, reward = 1\n",
+          "reward": 1
+        },
+        {
+          "iteration": 4,
+          "status": "success",
+          "answer": "Isle of Man"
+        }
+      ]
+    },
+    {
+      "question": "Melanie Molitor is the mom of which tennis world NO 1?",
+      "ground_truth": "Martina Hingis",
+      "success": true,
+      "answer": "Martina Hingis",
+      "history": [
+        {
+          "iteration": 1,
+          "thought": "Thought: I need to find information about melanie molitor is the mom of which tennis world no 1?. Let me search for relevant entities.",
+          "state": "Question: Melanie Molitor is the mom of which tennis world NO 1?\n",
+          "action": "search[Melanie]",
+          "observation": "Found information about Melanie. The answer appears to be Martina Hingis.",
+          "reward": 0
+        },
+        {
+          "iteration": 2,
+          "thought": "Thought 2: Analyzing the information. Need to gather more details.",
+          "state": "Question: Melanie Molitor is the mom of which tennis world NO 1?\nThought 1: Thought: I need to find information about melanie molitor is the mom of which tennis world no 1?. Let me search for relevant entities.\nAction 1: search[Melanie]\nObservation 1: Found information about Melanie. The answer appears to be Martina Hingis.",
+          "action": "think[continue reasoning]",
+          "observation": "Observation 2: Continuing search...",
+          "reward": 0
+        },
+        {
+          "iteration": 3,
+          "thought": "Thought: Based on the information gathered, the answer is Martina Hingis.",
+          "state": "Question: Melanie Molitor is the mom of which tennis world NO 1?\nThought 1: Thought: I need to find information about melanie molitor is the mom of which tennis world no 1?. Let me search for relevant entities.\nAction 1: search[Melanie]\nObservation 1: Found information about Melanie. The answer appears to be Martina Hingis.\nThought 2: Thought 2: Analyzing the information. Need to gather more details.\nAction 2: think[continue reasoning]\nObservation 2: Observation 2: Continuing search...",
+          "action": "finish[Martina Hingis]",
+          "observation": "Episode finished, reward = 1\n",
+          "reward": 1
+        },
+        {
+          "iteration": 3,
+          "status": "success",
+          "answer": "Martina Hingis"
+        }
+      ]
+    },
+    {
+      "question": "In the late 60s Owen Finlay MacLaren pioneered what useful item for parents of small children?",
+      "ground_truth": "umbrella stroller",
+      "success": false,
+      "answer": "incorrect answer for In the late 60s Owen Finlay Ma",
+      "history": [
+        {
+          "iteration": 1,
+          "thought": "Thought: I need to find information about in the late 60s owen finlay maclaren pioneered what useful item for parents of small children?. Let me search for relevant entities.",
+          "state": "Question: In the late 60s Owen Finlay MacLaren pioneered what useful item for parents of small children?\n",
+          "action": "search[In]",
+          "observation": "Found information about In. Need more information.",
+          "reward": 0
+        },
+        {
+          "iteration": 2,
+          "thought": "Thought 2: Analyzing the information. Need to gather more details.",
+          "state": "Question: In the late 60s Owen Finlay MacLaren pioneered what useful item for parents of small children?\nThought 1: Thought: I need to find information about in the late 60s owen finlay maclaren pioneered what useful item for parents of small children?. Let me search for relevant entities.\nAction 1: search[In]\nObservation 1: Found information about In. Need more information.",
+          "action": "lookup[keyword]",
+          "observation": "Observation 2: Continuing search...",
+          "reward": 0
+        },
+        {
+          "iteration": 3,
+          "thought": "Thought 3: Analyzing the information. Need to gather more details.",
+          "state": "Question: In the late 60s Owen Finlay MacLaren pioneered what useful item for parents of small children?\nThought 1: Thought: I need to find information about in the late 60s owen finlay maclaren pioneered what useful item for parents of small children?. Let me search for relevant entities.\nAction 1: search[In]\nObservation 1: Found information about In. Need more information.\nThought 2: Thought 2: Analyzing the information. Need to gather more details.\nAction 2: lookup[keyword]\nObservation 2: Observation 2: Continuing search...",
+          "action": "search[entity]",
+          "observation": "Observation 3: Continuing search...",
+          "reward": 0
+        },
+        {
+          "iteration": 4,
+          "thought": "Thought 4: Analyzing the information. Need to gather more details.",
+          "state": "Question: In the late 60s Owen Finlay MacLaren pioneered what useful item for parents of small children?\nThought 1: Thought: I need to find information about in the late 60s owen finlay maclaren pioneered what useful item for parents of small children?. Let me search for relevant entities.\nAction 1: search[In]\nObservation 1: Found information about In. Need more information.\nThought 2: Thought 2: Analyzing the information. Need to gather more details.\nAction 2: lookup[keyword]\nObservation 2: Observation 2: Continuing search...\nThought 3: Thought 3: Analyzing the information. Need to gather more details.\nAction 3: search[entity]\nObservation 3: Observation 3: Continuing search...",
+          "action": "search[entity]",
+          "observation": "Observation 4: Continuing search...",
+          "reward": 0
+        },
+        {
+          "iteration": 5,
+          "thought": "Thought 5: Analyzing the information. Need to gather more details.",
+          "state": "Question: In the late 60s Owen Finlay MacLaren pioneered what useful item for parents of small children?\nThought 1: Thought: I need to find information about in the late 60s owen finlay maclaren pioneered what useful item for parents of small children?. Let me search for relevant entities.\nAction 1: search[In]\nObservation 1: Found information about In. Need more information.\nThought 2: Thought 2: Analyzing the information. Need to gather more details.\nAction 2: lookup[keyword]\nObservation 2: Observation 2: Continuing search...\nThought 3: Thought 3: Analyzing the information. Need to gather more details.\nAction 3: search[entity]\nObservation 3: Observation 3: Continuing search...\nThought 4: Thought 4: Analyzing the information. Need to gather more details.\nAction 4: search[entity]\nObservation 4: Observation 4: Continuing search...",
+          "action": "search[entity]",
+          "observation": "Observation 5: Continuing search...",
+          "reward": 0
+        },
+        {
+          "iteration": 6,
+          "thought": "Thought 6: Analyzing the information. Need to gather more details.",
+          "state": "Question: In the late 60s Owen Finlay MacLaren pioneered what useful item for parents of small children?\nThought 1: Thought: I need to find information about in the late 60s owen finlay maclaren pioneered what useful item for parents of small children?. Let me search for relevant entities.\nAction 1: search[In]\nObservation 1: Found information about In. Need more information.\nThought 2: Thought 2: Analyzing the information. Need to gather more details.\nAction 2: lookup[keyword]\nObservation 2: Observation 2: Continuing search...\nThought 3: Thought 3: Analyzing the information. Need to gather more details.\nAction 3: search[entity]\nObservation 3: Observation 3: Continuing search...\nThought 4: Thought 4: Analyzing the information. Need to gather more details.\nAction 4: search[entity]\nObservation 4: Observation 4: Continuing search...\nThought 5: Thought 5: Analyzing the information. Need to gather more details.\nAction 5: search[entity]\nObservation 5: Observation 5: Continuing search...",
+          "action": "lookup[keyword]",
+          "observation": "Observation 6: Continuing search...",
+          "reward": 0
+        },
+        {
+          "iteration": 7,
+          "thought": "Thought 7: Analyzing the information. Need to gather more details.",
+          "state": "Question: In the late 60s Owen Finlay MacLaren pioneered what useful item for parents of small children?\nThought 1: Thought: I need to find information about in the late 60s owen finlay maclaren pioneered what useful item for parents of small children?. Let me search for relevant entities.\nAction 1: search[In]\nObservation 1: Found information about In. Need more information.\nThought 2: Thought 2: Analyzing the information. Need to gather more details.\nAction 2: lookup[keyword]\nObservation 2: Observation 2: Continuing search...\nThought 3: Thought 3: Analyzing the information. Need to gather more details.\nAction 3: search[entity]\nObservation 3: Observation 3: Continuing search...\nThought 4: Thought 4: Analyzing the information. Need to gather more details.\nAction 4: search[entity]\nObservation 4: Observation 4: Continuing search...\nThought 5: Thought 5: Analyzing the information. Need to gather more details.\nAction 5: search[entity]\nObservation 5: Observation 5: Continuing search...\nThought 6: Thought 6: Analyzing the information. Need to gather more details.\nAction 6: lookup[keyword]\nObservation 6: Observation 6: Continuing search...",
+          "action": "think[continue reasoning]",
+          "observation": "Observation 7: Continuing search...",
+          "reward": 0
+        },
+        {
+          "iteration": 7,
+          "thought": "Thought 7: Unable to find the correct answer. Providing best guess.",
+          "state": "Question: In the late 60s Owen Finlay MacLaren pioneered what useful item for parents of small children?\nThought 1: Thought: I need to find information about in the late 60s owen finlay maclaren pioneered what useful item for parents of small children?. Let me search for relevant entities.\nAction 1: search[In]\nObservation 1: Found information about In. Need more information.\nThought 2: Thought 2: Analyzing the information. Need to gather more details.\nAction 2: lookup[keyword]\nObservation 2: Observation 2: Continuing search...\nThought 3: Thought 3: Analyzing the information. Need to gather more details.\nAction 3: search[entity]\nObservation 3: Observation 3: Continuing search...\nThought 4: Thought 4: Analyzing the information. Need to gather more details.\nAction 4: search[entity]\nObservation 4: Observation 4: Continuing search...\nThought 5: Thought 5: Analyzing the information. Need to gather more details.\nAction 5: search[entity]\nObservation 5: Observation 5: Continuing search...\nThought 6: Thought 6: Analyzing the information. Need to gather more details.\nAction 6: lookup[keyword]\nObservation 6: Observation 6: Continuing search...\nThought 7: Thought 7: Analyzing the information. Need to gather more details.\nAction 7: think[continue reasoning]\nObservation 7: Observation 7: Continuing search...",
+          "action": "finish[incorrect answer for In the late 60s Owen Finlay Ma]",
+          "observation": "Episode finished, reward = 0\n",
+          "reward": 0
+        },
+        {
+          "iteration": 7,
+          "status": "failed",
+          "answer": "incorrect answer for In the late 60s Owen Finlay Ma",
+          "ground_truth": "umbrella stroller"
+        }
+      ]
+    },
+    {
+      "question": "What is the name of the river that flows through the city of Paris?",
+      "ground_truth": "Seine",
+      "success": false,
+      "answer": "incorrect answer for What is the name of the river ",
+      "history": [
+        {
+          "iteration": 1,
+          "thought": "Thought: I need to find information about what is the name of the river that flows through the city of paris?. Let me search for relevant entities.",
+          "state": "Question: What is the name of the river that flows through the city of Paris?\n",
+          "action": "search[What]",
+          "observation": "Found information about What. Need more information.",
+          "reward": 0
+        },
+        {
+          "iteration": 2,
+          "thought": "Thought 2: Analyzing the information. Need to gather more details.",
+          "state": "Question: What is the name of the river that flows through the city of Paris?\nThought 1: Thought: I need to find information about what is the name of the river that flows through the city of paris?. Let me search for relevant entities.\nAction 1: search[What]\nObservation 1: Found information about What. Need more information.",
+          "action": "think[continue reasoning]",
+          "observation": "Observation 2: Continuing search...",
+          "reward": 0
+        },
+        {
+          "iteration": 3,
+          "thought": "Thought 3: Analyzing the information. Need to gather more details.",
+          "state": "Question: What is the name of the river that flows through the city of Paris?\nThought 1: Thought: I need to find information about what is the name of the river that flows through the city of paris?. Let me search for relevant entities.\nAction 1: search[What]\nObservation 1: Found information about What. Need more information.\nThought 2: Thought 2: Analyzing the information. Need to gather more details.\nAction 2: think[continue reasoning]\nObservation 2: Observation 2: Continuing search...",
+          "action": "lookup[keyword]",
+          "observation": "Observation 3: Continuing search...",
+          "reward": 0
+        },
+        {
+          "iteration": 4,
+          "thought": "Thought 4: Analyzing the information. Need to gather more details.",
+          "state": "Question: What is the name of the river that flows through the city of Paris?\nThought 1: Thought: I need to find information about what is the name of the river that flows through the city of paris?. Let me search for relevant entities.\nAction 1: search[What]\nObservation 1: Found information about What. Need more information.\nThought 2: Thought 2: Analyzing the information. Need to gather more details.\nAction 2: think[continue reasoning]\nObservation 2: Observation 2: Continuing search...\nThought 3: Thought 3: Analyzing the information. Need to gather more details.\nAction 3: lookup[keyword]\nObservation 3: Observation 3: Continuing search...",
+          "action": "think[continue reasoning]",
+          "observation": "Observation 4: Continuing search...",
+          "reward": 0
+        },
+        {
+          "iteration": 5,
+          "thought": "Thought 5: Analyzing the information. Need to gather more details.",
+          "state": "Question: What is the name of the river that flows through the city of Paris?\nThought 1: Thought: I need to find information about what is the name of the river that flows through the city of paris?. Let me search for relevant entities.\nAction 1: search[What]\nObservation 1: Found information about What. Need more information.\nThought 2: Thought 2: Analyzing the information. Need to gather more details.\nAction 2: think[continue reasoning]\nObservation 2: Observation 2: Continuing search...\nThought 3: Thought 3: Analyzing the information. Need to gather more details.\nAction 3: lookup[keyword]\nObservation 3: Observation 3: Continuing search...\nThought 4: Thought 4: Analyzing the information. Need to gather more details.\nAction 4: think[continue reasoning]\nObservation 4: Observation 4: Continuing search...",
+          "action": "think[continue reasoning]",
+          "observation": "Observation 5: Continuing search...",
+          "reward": 0
+        },
+        {
+          "iteration": 6,
+          "thought": "Thought 6: Analyzing the information. Need to gather more details.",
+          "state": "Question: What is the name of the river that flows through the city of Paris?\nThought 1: Thought: I need to find information about what is the name of the river that flows through the city of paris?. Let me search for relevant entities.\nAction 1: search[What]\nObservation 1: Found information about What. Need more information.\nThought 2: Thought 2: Analyzing the information. Need to gather more details.\nAction 2: think[continue reasoning]\nObservation 2: Observation 2: Continuing search...\nThought 3: Thought 3: Analyzing the information. Need to gather more details.\nAction 3: lookup[keyword]\nObservation 3: Observation 3: Continuing search...\nThought 4: Thought 4: Analyzing the information. Need to gather more details.\nAction 4: think[continue reasoning]\nObservation 4: Observation 4: Continuing search...\nThought 5: Thought 5: Analyzing the information. Need to gather more details.\nAction 5: think[continue reasoning]\nObservation 5: Observation 5: Continuing search...",
+          "action": "search[entity]",
+          "observation": "Observation 6: Continuing search...",
+          "reward": 0
+        },
+        {
+          "iteration": 7,
+          "thought": "Thought 7: Analyzing the information. Need to gather more details.",
+          "state": "Question: What is the name of the river that flows through the city of Paris?\nThought 1: Thought: I need to find information about what is the name of the river that flows through the city of paris?. Let me search for relevant entities.\nAction 1: search[What]\nObservation 1: Found information about What. Need more information.\nThought 2: Thought 2: Analyzing the information. Need to gather more details.\nAction 2: think[continue reasoning]\nObservation 2: Observation 2: Continuing search...\nThought 3: Thought 3: Analyzing the information. Need to gather more details.\nAction 3: lookup[keyword]\nObservation 3: Observation 3: Continuing search...\nThought 4: Thought 4: Analyzing the information. Need to gather more details.\nAction 4: think[continue reasoning]\nObservation 4: Observation 4: Continuing search...\nThought 5: Thought 5: Analyzing the information. Need to gather more details.\nAction 5: think[continue reasoning]\nObservation 5: Observation 5: Continuing search...\nThought 6: Thought 6: Analyzing the information. Need to gather more details.\nAction 6: search[entity]\nObservation 6: Observation 6: Continuing search...",
+          "action": "think[continue reasoning]",
+          "observation": "Observation 7: Continuing search...",
+          "reward": 0
+        },
+        {
+          "iteration": 7,
+          "thought": "Thought 7: Unable to find the correct answer. Providing best guess.",
+          "state": "Question: What is the name of the river that flows through the city of Paris?\nThought 1: Thought: I need to find information about what is the name of the river that flows through the city of paris?. Let me search for relevant entities.\nAction 1: search[What]\nObservation 1: Found information about What. Need more information.\nThought 2: Thought 2: Analyzing the information. Need to gather more details.\nAction 2: think[continue reasoning]\nObservation 2: Observation 2: Continuing search...\nThought 3: Thought 3: Analyzing the information. Need to gather more details.\nAction 3: lookup[keyword]\nObservation 3: Observation 3: Continuing search...\nThought 4: Thought 4: Analyzing the information. Need to gather more details.\nAction 4: think[continue reasoning]\nObservation 4: Observation 4: Continuing search...\nThought 5: Thought 5: Analyzing the information. Need to gather more details.\nAction 5: think[continue reasoning]\nObservation 5: Observation 5: Continuing search...\nThought 6: Thought 6: Analyzing the information. Need to gather more details.\nAction 6: search[entity]\nObservation 6: Observation 6: Continuing search...\nThought 7: Thought 7: Analyzing the information. Need to gather more details.\nAction 7: think[continue reasoning]\nObservation 7: Observation 7: Continuing search...",
+          "action": "finish[incorrect answer for What is the name of the river ]",
+          "observation": "Episode finished, reward = 0\n",
+          "reward": 0
+        },
+        {
+          "iteration": 7,
+          "status": "failed",
+          "answer": "incorrect answer for What is the name of the river ",
+          "ground_truth": "Seine"
+        }
+      ]
+    },
+    {
+      "question": "What type of creature is a margay?",
+      "ground_truth": "cat",
+      "success": false,
+      "answer": "incorrect answer for What type of creature is a mar",
+      "history": [
+        {
+          "iteration": 1,
+          "thought": "Thought: I need to find information about what type of creature is a margay?. Let me search for relevant entities.",
+          "state": "Question: What type of creature is a margay?\n",
+          "action": "search[What]",
+          "observation": "Found information about What. Need more information.",
+          "reward": 0
+        },
+        {
+          "iteration": 2,
+          "thought": "Thought 2: Analyzing the information. Need to gather more details.",
+          "state": "Question: What type of creature is a margay?\nThought 1: Thought: I need to find information about what type of creature is a margay?. Let me search for relevant entities.\nAction 1: search[What]\nObservation 1: Found information about What. Need more information.",
+          "action": "lookup[keyword]",
+          "observation": "Observation 2: Continuing search...",
+          "reward": 0
+        },
+        {
+          "iteration": 3,
+          "thought": "Thought 3: Analyzing the information. Need to gather more details.",
+          "state": "Question: What type of creature is a margay?\nThought 1: Thought: I need to find information about what type of creature is a margay?. Let me search for relevant entities.\nAction 1: search[What]\nObservation 1: Found information about What. Need more information.\nThought 2: Thought 2: Analyzing the information. Need to gather more details.\nAction 2: lookup[keyword]\nObservation 2: Observation 2: Continuing search...",
+          "action": "search[entity]",
+          "observation": "Observation 3: Continuing search...",
+          "reward": 0
+        },
+        {
+          "iteration": 4,
+          "thought": "Thought 4: Analyzing the information. Need to gather more details.",
+          "state": "Question: What type of creature is a margay?\nThought 1: Thought: I need to find information about what type of creature is a margay?. Let me search for relevant entities.\nAction 1: search[What]\nObservation 1: Found information about What. Need more information.\nThought 2: Thought 2: Analyzing the information. Need to gather more details.\nAction 2: lookup[keyword]\nObservation 2: Observation 2: Continuing search...\nThought 3: Thought 3: Analyzing the information. Need to gather more details.\nAction 3: search[entity]\nObservation 3: Observation 3: Continuing search...",
+          "action": "think[continue reasoning]",
+          "observation": "Observation 4: Continuing search...",
+          "reward": 0
+        },
+        {
+          "iteration": 5,
+          "thought": "Thought 5: Analyzing the information. Need to gather more details.",
+          "state": "Question: What type of creature is a margay?\nThought 1: Thought: I need to find information about what type of creature is a margay?. Let me search for relevant entities.\nAction 1: search[What]\nObservation 1: Found information about What. Need more information.\nThought 2: Thought 2: Analyzing the information. Need to gather more details.\nAction 2: lookup[keyword]\nObservation 2: Observation 2: Continuing search...\nThought 3: Thought 3: Analyzing the information. Need to gather more details.\nAction 3: search[entity]\nObservation 3: Observation 3: Continuing search...\nThought 4: Thought 4: Analyzing the information. Need to gather more details.\nAction 4: think[continue reasoning]\nObservation 4: Observation 4: Continuing search...",
+          "action": "think[continue reasoning]",
+          "observation": "Observation 5: Continuing search...",
+          "reward": 0
+        },
+        {
+          "iteration": 6,
+          "thought": "Thought 6: Analyzing the information. Need to gather more details.",
+          "state": "Question: What type of creature is a margay?\nThought 1: Thought: I need to find information about what type of creature is a margay?. Let me search for relevant entities.\nAction 1: search[What]\nObservation 1: Found information about What. Need more information.\nThought 2: Thought 2: Analyzing the information. Need to gather more details.\nAction 2: lookup[keyword]\nObservation 2: Observation 2: Continuing search...\nThought 3: Thought 3: Analyzing the information. Need to gather more details.\nAction 3: search[entity]\nObservation 3: Observation 3: Continuing search...\nThought 4: Thought 4: Analyzing the information. Need to gather more details.\nAction 4: think[continue reasoning]\nObservation 4: Observation 4: Continuing search...\nThought 5: Thought 5: Analyzing the information. Need to gather more details.\nAction 5: think[continue reasoning]\nObservation 5: Observation 5: Continuing search...",
+          "action": "search[entity]",
+          "observation": "Observation 6: Continuing search...",
+          "reward": 0
+        },
+        {
+          "iteration": 6,
+          "thought": "Thought 6: Unable to find the correct answer. Providing best guess.",
+          "state": "Question: What type of creature is a margay?\nThought 1: Thought: I need to find information about what type of creature is a margay?. Let me search for relevant entities.\nAction 1: search[What]\nObservation 1: Found information about What. Need more information.\nThought 2: Thought 2: Analyzing the information. Need to gather more details.\nAction 2: lookup[keyword]\nObservation 2: Observation 2: Continuing search...\nThought 3: Thought 3: Analyzing the information. Need to gather more details.\nAction 3: search[entity]\nObservation 3: Observation 3: Continuing search...\nThought 4: Thought 4: Analyzing the information. Need to gather more details.\nAction 4: think[continue reasoning]\nObservation 4: Observation 4: Continuing search...\nThought 5: Thought 5: Analyzing the information. Need to gather more details.\nAction 5: think[continue reasoning]\nObservation 5: Observation 5: Continuing search...\nThought 6: Thought 6: Analyzing the information. Need to gather more details.\nAction 6: search[entity]\nObservation 6: Observation 6: Continuing search...",
+          "action": "finish[incorrect answer for What type of creature is a mar]",
+          "observation": "Episode finished, reward = 0\n",
+          "reward": 0
+        },
+        {
+          "iteration": 6,
+          "status": "failed",
+          "answer": "incorrect answer for What type of creature is a mar",
+          "ground_truth": "cat"
+        }
+      ]
+    },
+    {
+      "question": "Although mostly associated with Manchester in which other part of the UK were the Gibb Brothers born?",
+      "ground_truth": "Isle of Man",
+      "success": true,
+      "answer": "Isle of Man",
+      "history": [
+        {
+          "iteration": 1,
+          "thought": "Thought: I need to find information about although mostly associated with manchester in which other part of the uk were the gibb brothers born?. Let me search for relevant entities.",
+          "state": "Question: Although mostly associated with Manchester in which other part of the UK were the Gibb Brothers born?\n",
+          "action": "search[Although]",
+          "observation": "Found information about Although. The answer appears to be Isle of Man.",
+          "reward": 0
+        },
+        {
+          "iteration": 2,
+          "thought": "Thought 2: Analyzing the information. Need to gather more details.",
+          "state": "Question: Although mostly associated with Manchester in which other part of the UK were the Gibb Brothers born?\nThought 1: Thought: I need to find information about although mostly associated with manchester in which other part of the uk were the gibb brothers born?. Let me search for relevant entities.\nAction 1: search[Although]\nObservation 1: Found information about Although. The answer appears to be Isle of Man.",
+          "action": "think[continue reasoning]",
+          "observation": "Observation 2: Continuing search...",
+          "reward": 0
+        },
+        {
+          "iteration": 3,
+          "thought": "Thought 3: Analyzing the information. Need to gather more details.",
+          "state": "Question: Although mostly associated with Manchester in which other part of the UK were the Gibb Brothers born?\nThought 1: Thought: I need to find information about although mostly associated with manchester in which other part of the uk were the gibb brothers born?. Let me search for relevant entities.\nAction 1: search[Although]\nObservation 1: Found information about Although. The answer appears to be Isle of Man.\nThought 2: Thought 2: Analyzing the information. Need to gather more details.\nAction 2: think[continue reasoning]\nObservation 2: Observation 2: Continuing search...",
+          "action": "search[entity]",
+          "observation": "Observation 3: Continuing search...",
+          "reward": 0
+        },
+        {
+          "iteration": 4,
+          "thought": "Thought: Based on the information gathered, the answer is Isle of Man.",
+          "state": "Question: Although mostly associated with Manchester in which other part of the UK were the Gibb Brothers born?\nThought 1: Thought: I need to find information about although mostly associated with manchester in which other part of the uk were the gibb brothers born?. Let me search for relevant entities.\nAction 1: search[Although]\nObservation 1: Found information about Although. The answer appears to be Isle of Man.\nThought 2: Thought 2: Analyzing the information. Need to gather more details.\nAction 2: think[continue reasoning]\nObservation 2: Observation 2: Continuing search...\nThought 3: Thought 3: Analyzing the information. Need to gather more details.\nAction 3: search[entity]\nObservation 3: Observation 3: Continuing search...",
+          "action": "finish[Isle of Man]",
+          "observation": "Episode finished, reward = 1\n",
+          "reward": 1
+        },
+        {
+          "iteration": 4,
+          "status": "success",
+          "answer": "Isle of Man"
+        }
+      ]
+    },
+    {
+      "question": "Melanie Molitor is the mom of which tennis world NO 1?",
+      "ground_truth": "Martina Hingis",
+      "success": true,
+      "answer": "Martina Hingis",
+      "history": [
+        {
+          "iteration": 1,
+          "thought": "Thought: I need to find information about melanie molitor is the mom of which tennis world no 1?. Let me search for relevant entities.",
+          "state": "Question: Melanie Molitor is the mom of which tennis world NO 1?\n",
+          "action": "search[Melanie]",
+          "observation": "Found information about Melanie. The answer appears to be Martina Hingis.",
+          "reward": 0
+        },
+        {
+          "iteration": 2,
+          "thought": "Thought 2: Analyzing the information. Need to gather more details.",
+          "state": "Question: Melanie Molitor is the mom of which tennis world NO 1?\nThought 1: Thought: I need to find information about melanie molitor is the mom of which tennis world no 1?. Let me search for relevant entities.\nAction 1: search[Melanie]\nObservation 1: Found information about Melanie. The answer appears to be Martina Hingis.",
+          "action": "lookup[keyword]",
+          "observation": "Observation 2: Continuing search...",
+          "reward": 0
+        },
+        {
+          "iteration": 3,
+          "thought": "Thought 3: Analyzing the information. Need to gather more details.",
+          "state": "Question: Melanie Molitor is the mom of which tennis world NO 1?\nThought 1: Thought: I need to find information about melanie molitor is the mom of which tennis world no 1?. Let me search for relevant entities.\nAction 1: search[Melanie]\nObservation 1: Found information about Melanie. The answer appears to be Martina Hingis.\nThought 2: Thought 2: Analyzing the information. Need to gather more details.\nAction 2: lookup[keyword]\nObservation 2: Observation 2: Continuing search...",
+          "action": "search[entity]",
+          "observation": "Observation 3: Continuing search...",
+          "reward": 0
+        },
+        {
+          "iteration": 4,
+          "thought": "Thought 4: Analyzing the information. Moving towards the answer: Martina Hingis.",
+          "state": "Question: Melanie Molitor is the mom of which tennis world NO 1?\nThought 1: Thought: I need to find information about melanie molitor is the mom of which tennis world no 1?. Let me search for relevant entities.\nAction 1: search[Melanie]\nObservation 1: Found information about Melanie. The answer appears to be Martina Hingis.\nThought 2: Thought 2: Analyzing the information. Need to gather more details.\nAction 2: lookup[keyword]\nObservation 2: Observation 2: Continuing search...\nThought 3: Thought 3: Analyzing the information. Need to gather more details.\nAction 3: search[entity]\nObservation 3: Observation 3: Continuing search...",
+          "action": "search[entity]",
+          "observation": "Observation 4: Found relevant information about Martina Hingis.",
+          "reward": 0
+        },
+        {
+          "iteration": 5,
+          "thought": "Thought: Based on the information gathered, the answer is Martina Hingis.",
+          "state": "Question: Melanie Molitor is the mom of which tennis world NO 1?\nThought 1: Thought: I need to find information about melanie molitor is the mom of which tennis world no 1?. Let me search for relevant entities.\nAction 1: search[Melanie]\nObservation 1: Found information about Melanie. The answer appears to be Martina Hingis.\nThought 2: Thought 2: Analyzing the information. Need to gather more details.\nAction 2: lookup[keyword]\nObservation 2: Observation 2: Continuing search...\nThought 3: Thought 3: Analyzing the information. Need to gather more details.\nAction 3: search[entity]\nObservation 3: Observation 3: Continuing search...\nThought 4: Thought 4: Analyzing the information. Moving towards the answer: Martina Hingis.\nAction 4: search[entity]\nObservation 4: Observation 4: Found relevant information about Martina Hingis.",
+          "action": "finish[Martina Hingis]",
+          "observation": "Episode finished, reward = 1\n",
+          "reward": 1
+        },
+        {
+          "iteration": 5,
+          "status": "success",
+          "answer": "Martina Hingis"
+        }
+      ]
+    },
+    {
+      "question": "In the late 60s Owen Finlay MacLaren pioneered what useful item for parents of small children?",
+      "ground_truth": "umbrella stroller",
+      "success": true,
+      "answer": "umbrella stroller",
+      "history": [
+        {
+          "iteration": 1,
+          "thought": "Thought: I need to find information about in the late 60s owen finlay maclaren pioneered what useful item for parents of small children?. Let me search for relevant entities.",
+          "state": "Question: In the late 60s Owen Finlay MacLaren pioneered what useful item for parents of small children?\n",
+          "action": "search[In]",
+          "observation": "Found information about In. The answer appears to be umbrella stroller.",
+          "reward": 0
+        },
+        {
+          "iteration": 2,
+          "thought": "Thought 2: Analyzing the information. Need to gather more details.",
+          "state": "Question: In the late 60s Owen Finlay MacLaren pioneered what useful item for parents of small children?\nThought 1: Thought: I need to find information about in the late 60s owen finlay maclaren pioneered what useful item for parents of small children?. Let me search for relevant entities.\nAction 1: search[In]\nObservation 1: Found information about In. The answer appears to be umbrella stroller.",
+          "action": "think[continue reasoning]",
+          "observation": "Observation 2: Continuing search...",
+          "reward": 0
+        },
+        {
+          "iteration": 3,
+          "thought": "Thought: Based on the information gathered, the answer is umbrella stroller.",
+          "state": "Question: In the late 60s Owen Finlay MacLaren pioneered what useful item for parents of small children?\nThought 1: Thought: I need to find information about in the late 60s owen finlay maclaren pioneered what useful item for parents of small children?. Let me search for relevant entities.\nAction 1: search[In]\nObservation 1: Found information about In. The answer appears to be umbrella stroller.\nThought 2: Thought 2: Analyzing the information. Need to gather more details.\nAction 2: think[continue reasoning]\nObservation 2: Observation 2: Continuing search...",
+          "action": "finish[umbrella stroller]",
+          "observation": "Episode finished, reward = 1\n",
+          "reward": 1
+        },
+        {
+          "iteration": 3,
+          "status": "success",
+          "answer": "umbrella stroller"
+        }
+      ]
+    },
+    {
+      "question": "What is the name of the river that flows through the city of Paris?",
+      "ground_truth": "Seine",
+      "success": false,
+      "answer": "incorrect answer for What is the name of the river ",
+      "history": [
+        {
+          "iteration": 1,
+          "thought": "Thought: I need to find information about what is the name of the river that flows through the city of paris?. Let me search for relevant entities.",
+          "state": "Question: What is the name of the river that flows through the city of Paris?\n",
+          "action": "search[What]",
+          "observation": "Found information about What. Need more information.",
+          "reward": 0
+        },
+        {
+          "iteration": 2,
+          "thought": "Thought 2: Analyzing the information. Need to gather more details.",
+          "state": "Question: What is the name of the river that flows through the city of Paris?\nThought 1: Thought: I need to find information about what is the name of the river that flows through the city of paris?. Let me search for relevant entities.\nAction 1: search[What]\nObservation 1: Found information about What. Need more information.",
+          "action": "lookup[keyword]",
+          "observation": "Observation 2: Continuing search...",
+          "reward": 0
+        },
+        {
+          "iteration": 3,
+          "thought": "Thought 3: Analyzing the information. Need to gather more details.",
+          "state": "Question: What is the name of the river that flows through the city of Paris?\nThought 1: Thought: I need to find information about what is the name of the river that flows through the city of paris?. Let me search for relevant entities.\nAction 1: search[What]\nObservation 1: Found information about What. Need more information.\nThought 2: Thought 2: Analyzing the information. Need to gather more details.\nAction 2: lookup[keyword]\nObservation 2: Observation 2: Continuing search...",
+          "action": "lookup[keyword]",
+          "observation": "Observation 3: Continuing search...",
+          "reward": 0
+        },
+        {
+          "iteration": 4,
+          "thought": "Thought 4: Analyzing the information. Need to gather more details.",
+          "state": "Question: What is the name of the river that flows through the city of Paris?\nThought 1: Thought: I need to find information about what is the name of the river that flows through the city of paris?. Let me search for relevant entities.\nAction 1: search[What]\nObservation 1: Found information about What. Need more information.\nThought 2: Thought 2: Analyzing the information. Need to gather more details.\nAction 2: lookup[keyword]\nObservation 2: Observation 2: Continuing search...\nThought 3: Thought 3: Analyzing the information. Need to gather more details.\nAction 3: lookup[keyword]\nObservation 3: Observation 3: Continuing search...",
+          "action": "search[entity]",
+          "observation": "Observation 4: Continuing search...",
+          "reward": 0
+        },
+        {
+          "iteration": 5,
+          "thought": "Thought 5: Analyzing the information. Need to gather more details.",
+          "state": "Question: What is the name of the river that flows through the city of Paris?\nThought 1: Thought: I need to find information about what is the name of the river that flows through the city of paris?. Let me search for relevant entities.\nAction 1: search[What]\nObservation 1: Found information about What. Need more information.\nThought 2: Thought 2: Analyzing the information. Need to gather more details.\nAction 2: lookup[keyword]\nObservation 2: Observation 2: Continuing search...\nThought 3: Thought 3: Analyzing the information. Need to gather more details.\nAction 3: lookup[keyword]\nObservation 3: Observation 3: Continuing search...\nThought 4: Thought 4: Analyzing the information. Need to gather more details.\nAction 4: search[entity]\nObservation 4: Observation 4: Continuing search...",
+          "action": "think[continue reasoning]",
+          "observation": "Observation 5: Continuing search...",
+          "reward": 0
+        },
+        {
+          "iteration": 6,
+          "thought": "Thought 6: Analyzing the information. Need to gather more details.",
+          "state": "Question: What is the name of the river that flows through the city of Paris?\nThought 1: Thought: I need to find information about what is the name of the river that flows through the city of paris?. Let me search for relevant entities.\nAction 1: search[What]\nObservation 1: Found information about What. Need more information.\nThought 2: Thought 2: Analyzing the information. Need to gather more details.\nAction 2: lookup[keyword]\nObservation 2: Observation 2: Continuing search...\nThought 3: Thought 3: Analyzing the information. Need to gather more details.\nAction 3: lookup[keyword]\nObservation 3: Observation 3: Continuing search...\nThought 4: Thought 4: Analyzing the information. Need to gather more details.\nAction 4: search[entity]\nObservation 4: Observation 4: Continuing search...\nThought 5: Thought 5: Analyzing the information. Need to gather more details.\nAction 5: think[continue reasoning]\nObservation 5: Observation 5: Continuing search...",
+          "action": "lookup[keyword]",
+          "observation": "Observation 6: Continuing search...",
+          "reward": 0
+        },
+        {
+          "iteration": 6,
+          "thought": "Thought 6: Unable to find the correct answer. Providing best guess.",
+          "state": "Question: What is the name of the river that flows through the city of Paris?\nThought 1: Thought: I need to find information about what is the name of the river that flows through the city of paris?. Let me search for relevant entities.\nAction 1: search[What]\nObservation 1: Found information about What. Need more information.\nThought 2: Thought 2: Analyzing the information. Need to gather more details.\nAction 2: lookup[keyword]\nObservation 2: Observation 2: Continuing search...\nThought 3: Thought 3: Analyzing the information. Need to gather more details.\nAction 3: lookup[keyword]\nObservation 3: Observation 3: Continuing search...\nThought 4: Thought 4: Analyzing the information. Need to gather more details.\nAction 4: search[entity]\nObservation 4: Observation 4: Continuing search...\nThought 5: Thought 5: Analyzing the information. Need to gather more details.\nAction 5: think[continue reasoning]\nObservation 5: Observation 5: Continuing search...\nThought 6: Thought 6: Analyzing the information. Need to gather more details.\nAction 6: lookup[keyword]\nObservation 6: Observation 6: Continuing search...",
+          "action": "finish[incorrect answer for What is the name of the river ]",
+          "observation": "Episode finished, reward = 0\n",
+          "reward": 0
+        },
+        {
+          "iteration": 6,
+          "status": "failed",
+          "answer": "incorrect answer for What is the name of the river ",
+          "ground_truth": "Seine"
+        }
+      ]
+    },
+    {
+      "question": "What type of creature is a margay?",
+      "ground_truth": "cat",
+      "success": false,
+      "answer": "incorrect answer for What type of creature is a mar",
+      "history": [
+        {
+          "iteration": 1,
+          "thought": "Thought: I need to find information about what type of creature is a margay?. Let me search for relevant entities.",
+          "state": "Question: What type of creature is a margay?\n",
+          "action": "search[What]",
+          "observation": "Found information about What. Need more information.",
+          "reward": 0
+        },
+        {
+          "iteration": 2,
+          "thought": "Thought 2: Analyzing the information. Need to gather more details.",
+          "state": "Question: What type of creature is a margay?\nThought 1: Thought: I need to find information about what type of creature is a margay?. Let me search for relevant entities.\nAction 1: search[What]\nObservation 1: Found information about What. Need more information.",
+          "action": "lookup[keyword]",
+          "observation": "Observation 2: Continuing search...",
+          "reward": 0
+        },
+        {
+          "iteration": 3,
+          "thought": "Thought 3: Analyzing the information. Need to gather more details.",
+          "state": "Question: What type of creature is a margay?\nThought 1: Thought: I need to find information about what type of creature is a margay?. Let me search for relevant entities.\nAction 1: search[What]\nObservation 1: Found information about What. Need more information.\nThought 2: Thought 2: Analyzing the information. Need to gather more details.\nAction 2: lookup[keyword]\nObservation 2: Observation 2: Continuing search...",
+          "action": "think[continue reasoning]",
+          "observation": "Observation 3: Continuing search...",
+          "reward": 0
+        },
+        {
+          "iteration": 4,
+          "thought": "Thought 4: Analyzing the information. Need to gather more details.",
+          "state": "Question: What type of creature is a margay?\nThought 1: Thought: I need to find information about what type of creature is a margay?. Let me search for relevant entities.\nAction 1: search[What]\nObservation 1: Found information about What. Need more information.\nThought 2: Thought 2: Analyzing the information. Need to gather more details.\nAction 2: lookup[keyword]\nObservation 2: Observation 2: Continuing search...\nThought 3: Thought 3: Analyzing the information. Need to gather more details.\nAction 3: think[continue reasoning]\nObservation 3: Observation 3: Continuing search...",
+          "action": "search[entity]",
+          "observation": "Observation 4: Continuing search...",
+          "reward": 0
+        },
+        {
+          "iteration": 5,
+          "thought": "Thought 5: Analyzing the information. Need to gather more details.",
+          "state": "Question: What type of creature is a margay?\nThought 1: Thought: I need to find information about what type of creature is a margay?. Let me search for relevant entities.\nAction 1: search[What]\nObservation 1: Found information about What. Need more information.\nThought 2: Thought 2: Analyzing the information. Need to gather more details.\nAction 2: lookup[keyword]\nObservation 2: Observation 2: Continuing search...\nThought 3: Thought 3: Analyzing the information. Need to gather more details.\nAction 3: think[continue reasoning]\nObservation 3: Observation 3: Continuing search...\nThought 4: Thought 4: Analyzing the information. Need to gather more details.\nAction 4: search[entity]\nObservation 4: Observation 4: Continuing search...",
+          "action": "search[entity]",
+          "observation": "Observation 5: Continuing search...",
+          "reward": 0
+        },
+        {
+          "iteration": 6,
+          "thought": "Thought 6: Analyzing the information. Need to gather more details.",
+          "state": "Question: What type of creature is a margay?\nThought 1: Thought: I need to find information about what type of creature is a margay?. Let me search for relevant entities.\nAction 1: search[What]\nObservation 1: Found information about What. Need more information.\nThought 2: Thought 2: Analyzing the information. Need to gather more details.\nAction 2: lookup[keyword]\nObservation 2: Observation 2: Continuing search...\nThought 3: Thought 3: Analyzing the information. Need to gather more details.\nAction 3: think[continue reasoning]\nObservation 3: Observation 3: Continuing search...\nThought 4: Thought 4: Analyzing the information. Need to gather more details.\nAction 4: search[entity]\nObservation 4: Observation 4: Continuing search...\nThought 5: Thought 5: Analyzing the information. Need to gather more details.\nAction 5: search[entity]\nObservation 5: Observation 5: Continuing search...",
+          "action": "think[continue reasoning]",
+          "observation": "Observation 6: Continuing search...",
+          "reward": 0
+        },
+        {
+          "iteration": 6,
+          "thought": "Thought 6: Unable to find the correct answer. Providing best guess.",
+          "state": "Question: What type of creature is a margay?\nThought 1: Thought: I need to find information about what type of creature is a margay?. Let me search for relevant entities.\nAction 1: search[What]\nObservation 1: Found information about What. Need more information.\nThought 2: Thought 2: Analyzing the information. Need to gather more details.\nAction 2: lookup[keyword]\nObservation 2: Observation 2: Continuing search...\nThought 3: Thought 3: Analyzing the information. Need to gather more details.\nAction 3: think[continue reasoning]\nObservation 3: Observation 3: Continuing search...\nThought 4: Thought 4: Analyzing the information. Need to gather more details.\nAction 4: search[entity]\nObservation 4: Observation 4: Continuing search...\nThought 5: Thought 5: Analyzing the information. Need to gather more details.\nAction 5: search[entity]\nObservation 5: Observation 5: Continuing search...\nThought 6: Thought 6: Analyzing the information. Need to gather more details.\nAction 6: think[continue reasoning]\nObservation 6: Observation 6: Continuing search...",
+          "action": "finish[incorrect answer for What type of creature is a mar]",
+          "observation": "Episode finished, reward = 0\n",
+          "reward": 0
+        },
+        {
+          "iteration": 6,
+          "status": "failed",
+          "answer": "incorrect answer for What type of creature is a mar",
+          "ground_truth": "cat"
+        }
+      ]
+    },
+    {
+      "question": "Although mostly associated with Manchester in which other part of the UK were the Gibb Brothers born?",
+      "ground_truth": "Isle of Man",
+      "success": false,
+      "answer": "incorrect answer for Although mostly associated wit",
+      "history": [
+        {
+          "iteration": 1,
+          "thought": "Thought: I need to find information about although mostly associated with manchester in which other part of the uk were the gibb brothers born?. Let me search for relevant entities.",
+          "state": "Question: Although mostly associated with Manchester in which other part of the UK were the Gibb Brothers born?\n",
+          "action": "search[Although]",
+          "observation": "Found information about Although. Need more information.",
+          "reward": 0
+        },
+        {
+          "iteration": 2,
+          "thought": "Thought 2: Analyzing the information. Need to gather more details.",
+          "state": "Question: Although mostly associated with Manchester in which other part of the UK were the Gibb Brothers born?\nThought 1: Thought: I need to find information about although mostly associated with manchester in which other part of the uk were the gibb brothers born?. Let me search for relevant entities.\nAction 1: search[Although]\nObservation 1: Found information about Although. Need more information.",
+          "action": "lookup[keyword]",
+          "observation": "Observation 2: Continuing search...",
+          "reward": 0
+        },
+        {
+          "iteration": 3,
+          "thought": "Thought 3: Analyzing the information. Need to gather more details.",
+          "state": "Question: Although mostly associated with Manchester in which other part of the UK were the Gibb Brothers born?\nThought 1: Thought: I need to find information about although mostly associated with manchester in which other part of the uk were the gibb brothers born?. Let me search for relevant entities.\nAction 1: search[Although]\nObservation 1: Found information about Although. Need more information.\nThought 2: Thought 2: Analyzing the information. Need to gather more details.\nAction 2: lookup[keyword]\nObservation 2: Observation 2: Continuing search...",
+          "action": "search[entity]",
+          "observation": "Observation 3: Continuing search...",
+          "reward": 0
+        },
+        {
+          "iteration": 4,
+          "thought": "Thought 4: Analyzing the information. Need to gather more details.",
+          "state": "Question: Although mostly associated with Manchester in which other part of the UK were the Gibb Brothers born?\nThought 1: Thought: I need to find information about although mostly associated with manchester in which other part of the uk were the gibb brothers born?. Let me search for relevant entities.\nAction 1: search[Although]\nObservation 1: Found information about Although. Need more information.\nThought 2: Thought 2: Analyzing the information. Need to gather more details.\nAction 2: lookup[keyword]\nObservation 2: Observation 2: Continuing search...\nThought 3: Thought 3: Analyzing the information. Need to gather more details.\nAction 3: search[entity]\nObservation 3: Observation 3: Continuing search...",
+          "action": "lookup[keyword]",
+          "observation": "Observation 4: Continuing search...",
+          "reward": 0
+        },
+        {
+          "iteration": 5,
+          "thought": "Thought 5: Analyzing the information. Need to gather more details.",
+          "state": "Question: Although mostly associated with Manchester in which other part of the UK were the Gibb Brothers born?\nThought 1: Thought: I need to find information about although mostly associated with manchester in which other part of the uk were the gibb brothers born?. Let me search for relevant entities.\nAction 1: search[Although]\nObservation 1: Found information about Although. Need more information.\nThought 2: Thought 2: Analyzing the information. Need to gather more details.\nAction 2: lookup[keyword]\nObservation 2: Observation 2: Continuing search...\nThought 3: Thought 3: Analyzing the information. Need to gather more details.\nAction 3: search[entity]\nObservation 3: Observation 3: Continuing search...\nThought 4: Thought 4: Analyzing the information. Need to gather more details.\nAction 4: lookup[keyword]\nObservation 4: Observation 4: Continuing search...",
+          "action": "search[entity]",
+          "observation": "Observation 5: Continuing search...",
+          "reward": 0
+        },
+        {
+          "iteration": 6,
+          "thought": "Thought 6: Analyzing the information. Need to gather more details.",
+          "state": "Question: Although mostly associated with Manchester in which other part of the UK were the Gibb Brothers born?\nThought 1: Thought: I need to find information about although mostly associated with manchester in which other part of the uk were the gibb brothers born?. Let me search for relevant entities.\nAction 1: search[Although]\nObservation 1: Found information about Although. Need more information.\nThought 2: Thought 2: Analyzing the information. Need to gather more details.\nAction 2: lookup[keyword]\nObservation 2: Observation 2: Continuing search...\nThought 3: Thought 3: Analyzing the information. Need to gather more details.\nAction 3: search[entity]\nObservation 3: Observation 3: Continuing search...\nThought 4: Thought 4: Analyzing the information. Need to gather more details.\nAction 4: lookup[keyword]\nObservation 4: Observation 4: Continuing search...\nThought 5: Thought 5: Analyzing the information. Need to gather more details.\nAction 5: search[entity]\nObservation 5: Observation 5: Continuing search...",
+          "action": "lookup[keyword]",
+          "observation": "Observation 6: Continuing search...",
+          "reward": 0
+        },
+        {
+          "iteration": 7,
+          "thought": "Thought 7: Analyzing the information. Need to gather more details.",
+          "state": "Question: Although mostly associated with Manchester in which other part of the UK were the Gibb Brothers born?\nThought 1: Thought: I need to find information about although mostly associated with manchester in which other part of the uk were the gibb brothers born?. Let me search for relevant entities.\nAction 1: search[Although]\nObservation 1: Found information about Although. Need more information.\nThought 2: Thought 2: Analyzing the information. Need to gather more details.\nAction 2: lookup[keyword]\nObservation 2: Observation 2: Continuing search...\nThought 3: Thought 3: Analyzing the information. Need to gather more details.\nAction 3: search[entity]\nObservation 3: Observation 3: Continuing search...\nThought 4: Thought 4: Analyzing the information. Need to gather more details.\nAction 4: lookup[keyword]\nObservation 4: Observation 4: Continuing search...\nThought 5: Thought 5: Analyzing the information. Need to gather more details.\nAction 5: search[entity]\nObservation 5: Observation 5: Continuing search...\nThought 6: Thought 6: Analyzing the information. Need to gather more details.\nAction 6: lookup[keyword]\nObservation 6: Observation 6: Continuing search...",
+          "action": "search[entity]",
+          "observation": "Observation 7: Continuing search...",
+          "reward": 0
+        },
+        {
+          "iteration": 7,
+          "thought": "Thought 7: Unable to find the correct answer. Providing best guess.",
+          "state": "Question: Although mostly associated with Manchester in which other part of the UK were the Gibb Brothers born?\nThought 1: Thought: I need to find information about although mostly associated with manchester in which other part of the uk were the gibb brothers born?. Let me search for relevant entities.\nAction 1: search[Although]\nObservation 1: Found information about Although. Need more information.\nThought 2: Thought 2: Analyzing the information. Need to gather more details.\nAction 2: lookup[keyword]\nObservation 2: Observation 2: Continuing search...\nThought 3: Thought 3: Analyzing the information. Need to gather more details.\nAction 3: search[entity]\nObservation 3: Observation 3: Continuing search...\nThought 4: Thought 4: Analyzing the information. Need to gather more details.\nAction 4: lookup[keyword]\nObservation 4: Observation 4: Continuing search...\nThought 5: Thought 5: Analyzing the information. Need to gather more details.\nAction 5: search[entity]\nObservation 5: Observation 5: Continuing search...\nThought 6: Thought 6: Analyzing the information. Need to gather more details.\nAction 6: lookup[keyword]\nObservation 6: Observation 6: Continuing search...\nThought 7: Thought 7: Analyzing the information. Need to gather more details.\nAction 7: search[entity]\nObservation 7: Observation 7: Continuing search...",
+          "action": "finish[incorrect answer for Although mostly associated wit]",
+          "observation": "Episode finished, reward = 0\n",
+          "reward": 0
+        },
+        {
+          "iteration": 7,
+          "status": "failed",
+          "answer": "incorrect answer for Although mostly associated wit",
+          "ground_truth": "Isle of Man"
+        }
+      ]
+    },
+    {
+      "question": "Melanie Molitor is the mom of which tennis world NO 1?",
+      "ground_truth": "Martina Hingis",
+      "success": true,
+      "answer": "Martina Hingis",
+      "history": [
+        {
+          "iteration": 1,
+          "thought": "Thought: I need to find information about melanie molitor is the mom of which tennis world no 1?. Let me search for relevant entities.",
+          "state": "Question: Melanie Molitor is the mom of which tennis world NO 1?\n",
+          "action": "search[Melanie]",
+          "observation": "Found information about Melanie. The answer appears to be Martina Hingis.",
+          "reward": 0
+        },
+        {
+          "iteration": 2,
+          "thought": "Thought: Based on the information gathered, the answer is Martina Hingis.",
+          "state": "Question: Melanie Molitor is the mom of which tennis world NO 1?\nThought 1: Thought: I need to find information about melanie molitor is the mom of which tennis world no 1?. Let me search for relevant entities.\nAction 1: search[Melanie]\nObservation 1: Found information about Melanie. The answer appears to be Martina Hingis.",
+          "action": "finish[Martina Hingis]",
+          "observation": "Episode finished, reward = 1\n",
+          "reward": 1
+        },
+        {
+          "iteration": 2,
+          "status": "success",
+          "answer": "Martina Hingis"
+        }
+      ]
+    },
+    {
+      "question": "In the late 60s Owen Finlay MacLaren pioneered what useful item for parents of small children?",
+      "ground_truth": "umbrella stroller",
+      "success": false,
+      "answer": "incorrect answer for In the late 60s Owen Finlay Ma",
+      "history": [
+        {
+          "iteration": 1,
+          "thought": "Thought: I need to find information about in the late 60s owen finlay maclaren pioneered what useful item for parents of small children?. Let me search for relevant entities.",
+          "state": "Question: In the late 60s Owen Finlay MacLaren pioneered what useful item for parents of small children?\n",
+          "action": "search[In]",
+          "observation": "Found information about In. Need more information.",
+          "reward": 0
+        },
+        {
+          "iteration": 2,
+          "thought": "Thought 2: Analyzing the information. Need to gather more details.",
+          "state": "Question: In the late 60s Owen Finlay MacLaren pioneered what useful item for parents of small children?\nThought 1: Thought: I need to find information about in the late 60s owen finlay maclaren pioneered what useful item for parents of small children?. Let me search for relevant entities.\nAction 1: search[In]\nObservation 1: Found information about In. Need more information.",
+          "action": "search[entity]",
+          "observation": "Observation 2: Continuing search...",
+          "reward": 0
+        },
+        {
+          "iteration": 3,
+          "thought": "Thought 3: Analyzing the information. Need to gather more details.",
+          "state": "Question: In the late 60s Owen Finlay MacLaren pioneered what useful item for parents of small children?\nThought 1: Thought: I need to find information about in the late 60s owen finlay maclaren pioneered what useful item for parents of small children?. Let me search for relevant entities.\nAction 1: search[In]\nObservation 1: Found information about In. Need more information.\nThought 2: Thought 2: Analyzing the information. Need to gather more details.\nAction 2: search[entity]\nObservation 2: Observation 2: Continuing search...",
+          "action": "lookup[keyword]",
+          "observation": "Observation 3: Continuing search...",
+          "reward": 0
+        },
+        {
+          "iteration": 4,
+          "thought": "Thought 4: Analyzing the information. Need to gather more details.",
+          "state": "Question: In the late 60s Owen Finlay MacLaren pioneered what useful item for parents of small children?\nThought 1: Thought: I need to find information about in the late 60s owen finlay maclaren pioneered what useful item for parents of small children?. Let me search for relevant entities.\nAction 1: search[In]\nObservation 1: Found information about In. Need more information.\nThought 2: Thought 2: Analyzing the information. Need to gather more details.\nAction 2: search[entity]\nObservation 2: Observation 2: Continuing search...\nThought 3: Thought 3: Analyzing the information. Need to gather more details.\nAction 3: lookup[keyword]\nObservation 3: Observation 3: Continuing search...",
+          "action": "think[continue reasoning]",
+          "observation": "Observation 4: Continuing search...",
+          "reward": 0
+        },
+        {
+          "iteration": 5,
+          "thought": "Thought 5: Analyzing the information. Need to gather more details.",
+          "state": "Question: In the late 60s Owen Finlay MacLaren pioneered what useful item for parents of small children?\nThought 1: Thought: I need to find information about in the late 60s owen finlay maclaren pioneered what useful item for parents of small children?. Let me search for relevant entities.\nAction 1: search[In]\nObservation 1: Found information about In. Need more information.\nThought 2: Thought 2: Analyzing the information. Need to gather more details.\nAction 2: search[entity]\nObservation 2: Observation 2: Continuing search...\nThought 3: Thought 3: Analyzing the information. Need to gather more details.\nAction 3: lookup[keyword]\nObservation 3: Observation 3: Continuing search...\nThought 4: Thought 4: Analyzing the information. Need to gather more details.\nAction 4: think[continue reasoning]\nObservation 4: Observation 4: Continuing search...",
+          "action": "think[continue reasoning]",
+          "observation": "Observation 5: Continuing search...",
+          "reward": 0
+        },
+        {
+          "iteration": 6,
+          "thought": "Thought 6: Analyzing the information. Need to gather more details.",
+          "state": "Question: In the late 60s Owen Finlay MacLaren pioneered what useful item for parents of small children?\nThought 1: Thought: I need to find information about in the late 60s owen finlay maclaren pioneered what useful item for parents of small children?. Let me search for relevant entities.\nAction 1: search[In]\nObservation 1: Found information about In. Need more information.\nThought 2: Thought 2: Analyzing the information. Need to gather more details.\nAction 2: search[entity]\nObservation 2: Observation 2: Continuing search...\nThought 3: Thought 3: Analyzing the information. Need to gather more details.\nAction 3: lookup[keyword]\nObservation 3: Observation 3: Continuing search...\nThought 4: Thought 4: Analyzing the information. Need to gather more details.\nAction 4: think[continue reasoning]\nObservation 4: Observation 4: Continuing search...\nThought 5: Thought 5: Analyzing the information. Need to gather more details.\nAction 5: think[continue reasoning]\nObservation 5: Observation 5: Continuing search...",
+          "action": "lookup[keyword]",
+          "observation": "Observation 6: Continuing search...",
+          "reward": 0
+        },
+        {
+          "iteration": 6,
+          "thought": "Thought 6: Unable to find the correct answer. Providing best guess.",
+          "state": "Question: In the late 60s Owen Finlay MacLaren pioneered what useful item for parents of small children?\nThought 1: Thought: I need to find information about in the late 60s owen finlay maclaren pioneered what useful item for parents of small children?. Let me search for relevant entities.\nAction 1: search[In]\nObservation 1: Found information about In. Need more information.\nThought 2: Thought 2: Analyzing the information. Need to gather more details.\nAction 2: search[entity]\nObservation 2: Observation 2: Continuing search...\nThought 3: Thought 3: Analyzing the information. Need to gather more details.\nAction 3: lookup[keyword]\nObservation 3: Observation 3: Continuing search...\nThought 4: Thought 4: Analyzing the information. Need to gather more details.\nAction 4: think[continue reasoning]\nObservation 4: Observation 4: Continuing search...\nThought 5: Thought 5: Analyzing the information. Need to gather more details.\nAction 5: think[continue reasoning]\nObservation 5: Observation 5: Continuing search...\nThought 6: Thought 6: Analyzing the information. Need to gather more details.\nAction 6: lookup[keyword]\nObservation 6: Observation 6: Continuing search...",
+          "action": "finish[incorrect answer for In the late 60s Owen Finlay Ma]",
+          "observation": "Episode finished, reward = 0\n",
+          "reward": 0
+        },
+        {
+          "iteration": 6,
+          "status": "failed",
+          "answer": "incorrect answer for In the late 60s Owen Finlay Ma",
+          "ground_truth": "umbrella stroller"
+        }
+      ]
+    },
+    {
+      "question": "What is the name of the river that flows through the city of Paris?",
+      "ground_truth": "Seine",
+      "success": true,
+      "answer": "Seine",
+      "history": [
+        {
+          "iteration": 1,
+          "thought": "Thought: I need to find information about what is the name of the river that flows through the city of paris?. Let me search for relevant entities.",
+          "state": "Question: What is the name of the river that flows through the city of Paris?\n",
+          "action": "search[What]",
+          "observation": "Found information about What. The answer appears to be Seine.",
+          "reward": 0
+        },
+        {
+          "iteration": 2,
+          "thought": "Thought: Based on the information gathered, the answer is Seine.",
+          "state": "Question: What is the name of the river that flows through the city of Paris?\nThought 1: Thought: I need to find information about what is the name of the river that flows through the city of paris?. Let me search for relevant entities.\nAction 1: search[What]\nObservation 1: Found information about What. The answer appears to be Seine.",
+          "action": "finish[Seine]",
+          "observation": "Episode finished, reward = 1\n",
+          "reward": 1
+        },
+        {
+          "iteration": 2,
+          "status": "success",
+          "answer": "Seine"
+        }
+      ]
+    },
+    {
+      "question": "What type of creature is a margay?",
+      "ground_truth": "cat",
+      "success": false,
+      "answer": "incorrect answer for What type of creature is a mar",
+      "history": [
+        {
+          "iteration": 1,
+          "thought": "Thought: I need to find information about what type of creature is a margay?. Let me search for relevant entities.",
+          "state": "Question: What type of creature is a margay?\n",
+          "action": "search[What]",
+          "observation": "Found information about What. Need more information.",
+          "reward": 0
+        },
+        {
+          "iteration": 2,
+          "thought": "Thought 2: Analyzing the information. Need to gather more details.",
+          "state": "Question: What type of creature is a margay?\nThought 1: Thought: I need to find information about what type of creature is a margay?. Let me search for relevant entities.\nAction 1: search[What]\nObservation 1: Found information about What. Need more information.",
+          "action": "search[entity]",
+          "observation": "Observation 2: Continuing search...",
+          "reward": 0
+        },
+        {
+          "iteration": 3,
+          "thought": "Thought 3: Analyzing the information. Need to gather more details.",
+          "state": "Question: What type of creature is a margay?\nThought 1: Thought: I need to find information about what type of creature is a margay?. Let me search for relevant entities.\nAction 1: search[What]\nObservation 1: Found information about What. Need more information.\nThought 2: Thought 2: Analyzing the information. Need to gather more details.\nAction 2: search[entity]\nObservation 2: Observation 2: Continuing search...",
+          "action": "think[continue reasoning]",
+          "observation": "Observation 3: Continuing search...",
+          "reward": 0
+        },
+        {
+          "iteration": 4,
+          "thought": "Thought 4: Analyzing the information. Need to gather more details.",
+          "state": "Question: What type of creature is a margay?\nThought 1: Thought: I need to find information about what type of creature is a margay?. Let me search for relevant entities.\nAction 1: search[What]\nObservation 1: Found information about What. Need more information.\nThought 2: Thought 2: Analyzing the information. Need to gather more details.\nAction 2: search[entity]\nObservation 2: Observation 2: Continuing search...\nThought 3: Thought 3: Analyzing the information. Need to gather more details.\nAction 3: think[continue reasoning]\nObservation 3: Observation 3: Continuing search...",
+          "action": "think[continue reasoning]",
+          "observation": "Observation 4: Continuing search...",
+          "reward": 0
+        },
+        {
+          "iteration": 5,
+          "thought": "Thought 5: Analyzing the information. Need to gather more details.",
+          "state": "Question: What type of creature is a margay?\nThought 1: Thought: I need to find information about what type of creature is a margay?. Let me search for relevant entities.\nAction 1: search[What]\nObservation 1: Found information about What. Need more information.\nThought 2: Thought 2: Analyzing the information. Need to gather more details.\nAction 2: search[entity]\nObservation 2: Observation 2: Continuing search...\nThought 3: Thought 3: Analyzing the information. Need to gather more details.\nAction 3: think[continue reasoning]\nObservation 3: Observation 3: Continuing search...\nThought 4: Thought 4: Analyzing the information. Need to gather more details.\nAction 4: think[continue reasoning]\nObservation 4: Observation 4: Continuing search...",
+          "action": "think[continue reasoning]",
+          "observation": "Observation 5: Continuing search...",
+          "reward": 0
+        },
+        {
+          "iteration": 5,
+          "thought": "Thought 5: Unable to find the correct answer. Providing best guess.",
+          "state": "Question: What type of creature is a margay?\nThought 1: Thought: I need to find information about what type of creature is a margay?. Let me search for relevant entities.\nAction 1: search[What]\nObservation 1: Found information about What. Need more information.\nThought 2: Thought 2: Analyzing the information. Need to gather more details.\nAction 2: search[entity]\nObservation 2: Observation 2: Continuing search...\nThought 3: Thought 3: Analyzing the information. Need to gather more details.\nAction 3: think[continue reasoning]\nObservation 3: Observation 3: Continuing search...\nThought 4: Thought 4: Analyzing the information. Need to gather more details.\nAction 4: think[continue reasoning]\nObservation 4: Observation 4: Continuing search...\nThought 5: Thought 5: Analyzing the information. Need to gather more details.\nAction 5: think[continue reasoning]\nObservation 5: Observation 5: Continuing search...",
+          "action": "finish[incorrect answer for What type of creature is a mar]",
+          "observation": "Episode finished, reward = 0\n",
+          "reward": 0
+        },
+        {
+          "iteration": 5,
+          "status": "failed",
+          "answer": "incorrect answer for What type of creature is a mar",
+          "ground_truth": "cat"
+        }
+      ]
+    },
+    {
+      "question": "Although mostly associated with Manchester in which other part of the UK were the Gibb Brothers born?",
+      "ground_truth": "Isle of Man",
+      "success": false,
+      "answer": "incorrect answer for Although mostly associated wit",
+      "history": [
+        {
+          "iteration": 1,
+          "thought": "Thought: I need to find information about although mostly associated with manchester in which other part of the uk were the gibb brothers born?. Let me search for relevant entities.",
+          "state": "Question: Although mostly associated with Manchester in which other part of the UK were the Gibb Brothers born?\n",
+          "action": "search[Although]",
+          "observation": "Found information about Although. Need more information.",
+          "reward": 0
+        },
+        {
+          "iteration": 2,
+          "thought": "Thought 2: Analyzing the information. Need to gather more details.",
+          "state": "Question: Although mostly associated with Manchester in which other part of the UK were the Gibb Brothers born?\nThought 1: Thought: I need to find information about although mostly associated with manchester in which other part of the uk were the gibb brothers born?. Let me search for relevant entities.\nAction 1: search[Although]\nObservation 1: Found information about Although. Need more information.",
+          "action": "lookup[keyword]",
+          "observation": "Observation 2: Continuing search...",
+          "reward": 0
+        },
+        {
+          "iteration": 3,
+          "thought": "Thought 3: Analyzing the information. Need to gather more details.",
+          "state": "Question: Although mostly associated with Manchester in which other part of the UK were the Gibb Brothers born?\nThought 1: Thought: I need to find information about although mostly associated with manchester in which other part of the uk were the gibb brothers born?. Let me search for relevant entities.\nAction 1: search[Although]\nObservation 1: Found information about Although. Need more information.\nThought 2: Thought 2: Analyzing the information. Need to gather more details.\nAction 2: lookup[keyword]\nObservation 2: Observation 2: Continuing search...",
+          "action": "lookup[keyword]",
+          "observation": "Observation 3: Continuing search...",
+          "reward": 0
+        },
+        {
+          "iteration": 3,
+          "thought": "Thought 3: Unable to find the correct answer. Providing best guess.",
+          "state": "Question: Although mostly associated with Manchester in which other part of the UK were the Gibb Brothers born?\nThought 1: Thought: I need to find information about although mostly associated with manchester in which other part of the uk were the gibb brothers born?. Let me search for relevant entities.\nAction 1: search[Although]\nObservation 1: Found information about Although. Need more information.\nThought 2: Thought 2: Analyzing the information. Need to gather more details.\nAction 2: lookup[keyword]\nObservation 2: Observation 2: Continuing search...\nThought 3: Thought 3: Analyzing the information. Need to gather more details.\nAction 3: lookup[keyword]\nObservation 3: Observation 3: Continuing search...",
+          "action": "finish[incorrect answer for Although mostly associated wit]",
+          "observation": "Episode finished, reward = 0\n",
+          "reward": 0
+        },
+        {
+          "iteration": 3,
+          "status": "failed",
+          "answer": "incorrect answer for Although mostly associated wit",
+          "ground_truth": "Isle of Man"
+        }
+      ]
+    },
+    {
+      "question": "Melanie Molitor is the mom of which tennis world NO 1?",
+      "ground_truth": "Martina Hingis",
+      "success": false,
+      "answer": "incorrect answer for Melanie Molitor is the mom of ",
+      "history": [
+        {
+          "iteration": 1,
+          "thought": "Thought: I need to find information about melanie molitor is the mom of which tennis world no 1?. Let me search for relevant entities.",
+          "state": "Question: Melanie Molitor is the mom of which tennis world NO 1?\n",
+          "action": "search[Melanie]",
+          "observation": "Found information about Melanie. Need more information.",
+          "reward": 0
+        },
+        {
+          "iteration": 2,
+          "thought": "Thought 2: Analyzing the information. Need to gather more details.",
+          "state": "Question: Melanie Molitor is the mom of which tennis world NO 1?\nThought 1: Thought: I need to find information about melanie molitor is the mom of which tennis world no 1?. Let me search for relevant entities.\nAction 1: search[Melanie]\nObservation 1: Found information about Melanie. Need more information.",
+          "action": "think[continue reasoning]",
+          "observation": "Observation 2: Continuing search...",
+          "reward": 0
+        },
+        {
+          "iteration": 3,
+          "thought": "Thought 3: Analyzing the information. Need to gather more details.",
+          "state": "Question: Melanie Molitor is the mom of which tennis world NO 1?\nThought 1: Thought: I need to find information about melanie molitor is the mom of which tennis world no 1?. Let me search for relevant entities.\nAction 1: search[Melanie]\nObservation 1: Found information about Melanie. Need more information.\nThought 2: Thought 2: Analyzing the information. Need to gather more details.\nAction 2: think[continue reasoning]\nObservation 2: Observation 2: Continuing search...",
+          "action": "think[continue reasoning]",
+          "observation": "Observation 3: Continuing search...",
+          "reward": 0
+        },
+        {
+          "iteration": 4,
+          "thought": "Thought 4: Analyzing the information. Need to gather more details.",
+          "state": "Question: Melanie Molitor is the mom of which tennis world NO 1?\nThought 1: Thought: I need to find information about melanie molitor is the mom of which tennis world no 1?. Let me search for relevant entities.\nAction 1: search[Melanie]\nObservation 1: Found information about Melanie. Need more information.\nThought 2: Thought 2: Analyzing the information. Need to gather more details.\nAction 2: think[continue reasoning]\nObservation 2: Observation 2: Continuing search...\nThought 3: Thought 3: Analyzing the information. Need to gather more details.\nAction 3: think[continue reasoning]\nObservation 3: Observation 3: Continuing search...",
+          "action": "think[continue reasoning]",
+          "observation": "Observation 4: Continuing search...",
+          "reward": 0
+        },
+        {
+          "iteration": 5,
+          "thought": "Thought 5: Analyzing the information. Need to gather more details.",
+          "state": "Question: Melanie Molitor is the mom of which tennis world NO 1?\nThought 1: Thought: I need to find information about melanie molitor is the mom of which tennis world no 1?. Let me search for relevant entities.\nAction 1: search[Melanie]\nObservation 1: Found information about Melanie. Need more information.\nThought 2: Thought 2: Analyzing the information. Need to gather more details.\nAction 2: think[continue reasoning]\nObservation 2: Observation 2: Continuing search...\nThought 3: Thought 3: Analyzing the information. Need to gather more details.\nAction 3: think[continue reasoning]\nObservation 3: Observation 3: Continuing search...\nThought 4: Thought 4: Analyzing the information. Need to gather more details.\nAction 4: think[continue reasoning]\nObservation 4: Observation 4: Continuing search...",
+          "action": "lookup[keyword]",
+          "observation": "Observation 5: Continuing search...",
+          "reward": 0
+        },
+        {
+          "iteration": 6,
+          "thought": "Thought 6: Analyzing the information. Need to gather more details.",
+          "state": "Question: Melanie Molitor is the mom of which tennis world NO 1?\nThought 1: Thought: I need to find information about melanie molitor is the mom of which tennis world no 1?. Let me search for relevant entities.\nAction 1: search[Melanie]\nObservation 1: Found information about Melanie. Need more information.\nThought 2: Thought 2: Analyzing the information. Need to gather more details.\nAction 2: think[continue reasoning]\nObservation 2: Observation 2: Continuing search...\nThought 3: Thought 3: Analyzing the information. Need to gather more details.\nAction 3: think[continue reasoning]\nObservation 3: Observation 3: Continuing search...\nThought 4: Thought 4: Analyzing the information. Need to gather more details.\nAction 4: think[continue reasoning]\nObservation 4: Observation 4: Continuing search...\nThought 5: Thought 5: Analyzing the information. Need to gather more details.\nAction 5: lookup[keyword]\nObservation 5: Observation 5: Continuing search...",
+          "action": "search[entity]",
+          "observation": "Observation 6: Continuing search...",
+          "reward": 0
+        },
+        {
+          "iteration": 7,
+          "thought": "Thought 7: Analyzing the information. Need to gather more details.",
+          "state": "Question: Melanie Molitor is the mom of which tennis world NO 1?\nThought 1: Thought: I need to find information about melanie molitor is the mom of which tennis world no 1?. Let me search for relevant entities.\nAction 1: search[Melanie]\nObservation 1: Found information about Melanie. Need more information.\nThought 2: Thought 2: Analyzing the information. Need to gather more details.\nAction 2: think[continue reasoning]\nObservation 2: Observation 2: Continuing search...\nThought 3: Thought 3: Analyzing the information. Need to gather more details.\nAction 3: think[continue reasoning]\nObservation 3: Observation 3: Continuing search...\nThought 4: Thought 4: Analyzing the information. Need to gather more details.\nAction 4: think[continue reasoning]\nObservation 4: Observation 4: Continuing search...\nThought 5: Thought 5: Analyzing the information. Need to gather more details.\nAction 5: lookup[keyword]\nObservation 5: Observation 5: Continuing search...\nThought 6: Thought 6: Analyzing the information. Need to gather more details.\nAction 6: search[entity]\nObservation 6: Observation 6: Continuing search...",
+          "action": "lookup[keyword]",
+          "observation": "Observation 7: Continuing search...",
+          "reward": 0
+        },
+        {
+          "iteration": 7,
+          "thought": "Thought 7: Unable to find the correct answer. Providing best guess.",
+          "state": "Question: Melanie Molitor is the mom of which tennis world NO 1?\nThought 1: Thought: I need to find information about melanie molitor is the mom of which tennis world no 1?. Let me search for relevant entities.\nAction 1: search[Melanie]\nObservation 1: Found information about Melanie. Need more information.\nThought 2: Thought 2: Analyzing the information. Need to gather more details.\nAction 2: think[continue reasoning]\nObservation 2: Observation 2: Continuing search...\nThought 3: Thought 3: Analyzing the information. Need to gather more details.\nAction 3: think[continue reasoning]\nObservation 3: Observation 3: Continuing search...\nThought 4: Thought 4: Analyzing the information. Need to gather more details.\nAction 4: think[continue reasoning]\nObservation 4: Observation 4: Continuing search...\nThought 5: Thought 5: Analyzing the information. Need to gather more details.\nAction 5: lookup[keyword]\nObservation 5: Observation 5: Continuing search...\nThought 6: Thought 6: Analyzing the information. Need to gather more details.\nAction 6: search[entity]\nObservation 6: Observation 6: Continuing search...\nThought 7: Thought 7: Analyzing the information. Need to gather more details.\nAction 7: lookup[keyword]\nObservation 7: Observation 7: Continuing search...",
+          "action": "finish[incorrect answer for Melanie Molitor is the mom of ]",
+          "observation": "Episode finished, reward = 0\n",
+          "reward": 0
+        },
+        {
+          "iteration": 7,
+          "status": "failed",
+          "answer": "incorrect answer for Melanie Molitor is the mom of ",
+          "ground_truth": "Martina Hingis"
+        }
+      ]
+    },
+    {
+      "question": "In the late 60s Owen Finlay MacLaren pioneered what useful item for parents of small children?",
+      "ground_truth": "umbrella stroller",
+      "success": false,
+      "answer": "incorrect answer for In the late 60s Owen Finlay Ma",
+      "history": [
+        {
+          "iteration": 1,
+          "thought": "Thought: I need to find information about in the late 60s owen finlay maclaren pioneered what useful item for parents of small children?. Let me search for relevant entities.",
+          "state": "Question: In the late 60s Owen Finlay MacLaren pioneered what useful item for parents of small children?\n",
+          "action": "search[In]",
+          "observation": "Found information about In. Need more information.",
+          "reward": 0
+        },
+        {
+          "iteration": 2,
+          "thought": "Thought 2: Analyzing the information. Need to gather more details.",
+          "state": "Question: In the late 60s Owen Finlay MacLaren pioneered what useful item for parents of small children?\nThought 1: Thought: I need to find information about in the late 60s owen finlay maclaren pioneered what useful item for parents of small children?. Let me search for relevant entities.\nAction 1: search[In]\nObservation 1: Found information about In. Need more information.",
+          "action": "search[entity]",
+          "observation": "Observation 2: Continuing search...",
+          "reward": 0
+        },
+        {
+          "iteration": 3,
+          "thought": "Thought 3: Analyzing the information. Need to gather more details.",
+          "state": "Question: In the late 60s Owen Finlay MacLaren pioneered what useful item for parents of small children?\nThought 1: Thought: I need to find information about in the late 60s owen finlay maclaren pioneered what useful item for parents of small children?. Let me search for relevant entities.\nAction 1: search[In]\nObservation 1: Found information about In. Need more information.\nThought 2: Thought 2: Analyzing the information. Need to gather more details.\nAction 2: search[entity]\nObservation 2: Observation 2: Continuing search...",
+          "action": "lookup[keyword]",
+          "observation": "Observation 3: Continuing search...",
+          "reward": 0
+        },
+        {
+          "iteration": 4,
+          "thought": "Thought 4: Analyzing the information. Need to gather more details.",
+          "state": "Question: In the late 60s Owen Finlay MacLaren pioneered what useful item for parents of small children?\nThought 1: Thought: I need to find information about in the late 60s owen finlay maclaren pioneered what useful item for parents of small children?. Let me search for relevant entities.\nAction 1: search[In]\nObservation 1: Found information about In. Need more information.\nThought 2: Thought 2: Analyzing the information. Need to gather more details.\nAction 2: search[entity]\nObservation 2: Observation 2: Continuing search...\nThought 3: Thought 3: Analyzing the information. Need to gather more details.\nAction 3: lookup[keyword]\nObservation 3: Observation 3: Continuing search...",
+          "action": "lookup[keyword]",
+          "observation": "Observation 4: Continuing search...",
+          "reward": 0
+        },
+        {
+          "iteration": 5,
+          "thought": "Thought 5: Analyzing the information. Need to gather more details.",
+          "state": "Question: In the late 60s Owen Finlay MacLaren pioneered what useful item for parents of small children?\nThought 1: Thought: I need to find information about in the late 60s owen finlay maclaren pioneered what useful item for parents of small children?. Let me search for relevant entities.\nAction 1: search[In]\nObservation 1: Found information about In. Need more information.\nThought 2: Thought 2: Analyzing the information. Need to gather more details.\nAction 2: search[entity]\nObservation 2: Observation 2: Continuing search...\nThought 3: Thought 3: Analyzing the information. Need to gather more details.\nAction 3: lookup[keyword]\nObservation 3: Observation 3: Continuing search...\nThought 4: Thought 4: Analyzing the information. Need to gather more details.\nAction 4: lookup[keyword]\nObservation 4: Observation 4: Continuing search...",
+          "action": "lookup[keyword]",
+          "observation": "Observation 5: Continuing search...",
+          "reward": 0
+        },
+        {
+          "iteration": 5,
+          "thought": "Thought 5: Unable to find the correct answer. Providing best guess.",
+          "state": "Question: In the late 60s Owen Finlay MacLaren pioneered what useful item for parents of small children?\nThought 1: Thought: I need to find information about in the late 60s owen finlay maclaren pioneered what useful item for parents of small children?. Let me search for relevant entities.\nAction 1: search[In]\nObservation 1: Found information about In. Need more information.\nThought 2: Thought 2: Analyzing the information. Need to gather more details.\nAction 2: search[entity]\nObservation 2: Observation 2: Continuing search...\nThought 3: Thought 3: Analyzing the information. Need to gather more details.\nAction 3: lookup[keyword]\nObservation 3: Observation 3: Continuing search...\nThought 4: Thought 4: Analyzing the information. Need to gather more details.\nAction 4: lookup[keyword]\nObservation 4: Observation 4: Continuing search...\nThought 5: Thought 5: Analyzing the information. Need to gather more details.\nAction 5: lookup[keyword]\nObservation 5: Observation 5: Continuing search...",
+          "action": "finish[incorrect answer for In the late 60s Owen Finlay Ma]",
+          "observation": "Episode finished, reward = 0\n",
+          "reward": 0
+        },
+        {
+          "iteration": 5,
+          "status": "failed",
+          "answer": "incorrect answer for In the late 60s Owen Finlay Ma",
+          "ground_truth": "umbrella stroller"
+        }
+      ]
+    },
+    {
+      "question": "What is the name of the river that flows through the city of Paris?",
+      "ground_truth": "Seine",
+      "success": false,
+      "answer": "incorrect answer for What is the name of the river ",
+      "history": [
+        {
+          "iteration": 1,
+          "thought": "Thought: I need to find information about what is the name of the river that flows through the city of paris?. Let me search for relevant entities.",
+          "state": "Question: What is the name of the river that flows through the city of Paris?\n",
+          "action": "search[What]",
+          "observation": "Found information about What. Need more information.",
+          "reward": 0
+        },
+        {
+          "iteration": 2,
+          "thought": "Thought 2: Analyzing the information. Need to gather more details.",
+          "state": "Question: What is the name of the river that flows through the city of Paris?\nThought 1: Thought: I need to find information about what is the name of the river that flows through the city of paris?. Let me search for relevant entities.\nAction 1: search[What]\nObservation 1: Found information about What. Need more information.",
+          "action": "lookup[keyword]",
+          "observation": "Observation 2: Continuing search...",
+          "reward": 0
+        },
+        {
+          "iteration": 3,
+          "thought": "Thought 3: Analyzing the information. Need to gather more details.",
+          "state": "Question: What is the name of the river that flows through the city of Paris?\nThought 1: Thought: I need to find information about what is the name of the river that flows through the city of paris?. Let me search for relevant entities.\nAction 1: search[What]\nObservation 1: Found information about What. Need more information.\nThought 2: Thought 2: Analyzing the information. Need to gather more details.\nAction 2: lookup[keyword]\nObservation 2: Observation 2: Continuing search...",
+          "action": "think[continue reasoning]",
+          "observation": "Observation 3: Continuing search...",
+          "reward": 0
+        },
+        {
+          "iteration": 4,
+          "thought": "Thought 4: Analyzing the information. Need to gather more details.",
+          "state": "Question: What is the name of the river that flows through the city of Paris?\nThought 1: Thought: I need to find information about what is the name of the river that flows through the city of paris?. Let me search for relevant entities.\nAction 1: search[What]\nObservation 1: Found information about What. Need more information.\nThought 2: Thought 2: Analyzing the information. Need to gather more details.\nAction 2: lookup[keyword]\nObservation 2: Observation 2: Continuing search...\nThought 3: Thought 3: Analyzing the information. Need to gather more details.\nAction 3: think[continue reasoning]\nObservation 3: Observation 3: Continuing search...",
+          "action": "search[entity]",
+          "observation": "Observation 4: Continuing search...",
+          "reward": 0
+        },
+        {
+          "iteration": 5,
+          "thought": "Thought 5: Analyzing the information. Need to gather more details.",
+          "state": "Question: What is the name of the river that flows through the city of Paris?\nThought 1: Thought: I need to find information about what is the name of the river that flows through the city of paris?. Let me search for relevant entities.\nAction 1: search[What]\nObservation 1: Found information about What. Need more information.\nThought 2: Thought 2: Analyzing the information. Need to gather more details.\nAction 2: lookup[keyword]\nObservation 2: Observation 2: Continuing search...\nThought 3: Thought 3: Analyzing the information. Need to gather more details.\nAction 3: think[continue reasoning]\nObservation 3: Observation 3: Continuing search...\nThought 4: Thought 4: Analyzing the information. Need to gather more details.\nAction 4: search[entity]\nObservation 4: Observation 4: Continuing search...",
+          "action": "lookup[keyword]",
+          "observation": "Observation 5: Continuing search...",
+          "reward": 0
+        },
+        {
+          "iteration": 6,
+          "thought": "Thought 6: Analyzing the information. Need to gather more details.",
+          "state": "Question: What is the name of the river that flows through the city of Paris?\nThought 1: Thought: I need to find information about what is the name of the river that flows through the city of paris?. Let me search for relevant entities.\nAction 1: search[What]\nObservation 1: Found information about What. Need more information.\nThought 2: Thought 2: Analyzing the information. Need to gather more details.\nAction 2: lookup[keyword]\nObservation 2: Observation 2: Continuing search...\nThought 3: Thought 3: Analyzing the information. Need to gather more details.\nAction 3: think[continue reasoning]\nObservation 3: Observation 3: Continuing search...\nThought 4: Thought 4: Analyzing the information. Need to gather more details.\nAction 4: search[entity]\nObservation 4: Observation 4: Continuing search...\nThought 5: Thought 5: Analyzing the information. Need to gather more details.\nAction 5: lookup[keyword]\nObservation 5: Observation 5: Continuing search...",
+          "action": "think[continue reasoning]",
+          "observation": "Observation 6: Continuing search...",
+          "reward": 0
+        },
+        {
+          "iteration": 7,
+          "thought": "Thought 7: Analyzing the information. Need to gather more details.",
+          "state": "Question: What is the name of the river that flows through the city of Paris?\nThought 1: Thought: I need to find information about what is the name of the river that flows through the city of paris?. Let me search for relevant entities.\nAction 1: search[What]\nObservation 1: Found information about What. Need more information.\nThought 2: Thought 2: Analyzing the information. Need to gather more details.\nAction 2: lookup[keyword]\nObservation 2: Observation 2: Continuing search...\nThought 3: Thought 3: Analyzing the information. Need to gather more details.\nAction 3: think[continue reasoning]\nObservation 3: Observation 3: Continuing search...\nThought 4: Thought 4: Analyzing the information. Need to gather more details.\nAction 4: search[entity]\nObservation 4: Observation 4: Continuing search...\nThought 5: Thought 5: Analyzing the information. Need to gather more details.\nAction 5: lookup[keyword]\nObservation 5: Observation 5: Continuing search...\nThought 6: Thought 6: Analyzing the information. Need to gather more details.\nAction 6: think[continue reasoning]\nObservation 6: Observation 6: Continuing search...",
+          "action": "think[continue reasoning]",
+          "observation": "Observation 7: Continuing search...",
+          "reward": 0
+        },
+        {
+          "iteration": 8,
+          "thought": "Thought 8: Analyzing the information. Need to gather more details.",
+          "state": "Question: What is the name of the river that flows through the city of Paris?\nThought 1: Thought: I need to find information about what is the name of the river that flows through the city of paris?. Let me search for relevant entities.\nAction 1: search[What]\nObservation 1: Found information about What. Need more information.\nThought 2: Thought 2: Analyzing the information. Need to gather more details.\nAction 2: lookup[keyword]\nObservation 2: Observation 2: Continuing search...\nThought 3: Thought 3: Analyzing the information. Need to gather more details.\nAction 3: think[continue reasoning]\nObservation 3: Observation 3: Continuing search...\nThought 4: Thought 4: Analyzing the information. Need to gather more details.\nAction 4: search[entity]\nObservation 4: Observation 4: Continuing search...\nThought 5: Thought 5: Analyzing the information. Need to gather more details.\nAction 5: lookup[keyword]\nObservation 5: Observation 5: Continuing search...\nThought 6: Thought 6: Analyzing the information. Need to gather more details.\nAction 6: think[continue reasoning]\nObservation 6: Observation 6: Continuing search...\nThought 7: Thought 7: Analyzing the information. Need to gather more details.\nAction 7: think[continue reasoning]\nObservation 7: Observation 7: Continuing search...",
+          "action": "think[continue reasoning]",
+          "observation": "Observation 8: Continuing search...",
+          "reward": 0
+        },
+        {
+          "iteration": 8,
+          "thought": "Thought 8: Unable to find the correct answer. Providing best guess.",
+          "state": "Question: What is the name of the river that flows through the city of Paris?\nThought 1: Thought: I need to find information about what is the name of the river that flows through the city of paris?. Let me search for relevant entities.\nAction 1: search[What]\nObservation 1: Found information about What. Need more information.\nThought 2: Thought 2: Analyzing the information. Need to gather more details.\nAction 2: lookup[keyword]\nObservation 2: Observation 2: Continuing search...\nThought 3: Thought 3: Analyzing the information. Need to gather more details.\nAction 3: think[continue reasoning]\nObservation 3: Observation 3: Continuing search...\nThought 4: Thought 4: Analyzing the information. Need to gather more details.\nAction 4: search[entity]\nObservation 4: Observation 4: Continuing search...\nThought 5: Thought 5: Analyzing the information. Need to gather more details.\nAction 5: lookup[keyword]\nObservation 5: Observation 5: Continuing search...\nThought 6: Thought 6: Analyzing the information. Need to gather more details.\nAction 6: think[continue reasoning]\nObservation 6: Observation 6: Continuing search...\nThought 7: Thought 7: Analyzing the information. Need to gather more details.\nAction 7: think[continue reasoning]\nObservation 7: Observation 7: Continuing search...\nThought 8: Thought 8: Analyzing the information. Need to gather more details.\nAction 8: think[continue reasoning]\nObservation 8: Observation 8: Continuing search...",
+          "action": "finish[incorrect answer for What is the name of the river ]",
+          "observation": "Episode finished, reward = 0\n",
+          "reward": 0
+        },
+        {
+          "iteration": 8,
+          "status": "failed",
+          "answer": "incorrect answer for What is the name of the river ",
+          "ground_truth": "Seine"
+        }
+      ]
+    }
+  ],
+  "lats_results": [
+    {
+      "question": "What type of creature is a margay?",
+      "ground_truth": "cat",
+      "success": false,
+      "answer": "partial answer for What type of creature is a mar",
+      "history": [
+        {
+          "iteration": 1,
+          "value": 0.4,
+          "reward": 0.0
+        },
+        {
+          "iteration": 2,
+          "value": 0.5,
+          "reward": 0.0
+        },
+        {
+          "iteration": 3,
+          "value": 0.4,
+          "reward": 0.0
+        },
+        {
+          "iteration": 4,
+          "value": 0.3,
+          "reward": 0.0
+        },
+        {
+          "iteration": 5,
+          "value": 0.6,
+          "reward": 0.0
+        },
+        {
+          "iteration": 6,
+          "value": 0.4,
+          "reward": 0.0
+        },
+        {
+          "iteration": 7,
+          "value": 0.6,
+          "reward": 0.0
+        },
+        {
+          "iteration": 7,
+          "status": "completed",
+          "answer": "partial answer for What type of creature is a mar",
+          "success": false,
+          "best_node_reward": 0
+        }
+      ]
+    },
+    {
+      "question": "Although mostly associated with Manchester in which other part of the UK were the Gibb Brothers born?",
+      "ground_truth": "Isle of Man",
+      "success": false,
+      "answer": "partial answer for Although mostly associated wit",
+      "history": [
+        {
+          "iteration": 1,
+          "value": 0.4,
+          "reward": 0.0
+        },
+        {
+          "iteration": 2,
+          "value": 0.4,
+          "reward": 0.0
+        },
+        {
+          "iteration": 3,
+          "value": 0.5,
+          "reward": 0.0
+        },
+        {
+          "iteration": 4,
+          "value": 0.4,
+          "reward": 0.0
+        },
+        {
+          "iteration": 5,
+          "value": 0.3,
+          "reward": 0.0
+        },
+        {
+          "iteration": 6,
+          "value": 0.4,
+          "reward": 0.0
+        },
+        {
+          "iteration": 6,
+          "status": "completed",
+          "answer": "partial answer for Although mostly associated wit",
+          "success": false,
+          "best_node_reward": 0
+        }
+      ]
+    },
+    {
+      "question": "Melanie Molitor is the mom of which tennis world NO 1?",
+      "ground_truth": "Martina Hingis",
+      "success": false,
+      "answer": "partial answer for Melanie Molitor is the mom of ",
+      "history": [
+        {
+          "iteration": 1,
+          "value": 0.5,
+          "reward": 0.0
+        },
+        {
+          "iteration": 2,
+          "value": 0.4,
+          "reward": 0.0
+        },
+        {
+          "iteration": 3,
+          "value": 0.3,
+          "reward": 0.0
+        },
+        {
+          "iteration": 4,
+          "value": 0.4,
+          "reward": 0.0
+        },
+        {
+          "iteration": 5,
+          "value": 0.4,
+          "reward": 0.0
+        },
+        {
+          "iteration": 6,
+          "value": 0.6,
+          "reward": 0.0
+        },
+        {
+          "iteration": 7,
+          "value": 0.4,
+          "reward": 0.0
+        },
+        {
+          "iteration": 8,
+          "value": 0.5,
+          "reward": 0.0
+        },
+        {
+          "iteration": 9,
+          "value": 0.5,
+          "reward": 0.0
+        },
+        {
+          "iteration": 9,
+          "status": "completed",
+          "answer": "partial answer for Melanie Molitor is the mom of ",
+          "success": false,
+          "best_node_reward": 0
+        }
+      ]
+    },
+    {
+      "question": "In the late 60s Owen Finlay MacLaren pioneered what useful item for parents of small children?",
+      "ground_truth": "umbrella stroller",
+      "success": false,
+      "answer": "partial answer for In the late 60s Owen Finlay Ma",
+      "history": [
+        {
+          "iteration": 1,
+          "value": 0.5,
+          "reward": 0.0
+        },
+        {
+          "iteration": 2,
+          "value": 0.4,
+          "reward": 0.0
+        },
+        {
+          "iteration": 3,
+          "value": 0.5,
+          "reward": 0.0
+        },
+        {
+          "iteration": 4,
+          "value": 0.5,
+          "reward": 0.0
+        },
+        {
+          "iteration": 5,
+          "value": 0.4,
+          "reward": 0.0
+        },
+        {
+          "iteration": 6,
+          "value": 0.5,
+          "reward": 0.0
+        },
+        {
+          "iteration": 7,
+          "value": 0.4,
+          "reward": 0.0
+        },
+        {
+          "iteration": 7,
+          "status": "completed",
+          "answer": "partial answer for In the late 60s Owen Finlay Ma",
+          "success": false,
+          "best_node_reward": 0
+        }
+      ]
+    },
+    {
+      "question": "What is the name of the river that flows through the city of Paris?",
+      "ground_truth": "Seine",
+      "success": false,
+      "answer": "partial answer for What is the name of the river ",
+      "history": [
+        {
+          "iteration": 1,
+          "value": 0.5,
+          "reward": 0.0
+        },
+        {
+          "iteration": 2,
+          "value": 0.4,
+          "reward": 0.0
+        },
+        {
+          "iteration": 3,
+          "value": 0.6,
+          "reward": 0.0
+        },
+        {
+          "iteration": 4,
+          "value": 0.5,
+          "reward": 0.0
+        },
+        {
+          "iteration": 5,
+          "value": 0.5,
+          "reward": 0.0
+        },
+        {
+          "iteration": 6,
+          "value": 0.3,
+          "reward": 0.0
+        },
+        {
+          "iteration": 6,
+          "status": "completed",
+          "answer": "partial answer for What is the name of the river ",
+          "success": false,
+          "best_node_reward": 0
+        }
+      ]
+    },
+    {
+      "question": "What type of creature is a margay?",
+      "ground_truth": "cat",
+      "success": true,
+      "answer": "cat",
+      "history": [
+        {
+          "iteration": 1,
+          "status": "success",
+          "answer": "cat"
+        }
+      ]
+    },
+    {
+      "question": "Although mostly associated with Manchester in which other part of the UK were the Gibb Brothers born?",
+      "ground_truth": "Isle of Man",
+      "success": true,
+      "answer": "Isle of Man",
+      "history": [
+        {
+          "iteration": 1,
+          "status": "success",
+          "answer": "Isle of Man"
+        }
+      ]
+    },
+    {
+      "question": "Melanie Molitor is the mom of which tennis world NO 1?",
+      "ground_truth": "Martina Hingis",
+      "success": true,
+      "answer": "Martina Hingis",
+      "history": [
+        {
+          "iteration": 1,
+          "value": 0.5,
+          "reward": 0.0
+        },
+        {
+          "iteration": 2,
+          "value": 0.5,
+          "reward": 0.0
+        },
+        {
+          "iteration": 3,
+          "value": 0.5,
+          "reward": 1.0
+        },
+        {
+          "iteration": 3,
+          "status": "success",
+          "answer": "Martina Hingis"
+        }
+      ]
+    },
+    {
+      "question": "In the late 60s Owen Finlay MacLaren pioneered what useful item for parents of small children?",
+      "ground_truth": "umbrella stroller",
+      "success": true,
+      "answer": "umbrella stroller",
+      "history": [
+        {
+          "iteration": 1,
+          "value": 0.6,
+          "reward": 0.0
+        },
+        {
+          "iteration": 2,
+          "value": 0.7,
+          "reward": 0.0
+        },
+        {
+          "iteration": 3,
+          "value": 0.5,
+          "reward": 1.0
+        },
+        {
+          "iteration": 3,
+          "status": "success",
+          "answer": "umbrella stroller"
+        }
+      ]
+    },
+    {
+      "question": "What is the name of the river that flows through the city of Paris?",
+      "ground_truth": "Seine",
+      "success": true,
+      "answer": "Seine",
+      "history": [
+        {
+          "iteration": 1,
+          "value": 0.6,
+          "reward": 0.0
+        },
+        {
+          "iteration": 2,
+          "value": 0.5,
+          "reward": 0.0
+        },
+        {
+          "iteration": 3,
+          "value": 0.7,
+          "reward": 1.0
+        },
+        {
+          "iteration": 3,
+          "status": "success",
+          "answer": "Seine"
+        }
+      ]
+    },
+    {
+      "question": "What type of creature is a margay?",
+      "ground_truth": "cat",
+      "success": true,
+      "answer": "cat",
+      "history": [
+        {
+          "iteration": 1,
+          "value": 0.8,
+          "reward": 0.0
+        },
+        {
+          "iteration": 2,
+          "value": 0.7,
+          "reward": 0.0
+        },
+        {
+          "iteration": 3,
+          "value": 0.5,
+          "reward": 1.0
+        },
+        {
+          "iteration": 3,
+          "status": "success",
+          "answer": "cat"
+        }
+      ]
+    },
+    {
+      "question": "Although mostly associated with Manchester in which other part of the UK were the Gibb Brothers born?",
+      "ground_truth": "Isle of Man",
+      "success": false,
+      "answer": "partial answer for Although mostly associated wit",
+      "history": [
+        {
+          "iteration": 1,
+          "value": 0.5,
+          "reward": 0.0
+        },
+        {
+          "iteration": 2,
+          "value": 0.3,
+          "reward": 0.0
+        },
+        {
+          "iteration": 3,
+          "value": 0.5,
+          "reward": 0.0
+        },
+        {
+          "iteration": 4,
+          "value": 0.4,
+          "reward": 0.0
+        },
+        {
+          "iteration": 5,
+          "value": 0.6,
+          "reward": 0.0
+        },
+        {
+          "iteration": 6,
+          "value": 0.3,
+          "reward": 0.0
+        },
+        {
+          "iteration": 7,
+          "value": 0.5,
+          "reward": 0.0
+        },
+        {
+          "iteration": 8,
+          "value": 0.5,
+          "reward": 0.0
+        },
+        {
+          "iteration": 9,
+          "value": 0.5,
+          "reward": 0.0
+        },
+        {
+          "iteration": 9,
+          "status": "completed",
+          "answer": "partial answer for Although mostly associated wit",
+          "success": false,
+          "best_node_reward": 0
+        }
+      ]
+    },
+    {
+      "question": "Melanie Molitor is the mom of which tennis world NO 1?",
+      "ground_truth": "Martina Hingis",
+      "success": true,
+      "answer": "Martina Hingis",
+      "history": [
+        {
+          "iteration": 1,
+          "status": "success",
+          "answer": "Martina Hingis"
+        }
+      ]
+    },
+    {
+      "question": "In the late 60s Owen Finlay MacLaren pioneered what useful item for parents of small children?",
+      "ground_truth": "umbrella stroller",
+      "success": false,
+      "answer": "partial answer for In the late 60s Owen Finlay Ma",
+      "history": [
+        {
+          "iteration": 1,
+          "value": 0.6,
+          "reward": 0.0
+        },
+        {
+          "iteration": 2,
+          "value": 0.5,
+          "reward": 0.0
+        },
+        {
+          "iteration": 3,
+          "value": 0.4,
+          "reward": 0.0
+        },
+        {
+          "iteration": 4,
+          "value": 0.5,
+          "reward": 0.0
+        },
+        {
+          "iteration": 5,
+          "value": 0.4,
+          "reward": 0.0
+        },
+        {
+          "iteration": 5,
+          "status": "completed",
+          "answer": "partial answer for In the late 60s Owen Finlay Ma",
+          "success": false,
+          "best_node_reward": 0
+        }
+      ]
+    },
+    {
+      "question": "What is the name of the river that flows through the city of Paris?",
+      "ground_truth": "Seine",
+      "success": false,
+      "answer": "partial answer for What is the name of the river ",
+      "history": [
+        {
+          "iteration": 1,
+          "value": 0.4,
+          "reward": 0.0
+        },
+        {
+          "iteration": 2,
+          "value": 0.4,
+          "reward": 0.0
+        },
+        {
+          "iteration": 3,
+          "value": 0.4,
+          "reward": 0.0
+        },
+        {
+          "iteration": 4,
+          "value": 0.4,
+          "reward": 0.0
+        },
+        {
+          "iteration": 5,
+          "value": 0.5,
+          "reward": 0.0
+        },
+        {
+          "iteration": 6,
+          "value": 0.6,
+          "reward": 0.0
+        },
+        {
+          "iteration": 7,
+          "value": 0.4,
+          "reward": 0.0
+        },
+        {
+          "iteration": 7,
+          "status": "completed",
+          "answer": "partial answer for What is the name of the river ",
+          "success": false,
+          "best_node_reward": 0
+        }
+      ]
+    },
+    {
+      "question": "What type of creature is a margay?",
+      "ground_truth": "cat",
+      "success": false,
+      "answer": "partial answer for What type of creature is a mar",
+      "history": [
+        {
+          "iteration": 1,
+          "value": 0.5,
+          "reward": 0.0
+        },
+        {
+          "iteration": 2,
+          "value": 0.3,
+          "reward": 0.0
+        },
+        {
+          "iteration": 3,
+          "value": 0.6,
+          "reward": 0.0
+        },
+        {
+          "iteration": 4,
+          "value": 0.5,
+          "reward": 0.0
+        },
+        {
+          "iteration": 5,
+          "value": 0.3,
+          "reward": 0.0
+        },
+        {
+          "iteration": 6,
+          "value": 0.4,
+          "reward": 0.0
+        },
+        {
+          "iteration": 7,
+          "value": 0.4,
+          "reward": 0.0
+        },
+        {
+          "iteration": 8,
+          "value": 0.4,
+          "reward": 0.0
+        },
+        {
+          "iteration": 9,
+          "value": 0.5,
+          "reward": 0.0
+        },
+        {
+          "iteration": 10,
+          "value": 0.5,
+          "reward": 0.0
+        },
+        {
+          "iteration": 10,
+          "status": "completed",
+          "answer": "partial answer for What type of creature is a mar",
+          "success": false,
+          "best_node_reward": 0
+        }
+      ]
+    },
+    {
+      "question": "Although mostly associated with Manchester in which other part of the UK were the Gibb Brothers born?",
+      "ground_truth": "Isle of Man",
+      "success": true,
+      "answer": "Isle of Man",
+      "history": [
+        {
+          "iteration": 1,
+          "status": "success",
+          "answer": "Isle of Man"
+        }
+      ]
+    },
+    {
+      "question": "Melanie Molitor is the mom of which tennis world NO 1?",
+      "ground_truth": "Martina Hingis",
+      "success": true,
+      "answer": "Martina Hingis",
+      "history": [
+        {
+          "iteration": 1,
+          "value": 0.8,
+          "reward": 0.0
+        },
+        {
+          "iteration": 2,
+          "value": 0.7,
+          "reward": 1.0
+        },
+        {
+          "iteration": 2,
+          "status": "success",
+          "answer": "Martina Hingis"
+        }
+      ]
+    },
+    {
+      "question": "In the late 60s Owen Finlay MacLaren pioneered what useful item for parents of small children?",
+      "ground_truth": "umbrella stroller",
+      "success": false,
+      "answer": "partial answer for In the late 60s Owen Finlay Ma",
+      "history": [
+        {
+          "iteration": 1,
+          "value": 0.5,
+          "reward": 0.0
+        },
+        {
+          "iteration": 2,
+          "value": 0.6,
+          "reward": 0.0
+        },
+        {
+          "iteration": 3,
+          "value": 0.3,
+          "reward": 0.0
+        },
+        {
+          "iteration": 4,
+          "value": 0.5,
+          "reward": 0.0
+        },
+        {
+          "iteration": 5,
+          "value": 0.3,
+          "reward": 0.0
+        },
+        {
+          "iteration": 6,
+          "value": 0.4,
+          "reward": 0.0
+        },
+        {
+          "iteration": 7,
+          "value": 0.6,
+          "reward": 0.0
+        },
+        {
+          "iteration": 7,
+          "status": "completed",
+          "answer": "partial answer for In the late 60s Owen Finlay Ma",
+          "success": false,
+          "best_node_reward": 0
+        }
+      ]
+    },
+    {
+      "question": "What is the name of the river that flows through the city of Paris?",
+      "ground_truth": "Seine",
+      "success": true,
+      "answer": "Seine",
+      "history": [
+        {
+          "iteration": 1,
+          "value": 0.6,
+          "reward": 0.0
+        },
+        {
+          "iteration": 2,
+          "value": 0.5,
+          "reward": 0.0
+        },
+        {
+          "iteration": 3,
+          "value": 0.5,
+          "reward": 1.0
+        },
+        {
+          "iteration": 3,
+          "status": "success",
+          "answer": "Seine"
+        }
+      ]
+    }
+  ],
+  "react_success_rate": 0.35,
+  "lats_success_rate": 0.5,
+  "demo_mode": true
+}

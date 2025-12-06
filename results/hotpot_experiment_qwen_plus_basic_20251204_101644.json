@@ -1,0 +1,1919 @@
+{
+  "config": {
+    "num_problems": 20,
+    "max_iterations": 10,
+    "model": "qwen-plus",
+    "n_generate": 3,
+    "n_evaluate": 1,
+    "api_provider": "qwen",
+    "split": "dev",
+    "start_idx": 0,
+    "env_backend": "dataset",
+    "dataset_type": "h",
+    "dataset_name": "HotpotQA",
+    "use_tree_search": false,
+    "tree_m": null,
+    "tree_n": null,
+    "tree_l": null,
+    "tree_k": null,
+    "tree_expand_mode": null,
+    "tree_reward_mode": null,
+    "mcts_num_simulations": null,
+    "mcts_use_value_function": null,
+    "mcts_use_rollout": null,
+    "demo_mode": true
+  },
+  "react_results": [
+    {
+      "question": "Which magazine was started first Arthur's Magazine or First for Women?",
+      "ground_truth": "Arthur's Magazine",
+      "success": true,
+      "answer": "Arthur's Magazine",
+      "history": [
+        {
+          "iteration": 1,
+          "thought": "Thought: I need to find information about which magazine was started first arthur's magazine or first for women?. Let me search for relevant entities.",
+          "state": "Question: Which magazine was started first Arthur's Magazine or First for Women?\n",
+          "action": "search[Which]",
+          "observation": "Found information about Which. The answer appears to be Arthur's Magazine.",
+          "reward": 0
+        },
+        {
+          "iteration": 2,
+          "thought": "Thought: Based on the information gathered, the answer is Arthur's Magazine.",
+          "state": "Question: Which magazine was started first Arthur's Magazine or First for Women?\nThought 1: Thought: I need to find information about which magazine was started first arthur's magazine or first for women?. Let me search for relevant entities.\nAction 1: search[Which]\nObservation 1: Found information about Which. The answer appears to be Arthur's Magazine.",
+          "action": "finish[Arthur's Magazine]",
+          "observation": "Episode finished, reward = 1\n",
+          "reward": 1
+        },
+        {
+          "iteration": 2,
+          "status": "success",
+          "answer": "Arthur's Magazine"
+        }
+      ]
+    },
+    {
+      "question": "Nolan North is the voice of Superboy in a animated tv series that airs on what network?",
+      "ground_truth": "Cartoon Network",
+      "success": false,
+      "answer": "incorrect answer for Nolan North is the voice of Su",
+      "history": [
+        {
+          "iteration": 1,
+          "thought": "Thought: I need to find information about nolan north is the voice of superboy in a animated tv series that airs on what network?. Let me search for relevant entities.",
+          "state": "Question: Nolan North is the voice of Superboy in a animated tv series that airs on what network?\n",
+          "action": "search[Nolan]",
+          "observation": "Found information about Nolan. Need more information.",
+          "reward": 0
+        },
+        {
+          "iteration": 2,
+          "thought": "Thought 2: Analyzing the information. Need to gather more details.",
+          "state": "Question: Nolan North is the voice of Superboy in a animated tv series that airs on what network?\nThought 1: Thought: I need to find information about nolan north is the voice of superboy in a animated tv series that airs on what network?. Let me search for relevant entities.\nAction 1: search[Nolan]\nObservation 1: Found information about Nolan. Need more information.",
+          "action": "think[continue reasoning]",
+          "observation": "Observation 2: Continuing search...",
+          "reward": 0
+        },
+        {
+          "iteration": 3,
+          "thought": "Thought 3: Analyzing the information. Need to gather more details.",
+          "state": "Question: Nolan North is the voice of Superboy in a animated tv series that airs on what network?\nThought 1: Thought: I need to find information about nolan north is the voice of superboy in a animated tv series that airs on what network?. Let me search for relevant entities.\nAction 1: search[Nolan]\nObservation 1: Found information about Nolan. Need more information.\nThought 2: Thought 2: Analyzing the information. Need to gather more details.\nAction 2: think[continue reasoning]\nObservation 2: Observation 2: Continuing search...",
+          "action": "think[continue reasoning]",
+          "observation": "Observation 3: Continuing search...",
+          "reward": 0
+        },
+        {
+          "iteration": 4,
+          "thought": "Thought 4: Analyzing the information. Need to gather more details.",
+          "state": "Question: Nolan North is the voice of Superboy in a animated tv series that airs on what network?\nThought 1: Thought: I need to find information about nolan north is the voice of superboy in a animated tv series that airs on what network?. Let me search for relevant entities.\nAction 1: search[Nolan]\nObservation 1: Found information about Nolan. Need more information.\nThought 2: Thought 2: Analyzing the information. Need to gather more details.\nAction 2: think[continue reasoning]\nObservation 2: Observation 2: Continuing search...\nThought 3: Thought 3: Analyzing the information. Need to gather more details.\nAction 3: think[continue reasoning]\nObservation 3: Observation 3: Continuing search...",
+          "action": "lookup[keyword]",
+          "observation": "Observation 4: Continuing search...",
+          "reward": 0
+        },
+        {
+          "iteration": 5,
+          "thought": "Thought 5: Analyzing the information. Need to gather more details.",
+          "state": "Question: Nolan North is the voice of Superboy in a animated tv series that airs on what network?\nThought 1: Thought: I need to find information about nolan north is the voice of superboy in a animated tv series that airs on what network?. Let me search for relevant entities.\nAction 1: search[Nolan]\nObservation 1: Found information about Nolan. Need more information.\nThought 2: Thought 2: Analyzing the information. Need to gather more details.\nAction 2: think[continue reasoning]\nObservation 2: Observation 2: Continuing search...\nThought 3: Thought 3: Analyzing the information. Need to gather more details.\nAction 3: think[continue reasoning]\nObservation 3: Observation 3: Continuing search...\nThought 4: Thought 4: Analyzing the information. Need to gather more details.\nAction 4: lookup[keyword]\nObservation 4: Observation 4: Continuing search...",
+          "action": "think[continue reasoning]",
+          "observation": "Observation 5: Continuing search...",
+          "reward": 0
+        },
+        {
+          "iteration": 6,
+          "thought": "Thought 6: Analyzing the information. Need to gather more details.",
+          "state": "Question: Nolan North is the voice of Superboy in a animated tv series that airs on what network?\nThought 1: Thought: I need to find information about nolan north is the voice of superboy in a animated tv series that airs on what network?. Let me search for relevant entities.\nAction 1: search[Nolan]\nObservation 1: Found information about Nolan. Need more information.\nThought 2: Thought 2: Analyzing the information. Need to gather more details.\nAction 2: think[continue reasoning]\nObservation 2: Observation 2: Continuing search...\nThought 3: Thought 3: Analyzing the information. Need to gather more details.\nAction 3: think[continue reasoning]\nObservation 3: Observation 3: Continuing search...\nThought 4: Thought 4: Analyzing the information. Need to gather more details.\nAction 4: lookup[keyword]\nObservation 4: Observation 4: Continuing search...\nThought 5: Thought 5: Analyzing the information. Need to gather more details.\nAction 5: think[continue reasoning]\nObservation 5: Observation 5: Continuing search...",
+          "action": "search[entity]",
+          "observation": "Observation 6: Continuing search...",
+          "reward": 0
+        },
+        {
+          "iteration": 7,
+          "thought": "Thought 7: Analyzing the information. Need to gather more details.",
+          "state": "Question: Nolan North is the voice of Superboy in a animated tv series that airs on what network?\nThought 1: Thought: I need to find information about nolan north is the voice of superboy in a animated tv series that airs on what network?. Let me search for relevant entities.\nAction 1: search[Nolan]\nObservation 1: Found information about Nolan. Need more information.\nThought 2: Thought 2: Analyzing the information. Need to gather more details.\nAction 2: think[continue reasoning]\nObservation 2: Observation 2: Continuing search...\nThought 3: Thought 3: Analyzing the information. Need to gather more details.\nAction 3: think[continue reasoning]\nObservation 3: Observation 3: Continuing search...\nThought 4: Thought 4: Analyzing the information. Need to gather more details.\nAction 4: lookup[keyword]\nObservation 4: Observation 4: Continuing search...\nThought 5: Thought 5: Analyzing the information. Need to gather more details.\nAction 5: think[continue reasoning]\nObservation 5: Observation 5: Continuing search...\nThought 6: Thought 6: Analyzing the information. Need to gather more details.\nAction 6: search[entity]\nObservation 6: Observation 6: Continuing search...",
+          "action": "lookup[keyword]",
+          "observation": "Observation 7: Continuing search...",
+          "reward": 0
+        },
+        {
+          "iteration": 8,
+          "thought": "Thought 8: Analyzing the information. Need to gather more details.",
+          "state": "Question: Nolan North is the voice of Superboy in a animated tv series that airs on what network?\nThought 1: Thought: I need to find information about nolan north is the voice of superboy in a animated tv series that airs on what network?. Let me search for relevant entities.\nAction 1: search[Nolan]\nObservation 1: Found information about Nolan. Need more information.\nThought 2: Thought 2: Analyzing the information. Need to gather more details.\nAction 2: think[continue reasoning]\nObservation 2: Observation 2: Continuing search...\nThought 3: Thought 3: Analyzing the information. Need to gather more details.\nAction 3: think[continue reasoning]\nObservation 3: Observation 3: Continuing search...\nThought 4: Thought 4: Analyzing the information. Need to gather more details.\nAction 4: lookup[keyword]\nObservation 4: Observation 4: Continuing search...\nThought 5: Thought 5: Analyzing the information. Need to gather more details.\nAction 5: think[continue reasoning]\nObservation 5: Observation 5: Continuing search...\nThought 6: Thought 6: Analyzing the information. Need to gather more details.\nAction 6: search[entity]\nObservation 6: Observation 6: Continuing search...\nThought 7: Thought 7: Analyzing the information. Need to gather more details.\nAction 7: lookup[keyword]\nObservation 7: Observation 7: Continuing search...",
+          "action": "lookup[keyword]",
+          "observation": "Observation 8: Continuing search...",
+          "reward": 0
+        },
+        {
+          "iteration": 8,
+          "thought": "Thought 8: Unable to find the correct answer. Providing best guess.",
+          "state": "Question: Nolan North is the voice of Superboy in a animated tv series that airs on what network?\nThought 1: Thought: I need to find information about nolan north is the voice of superboy in a animated tv series that airs on what network?. Let me search for relevant entities.\nAction 1: search[Nolan]\nObservation 1: Found information about Nolan. Need more information.\nThought 2: Thought 2: Analyzing the information. Need to gather more details.\nAction 2: think[continue reasoning]\nObservation 2: Observation 2: Continuing search...\nThought 3: Thought 3: Analyzing the information. Need to gather more details.\nAction 3: think[continue reasoning]\nObservation 3: Observation 3: Continuing search...\nThought 4: Thought 4: Analyzing the information. Need to gather more details.\nAction 4: lookup[keyword]\nObservation 4: Observation 4: Continuing search...\nThought 5: Thought 5: Analyzing the information. Need to gather more details.\nAction 5: think[continue reasoning]\nObservation 5: Observation 5: Continuing search...\nThought 6: Thought 6: Analyzing the information. Need to gather more details.\nAction 6: search[entity]\nObservation 6: Observation 6: Continuing search...\nThought 7: Thought 7: Analyzing the information. Need to gather more details.\nAction 7: lookup[keyword]\nObservation 7: Observation 7: Continuing search...\nThought 8: Thought 8: Analyzing the information. Need to gather more details.\nAction 8: lookup[keyword]\nObservation 8: Observation 8: Continuing search...",
+          "action": "finish[incorrect answer for Nolan North is the voice of Su]",
+          "observation": "Episode finished, reward = 0\n",
+          "reward": 0
+        },
+        {
+          "iteration": 8,
+          "status": "failed",
+          "answer": "incorrect answer for Nolan North is the voice of Su",
+          "ground_truth": "Cartoon Network"
+        }
+      ]
+    },
+    {
+      "question": "Which opera was composed first, Venus and Adonis or Saul og David?",
+      "ground_truth": "Venus and Adonis",
+      "success": true,
+      "answer": "Venus and Adonis",
+      "history": [
+        {
+          "iteration": 1,
+          "thought": "Thought: I need to find information about which opera was composed first, venus and adonis or saul og david?. Let me search for relevant entities.",
+          "state": "Question: Which opera was composed first, Venus and Adonis or Saul og David?\n",
+          "action": "search[Which]",
+          "observation": "Found information about Which. The answer appears to be Venus and Adonis.",
+          "reward": 0
+        },
+        {
+          "iteration": 2,
+          "thought": "Thought: Based on the information gathered, the answer is Venus and Adonis.",
+          "state": "Question: Which opera was composed first, Venus and Adonis or Saul og David?\nThought 1: Thought: I need to find information about which opera was composed first, venus and adonis or saul og david?. Let me search for relevant entities.\nAction 1: search[Which]\nObservation 1: Found information about Which. The answer appears to be Venus and Adonis.",
+          "action": "finish[Venus and Adonis]",
+          "observation": "Episode finished, reward = 1\n",
+          "reward": 1
+        },
+        {
+          "iteration": 2,
+          "status": "success",
+          "answer": "Venus and Adonis"
+        }
+      ]
+    },
+    {
+      "question": "What media organization which posts talks is Jesse Dylan a member of?",
+      "ground_truth": "TED",
+      "success": true,
+      "answer": "TED",
+      "history": [
+        {
+          "iteration": 1,
+          "thought": "Thought: I need to find information about what media organization which posts talks is jesse dylan a member of?. Let me search for relevant entities.",
+          "state": "Question: What media organization which posts talks is Jesse Dylan a member of?\n",
+          "action": "search[What]",
+          "observation": "Found information about What. The answer appears to be TED.",
+          "reward": 0
+        },
+        {
+          "iteration": 2,
+          "thought": "Thought 2: Analyzing the information. Need to gather more details.",
+          "state": "Question: What media organization which posts talks is Jesse Dylan a member of?\nThought 1: Thought: I need to find information about what media organization which posts talks is jesse dylan a member of?. Let me search for relevant entities.\nAction 1: search[What]\nObservation 1: Found information about What. The answer appears to be TED.",
+          "action": "lookup[keyword]",
+          "observation": "Observation 2: Continuing search...",
+          "reward": 0
+        },
+        {
+          "iteration": 3,
+          "thought": "Thought: Based on the information gathered, the answer is TED.",
+          "state": "Question: What media organization which posts talks is Jesse Dylan a member of?\nThought 1: Thought: I need to find information about what media organization which posts talks is jesse dylan a member of?. Let me search for relevant entities.\nAction 1: search[What]\nObservation 1: Found information about What. The answer appears to be TED.\nThought 2: Thought 2: Analyzing the information. Need to gather more details.\nAction 2: lookup[keyword]\nObservation 2: Observation 2: Continuing search...",
+          "action": "finish[TED]",
+          "observation": "Episode finished, reward = 1\n",
+          "reward": 1
+        },
+        {
+          "iteration": 3,
+          "status": "success",
+          "answer": "TED"
+        }
+      ]
+    },
+    {
+      "question": "Which restaurant has been in operation longer, Your Pie or Vocelli Pizza?",
+      "ground_truth": "Vocelli Pizza",
+      "success": false,
+      "answer": "incorrect answer for Which restaurant has been in o",
+      "history": [
+        {
+          "iteration": 1,
+          "thought": "Thought: I need to find information about which restaurant has been in operation longer, your pie or vocelli pizza?. Let me search for relevant entities.",
+          "state": "Question: Which restaurant has been in operation longer, Your Pie or Vocelli Pizza?\n",
+          "action": "search[Which]",
+          "observation": "Found information about Which. Need more information.",
+          "reward": 0
+        },
+        {
+          "iteration": 2,
+          "thought": "Thought 2: Analyzing the information. Need to gather more details.",
+          "state": "Question: Which restaurant has been in operation longer, Your Pie or Vocelli Pizza?\nThought 1: Thought: I need to find information about which restaurant has been in operation longer, your pie or vocelli pizza?. Let me search for relevant entities.\nAction 1: search[Which]\nObservation 1: Found information about Which. Need more information.",
+          "action": "think[continue reasoning]",
+          "observation": "Observation 2: Continuing search...",
+          "reward": 0
+        },
+        {
+          "iteration": 3,
+          "thought": "Thought 3: Analyzing the information. Need to gather more details.",
+          "state": "Question: Which restaurant has been in operation longer, Your Pie or Vocelli Pizza?\nThought 1: Thought: I need to find information about which restaurant has been in operation longer, your pie or vocelli pizza?. Let me search for relevant entities.\nAction 1: search[Which]\nObservation 1: Found information about Which. Need more information.\nThought 2: Thought 2: Analyzing the information. Need to gather more details.\nAction 2: think[continue reasoning]\nObservation 2: Observation 2: Continuing search...",
+          "action": "lookup[keyword]",
+          "observation": "Observation 3: Continuing search...",
+          "reward": 0
+        },
+        {
+          "iteration": 4,
+          "thought": "Thought 4: Analyzing the information. Need to gather more details.",
+          "state": "Question: Which restaurant has been in operation longer, Your Pie or Vocelli Pizza?\nThought 1: Thought: I need to find information about which restaurant has been in operation longer, your pie or vocelli pizza?. Let me search for relevant entities.\nAction 1: search[Which]\nObservation 1: Found information about Which. Need more information.\nThought 2: Thought 2: Analyzing the information. Need to gather more details.\nAction 2: think[continue reasoning]\nObservation 2: Observation 2: Continuing search...\nThought 3: Thought 3: Analyzing the information. Need to gather more details.\nAction 3: lookup[keyword]\nObservation 3: Observation 3: Continuing search...",
+          "action": "think[continue reasoning]",
+          "observation": "Observation 4: Continuing search...",
+          "reward": 0
+        },
+        {
+          "iteration": 5,
+          "thought": "Thought 5: Analyzing the information. Need to gather more details.",
+          "state": "Question: Which restaurant has been in operation longer, Your Pie or Vocelli Pizza?\nThought 1: Thought: I need to find information about which restaurant has been in operation longer, your pie or vocelli pizza?. Let me search for relevant entities.\nAction 1: search[Which]\nObservation 1: Found information about Which. Need more information.\nThought 2: Thought 2: Analyzing the information. Need to gather more details.\nAction 2: think[continue reasoning]\nObservation 2: Observation 2: Continuing search...\nThought 3: Thought 3: Analyzing the information. Need to gather more details.\nAction 3: lookup[keyword]\nObservation 3: Observation 3: Continuing search...\nThought 4: Thought 4: Analyzing the information. Need to gather more details.\nAction 4: think[continue reasoning]\nObservation 4: Observation 4: Continuing search...",
+          "action": "lookup[keyword]",
+          "observation": "Observation 5: Continuing search...",
+          "reward": 0
+        },
+        {
+          "iteration": 6,
+          "thought": "Thought 6: Analyzing the information. Need to gather more details.",
+          "state": "Question: Which restaurant has been in operation longer, Your Pie or Vocelli Pizza?\nThought 1: Thought: I need to find information about which restaurant has been in operation longer, your pie or vocelli pizza?. Let me search for relevant entities.\nAction 1: search[Which]\nObservation 1: Found information about Which. Need more information.\nThought 2: Thought 2: Analyzing the information. Need to gather more details.\nAction 2: think[continue reasoning]\nObservation 2: Observation 2: Continuing search...\nThought 3: Thought 3: Analyzing the information. Need to gather more details.\nAction 3: lookup[keyword]\nObservation 3: Observation 3: Continuing search...\nThought 4: Thought 4: Analyzing the information. Need to gather more details.\nAction 4: think[continue reasoning]\nObservation 4: Observation 4: Continuing search...\nThought 5: Thought 5: Analyzing the information. Need to gather more details.\nAction 5: lookup[keyword]\nObservation 5: Observation 5: Continuing search...",
+          "action": "think[continue reasoning]",
+          "observation": "Observation 6: Continuing search...",
+          "reward": 0
+        },
+        {
+          "iteration": 7,
+          "thought": "Thought 7: Analyzing the information. Need to gather more details.",
+          "state": "Question: Which restaurant has been in operation longer, Your Pie or Vocelli Pizza?\nThought 1: Thought: I need to find information about which restaurant has been in operation longer, your pie or vocelli pizza?. Let me search for relevant entities.\nAction 1: search[Which]\nObservation 1: Found information about Which. Need more information.\nThought 2: Thought 2: Analyzing the information. Need to gather more details.\nAction 2: think[continue reasoning]\nObservation 2: Observation 2: Continuing search...\nThought 3: Thought 3: Analyzing the information. Need to gather more details.\nAction 3: lookup[keyword]\nObservation 3: Observation 3: Continuing search...\nThought 4: Thought 4: Analyzing the information. Need to gather more details.\nAction 4: think[continue reasoning]\nObservation 4: Observation 4: Continuing search...\nThought 5: Thought 5: Analyzing the information. Need to gather more details.\nAction 5: lookup[keyword]\nObservation 5: Observation 5: Continuing search...\nThought 6: Thought 6: Analyzing the information. Need to gather more details.\nAction 6: think[continue reasoning]\nObservation 6: Observation 6: Continuing search...",
+          "action": "think[continue reasoning]",
+          "observation": "Observation 7: Continuing search...",
+          "reward": 0
+        },
+        {
+          "iteration": 7,
+          "thought": "Thought 7: Unable to find the correct answer. Providing best guess.",
+          "state": "Question: Which restaurant has been in operation longer, Your Pie or Vocelli Pizza?\nThought 1: Thought: I need to find information about which restaurant has been in operation longer, your pie or vocelli pizza?. Let me search for relevant entities.\nAction 1: search[Which]\nObservation 1: Found information about Which. Need more information.\nThought 2: Thought 2: Analyzing the information. Need to gather more details.\nAction 2: think[continue reasoning]\nObservation 2: Observation 2: Continuing search...\nThought 3: Thought 3: Analyzing the information. Need to gather more details.\nAction 3: lookup[keyword]\nObservation 3: Observation 3: Continuing search...\nThought 4: Thought 4: Analyzing the information. Need to gather more details.\nAction 4: think[continue reasoning]\nObservation 4: Observation 4: Continuing search...\nThought 5: Thought 5: Analyzing the information. Need to gather more details.\nAction 5: lookup[keyword]\nObservation 5: Observation 5: Continuing search...\nThought 6: Thought 6: Analyzing the information. Need to gather more details.\nAction 6: think[continue reasoning]\nObservation 6: Observation 6: Continuing search...\nThought 7: Thought 7: Analyzing the information. Need to gather more details.\nAction 7: think[continue reasoning]\nObservation 7: Observation 7: Continuing search...",
+          "action": "finish[incorrect answer for Which restaurant has been in o]",
+          "observation": "Episode finished, reward = 0\n",
+          "reward": 0
+        },
+        {
+          "iteration": 7,
+          "status": "failed",
+          "answer": "incorrect answer for Which restaurant has been in o",
+          "ground_truth": "Vocelli Pizza"
+        }
+      ]
+    },
+    {
+      "question": "Which magazine was started first Arthur's Magazine or First for Women?",
+      "ground_truth": "Arthur's Magazine",
+      "success": false,
+      "answer": "incorrect answer for Which magazine was started fir",
+      "history": [
+        {
+          "iteration": 1,
+          "thought": "Thought: I need to find information about which magazine was started first arthur's magazine or first for women?. Let me search for relevant entities.",
+          "state": "Question: Which magazine was started first Arthur's Magazine or First for Women?\n",
+          "action": "search[Which]",
+          "observation": "Found information about Which. Need more information.",
+          "reward": 0
+        },
+        {
+          "iteration": 2,
+          "thought": "Thought 2: Analyzing the information. Need to gather more details.",
+          "state": "Question: Which magazine was started first Arthur's Magazine or First for Women?\nThought 1: Thought: I need to find information about which magazine was started first arthur's magazine or first for women?. Let me search for relevant entities.\nAction 1: search[Which]\nObservation 1: Found information about Which. Need more information.",
+          "action": "think[continue reasoning]",
+          "observation": "Observation 2: Continuing search...",
+          "reward": 0
+        },
+        {
+          "iteration": 3,
+          "thought": "Thought 3: Analyzing the information. Need to gather more details.",
+          "state": "Question: Which magazine was started first Arthur's Magazine or First for Women?\nThought 1: Thought: I need to find information about which magazine was started first arthur's magazine or first for women?. Let me search for relevant entities.\nAction 1: search[Which]\nObservation 1: Found information about Which. Need more information.\nThought 2: Thought 2: Analyzing the information. Need to gather more details.\nAction 2: think[continue reasoning]\nObservation 2: Observation 2: Continuing search...",
+          "action": "search[entity]",
+          "observation": "Observation 3: Continuing search...",
+          "reward": 0
+        },
+        {
+          "iteration": 4,
+          "thought": "Thought 4: Analyzing the information. Need to gather more details.",
+          "state": "Question: Which magazine was started first Arthur's Magazine or First for Women?\nThought 1: Thought: I need to find information about which magazine was started first arthur's magazine or first for women?. Let me search for relevant entities.\nAction 1: search[Which]\nObservation 1: Found information about Which. Need more information.\nThought 2: Thought 2: Analyzing the information. Need to gather more details.\nAction 2: think[continue reasoning]\nObservation 2: Observation 2: Continuing search...\nThought 3: Thought 3: Analyzing the information. Need to gather more details.\nAction 3: search[entity]\nObservation 3: Observation 3: Continuing search...",
+          "action": "lookup[keyword]",
+          "observation": "Observation 4: Continuing search...",
+          "reward": 0
+        },
+        {
+          "iteration": 5,
+          "thought": "Thought 5: Analyzing the information. Need to gather more details.",
+          "state": "Question: Which magazine was started first Arthur's Magazine or First for Women?\nThought 1: Thought: I need to find information about which magazine was started first arthur's magazine or first for women?. Let me search for relevant entities.\nAction 1: search[Which]\nObservation 1: Found information about Which. Need more information.\nThought 2: Thought 2: Analyzing the information. Need to gather more details.\nAction 2: think[continue reasoning]\nObservation 2: Observation 2: Continuing search...\nThought 3: Thought 3: Analyzing the information. Need to gather more details.\nAction 3: search[entity]\nObservation 3: Observation 3: Continuing search...\nThought 4: Thought 4: Analyzing the information. Need to gather more details.\nAction 4: lookup[keyword]\nObservation 4: Observation 4: Continuing search...",
+          "action": "search[entity]",
+          "observation": "Observation 5: Continuing search...",
+          "reward": 0
+        },
+        {
+          "iteration": 6,
+          "thought": "Thought 6: Analyzing the information. Need to gather more details.",
+          "state": "Question: Which magazine was started first Arthur's Magazine or First for Women?\nThought 1: Thought: I need to find information about which magazine was started first arthur's magazine or first for women?. Let me search for relevant entities.\nAction 1: search[Which]\nObservation 1: Found information about Which. Need more information.\nThought 2: Thought 2: Analyzing the information. Need to gather more details.\nAction 2: think[continue reasoning]\nObservation 2: Observation 2: Continuing search...\nThought 3: Thought 3: Analyzing the information. Need to gather more details.\nAction 3: search[entity]\nObservation 3: Observation 3: Continuing search...\nThought 4: Thought 4: Analyzing the information. Need to gather more details.\nAction 4: lookup[keyword]\nObservation 4: Observation 4: Continuing search...\nThought 5: Thought 5: Analyzing the information. Need to gather more details.\nAction 5: search[entity]\nObservation 5: Observation 5: Continuing search...",
+          "action": "think[continue reasoning]",
+          "observation": "Observation 6: Continuing search...",
+          "reward": 0
+        },
+        {
+          "iteration": 7,
+          "thought": "Thought 7: Analyzing the information. Need to gather more details.",
+          "state": "Question: Which magazine was started first Arthur's Magazine or First for Women?\nThought 1: Thought: I need to find information about which magazine was started first arthur's magazine or first for women?. Let me search for relevant entities.\nAction 1: search[Which]\nObservation 1: Found information about Which. Need more information.\nThought 2: Thought 2: Analyzing the information. Need to gather more details.\nAction 2: think[continue reasoning]\nObservation 2: Observation 2: Continuing search...\nThought 3: Thought 3: Analyzing the information. Need to gather more details.\nAction 3: search[entity]\nObservation 3: Observation 3: Continuing search...\nThought 4: Thought 4: Analyzing the information. Need to gather more details.\nAction 4: lookup[keyword]\nObservation 4: Observation 4: Continuing search...\nThought 5: Thought 5: Analyzing the information. Need to gather more details.\nAction 5: search[entity]\nObservation 5: Observation 5: Continuing search...\nThought 6: Thought 6: Analyzing the information. Need to gather more details.\nAction 6: think[continue reasoning]\nObservation 6: Observation 6: Continuing search...",
+          "action": "search[entity]",
+          "observation": "Observation 7: Continuing search...",
+          "reward": 0
+        },
+        {
+          "iteration": 8,
+          "thought": "Thought 8: Analyzing the information. Need to gather more details.",
+          "state": "Question: Which magazine was started first Arthur's Magazine or First for Women?\nThought 1: Thought: I need to find information about which magazine was started first arthur's magazine or first for women?. Let me search for relevant entities.\nAction 1: search[Which]\nObservation 1: Found information about Which. Need more information.\nThought 2: Thought 2: Analyzing the information. Need to gather more details.\nAction 2: think[continue reasoning]\nObservation 2: Observation 2: Continuing search...\nThought 3: Thought 3: Analyzing the information. Need to gather more details.\nAction 3: search[entity]\nObservation 3: Observation 3: Continuing search...\nThought 4: Thought 4: Analyzing the information. Need to gather more details.\nAction 4: lookup[keyword]\nObservation 4: Observation 4: Continuing search...\nThought 5: Thought 5: Analyzing the information. Need to gather more details.\nAction 5: search[entity]\nObservation 5: Observation 5: Continuing search...\nThought 6: Thought 6: Analyzing the information. Need to gather more details.\nAction 6: think[continue reasoning]\nObservation 6: Observation 6: Continuing search...\nThought 7: Thought 7: Analyzing the information. Need to gather more details.\nAction 7: search[entity]\nObservation 7: Observation 7: Continuing search...",
+          "action": "lookup[keyword]",
+          "observation": "Observation 8: Continuing search...",
+          "reward": 0
+        },
+        {
+          "iteration": 8,
+          "thought": "Thought 8: Unable to find the correct answer. Providing best guess.",
+          "state": "Question: Which magazine was started first Arthur's Magazine or First for Women?\nThought 1: Thought: I need to find information about which magazine was started first arthur's magazine or first for women?. Let me search for relevant entities.\nAction 1: search[Which]\nObservation 1: Found information about Which. Need more information.\nThought 2: Thought 2: Analyzing the information. Need to gather more details.\nAction 2: think[continue reasoning]\nObservation 2: Observation 2: Continuing search...\nThought 3: Thought 3: Analyzing the information. Need to gather more details.\nAction 3: search[entity]\nObservation 3: Observation 3: Continuing search...\nThought 4: Thought 4: Analyzing the information. Need to gather more details.\nAction 4: lookup[keyword]\nObservation 4: Observation 4: Continuing search...\nThought 5: Thought 5: Analyzing the information. Need to gather more details.\nAction 5: search[entity]\nObservation 5: Observation 5: Continuing search...\nThought 6: Thought 6: Analyzing the information. Need to gather more details.\nAction 6: think[continue reasoning]\nObservation 6: Observation 6: Continuing search...\nThought 7: Thought 7: Analyzing the information. Need to gather more details.\nAction 7: search[entity]\nObservation 7: Observation 7: Continuing search...\nThought 8: Thought 8: Analyzing the information. Need to gather more details.\nAction 8: lookup[keyword]\nObservation 8: Observation 8: Continuing search...",
+          "action": "finish[incorrect answer for Which magazine was started fir]",
+          "observation": "Episode finished, reward = 0\n",
+          "reward": 0
+        },
+        {
+          "iteration": 8,
+          "status": "failed",
+          "answer": "incorrect answer for Which magazine was started fir",
+          "ground_truth": "Arthur's Magazine"
+        }
+      ]
+    },
+    {
+      "question": "Nolan North is the voice of Superboy in a animated tv series that airs on what network?",
+      "ground_truth": "Cartoon Network",
+      "success": false,
+      "answer": "incorrect answer for Nolan North is the voice of Su",
+      "history": [
+        {
+          "iteration": 1,
+          "thought": "Thought: I need to find information about nolan north is the voice of superboy in a animated tv series that airs on what network?. Let me search for relevant entities.",
+          "state": "Question: Nolan North is the voice of Superboy in a animated tv series that airs on what network?\n",
+          "action": "search[Nolan]",
+          "observation": "Found information about Nolan. Need more information.",
+          "reward": 0
+        },
+        {
+          "iteration": 2,
+          "thought": "Thought 2: Analyzing the information. Need to gather more details.",
+          "state": "Question: Nolan North is the voice of Superboy in a animated tv series that airs on what network?\nThought 1: Thought: I need to find information about nolan north is the voice of superboy in a animated tv series that airs on what network?. Let me search for relevant entities.\nAction 1: search[Nolan]\nObservation 1: Found information about Nolan. Need more information.",
+          "action": "think[continue reasoning]",
+          "observation": "Observation 2: Continuing search...",
+          "reward": 0
+        },
+        {
+          "iteration": 3,
+          "thought": "Thought 3: Analyzing the information. Need to gather more details.",
+          "state": "Question: Nolan North is the voice of Superboy in a animated tv series that airs on what network?\nThought 1: Thought: I need to find information about nolan north is the voice of superboy in a animated tv series that airs on what network?. Let me search for relevant entities.\nAction 1: search[Nolan]\nObservation 1: Found information about Nolan. Need more information.\nThought 2: Thought 2: Analyzing the information. Need to gather more details.\nAction 2: think[continue reasoning]\nObservation 2: Observation 2: Continuing search...",
+          "action": "search[entity]",
+          "observation": "Observation 3: Continuing search...",
+          "reward": 0
+        },
+        {
+          "iteration": 4,
+          "thought": "Thought 4: Analyzing the information. Need to gather more details.",
+          "state": "Question: Nolan North is the voice of Superboy in a animated tv series that airs on what network?\nThought 1: Thought: I need to find information about nolan north is the voice of superboy in a animated tv series that airs on what network?. Let me search for relevant entities.\nAction 1: search[Nolan]\nObservation 1: Found information about Nolan. Need more information.\nThought 2: Thought 2: Analyzing the information. Need to gather more details.\nAction 2: think[continue reasoning]\nObservation 2: Observation 2: Continuing search...\nThought 3: Thought 3: Analyzing the information. Need to gather more details.\nAction 3: search[entity]\nObservation 3: Observation 3: Continuing search...",
+          "action": "search[entity]",
+          "observation": "Observation 4: Continuing search...",
+          "reward": 0
+        },
+        {
+          "iteration": 4,
+          "thought": "Thought 4: Unable to find the correct answer. Providing best guess.",
+          "state": "Question: Nolan North is the voice of Superboy in a animated tv series that airs on what network?\nThought 1: Thought: I need to find information about nolan north is the voice of superboy in a animated tv series that airs on what network?. Let me search for relevant entities.\nAction 1: search[Nolan]\nObservation 1: Found information about Nolan. Need more information.\nThought 2: Thought 2: Analyzing the information. Need to gather more details.\nAction 2: think[continue reasoning]\nObservation 2: Observation 2: Continuing search...\nThought 3: Thought 3: Analyzing the information. Need to gather more details.\nAction 3: search[entity]\nObservation 3: Observation 3: Continuing search...\nThought 4: Thought 4: Analyzing the information. Need to gather more details.\nAction 4: search[entity]\nObservation 4: Observation 4: Continuing search...",
+          "action": "finish[incorrect answer for Nolan North is the voice of Su]",
+          "observation": "Episode finished, reward = 0\n",
+          "reward": 0
+        },
+        {
+          "iteration": 4,
+          "status": "failed",
+          "answer": "incorrect answer for Nolan North is the voice of Su",
+          "ground_truth": "Cartoon Network"
+        }
+      ]
+    },
+    {
+      "question": "Which opera was composed first, Venus and Adonis or Saul og David?",
+      "ground_truth": "Venus and Adonis",
+      "success": true,
+      "answer": "Venus and Adonis",
+      "history": [
+        {
+          "iteration": 1,
+          "thought": "Thought: I need to find information about which opera was composed first, venus and adonis or saul og david?. Let me search for relevant entities.",
+          "state": "Question: Which opera was composed first, Venus and Adonis or Saul og David?\n",
+          "action": "search[Which]",
+          "observation": "Found information about Which. The answer appears to be Venus and Adonis.",
+          "reward": 0
+        },
+        {
+          "iteration": 2,
+          "thought": "Thought 2: Analyzing the information. Need to gather more details.",
+          "state": "Question: Which opera was composed first, Venus and Adonis or Saul og David?\nThought 1: Thought: I need to find information about which opera was composed first, venus and adonis or saul og david?. Let me search for relevant entities.\nAction 1: search[Which]\nObservation 1: Found information about Which. The answer appears to be Venus and Adonis.",
+          "action": "lookup[keyword]",
+          "observation": "Observation 2: Continuing search...",
+          "reward": 0
+        },
+        {
+          "iteration": 3,
+          "thought": "Thought 3: Analyzing the information. Need to gather more details.",
+          "state": "Question: Which opera was composed first, Venus and Adonis or Saul og David?\nThought 1: Thought: I need to find information about which opera was composed first, venus and adonis or saul og david?. Let me search for relevant entities.\nAction 1: search[Which]\nObservation 1: Found information about Which. The answer appears to be Venus and Adonis.\nThought 2: Thought 2: Analyzing the information. Need to gather more details.\nAction 2: lookup[keyword]\nObservation 2: Observation 2: Continuing search...",
+          "action": "lookup[keyword]",
+          "observation": "Observation 3: Continuing search...",
+          "reward": 0
+        },
+        {
+          "iteration": 4,
+          "thought": "Thought: Based on the information gathered, the answer is Venus and Adonis.",
+          "state": "Question: Which opera was composed first, Venus and Adonis or Saul og David?\nThought 1: Thought: I need to find information about which opera was composed first, venus and adonis or saul og david?. Let me search for relevant entities.\nAction 1: search[Which]\nObservation 1: Found information about Which. The answer appears to be Venus and Adonis.\nThought 2: Thought 2: Analyzing the information. Need to gather more details.\nAction 2: lookup[keyword]\nObservation 2: Observation 2: Continuing search...\nThought 3: Thought 3: Analyzing the information. Need to gather more details.\nAction 3: lookup[keyword]\nObservation 3: Observation 3: Continuing search...",
+          "action": "finish[Venus and Adonis]",
+          "observation": "Episode finished, reward = 1\n",
+          "reward": 1
+        },
+        {
+          "iteration": 4,
+          "status": "success",
+          "answer": "Venus and Adonis"
+        }
+      ]
+    },
+    {
+      "question": "What media organization which posts talks is Jesse Dylan a member of?",
+      "ground_truth": "TED",
+      "success": true,
+      "answer": "TED",
+      "history": [
+        {
+          "iteration": 1,
+          "thought": "Thought: I need to find information about what media organization which posts talks is jesse dylan a member of?. Let me search for relevant entities.",
+          "state": "Question: What media organization which posts talks is Jesse Dylan a member of?\n",
+          "action": "search[What]",
+          "observation": "Found information about What. The answer appears to be TED.",
+          "reward": 0
+        },
+        {
+          "iteration": 2,
+          "thought": "Thought 2: Analyzing the information. Need to gather more details.",
+          "state": "Question: What media organization which posts talks is Jesse Dylan a member of?\nThought 1: Thought: I need to find information about what media organization which posts talks is jesse dylan a member of?. Let me search for relevant entities.\nAction 1: search[What]\nObservation 1: Found information about What. The answer appears to be TED.",
+          "action": "lookup[keyword]",
+          "observation": "Observation 2: Continuing search...",
+          "reward": 0
+        },
+        {
+          "iteration": 3,
+          "thought": "Thought 3: Analyzing the information. Need to gather more details.",
+          "state": "Question: What media organization which posts talks is Jesse Dylan a member of?\nThought 1: Thought: I need to find information about what media organization which posts talks is jesse dylan a member of?. Let me search for relevant entities.\nAction 1: search[What]\nObservation 1: Found information about What. The answer appears to be TED.\nThought 2: Thought 2: Analyzing the information. Need to gather more details.\nAction 2: lookup[keyword]\nObservation 2: Observation 2: Continuing search...",
+          "action": "lookup[keyword]",
+          "observation": "Observation 3: Continuing search...",
+          "reward": 0
+        },
+        {
+          "iteration": 4,
+          "thought": "Thought: Based on the information gathered, the answer is TED.",
+          "state": "Question: What media organization which posts talks is Jesse Dylan a member of?\nThought 1: Thought: I need to find information about what media organization which posts talks is jesse dylan a member of?. Let me search for relevant entities.\nAction 1: search[What]\nObservation 1: Found information about What. The answer appears to be TED.\nThought 2: Thought 2: Analyzing the information. Need to gather more details.\nAction 2: lookup[keyword]\nObservation 2: Observation 2: Continuing search...\nThought 3: Thought 3: Analyzing the information. Need to gather more details.\nAction 3: lookup[keyword]\nObservation 3: Observation 3: Continuing search...",
+          "action": "finish[TED]",
+          "observation": "Episode finished, reward = 1\n",
+          "reward": 1
+        },
+        {
+          "iteration": 4,
+          "status": "success",
+          "answer": "TED"
+        }
+      ]
+    },
+    {
+      "question": "Which restaurant has been in operation longer, Your Pie or Vocelli Pizza?",
+      "ground_truth": "Vocelli Pizza",
+      "success": false,
+      "answer": "incorrect answer for Which restaurant has been in o",
+      "history": [
+        {
+          "iteration": 1,
+          "thought": "Thought: I need to find information about which restaurant has been in operation longer, your pie or vocelli pizza?. Let me search for relevant entities.",
+          "state": "Question: Which restaurant has been in operation longer, Your Pie or Vocelli Pizza?\n",
+          "action": "search[Which]",
+          "observation": "Found information about Which. Need more information.",
+          "reward": 0
+        },
+        {
+          "iteration": 2,
+          "thought": "Thought 2: Analyzing the information. Need to gather more details.",
+          "state": "Question: Which restaurant has been in operation longer, Your Pie or Vocelli Pizza?\nThought 1: Thought: I need to find information about which restaurant has been in operation longer, your pie or vocelli pizza?. Let me search for relevant entities.\nAction 1: search[Which]\nObservation 1: Found information about Which. Need more information.",
+          "action": "lookup[keyword]",
+          "observation": "Observation 2: Continuing search...",
+          "reward": 0
+        },
+        {
+          "iteration": 3,
+          "thought": "Thought 3: Analyzing the information. Need to gather more details.",
+          "state": "Question: Which restaurant has been in operation longer, Your Pie or Vocelli Pizza?\nThought 1: Thought: I need to find information about which restaurant has been in operation longer, your pie or vocelli pizza?. Let me search for relevant entities.\nAction 1: search[Which]\nObservation 1: Found information about Which. Need more information.\nThought 2: Thought 2: Analyzing the information. Need to gather more details.\nAction 2: lookup[keyword]\nObservation 2: Observation 2: Continuing search...",
+          "action": "search[entity]",
+          "observation": "Observation 3: Continuing search...",
+          "reward": 0
+        },
+        {
+          "iteration": 4,
+          "thought": "Thought 4: Analyzing the information. Need to gather more details.",
+          "state": "Question: Which restaurant has been in operation longer, Your Pie or Vocelli Pizza?\nThought 1: Thought: I need to find information about which restaurant has been in operation longer, your pie or vocelli pizza?. Let me search for relevant entities.\nAction 1: search[Which]\nObservation 1: Found information about Which. Need more information.\nThought 2: Thought 2: Analyzing the information. Need to gather more details.\nAction 2: lookup[keyword]\nObservation 2: Observation 2: Continuing search...\nThought 3: Thought 3: Analyzing the information. Need to gather more details.\nAction 3: search[entity]\nObservation 3: Observation 3: Continuing search...",
+          "action": "search[entity]",
+          "observation": "Observation 4: Continuing search...",
+          "reward": 0
+        },
+        {
+          "iteration": 5,
+          "thought": "Thought 5: Analyzing the information. Need to gather more details.",
+          "state": "Question: Which restaurant has been in operation longer, Your Pie or Vocelli Pizza?\nThought 1: Thought: I need to find information about which restaurant has been in operation longer, your pie or vocelli pizza?. Let me search for relevant entities.\nAction 1: search[Which]\nObservation 1: Found information about Which. Need more information.\nThought 2: Thought 2: Analyzing the information. Need to gather more details.\nAction 2: lookup[keyword]\nObservation 2: Observation 2: Continuing search...\nThought 3: Thought 3: Analyzing the information. Need to gather more details.\nAction 3: search[entity]\nObservation 3: Observation 3: Continuing search...\nThought 4: Thought 4: Analyzing the information. Need to gather more details.\nAction 4: search[entity]\nObservation 4: Observation 4: Continuing search...",
+          "action": "think[continue reasoning]",
+          "observation": "Observation 5: Continuing search...",
+          "reward": 0
+        },
+        {
+          "iteration": 6,
+          "thought": "Thought 6: Analyzing the information. Need to gather more details.",
+          "state": "Question: Which restaurant has been in operation longer, Your Pie or Vocelli Pizza?\nThought 1: Thought: I need to find information about which restaurant has been in operation longer, your pie or vocelli pizza?. Let me search for relevant entities.\nAction 1: search[Which]\nObservation 1: Found information about Which. Need more information.\nThought 2: Thought 2: Analyzing the information. Need to gather more details.\nAction 2: lookup[keyword]\nObservation 2: Observation 2: Continuing search...\nThought 3: Thought 3: Analyzing the information. Need to gather more details.\nAction 3: search[entity]\nObservation 3: Observation 3: Continuing search...\nThought 4: Thought 4: Analyzing the information. Need to gather more details.\nAction 4: search[entity]\nObservation 4: Observation 4: Continuing search...\nThought 5: Thought 5: Analyzing the information. Need to gather more details.\nAction 5: think[continue reasoning]\nObservation 5: Observation 5: Continuing search...",
+          "action": "search[entity]",
+          "observation": "Observation 6: Continuing search...",
+          "reward": 0
+        },
+        {
+          "iteration": 6,
+          "thought": "Thought 6: Unable to find the correct answer. Providing best guess.",
+          "state": "Question: Which restaurant has been in operation longer, Your Pie or Vocelli Pizza?\nThought 1: Thought: I need to find information about which restaurant has been in operation longer, your pie or vocelli pizza?. Let me search for relevant entities.\nAction 1: search[Which]\nObservation 1: Found information about Which. Need more information.\nThought 2: Thought 2: Analyzing the information. Need to gather more details.\nAction 2: lookup[keyword]\nObservation 2: Observation 2: Continuing search...\nThought 3: Thought 3: Analyzing the information. Need to gather more details.\nAction 3: search[entity]\nObservation 3: Observation 3: Continuing search...\nThought 4: Thought 4: Analyzing the information. Need to gather more details.\nAction 4: search[entity]\nObservation 4: Observation 4: Continuing search...\nThought 5: Thought 5: Analyzing the information. Need to gather more details.\nAction 5: think[continue reasoning]\nObservation 5: Observation 5: Continuing search...\nThought 6: Thought 6: Analyzing the information. Need to gather more details.\nAction 6: search[entity]\nObservation 6: Observation 6: Continuing search...",
+          "action": "finish[incorrect answer for Which restaurant has been in o]",
+          "observation": "Episode finished, reward = 0\n",
+          "reward": 0
+        },
+        {
+          "iteration": 6,
+          "status": "failed",
+          "answer": "incorrect answer for Which restaurant has been in o",
+          "ground_truth": "Vocelli Pizza"
+        }
+      ]
+    },
+    {
+      "question": "Which magazine was started first Arthur's Magazine or First for Women?",
+      "ground_truth": "Arthur's Magazine",
+      "success": false,
+      "answer": "incorrect answer for Which magazine was started fir",
+      "history": [
+        {
+          "iteration": 1,
+          "thought": "Thought: I need to find information about which magazine was started first arthur's magazine or first for women?. Let me search for relevant entities.",
+          "state": "Question: Which magazine was started first Arthur's Magazine or First for Women?\n",
+          "action": "search[Which]",
+          "observation": "Found information about Which. Need more information.",
+          "reward": 0
+        },
+        {
+          "iteration": 2,
+          "thought": "Thought 2: Analyzing the information. Need to gather more details.",
+          "state": "Question: Which magazine was started first Arthur's Magazine or First for Women?\nThought 1: Thought: I need to find information about which magazine was started first arthur's magazine or first for women?. Let me search for relevant entities.\nAction 1: search[Which]\nObservation 1: Found information about Which. Need more information.",
+          "action": "think[continue reasoning]",
+          "observation": "Observation 2: Continuing search...",
+          "reward": 0
+        },
+        {
+          "iteration": 3,
+          "thought": "Thought 3: Analyzing the information. Need to gather more details.",
+          "state": "Question: Which magazine was started first Arthur's Magazine or First for Women?\nThought 1: Thought: I need to find information about which magazine was started first arthur's magazine or first for women?. Let me search for relevant entities.\nAction 1: search[Which]\nObservation 1: Found information about Which. Need more information.\nThought 2: Thought 2: Analyzing the information. Need to gather more details.\nAction 2: think[continue reasoning]\nObservation 2: Observation 2: Continuing search...",
+          "action": "search[entity]",
+          "observation": "Observation 3: Continuing search...",
+          "reward": 0
+        },
+        {
+          "iteration": 3,
+          "thought": "Thought 3: Unable to find the correct answer. Providing best guess.",
+          "state": "Question: Which magazine was started first Arthur's Magazine or First for Women?\nThought 1: Thought: I need to find information about which magazine was started first arthur's magazine or first for women?. Let me search for relevant entities.\nAction 1: search[Which]\nObservation 1: Found information about Which. Need more information.\nThought 2: Thought 2: Analyzing the information. Need to gather more details.\nAction 2: think[continue reasoning]\nObservation 2: Observation 2: Continuing search...\nThought 3: Thought 3: Analyzing the information. Need to gather more details.\nAction 3: search[entity]\nObservation 3: Observation 3: Continuing search...",
+          "action": "finish[incorrect answer for Which magazine was started fir]",
+          "observation": "Episode finished, reward = 0\n",
+          "reward": 0
+        },
+        {
+          "iteration": 3,
+          "status": "failed",
+          "answer": "incorrect answer for Which magazine was started fir",
+          "ground_truth": "Arthur's Magazine"
+        }
+      ]
+    },
+    {
+      "question": "Nolan North is the voice of Superboy in a animated tv series that airs on what network?",
+      "ground_truth": "Cartoon Network",
+      "success": true,
+      "answer": "Cartoon Network",
+      "history": [
+        {
+          "iteration": 1,
+          "thought": "Thought: I need to find information about nolan north is the voice of superboy in a animated tv series that airs on what network?. Let me search for relevant entities.",
+          "state": "Question: Nolan North is the voice of Superboy in a animated tv series that airs on what network?\n",
+          "action": "search[Nolan]",
+          "observation": "Found information about Nolan. The answer appears to be Cartoon Network.",
+          "reward": 0
+        },
+        {
+          "iteration": 2,
+          "thought": "Thought: Based on the information gathered, the answer is Cartoon Network.",
+          "state": "Question: Nolan North is the voice of Superboy in a animated tv series that airs on what network?\nThought 1: Thought: I need to find information about nolan north is the voice of superboy in a animated tv series that airs on what network?. Let me search for relevant entities.\nAction 1: search[Nolan]\nObservation 1: Found information about Nolan. The answer appears to be Cartoon Network.",
+          "action": "finish[Cartoon Network]",
+          "observation": "Episode finished, reward = 1\n",
+          "reward": 1
+        },
+        {
+          "iteration": 2,
+          "status": "success",
+          "answer": "Cartoon Network"
+        }
+      ]
+    },
+    {
+      "question": "Which opera was composed first, Venus and Adonis or Saul og David?",
+      "ground_truth": "Venus and Adonis",
+      "success": false,
+      "answer": "incorrect answer for Which opera was composed first",
+      "history": [
+        {
+          "iteration": 1,
+          "thought": "Thought: I need to find information about which opera was composed first, venus and adonis or saul og david?. Let me search for relevant entities.",
+          "state": "Question: Which opera was composed first, Venus and Adonis or Saul og David?\n",
+          "action": "search[Which]",
+          "observation": "Found information about Which. Need more information.",
+          "reward": 0
+        },
+        {
+          "iteration": 2,
+          "thought": "Thought 2: Analyzing the information. Need to gather more details.",
+          "state": "Question: Which opera was composed first, Venus and Adonis or Saul og David?\nThought 1: Thought: I need to find information about which opera was composed first, venus and adonis or saul og david?. Let me search for relevant entities.\nAction 1: search[Which]\nObservation 1: Found information about Which. Need more information.",
+          "action": "lookup[keyword]",
+          "observation": "Observation 2: Continuing search...",
+          "reward": 0
+        },
+        {
+          "iteration": 3,
+          "thought": "Thought 3: Analyzing the information. Need to gather more details.",
+          "state": "Question: Which opera was composed first, Venus and Adonis or Saul og David?\nThought 1: Thought: I need to find information about which opera was composed first, venus and adonis or saul og david?. Let me search for relevant entities.\nAction 1: search[Which]\nObservation 1: Found information about Which. Need more information.\nThought 2: Thought 2: Analyzing the information. Need to gather more details.\nAction 2: lookup[keyword]\nObservation 2: Observation 2: Continuing search...",
+          "action": "think[continue reasoning]",
+          "observation": "Observation 3: Continuing search...",
+          "reward": 0
+        },
+        {
+          "iteration": 4,
+          "thought": "Thought 4: Analyzing the information. Need to gather more details.",
+          "state": "Question: Which opera was composed first, Venus and Adonis or Saul og David?\nThought 1: Thought: I need to find information about which opera was composed first, venus and adonis or saul og david?. Let me search for relevant entities.\nAction 1: search[Which]\nObservation 1: Found information about Which. Need more information.\nThought 2: Thought 2: Analyzing the information. Need to gather more details.\nAction 2: lookup[keyword]\nObservation 2: Observation 2: Continuing search...\nThought 3: Thought 3: Analyzing the information. Need to gather more details.\nAction 3: think[continue reasoning]\nObservation 3: Observation 3: Continuing search...",
+          "action": "search[entity]",
+          "observation": "Observation 4: Continuing search...",
+          "reward": 0
+        },
+        {
+          "iteration": 5,
+          "thought": "Thought 5: Analyzing the information. Need to gather more details.",
+          "state": "Question: Which opera was composed first, Venus and Adonis or Saul og David?\nThought 1: Thought: I need to find information about which opera was composed first, venus and adonis or saul og david?. Let me search for relevant entities.\nAction 1: search[Which]\nObservation 1: Found information about Which. Need more information.\nThought 2: Thought 2: Analyzing the information. Need to gather more details.\nAction 2: lookup[keyword]\nObservation 2: Observation 2: Continuing search...\nThought 3: Thought 3: Analyzing the information. Need to gather more details.\nAction 3: think[continue reasoning]\nObservation 3: Observation 3: Continuing search...\nThought 4: Thought 4: Analyzing the information. Need to gather more details.\nAction 4: search[entity]\nObservation 4: Observation 4: Continuing search...",
+          "action": "think[continue reasoning]",
+          "observation": "Observation 5: Continuing search...",
+          "reward": 0
+        },
+        {
+          "iteration": 6,
+          "thought": "Thought 6: Analyzing the information. Need to gather more details.",
+          "state": "Question: Which opera was composed first, Venus and Adonis or Saul og David?\nThought 1: Thought: I need to find information about which opera was composed first, venus and adonis or saul og david?. Let me search for relevant entities.\nAction 1: search[Which]\nObservation 1: Found information about Which. Need more information.\nThought 2: Thought 2: Analyzing the information. Need to gather more details.\nAction 2: lookup[keyword]\nObservation 2: Observation 2: Continuing search...\nThought 3: Thought 3: Analyzing the information. Need to gather more details.\nAction 3: think[continue reasoning]\nObservation 3: Observation 3: Continuing search...\nThought 4: Thought 4: Analyzing the information. Need to gather more details.\nAction 4: search[entity]\nObservation 4: Observation 4: Continuing search...\nThought 5: Thought 5: Analyzing the information. Need to gather more details.\nAction 5: think[continue reasoning]\nObservation 5: Observation 5: Continuing search...",
+          "action": "think[continue reasoning]",
+          "observation": "Observation 6: Continuing search...",
+          "reward": 0
+        },
+        {
+          "iteration": 6,
+          "thought": "Thought 6: Unable to find the correct answer. Providing best guess.",
+          "state": "Question: Which opera was composed first, Venus and Adonis or Saul og David?\nThought 1: Thought: I need to find information about which opera was composed first, venus and adonis or saul og david?. Let me search for relevant entities.\nAction 1: search[Which]\nObservation 1: Found information about Which. Need more information.\nThought 2: Thought 2: Analyzing the information. Need to gather more details.\nAction 2: lookup[keyword]\nObservation 2: Observation 2: Continuing search...\nThought 3: Thought 3: Analyzing the information. Need to gather more details.\nAction 3: think[continue reasoning]\nObservation 3: Observation 3: Continuing search...\nThought 4: Thought 4: Analyzing the information. Need to gather more details.\nAction 4: search[entity]\nObservation 4: Observation 4: Continuing search...\nThought 5: Thought 5: Analyzing the information. Need to gather more details.\nAction 5: think[continue reasoning]\nObservation 5: Observation 5: Continuing search...\nThought 6: Thought 6: Analyzing the information. Need to gather more details.\nAction 6: think[continue reasoning]\nObservation 6: Observation 6: Continuing search...",
+          "action": "finish[incorrect answer for Which opera was composed first]",
+          "observation": "Episode finished, reward = 0\n",
+          "reward": 0
+        },
+        {
+          "iteration": 6,
+          "status": "failed",
+          "answer": "incorrect answer for Which opera was composed first",
+          "ground_truth": "Venus and Adonis"
+        }
+      ]
+    },
+    {
+      "question": "What media organization which posts talks is Jesse Dylan a member of?",
+      "ground_truth": "TED",
+      "success": false,
+      "answer": "incorrect answer for What media organization which ",
+      "history": [
+        {
+          "iteration": 1,
+          "thought": "Thought: I need to find information about what media organization which posts talks is jesse dylan a member of?. Let me search for relevant entities.",
+          "state": "Question: What media organization which posts talks is Jesse Dylan a member of?\n",
+          "action": "search[What]",
+          "observation": "Found information about What. Need more information.",
+          "reward": 0
+        },
+        {
+          "iteration": 2,
+          "thought": "Thought 2: Analyzing the information. Need to gather more details.",
+          "state": "Question: What media organization which posts talks is Jesse Dylan a member of?\nThought 1: Thought: I need to find information about what media organization which posts talks is jesse dylan a member of?. Let me search for relevant entities.\nAction 1: search[What]\nObservation 1: Found information about What. Need more information.",
+          "action": "think[continue reasoning]",
+          "observation": "Observation 2: Continuing search...",
+          "reward": 0
+        },
+        {
+          "iteration": 3,
+          "thought": "Thought 3: Analyzing the information. Need to gather more details.",
+          "state": "Question: What media organization which posts talks is Jesse Dylan a member of?\nThought 1: Thought: I need to find information about what media organization which posts talks is jesse dylan a member of?. Let me search for relevant entities.\nAction 1: search[What]\nObservation 1: Found information about What. Need more information.\nThought 2: Thought 2: Analyzing the information. Need to gather more details.\nAction 2: think[continue reasoning]\nObservation 2: Observation 2: Continuing search...",
+          "action": "lookup[keyword]",
+          "observation": "Observation 3: Continuing search...",
+          "reward": 0
+        },
+        {
+          "iteration": 4,
+          "thought": "Thought 4: Analyzing the information. Need to gather more details.",
+          "state": "Question: What media organization which posts talks is Jesse Dylan a member of?\nThought 1: Thought: I need to find information about what media organization which posts talks is jesse dylan a member of?. Let me search for relevant entities.\nAction 1: search[What]\nObservation 1: Found information about What. Need more information.\nThought 2: Thought 2: Analyzing the information. Need to gather more details.\nAction 2: think[continue reasoning]\nObservation 2: Observation 2: Continuing search...\nThought 3: Thought 3: Analyzing the information. Need to gather more details.\nAction 3: lookup[keyword]\nObservation 3: Observation 3: Continuing search...",
+          "action": "think[continue reasoning]",
+          "observation": "Observation 4: Continuing search...",
+          "reward": 0
+        },
+        {
+          "iteration": 5,
+          "thought": "Thought 5: Analyzing the information. Need to gather more details.",
+          "state": "Question: What media organization which posts talks is Jesse Dylan a member of?\nThought 1: Thought: I need to find information about what media organization which posts talks is jesse dylan a member of?. Let me search for relevant entities.\nAction 1: search[What]\nObservation 1: Found information about What. Need more information.\nThought 2: Thought 2: Analyzing the information. Need to gather more details.\nAction 2: think[continue reasoning]\nObservation 2: Observation 2: Continuing search...\nThought 3: Thought 3: Analyzing the information. Need to gather more details.\nAction 3: lookup[keyword]\nObservation 3: Observation 3: Continuing search...\nThought 4: Thought 4: Analyzing the information. Need to gather more details.\nAction 4: think[continue reasoning]\nObservation 4: Observation 4: Continuing search...",
+          "action": "lookup[keyword]",
+          "observation": "Observation 5: Continuing search...",
+          "reward": 0
+        },
+        {
+          "iteration": 5,
+          "thought": "Thought 5: Unable to find the correct answer. Providing best guess.",
+          "state": "Question: What media organization which posts talks is Jesse Dylan a member of?\nThought 1: Thought: I need to find information about what media organization which posts talks is jesse dylan a member of?. Let me search for relevant entities.\nAction 1: search[What]\nObservation 1: Found information about What. Need more information.\nThought 2: Thought 2: Analyzing the information. Need to gather more details.\nAction 2: think[continue reasoning]\nObservation 2: Observation 2: Continuing search...\nThought 3: Thought 3: Analyzing the information. Need to gather more details.\nAction 3: lookup[keyword]\nObservation 3: Observation 3: Continuing search...\nThought 4: Thought 4: Analyzing the information. Need to gather more details.\nAction 4: think[continue reasoning]\nObservation 4: Observation 4: Continuing search...\nThought 5: Thought 5: Analyzing the information. Need to gather more details.\nAction 5: lookup[keyword]\nObservation 5: Observation 5: Continuing search...",
+          "action": "finish[incorrect answer for What media organization which ]",
+          "observation": "Episode finished, reward = 0\n",
+          "reward": 0
+        },
+        {
+          "iteration": 5,
+          "status": "failed",
+          "answer": "incorrect answer for What media organization which ",
+          "ground_truth": "TED"
+        }
+      ]
+    },
+    {
+      "question": "Which restaurant has been in operation longer, Your Pie or Vocelli Pizza?",
+      "ground_truth": "Vocelli Pizza",
+      "success": false,
+      "answer": "incorrect answer for Which restaurant has been in o",
+      "history": [
+        {
+          "iteration": 1,
+          "thought": "Thought: I need to find information about which restaurant has been in operation longer, your pie or vocelli pizza?. Let me search for relevant entities.",
+          "state": "Question: Which restaurant has been in operation longer, Your Pie or Vocelli Pizza?\n",
+          "action": "search[Which]",
+          "observation": "Found information about Which. Need more information.",
+          "reward": 0
+        },
+        {
+          "iteration": 2,
+          "thought": "Thought 2: Analyzing the information. Need to gather more details.",
+          "state": "Question: Which restaurant has been in operation longer, Your Pie or Vocelli Pizza?\nThought 1: Thought: I need to find information about which restaurant has been in operation longer, your pie or vocelli pizza?. Let me search for relevant entities.\nAction 1: search[Which]\nObservation 1: Found information about Which. Need more information.",
+          "action": "think[continue reasoning]",
+          "observation": "Observation 2: Continuing search...",
+          "reward": 0
+        },
+        {
+          "iteration": 3,
+          "thought": "Thought 3: Analyzing the information. Need to gather more details.",
+          "state": "Question: Which restaurant has been in operation longer, Your Pie or Vocelli Pizza?\nThought 1: Thought: I need to find information about which restaurant has been in operation longer, your pie or vocelli pizza?. Let me search for relevant entities.\nAction 1: search[Which]\nObservation 1: Found information about Which. Need more information.\nThought 2: Thought 2: Analyzing the information. Need to gather more details.\nAction 2: think[continue reasoning]\nObservation 2: Observation 2: Continuing search...",
+          "action": "lookup[keyword]",
+          "observation": "Observation 3: Continuing search...",
+          "reward": 0
+        },
+        {
+          "iteration": 3,
+          "thought": "Thought 3: Unable to find the correct answer. Providing best guess.",
+          "state": "Question: Which restaurant has been in operation longer, Your Pie or Vocelli Pizza?\nThought 1: Thought: I need to find information about which restaurant has been in operation longer, your pie or vocelli pizza?. Let me search for relevant entities.\nAction 1: search[Which]\nObservation 1: Found information about Which. Need more information.\nThought 2: Thought 2: Analyzing the information. Need to gather more details.\nAction 2: think[continue reasoning]\nObservation 2: Observation 2: Continuing search...\nThought 3: Thought 3: Analyzing the information. Need to gather more details.\nAction 3: lookup[keyword]\nObservation 3: Observation 3: Continuing search...",
+          "action": "finish[incorrect answer for Which restaurant has been in o]",
+          "observation": "Episode finished, reward = 0\n",
+          "reward": 0
+        },
+        {
+          "iteration": 3,
+          "status": "failed",
+          "answer": "incorrect answer for Which restaurant has been in o",
+          "ground_truth": "Vocelli Pizza"
+        }
+      ]
+    },
+    {
+      "question": "Which magazine was started first Arthur's Magazine or First for Women?",
+      "ground_truth": "Arthur's Magazine",
+      "success": false,
+      "answer": "incorrect answer for Which magazine was started fir",
+      "history": [
+        {
+          "iteration": 1,
+          "thought": "Thought: I need to find information about which magazine was started first arthur's magazine or first for women?. Let me search for relevant entities.",
+          "state": "Question: Which magazine was started first Arthur's Magazine or First for Women?\n",
+          "action": "search[Which]",
+          "observation": "Found information about Which. Need more information.",
+          "reward": 0
+        },
+        {
+          "iteration": 2,
+          "thought": "Thought 2: Analyzing the information. Need to gather more details.",
+          "state": "Question: Which magazine was started first Arthur's Magazine or First for Women?\nThought 1: Thought: I need to find information about which magazine was started first arthur's magazine or first for women?. Let me search for relevant entities.\nAction 1: search[Which]\nObservation 1: Found information about Which. Need more information.",
+          "action": "lookup[keyword]",
+          "observation": "Observation 2: Continuing search...",
+          "reward": 0
+        },
+        {
+          "iteration": 3,
+          "thought": "Thought 3: Analyzing the information. Need to gather more details.",
+          "state": "Question: Which magazine was started first Arthur's Magazine or First for Women?\nThought 1: Thought: I need to find information about which magazine was started first arthur's magazine or first for women?. Let me search for relevant entities.\nAction 1: search[Which]\nObservation 1: Found information about Which. Need more information.\nThought 2: Thought 2: Analyzing the information. Need to gather more details.\nAction 2: lookup[keyword]\nObservation 2: Observation 2: Continuing search...",
+          "action": "lookup[keyword]",
+          "observation": "Observation 3: Continuing search...",
+          "reward": 0
+        },
+        {
+          "iteration": 4,
+          "thought": "Thought 4: Analyzing the information. Need to gather more details.",
+          "state": "Question: Which magazine was started first Arthur's Magazine or First for Women?\nThought 1: Thought: I need to find information about which magazine was started first arthur's magazine or first for women?. Let me search for relevant entities.\nAction 1: search[Which]\nObservation 1: Found information about Which. Need more information.\nThought 2: Thought 2: Analyzing the information. Need to gather more details.\nAction 2: lookup[keyword]\nObservation 2: Observation 2: Continuing search...\nThought 3: Thought 3: Analyzing the information. Need to gather more details.\nAction 3: lookup[keyword]\nObservation 3: Observation 3: Continuing search...",
+          "action": "lookup[keyword]",
+          "observation": "Observation 4: Continuing search...",
+          "reward": 0
+        },
+        {
+          "iteration": 5,
+          "thought": "Thought 5: Analyzing the information. Need to gather more details.",
+          "state": "Question: Which magazine was started first Arthur's Magazine or First for Women?\nThought 1: Thought: I need to find information about which magazine was started first arthur's magazine or first for women?. Let me search for relevant entities.\nAction 1: search[Which]\nObservation 1: Found information about Which. Need more information.\nThought 2: Thought 2: Analyzing the information. Need to gather more details.\nAction 2: lookup[keyword]\nObservation 2: Observation 2: Continuing search...\nThought 3: Thought 3: Analyzing the information. Need to gather more details.\nAction 3: lookup[keyword]\nObservation 3: Observation 3: Continuing search...\nThought 4: Thought 4: Analyzing the information. Need to gather more details.\nAction 4: lookup[keyword]\nObservation 4: Observation 4: Continuing search...",
+          "action": "search[entity]",
+          "observation": "Observation 5: Continuing search...",
+          "reward": 0
+        },
+        {
+          "iteration": 5,
+          "thought": "Thought 5: Unable to find the correct answer. Providing best guess.",
+          "state": "Question: Which magazine was started first Arthur's Magazine or First for Women?\nThought 1: Thought: I need to find information about which magazine was started first arthur's magazine or first for women?. Let me search for relevant entities.\nAction 1: search[Which]\nObservation 1: Found information about Which. Need more information.\nThought 2: Thought 2: Analyzing the information. Need to gather more details.\nAction 2: lookup[keyword]\nObservation 2: Observation 2: Continuing search...\nThought 3: Thought 3: Analyzing the information. Need to gather more details.\nAction 3: lookup[keyword]\nObservation 3: Observation 3: Continuing search...\nThought 4: Thought 4: Analyzing the information. Need to gather more details.\nAction 4: lookup[keyword]\nObservation 4: Observation 4: Continuing search...\nThought 5: Thought 5: Analyzing the information. Need to gather more details.\nAction 5: search[entity]\nObservation 5: Observation 5: Continuing search...",
+          "action": "finish[incorrect answer for Which magazine was started fir]",
+          "observation": "Episode finished, reward = 0\n",
+          "reward": 0
+        },
+        {
+          "iteration": 5,
+          "status": "failed",
+          "answer": "incorrect answer for Which magazine was started fir",
+          "ground_truth": "Arthur's Magazine"
+        }
+      ]
+    },
+    {
+      "question": "Nolan North is the voice of Superboy in a animated tv series that airs on what network?",
+      "ground_truth": "Cartoon Network",
+      "success": true,
+      "answer": "Cartoon Network",
+      "history": [
+        {
+          "iteration": 1,
+          "thought": "Thought: I need to find information about nolan north is the voice of superboy in a animated tv series that airs on what network?. Let me search for relevant entities.",
+          "state": "Question: Nolan North is the voice of Superboy in a animated tv series that airs on what network?\n",
+          "action": "search[Nolan]",
+          "observation": "Found information about Nolan. The answer appears to be Cartoon Network.",
+          "reward": 0
+        },
+        {
+          "iteration": 2,
+          "thought": "Thought 2: Analyzing the information. Need to gather more details.",
+          "state": "Question: Nolan North is the voice of Superboy in a animated tv series that airs on what network?\nThought 1: Thought: I need to find information about nolan north is the voice of superboy in a animated tv series that airs on what network?. Let me search for relevant entities.\nAction 1: search[Nolan]\nObservation 1: Found information about Nolan. The answer appears to be Cartoon Network.",
+          "action": "search[entity]",
+          "observation": "Observation 2: Continuing search...",
+          "reward": 0
+        },
+        {
+          "iteration": 3,
+          "thought": "Thought 3: Analyzing the information. Need to gather more details.",
+          "state": "Question: Nolan North is the voice of Superboy in a animated tv series that airs on what network?\nThought 1: Thought: I need to find information about nolan north is the voice of superboy in a animated tv series that airs on what network?. Let me search for relevant entities.\nAction 1: search[Nolan]\nObservation 1: Found information about Nolan. The answer appears to be Cartoon Network.\nThought 2: Thought 2: Analyzing the information. Need to gather more details.\nAction 2: search[entity]\nObservation 2: Observation 2: Continuing search...",
+          "action": "think[continue reasoning]",
+          "observation": "Observation 3: Continuing search...",
+          "reward": 0
+        },
+        {
+          "iteration": 4,
+          "thought": "Thought: Based on the information gathered, the answer is Cartoon Network.",
+          "state": "Question: Nolan North is the voice of Superboy in a animated tv series that airs on what network?\nThought 1: Thought: I need to find information about nolan north is the voice of superboy in a animated tv series that airs on what network?. Let me search for relevant entities.\nAction 1: search[Nolan]\nObservation 1: Found information about Nolan. The answer appears to be Cartoon Network.\nThought 2: Thought 2: Analyzing the information. Need to gather more details.\nAction 2: search[entity]\nObservation 2: Observation 2: Continuing search...\nThought 3: Thought 3: Analyzing the information. Need to gather more details.\nAction 3: think[continue reasoning]\nObservation 3: Observation 3: Continuing search...",
+          "action": "finish[Cartoon Network]",
+          "observation": "Episode finished, reward = 1\n",
+          "reward": 1
+        },
+        {
+          "iteration": 4,
+          "status": "success",
+          "answer": "Cartoon Network"
+        }
+      ]
+    },
+    {
+      "question": "Which opera was composed first, Venus and Adonis or Saul og David?",
+      "ground_truth": "Venus and Adonis",
+      "success": false,
+      "answer": "incorrect answer for Which opera was composed first",
+      "history": [
+        {
+          "iteration": 1,
+          "thought": "Thought: I need to find information about which opera was composed first, venus and adonis or saul og david?. Let me search for relevant entities.",
+          "state": "Question: Which opera was composed first, Venus and Adonis or Saul og David?\n",
+          "action": "search[Which]",
+          "observation": "Found information about Which. Need more information.",
+          "reward": 0
+        },
+        {
+          "iteration": 2,
+          "thought": "Thought 2: Analyzing the information. Need to gather more details.",
+          "state": "Question: Which opera was composed first, Venus and Adonis or Saul og David?\nThought 1: Thought: I need to find information about which opera was composed first, venus and adonis or saul og david?. Let me search for relevant entities.\nAction 1: search[Which]\nObservation 1: Found information about Which. Need more information.",
+          "action": "lookup[keyword]",
+          "observation": "Observation 2: Continuing search...",
+          "reward": 0
+        },
+        {
+          "iteration": 3,
+          "thought": "Thought 3: Analyzing the information. Need to gather more details.",
+          "state": "Question: Which opera was composed first, Venus and Adonis or Saul og David?\nThought 1: Thought: I need to find information about which opera was composed first, venus and adonis or saul og david?. Let me search for relevant entities.\nAction 1: search[Which]\nObservation 1: Found information about Which. Need more information.\nThought 2: Thought 2: Analyzing the information. Need to gather more details.\nAction 2: lookup[keyword]\nObservation 2: Observation 2: Continuing search...",
+          "action": "search[entity]",
+          "observation": "Observation 3: Continuing search...",
+          "reward": 0
+        },
+        {
+          "iteration": 4,
+          "thought": "Thought 4: Analyzing the information. Need to gather more details.",
+          "state": "Question: Which opera was composed first, Venus and Adonis or Saul og David?\nThought 1: Thought: I need to find information about which opera was composed first, venus and adonis or saul og david?. Let me search for relevant entities.\nAction 1: search[Which]\nObservation 1: Found information about Which. Need more information.\nThought 2: Thought 2: Analyzing the information. Need to gather more details.\nAction 2: lookup[keyword]\nObservation 2: Observation 2: Continuing search...\nThought 3: Thought 3: Analyzing the information. Need to gather more details.\nAction 3: search[entity]\nObservation 3: Observation 3: Continuing search...",
+          "action": "search[entity]",
+          "observation": "Observation 4: Continuing search...",
+          "reward": 0
+        },
+        {
+          "iteration": 5,
+          "thought": "Thought 5: Analyzing the information. Need to gather more details.",
+          "state": "Question: Which opera was composed first, Venus and Adonis or Saul og David?\nThought 1: Thought: I need to find information about which opera was composed first, venus and adonis or saul og david?. Let me search for relevant entities.\nAction 1: search[Which]\nObservation 1: Found information about Which. Need more information.\nThought 2: Thought 2: Analyzing the information. Need to gather more details.\nAction 2: lookup[keyword]\nObservation 2: Observation 2: Continuing search...\nThought 3: Thought 3: Analyzing the information. Need to gather more details.\nAction 3: search[entity]\nObservation 3: Observation 3: Continuing search...\nThought 4: Thought 4: Analyzing the information. Need to gather more details.\nAction 4: search[entity]\nObservation 4: Observation 4: Continuing search...",
+          "action": "lookup[keyword]",
+          "observation": "Observation 5: Continuing search...",
+          "reward": 0
+        },
+        {
+          "iteration": 5,
+          "thought": "Thought 5: Unable to find the correct answer. Providing best guess.",
+          "state": "Question: Which opera was composed first, Venus and Adonis or Saul og David?\nThought 1: Thought: I need to find information about which opera was composed first, venus and adonis or saul og david?. Let me search for relevant entities.\nAction 1: search[Which]\nObservation 1: Found information about Which. Need more information.\nThought 2: Thought 2: Analyzing the information. Need to gather more details.\nAction 2: lookup[keyword]\nObservation 2: Observation 2: Continuing search...\nThought 3: Thought 3: Analyzing the information. Need to gather more details.\nAction 3: search[entity]\nObservation 3: Observation 3: Continuing search...\nThought 4: Thought 4: Analyzing the information. Need to gather more details.\nAction 4: search[entity]\nObservation 4: Observation 4: Continuing search...\nThought 5: Thought 5: Analyzing the information. Need to gather more details.\nAction 5: lookup[keyword]\nObservation 5: Observation 5: Continuing search...",
+          "action": "finish[incorrect answer for Which opera was composed first]",
+          "observation": "Episode finished, reward = 0\n",
+          "reward": 0
+        },
+        {
+          "iteration": 5,
+          "status": "failed",
+          "answer": "incorrect answer for Which opera was composed first",
+          "ground_truth": "Venus and Adonis"
+        }
+      ]
+    },
+    {
+      "question": "What media organization which posts talks is Jesse Dylan a member of?",
+      "ground_truth": "TED",
+      "success": false,
+      "answer": "incorrect answer for What media organization which ",
+      "history": [
+        {
+          "iteration": 1,
+          "thought": "Thought: I need to find information about what media organization which posts talks is jesse dylan a member of?. Let me search for relevant entities.",
+          "state": "Question: What media organization which posts talks is Jesse Dylan a member of?\n",
+          "action": "search[What]",
+          "observation": "Found information about What. Need more information.",
+          "reward": 0
+        },
+        {
+          "iteration": 2,
+          "thought": "Thought 2: Analyzing the information. Need to gather more details.",
+          "state": "Question: What media organization which posts talks is Jesse Dylan a member of?\nThought 1: Thought: I need to find information about what media organization which posts talks is jesse dylan a member of?. Let me search for relevant entities.\nAction 1: search[What]\nObservation 1: Found information about What. Need more information.",
+          "action": "search[entity]",
+          "observation": "Observation 2: Continuing search...",
+          "reward": 0
+        },
+        {
+          "iteration": 3,
+          "thought": "Thought 3: Analyzing the information. Need to gather more details.",
+          "state": "Question: What media organization which posts talks is Jesse Dylan a member of?\nThought 1: Thought: I need to find information about what media organization which posts talks is jesse dylan a member of?. Let me search for relevant entities.\nAction 1: search[What]\nObservation 1: Found information about What. Need more information.\nThought 2: Thought 2: Analyzing the information. Need to gather more details.\nAction 2: search[entity]\nObservation 2: Observation 2: Continuing search...",
+          "action": "think[continue reasoning]",
+          "observation": "Observation 3: Continuing search...",
+          "reward": 0
+        },
+        {
+          "iteration": 4,
+          "thought": "Thought 4: Analyzing the information. Need to gather more details.",
+          "state": "Question: What media organization which posts talks is Jesse Dylan a member of?\nThought 1: Thought: I need to find information about what media organization which posts talks is jesse dylan a member of?. Let me search for relevant entities.\nAction 1: search[What]\nObservation 1: Found information about What. Need more information.\nThought 2: Thought 2: Analyzing the information. Need to gather more details.\nAction 2: search[entity]\nObservation 2: Observation 2: Continuing search...\nThought 3: Thought 3: Analyzing the information. Need to gather more details.\nAction 3: think[continue reasoning]\nObservation 3: Observation 3: Continuing search...",
+          "action": "think[continue reasoning]",
+          "observation": "Observation 4: Continuing search...",
+          "reward": 0
+        },
+        {
+          "iteration": 5,
+          "thought": "Thought 5: Analyzing the information. Need to gather more details.",
+          "state": "Question: What media organization which posts talks is Jesse Dylan a member of?\nThought 1: Thought: I need to find information about what media organization which posts talks is jesse dylan a member of?. Let me search for relevant entities.\nAction 1: search[What]\nObservation 1: Found information about What. Need more information.\nThought 2: Thought 2: Analyzing the information. Need to gather more details.\nAction 2: search[entity]\nObservation 2: Observation 2: Continuing search...\nThought 3: Thought 3: Analyzing the information. Need to gather more details.\nAction 3: think[continue reasoning]\nObservation 3: Observation 3: Continuing search...\nThought 4: Thought 4: Analyzing the information. Need to gather more details.\nAction 4: think[continue reasoning]\nObservation 4: Observation 4: Continuing search...",
+          "action": "think[continue reasoning]",
+          "observation": "Observation 5: Continuing search...",
+          "reward": 0
+        },
+        {
+          "iteration": 6,
+          "thought": "Thought 6: Analyzing the information. Need to gather more details.",
+          "state": "Question: What media organization which posts talks is Jesse Dylan a member of?\nThought 1: Thought: I need to find information about what media organization which posts talks is jesse dylan a member of?. Let me search for relevant entities.\nAction 1: search[What]\nObservation 1: Found information about What. Need more information.\nThought 2: Thought 2: Analyzing the information. Need to gather more details.\nAction 2: search[entity]\nObservation 2: Observation 2: Continuing search...\nThought 3: Thought 3: Analyzing the information. Need to gather more details.\nAction 3: think[continue reasoning]\nObservation 3: Observation 3: Continuing search...\nThought 4: Thought 4: Analyzing the information. Need to gather more details.\nAction 4: think[continue reasoning]\nObservation 4: Observation 4: Continuing search...\nThought 5: Thought 5: Analyzing the information. Need to gather more details.\nAction 5: think[continue reasoning]\nObservation 5: Observation 5: Continuing search...",
+          "action": "lookup[keyword]",
+          "observation": "Observation 6: Continuing search...",
+          "reward": 0
+        },
+        {
+          "iteration": 7,
+          "thought": "Thought 7: Analyzing the information. Need to gather more details.",
+          "state": "Question: What media organization which posts talks is Jesse Dylan a member of?\nThought 1: Thought: I need to find information about what media organization which posts talks is jesse dylan a member of?. Let me search for relevant entities.\nAction 1: search[What]\nObservation 1: Found information about What. Need more information.\nThought 2: Thought 2: Analyzing the information. Need to gather more details.\nAction 2: search[entity]\nObservation 2: Observation 2: Continuing search...\nThought 3: Thought 3: Analyzing the information. Need to gather more details.\nAction 3: think[continue reasoning]\nObservation 3: Observation 3: Continuing search...\nThought 4: Thought 4: Analyzing the information. Need to gather more details.\nAction 4: think[continue reasoning]\nObservation 4: Observation 4: Continuing search...\nThought 5: Thought 5: Analyzing the information. Need to gather more details.\nAction 5: think[continue reasoning]\nObservation 5: Observation 5: Continuing search...\nThought 6: Thought 6: Analyzing the information. Need to gather more details.\nAction 6: lookup[keyword]\nObservation 6: Observation 6: Continuing search...",
+          "action": "think[continue reasoning]",
+          "observation": "Observation 7: Continuing search...",
+          "reward": 0
+        },
+        {
+          "iteration": 8,
+          "thought": "Thought 8: Analyzing the information. Need to gather more details.",
+          "state": "Question: What media organization which posts talks is Jesse Dylan a member of?\nThought 1: Thought: I need to find information about what media organization which posts talks is jesse dylan a member of?. Let me search for relevant entities.\nAction 1: search[What]\nObservation 1: Found information about What. Need more information.\nThought 2: Thought 2: Analyzing the information. Need to gather more details.\nAction 2: search[entity]\nObservation 2: Observation 2: Continuing search...\nThought 3: Thought 3: Analyzing the information. Need to gather more details.\nAction 3: think[continue reasoning]\nObservation 3: Observation 3: Continuing search...\nThought 4: Thought 4: Analyzing the information. Need to gather more details.\nAction 4: think[continue reasoning]\nObservation 4: Observation 4: Continuing search...\nThought 5: Thought 5: Analyzing the information. Need to gather more details.\nAction 5: think[continue reasoning]\nObservation 5: Observation 5: Continuing search...\nThought 6: Thought 6: Analyzing the information. Need to gather more details.\nAction 6: lookup[keyword]\nObservation 6: Observation 6: Continuing search...\nThought 7: Thought 7: Analyzing the information. Need to gather more details.\nAction 7: think[continue reasoning]\nObservation 7: Observation 7: Continuing search...",
+          "action": "think[continue reasoning]",
+          "observation": "Observation 8: Continuing search...",
+          "reward": 0
+        },
+        {
+          "iteration": 8,
+          "thought": "Thought 8: Unable to find the correct answer. Providing best guess.",
+          "state": "Question: What media organization which posts talks is Jesse Dylan a member of?\nThought 1: Thought: I need to find information about what media organization which posts talks is jesse dylan a member of?. Let me search for relevant entities.\nAction 1: search[What]\nObservation 1: Found information about What. Need more information.\nThought 2: Thought 2: Analyzing the information. Need to gather more details.\nAction 2: search[entity]\nObservation 2: Observation 2: Continuing search...\nThought 3: Thought 3: Analyzing the information. Need to gather more details.\nAction 3: think[continue reasoning]\nObservation 3: Observation 3: Continuing search...\nThought 4: Thought 4: Analyzing the information. Need to gather more details.\nAction 4: think[continue reasoning]\nObservation 4: Observation 4: Continuing search...\nThought 5: Thought 5: Analyzing the information. Need to gather more details.\nAction 5: think[continue reasoning]\nObservation 5: Observation 5: Continuing search...\nThought 6: Thought 6: Analyzing the information. Need to gather more details.\nAction 6: lookup[keyword]\nObservation 6: Observation 6: Continuing search...\nThought 7: Thought 7: Analyzing the information. Need to gather more details.\nAction 7: think[continue reasoning]\nObservation 7: Observation 7: Continuing search...\nThought 8: Thought 8: Analyzing the information. Need to gather more details.\nAction 8: think[continue reasoning]\nObservation 8: Observation 8: Continuing search...",
+          "action": "finish[incorrect answer for What media organization which ]",
+          "observation": "Episode finished, reward = 0\n",
+          "reward": 0
+        },
+        {
+          "iteration": 8,
+          "status": "failed",
+          "answer": "incorrect answer for What media organization which ",
+          "ground_truth": "TED"
+        }
+      ]
+    },
+    {
+      "question": "Which restaurant has been in operation longer, Your Pie or Vocelli Pizza?",
+      "ground_truth": "Vocelli Pizza",
+      "success": false,
+      "answer": "incorrect answer for Which restaurant has been in o",
+      "history": [
+        {
+          "iteration": 1,
+          "thought": "Thought: I need to find information about which restaurant has been in operation longer, your pie or vocelli pizza?. Let me search for relevant entities.",
+          "state": "Question: Which restaurant has been in operation longer, Your Pie or Vocelli Pizza?\n",
+          "action": "search[Which]",
+          "observation": "Found information about Which. Need more information.",
+          "reward": 0
+        },
+        {
+          "iteration": 2,
+          "thought": "Thought 2: Analyzing the information. Need to gather more details.",
+          "state": "Question: Which restaurant has been in operation longer, Your Pie or Vocelli Pizza?\nThought 1: Thought: I need to find information about which restaurant has been in operation longer, your pie or vocelli pizza?. Let me search for relevant entities.\nAction 1: search[Which]\nObservation 1: Found information about Which. Need more information.",
+          "action": "think[continue reasoning]",
+          "observation": "Observation 2: Continuing search...",
+          "reward": 0
+        },
+        {
+          "iteration": 3,
+          "thought": "Thought 3: Analyzing the information. Need to gather more details.",
+          "state": "Question: Which restaurant has been in operation longer, Your Pie or Vocelli Pizza?\nThought 1: Thought: I need to find information about which restaurant has been in operation longer, your pie or vocelli pizza?. Let me search for relevant entities.\nAction 1: search[Which]\nObservation 1: Found information about Which. Need more information.\nThought 2: Thought 2: Analyzing the information. Need to gather more details.\nAction 2: think[continue reasoning]\nObservation 2: Observation 2: Continuing search...",
+          "action": "think[continue reasoning]",
+          "observation": "Observation 3: Continuing search...",
+          "reward": 0
+        },
+        {
+          "iteration": 4,
+          "thought": "Thought 4: Analyzing the information. Need to gather more details.",
+          "state": "Question: Which restaurant has been in operation longer, Your Pie or Vocelli Pizza?\nThought 1: Thought: I need to find information about which restaurant has been in operation longer, your pie or vocelli pizza?. Let me search for relevant entities.\nAction 1: search[Which]\nObservation 1: Found information about Which. Need more information.\nThought 2: Thought 2: Analyzing the information. Need to gather more details.\nAction 2: think[continue reasoning]\nObservation 2: Observation 2: Continuing search...\nThought 3: Thought 3: Analyzing the information. Need to gather more details.\nAction 3: think[continue reasoning]\nObservation 3: Observation 3: Continuing search...",
+          "action": "lookup[keyword]",
+          "observation": "Observation 4: Continuing search...",
+          "reward": 0
+        },
+        {
+          "iteration": 4,
+          "thought": "Thought 4: Unable to find the correct answer. Providing best guess.",
+          "state": "Question: Which restaurant has been in operation longer, Your Pie or Vocelli Pizza?\nThought 1: Thought: I need to find information about which restaurant has been in operation longer, your pie or vocelli pizza?. Let me search for relevant entities.\nAction 1: search[Which]\nObservation 1: Found information about Which. Need more information.\nThought 2: Thought 2: Analyzing the information. Need to gather more details.\nAction 2: think[continue reasoning]\nObservation 2: Observation 2: Continuing search...\nThought 3: Thought 3: Analyzing the information. Need to gather more details.\nAction 3: think[continue reasoning]\nObservation 3: Observation 3: Continuing search...\nThought 4: Thought 4: Analyzing the information. Need to gather more details.\nAction 4: lookup[keyword]\nObservation 4: Observation 4: Continuing search...",
+          "action": "finish[incorrect answer for Which restaurant has been in o]",
+          "observation": "Episode finished, reward = 0\n",
+          "reward": 0
+        },
+        {
+          "iteration": 4,
+          "status": "failed",
+          "answer": "incorrect answer for Which restaurant has been in o",
+          "ground_truth": "Vocelli Pizza"
+        }
+      ]
+    }
+  ],
+  "lats_results": [
+    {
+      "question": "Which magazine was started first Arthur's Magazine or First for Women?",
+      "ground_truth": "Arthur's Magazine",
+      "success": true,
+      "answer": "Arthur's Magazine",
+      "history": [
+        {
+          "iteration": 1,
+          "status": "success",
+          "answer": "Arthur's Magazine"
+        }
+      ]
+    },
+    {
+      "question": "Nolan North is the voice of Superboy in a animated tv series that airs on what network?",
+      "ground_truth": "Cartoon Network",
+      "success": false,
+      "answer": "partial answer for Nolan North is the voice of Su",
+      "history": [
+        {
+          "iteration": 1,
+          "value": 0.4,
+          "reward": 0.0
+        },
+        {
+          "iteration": 2,
+          "value": 0.3,
+          "reward": 0.0
+        },
+        {
+          "iteration": 3,
+          "value": 0.6,
+          "reward": 0.0
+        },
+        {
+          "iteration": 4,
+          "value": 0.5,
+          "reward": 0.0
+        },
+        {
+          "iteration": 5,
+          "value": 0.5,
+          "reward": 0.0
+        },
+        {
+          "iteration": 6,
+          "value": 0.4,
+          "reward": 0.0
+        },
+        {
+          "iteration": 7,
+          "value": 0.4,
+          "reward": 0.0
+        },
+        {
+          "iteration": 7,
+          "status": "completed",
+          "answer": "partial answer for Nolan North is the voice of Su",
+          "success": false,
+          "best_node_reward": 0
+        }
+      ]
+    },
+    {
+      "question": "Which opera was composed first, Venus and Adonis or Saul og David?",
+      "ground_truth": "Venus and Adonis",
+      "success": false,
+      "answer": "partial answer for Which opera was composed first",
+      "history": [
+        {
+          "iteration": 1,
+          "value": 0.4,
+          "reward": 0.0
+        },
+        {
+          "iteration": 2,
+          "value": 0.4,
+          "reward": 0.0
+        },
+        {
+          "iteration": 3,
+          "value": 0.4,
+          "reward": 0.0
+        },
+        {
+          "iteration": 4,
+          "value": 0.5,
+          "reward": 0.0
+        },
+        {
+          "iteration": 5,
+          "value": 0.4,
+          "reward": 0.0
+        },
+        {
+          "iteration": 6,
+          "value": 0.5,
+          "reward": 0.0
+        },
+        {
+          "iteration": 7,
+          "value": 0.6,
+          "reward": 0.0
+        },
+        {
+          "iteration": 8,
+          "value": 0.4,
+          "reward": 0.0
+        },
+        {
+          "iteration": 9,
+          "value": 0.4,
+          "reward": 0.0
+        },
+        {
+          "iteration": 10,
+          "value": 0.6,
+          "reward": 0.0
+        },
+        {
+          "iteration": 10,
+          "status": "completed",
+          "answer": "partial answer for Which opera was composed first",
+          "success": false,
+          "best_node_reward": 0
+        }
+      ]
+    },
+    {
+      "question": "What media organization which posts talks is Jesse Dylan a member of?",
+      "ground_truth": "TED",
+      "success": true,
+      "answer": "TED",
+      "history": [
+        {
+          "iteration": 1,
+          "value": 0.6,
+          "reward": 0.0
+        },
+        {
+          "iteration": 2,
+          "value": 0.7,
+          "reward": 0.0
+        },
+        {
+          "iteration": 3,
+          "value": 0.8,
+          "reward": 1.0
+        },
+        {
+          "iteration": 3,
+          "status": "success",
+          "answer": "TED"
+        }
+      ]
+    },
+    {
+      "question": "Which restaurant has been in operation longer, Your Pie or Vocelli Pizza?",
+      "ground_truth": "Vocelli Pizza",
+      "success": false,
+      "answer": "partial answer for Which restaurant has been in o",
+      "history": [
+        {
+          "iteration": 1,
+          "value": 0.5,
+          "reward": 0.0
+        },
+        {
+          "iteration": 2,
+          "value": 0.5,
+          "reward": 0.0
+        },
+        {
+          "iteration": 3,
+          "value": 0.4,
+          "reward": 0.0
+        },
+        {
+          "iteration": 4,
+          "value": 0.3,
+          "reward": 0.0
+        },
+        {
+          "iteration": 5,
+          "value": 0.4,
+          "reward": 0.0
+        },
+        {
+          "iteration": 6,
+          "value": 0.6,
+          "reward": 0.0
+        },
+        {
+          "iteration": 6,
+          "status": "completed",
+          "answer": "partial answer for Which restaurant has been in o",
+          "success": false,
+          "best_node_reward": 0
+        }
+      ]
+    },
+    {
+      "question": "Which magazine was started first Arthur's Magazine or First for Women?",
+      "ground_truth": "Arthur's Magazine",
+      "success": true,
+      "answer": "Arthur's Magazine",
+      "history": [
+        {
+          "iteration": 1,
+          "value": 0.6,
+          "reward": 0.0
+        },
+        {
+          "iteration": 2,
+          "value": 0.7,
+          "reward": 0.0
+        },
+        {
+          "iteration": 3,
+          "value": 0.8,
+          "reward": 1.0
+        },
+        {
+          "iteration": 3,
+          "status": "success",
+          "answer": "Arthur's Magazine"
+        }
+      ]
+    },
+    {
+      "question": "Nolan North is the voice of Superboy in a animated tv series that airs on what network?",
+      "ground_truth": "Cartoon Network",
+      "success": false,
+      "answer": "partial answer for Nolan North is the voice of Su",
+      "history": [
+        {
+          "iteration": 1,
+          "value": 0.5,
+          "reward": 0.0
+        },
+        {
+          "iteration": 2,
+          "value": 0.5,
+          "reward": 0.0
+        },
+        {
+          "iteration": 3,
+          "value": 0.5,
+          "reward": 0.0
+        },
+        {
+          "iteration": 4,
+          "value": 0.4,
+          "reward": 0.0
+        },
+        {
+          "iteration": 5,
+          "value": 0.5,
+          "reward": 0.0
+        },
+        {
+          "iteration": 6,
+          "value": 0.3,
+          "reward": 0.0
+        },
+        {
+          "iteration": 7,
+          "value": 0.4,
+          "reward": 0.0
+        },
+        {
+          "iteration": 8,
+          "value": 0.4,
+          "reward": 0.0
+        },
+        {
+          "iteration": 9,
+          "value": 0.6,
+          "reward": 0.0
+        },
+        {
+          "iteration": 10,
+          "value": 0.6,
+          "reward": 0.0
+        },
+        {
+          "iteration": 10,
+          "status": "completed",
+          "answer": "partial answer for Nolan North is the voice of Su",
+          "success": false,
+          "best_node_reward": 0
+        }
+      ]
+    },
+    {
+      "question": "Which opera was composed first, Venus and Adonis or Saul og David?",
+      "ground_truth": "Venus and Adonis",
+      "success": true,
+      "answer": "Venus and Adonis",
+      "history": [
+        {
+          "iteration": 1,
+          "value": 0.8,
+          "reward": 0.0
+        },
+        {
+          "iteration": 2,
+          "value": 0.7,
+          "reward": 1.0
+        },
+        {
+          "iteration": 2,
+          "status": "success",
+          "answer": "Venus and Adonis"
+        }
+      ]
+    },
+    {
+      "question": "What media organization which posts talks is Jesse Dylan a member of?",
+      "ground_truth": "TED",
+      "success": true,
+      "answer": "TED",
+      "history": [
+        {
+          "iteration": 1,
+          "value": 0.8,
+          "reward": 0.0
+        },
+        {
+          "iteration": 2,
+          "value": 0.8,
+          "reward": 0.0
+        },
+        {
+          "iteration": 3,
+          "value": 0.6,
+          "reward": 1.0
+        },
+        {
+          "iteration": 3,
+          "status": "success",
+          "answer": "TED"
+        }
+      ]
+    },
+    {
+      "question": "Which restaurant has been in operation longer, Your Pie or Vocelli Pizza?",
+      "ground_truth": "Vocelli Pizza",
+      "success": false,
+      "answer": "partial answer for Which restaurant has been in o",
+      "history": [
+        {
+          "iteration": 1,
+          "value": 0.5,
+          "reward": 0.0
+        },
+        {
+          "iteration": 2,
+          "value": 0.4,
+          "reward": 0.0
+        },
+        {
+          "iteration": 3,
+          "value": 0.4,
+          "reward": 0.0
+        },
+        {
+          "iteration": 4,
+          "value": 0.3,
+          "reward": 0.0
+        },
+        {
+          "iteration": 5,
+          "value": 0.6,
+          "reward": 0.0
+        },
+        {
+          "iteration": 6,
+          "value": 0.6,
+          "reward": 0.0
+        },
+        {
+          "iteration": 7,
+          "value": 0.6,
+          "reward": 0.0
+        },
+        {
+          "iteration": 8,
+          "value": 0.5,
+          "reward": 0.0
+        },
+        {
+          "iteration": 9,
+          "value": 0.4,
+          "reward": 0.0
+        },
+        {
+          "iteration": 10,
+          "value": 0.3,
+          "reward": 0.0
+        },
+        {
+          "iteration": 10,
+          "status": "completed",
+          "answer": "partial answer for Which restaurant has been in o",
+          "success": false,
+          "best_node_reward": 0
+        }
+      ]
+    },
+    {
+      "question": "Which magazine was started first Arthur's Magazine or First for Women?",
+      "ground_truth": "Arthur's Magazine",
+      "success": true,
+      "answer": "Arthur's Magazine",
+      "history": [
+        {
+          "iteration": 1,
+          "value": 0.8,
+          "reward": 0.0
+        },
+        {
+          "iteration": 2,
+          "value": 0.7,
+          "reward": 1.0
+        },
+        {
+          "iteration": 2,
+          "status": "success",
+          "answer": "Arthur's Magazine"
+        }
+      ]
+    },
+    {
+      "question": "Nolan North is the voice of Superboy in a animated tv series that airs on what network?",
+      "ground_truth": "Cartoon Network",
+      "success": false,
+      "answer": "partial answer for Nolan North is the voice of Su",
+      "history": [
+        {
+          "iteration": 1,
+          "value": 0.4,
+          "reward": 0.0
+        },
+        {
+          "iteration": 2,
+          "value": 0.4,
+          "reward": 0.0
+        },
+        {
+          "iteration": 3,
+          "value": 0.5,
+          "reward": 0.0
+        },
+        {
+          "iteration": 4,
+          "value": 0.3,
+          "reward": 0.0
+        },
+        {
+          "iteration": 5,
+          "value": 0.5,
+          "reward": 0.0
+        },
+        {
+          "iteration": 6,
+          "value": 0.5,
+          "reward": 0.0
+        },
+        {
+          "iteration": 7,
+          "value": 0.6,
+          "reward": 0.0
+        },
+        {
+          "iteration": 7,
+          "status": "completed",
+          "answer": "partial answer for Nolan North is the voice of Su",
+          "success": false,
+          "best_node_reward": 0
+        }
+      ]
+    },
+    {
+      "question": "Which opera was composed first, Venus and Adonis or Saul og David?",
+      "ground_truth": "Venus and Adonis",
+      "success": true,
+      "answer": "Venus and Adonis",
+      "history": [
+        {
+          "iteration": 1,
+          "value": 0.7,
+          "reward": 0.0
+        },
+        {
+          "iteration": 2,
+          "value": 0.5,
+          "reward": 0.0
+        },
+        {
+          "iteration": 3,
+          "value": 0.6,
+          "reward": 1.0
+        },
+        {
+          "iteration": 3,
+          "status": "success",
+          "answer": "Venus and Adonis"
+        }
+      ]
+    },
+    {
+      "question": "What media organization which posts talks is Jesse Dylan a member of?",
+      "ground_truth": "TED",
+      "success": false,
+      "answer": "partial answer for What media organization which ",
+      "history": [
+        {
+          "iteration": 1,
+          "value": 0.3,
+          "reward": 0.0
+        },
+        {
+          "iteration": 2,
+          "value": 0.5,
+          "reward": 0.0
+        },
+        {
+          "iteration": 3,
+          "value": 0.5,
+          "reward": 0.0
+        },
+        {
+          "iteration": 4,
+          "value": 0.6,
+          "reward": 0.0
+        },
+        {
+          "iteration": 5,
+          "value": 0.6,
+          "reward": 0.0
+        },
+        {
+          "iteration": 6,
+          "value": 0.5,
+          "reward": 0.0
+        },
+        {
+          "iteration": 7,
+          "value": 0.5,
+          "reward": 0.0
+        },
+        {
+          "iteration": 8,
+          "value": 0.5,
+          "reward": 0.0
+        },
+        {
+          "iteration": 9,
+          "value": 0.4,
+          "reward": 0.0
+        },
+        {
+          "iteration": 9,
+          "status": "completed",
+          "answer": "partial answer for What media organization which ",
+          "success": false,
+          "best_node_reward": 0
+        }
+      ]
+    },
+    {
+      "question": "Which restaurant has been in operation longer, Your Pie or Vocelli Pizza?",
+      "ground_truth": "Vocelli Pizza",
+      "success": true,
+      "answer": "Vocelli Pizza",
+      "history": [
+        {
+          "iteration": 1,
+          "value": 0.7,
+          "reward": 0.0
+        },
+        {
+          "iteration": 2,
+          "value": 0.6,
+          "reward": 0.0
+        },
+        {
+          "iteration": 3,
+          "value": 0.7,
+          "reward": 1.0
+        },
+        {
+          "iteration": 3,
+          "status": "success",
+          "answer": "Vocelli Pizza"
+        }
+      ]
+    },
+    {
+      "question": "Which magazine was started first Arthur's Magazine or First for Women?",
+      "ground_truth": "Arthur's Magazine",
+      "success": false,
+      "answer": "partial answer for Which magazine was started fir",
+      "history": [
+        {
+          "iteration": 1,
+          "value": 0.4,
+          "reward": 0.0
+        },
+        {
+          "iteration": 2,
+          "value": 0.3,
+          "reward": 0.0
+        },
+        {
+          "iteration": 3,
+          "value": 0.3,
+          "reward": 0.0
+        },
+        {
+          "iteration": 4,
+          "value": 0.5,
+          "reward": 0.0
+        },
+        {
+          "iteration": 5,
+          "value": 0.5,
+          "reward": 0.0
+        },
+        {
+          "iteration": 5,
+          "status": "completed",
+          "answer": "partial answer for Which magazine was started fir",
+          "success": false,
+          "best_node_reward": 0
+        }
+      ]
+    },
+    {
+      "question": "Nolan North is the voice of Superboy in a animated tv series that airs on what network?",
+      "ground_truth": "Cartoon Network",
+      "success": false,
+      "answer": "partial answer for Nolan North is the voice of Su",
+      "history": [
+        {
+          "iteration": 1,
+          "value": 0.3,
+          "reward": 0.0
+        },
+        {
+          "iteration": 2,
+          "value": 0.5,
+          "reward": 0.0
+        },
+        {
+          "iteration": 3,
+          "value": 0.4,
+          "reward": 0.0
+        },
+        {
+          "iteration": 4,
+          "value": 0.6,
+          "reward": 0.0
+        },
+        {
+          "iteration": 5,
+          "value": 0.6,
+          "reward": 0.0
+        },
+        {
+          "iteration": 5,
+          "status": "completed",
+          "answer": "partial answer for Nolan North is the voice of Su",
+          "success": false,
+          "best_node_reward": 0
+        }
+      ]
+    },
+    {
+      "question": "Which opera was composed first, Venus and Adonis or Saul og David?",
+      "ground_truth": "Venus and Adonis",
+      "success": true,
+      "answer": "Venus and Adonis",
+      "history": [
+        {
+          "iteration": 1,
+          "status": "success",
+          "answer": "Venus and Adonis"
+        }
+      ]
+    },
+    {
+      "question": "What media organization which posts talks is Jesse Dylan a member of?",
+      "ground_truth": "TED",
+      "success": false,
+      "answer": "partial answer for What media organization which ",
+      "history": [
+        {
+          "iteration": 1,
+          "value": 0.4,
+          "reward": 0.0
+        },
+        {
+          "iteration": 2,
+          "value": 0.5,
+          "reward": 0.0
+        },
+        {
+          "iteration": 3,
+          "value": 0.4,
+          "reward": 0.0
+        },
+        {
+          "iteration": 4,
+          "value": 0.3,
+          "reward": 0.0
+        },
+        {
+          "iteration": 5,
+          "value": 0.6,
+          "reward": 0.0
+        },
+        {
+          "iteration": 6,
+          "value": 0.5,
+          "reward": 0.0
+        },
+        {
+          "iteration": 7,
+          "value": 0.4,
+          "reward": 0.0
+        },
+        {
+          "iteration": 8,
+          "value": 0.5,
+          "reward": 0.0
+        },
+        {
+          "iteration": 9,
+          "value": 0.5,
+          "reward": 0.0
+        },
+        {
+          "iteration": 9,
+          "status": "completed",
+          "answer": "partial answer for What media organization which ",
+          "success": false,
+          "best_node_reward": 0
+        }
+      ]
+    },
+    {
+      "question": "Which restaurant has been in operation longer, Your Pie or Vocelli Pizza?",
+      "ground_truth": "Vocelli Pizza",
+      "success": true,
+      "answer": "Vocelli Pizza",
+      "history": [
+        {
+          "iteration": 1,
+          "status": "success",
+          "answer": "Vocelli Pizza"
+        }
+      ]
+    }
+  ],
+  "react_success_rate": 0.35,
+  "lats_success_rate": 0.5,
+  "demo_mode": true
+}

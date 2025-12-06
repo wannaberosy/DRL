@@ -1,0 +1,1786 @@
+{
+  "config": {
+    "num_problems": 20,
+    "max_iterations": 10,
+    "model": "qwen-plus",
+    "n_generate": 3,
+    "n_evaluate": 1,
+    "api_provider": "qwen",
+    "split": "dev",
+    "start_idx": 0,
+    "env_backend": "dataset",
+    "dataset_type": "s",
+    "dataset_name": "SQuAD",
+    "use_tree_search": true,
+    "tree_m": 4,
+    "tree_n": 2,
+    "tree_l": null,
+    "tree_k": 4,
+    "tree_expand_mode": "uct",
+    "tree_reward_mode": "base",
+    "mcts_num_simulations": null,
+    "mcts_use_value_function": null,
+    "mcts_use_rollout": null,
+    "demo_mode": true
+  },
+  "react_results": [
+    {
+      "question": "In what country is Normandy located?",
+      "ground_truth": "France",
+      "success": false,
+      "answer": "incorrect answer for In what country is Normandy lo",
+      "history": [
+        {
+          "iteration": 1,
+          "thought": "Thought: I need to find information about in what country is normandy located?. Let me search for relevant entities.",
+          "state": "Question: In what country is Normandy located?\n",
+          "action": "search[In]",
+          "observation": "Found information about In. Need more information.",
+          "reward": 0
+        },
+        {
+          "iteration": 2,
+          "thought": "Thought 2: Analyzing the information. Need to gather more details.",
+          "state": "Question: In what country is Normandy located?\nThought 1: Thought: I need to find information about in what country is normandy located?. Let me search for relevant entities.\nAction 1: search[In]\nObservation 1: Found information about In. Need more information.",
+          "action": "lookup[keyword]",
+          "observation": "Observation 2: Continuing search...",
+          "reward": 0
+        },
+        {
+          "iteration": 3,
+          "thought": "Thought 3: Analyzing the information. Need to gather more details.",
+          "state": "Question: In what country is Normandy located?\nThought 1: Thought: I need to find information about in what country is normandy located?. Let me search for relevant entities.\nAction 1: search[In]\nObservation 1: Found information about In. Need more information.\nThought 2: Thought 2: Analyzing the information. Need to gather more details.\nAction 2: lookup[keyword]\nObservation 2: Observation 2: Continuing search...",
+          "action": "lookup[keyword]",
+          "observation": "Observation 3: Continuing search...",
+          "reward": 0
+        },
+        {
+          "iteration": 4,
+          "thought": "Thought 4: Analyzing the information. Need to gather more details.",
+          "state": "Question: In what country is Normandy located?\nThought 1: Thought: I need to find information about in what country is normandy located?. Let me search for relevant entities.\nAction 1: search[In]\nObservation 1: Found information about In. Need more information.\nThought 2: Thought 2: Analyzing the information. Need to gather more details.\nAction 2: lookup[keyword]\nObservation 2: Observation 2: Continuing search...\nThought 3: Thought 3: Analyzing the information. Need to gather more details.\nAction 3: lookup[keyword]\nObservation 3: Observation 3: Continuing search...",
+          "action": "search[entity]",
+          "observation": "Observation 4: Continuing search...",
+          "reward": 0
+        },
+        {
+          "iteration": 5,
+          "thought": "Thought 5: Analyzing the information. Need to gather more details.",
+          "state": "Question: In what country is Normandy located?\nThought 1: Thought: I need to find information about in what country is normandy located?. Let me search for relevant entities.\nAction 1: search[In]\nObservation 1: Found information about In. Need more information.\nThought 2: Thought 2: Analyzing the information. Need to gather more details.\nAction 2: lookup[keyword]\nObservation 2: Observation 2: Continuing search...\nThought 3: Thought 3: Analyzing the information. Need to gather more details.\nAction 3: lookup[keyword]\nObservation 3: Observation 3: Continuing search...\nThought 4: Thought 4: Analyzing the information. Need to gather more details.\nAction 4: search[entity]\nObservation 4: Observation 4: Continuing search...",
+          "action": "search[entity]",
+          "observation": "Observation 5: Continuing search...",
+          "reward": 0
+        },
+        {
+          "iteration": 5,
+          "thought": "Thought 5: Unable to find the correct answer. Providing best guess.",
+          "state": "Question: In what country is Normandy located?\nThought 1: Thought: I need to find information about in what country is normandy located?. Let me search for relevant entities.\nAction 1: search[In]\nObservation 1: Found information about In. Need more information.\nThought 2: Thought 2: Analyzing the information. Need to gather more details.\nAction 2: lookup[keyword]\nObservation 2: Observation 2: Continuing search...\nThought 3: Thought 3: Analyzing the information. Need to gather more details.\nAction 3: lookup[keyword]\nObservation 3: Observation 3: Continuing search...\nThought 4: Thought 4: Analyzing the information. Need to gather more details.\nAction 4: search[entity]\nObservation 4: Observation 4: Continuing search...\nThought 5: Thought 5: Analyzing the information. Need to gather more details.\nAction 5: search[entity]\nObservation 5: Observation 5: Continuing search...",
+          "action": "finish[incorrect answer for In what country is Normandy lo]",
+          "observation": "Episode finished, reward = 0\n",
+          "reward": 0
+        },
+        {
+          "iteration": 5,
+          "status": "failed",
+          "answer": "incorrect answer for In what country is Normandy lo",
+          "ground_truth": "France"
+        }
+      ]
+    },
+    {
+      "question": "When were the Normans in Normandy?",
+      "ground_truth": "10th and 11th centuries",
+      "success": false,
+      "answer": "incorrect answer for When were the Normans in Norma",
+      "history": [
+        {
+          "iteration": 1,
+          "thought": "Thought: I need to find information about when were the normans in normandy?. Let me search for relevant entities.",
+          "state": "Question: When were the Normans in Normandy?\n",
+          "action": "search[When]",
+          "observation": "Found information about When. Need more information.",
+          "reward": 0
+        },
+        {
+          "iteration": 2,
+          "thought": "Thought 2: Analyzing the information. Need to gather more details.",
+          "state": "Question: When were the Normans in Normandy?\nThought 1: Thought: I need to find information about when were the normans in normandy?. Let me search for relevant entities.\nAction 1: search[When]\nObservation 1: Found information about When. Need more information.",
+          "action": "lookup[keyword]",
+          "observation": "Observation 2: Continuing search...",
+          "reward": 0
+        },
+        {
+          "iteration": 3,
+          "thought": "Thought 3: Analyzing the information. Need to gather more details.",
+          "state": "Question: When were the Normans in Normandy?\nThought 1: Thought: I need to find information about when were the normans in normandy?. Let me search for relevant entities.\nAction 1: search[When]\nObservation 1: Found information about When. Need more information.\nThought 2: Thought 2: Analyzing the information. Need to gather more details.\nAction 2: lookup[keyword]\nObservation 2: Observation 2: Continuing search...",
+          "action": "lookup[keyword]",
+          "observation": "Observation 3: Continuing search...",
+          "reward": 0
+        },
+        {
+          "iteration": 4,
+          "thought": "Thought 4: Analyzing the information. Need to gather more details.",
+          "state": "Question: When were the Normans in Normandy?\nThought 1: Thought: I need to find information about when were the normans in normandy?. Let me search for relevant entities.\nAction 1: search[When]\nObservation 1: Found information about When. Need more information.\nThought 2: Thought 2: Analyzing the information. Need to gather more details.\nAction 2: lookup[keyword]\nObservation 2: Observation 2: Continuing search...\nThought 3: Thought 3: Analyzing the information. Need to gather more details.\nAction 3: lookup[keyword]\nObservation 3: Observation 3: Continuing search...",
+          "action": "search[entity]",
+          "observation": "Observation 4: Continuing search...",
+          "reward": 0
+        },
+        {
+          "iteration": 5,
+          "thought": "Thought 5: Analyzing the information. Need to gather more details.",
+          "state": "Question: When were the Normans in Normandy?\nThought 1: Thought: I need to find information about when were the normans in normandy?. Let me search for relevant entities.\nAction 1: search[When]\nObservation 1: Found information about When. Need more information.\nThought 2: Thought 2: Analyzing the information. Need to gather more details.\nAction 2: lookup[keyword]\nObservation 2: Observation 2: Continuing search...\nThought 3: Thought 3: Analyzing the information. Need to gather more details.\nAction 3: lookup[keyword]\nObservation 3: Observation 3: Continuing search...\nThought 4: Thought 4: Analyzing the information. Need to gather more details.\nAction 4: search[entity]\nObservation 4: Observation 4: Continuing search...",
+          "action": "think[continue reasoning]",
+          "observation": "Observation 5: Continuing search...",
+          "reward": 0
+        },
+        {
+          "iteration": 6,
+          "thought": "Thought 6: Analyzing the information. Need to gather more details.",
+          "state": "Question: When were the Normans in Normandy?\nThought 1: Thought: I need to find information about when were the normans in normandy?. Let me search for relevant entities.\nAction 1: search[When]\nObservation 1: Found information about When. Need more information.\nThought 2: Thought 2: Analyzing the information. Need to gather more details.\nAction 2: lookup[keyword]\nObservation 2: Observation 2: Continuing search...\nThought 3: Thought 3: Analyzing the information. Need to gather more details.\nAction 3: lookup[keyword]\nObservation 3: Observation 3: Continuing search...\nThought 4: Thought 4: Analyzing the information. Need to gather more details.\nAction 4: search[entity]\nObservation 4: Observation 4: Continuing search...\nThought 5: Thought 5: Analyzing the information. Need to gather more details.\nAction 5: think[continue reasoning]\nObservation 5: Observation 5: Continuing search...",
+          "action": "lookup[keyword]",
+          "observation": "Observation 6: Continuing search...",
+          "reward": 0
+        },
+        {
+          "iteration": 7,
+          "thought": "Thought 7: Analyzing the information. Need to gather more details.",
+          "state": "Question: When were the Normans in Normandy?\nThought 1: Thought: I need to find information about when were the normans in normandy?. Let me search for relevant entities.\nAction 1: search[When]\nObservation 1: Found information about When. Need more information.\nThought 2: Thought 2: Analyzing the information. Need to gather more details.\nAction 2: lookup[keyword]\nObservation 2: Observation 2: Continuing search...\nThought 3: Thought 3: Analyzing the information. Need to gather more details.\nAction 3: lookup[keyword]\nObservation 3: Observation 3: Continuing search...\nThought 4: Thought 4: Analyzing the information. Need to gather more details.\nAction 4: search[entity]\nObservation 4: Observation 4: Continuing search...\nThought 5: Thought 5: Analyzing the information. Need to gather more details.\nAction 5: think[continue reasoning]\nObservation 5: Observation 5: Continuing search...\nThought 6: Thought 6: Analyzing the information. Need to gather more details.\nAction 6: lookup[keyword]\nObservation 6: Observation 6: Continuing search...",
+          "action": "lookup[keyword]",
+          "observation": "Observation 7: Continuing search...",
+          "reward": 0
+        },
+        {
+          "iteration": 7,
+          "thought": "Thought 7: Unable to find the correct answer. Providing best guess.",
+          "state": "Question: When were the Normans in Normandy?\nThought 1: Thought: I need to find information about when were the normans in normandy?. Let me search for relevant entities.\nAction 1: search[When]\nObservation 1: Found information about When. Need more information.\nThought 2: Thought 2: Analyzing the information. Need to gather more details.\nAction 2: lookup[keyword]\nObservation 2: Observation 2: Continuing search...\nThought 3: Thought 3: Analyzing the information. Need to gather more details.\nAction 3: lookup[keyword]\nObservation 3: Observation 3: Continuing search...\nThought 4: Thought 4: Analyzing the information. Need to gather more details.\nAction 4: search[entity]\nObservation 4: Observation 4: Continuing search...\nThought 5: Thought 5: Analyzing the information. Need to gather more details.\nAction 5: think[continue reasoning]\nObservation 5: Observation 5: Continuing search...\nThought 6: Thought 6: Analyzing the information. Need to gather more details.\nAction 6: lookup[keyword]\nObservation 6: Observation 6: Continuing search...\nThought 7: Thought 7: Analyzing the information. Need to gather more details.\nAction 7: lookup[keyword]\nObservation 7: Observation 7: Continuing search...",
+          "action": "finish[incorrect answer for When were the Normans in Norma]",
+          "observation": "Episode finished, reward = 0\n",
+          "reward": 0
+        },
+        {
+          "iteration": 7,
+          "status": "failed",
+          "answer": "incorrect answer for When were the Normans in Norma",
+          "ground_truth": "10th and 11th centuries"
+        }
+      ]
+    },
+    {
+      "question": "From which countries did the Norse originate?",
+      "ground_truth": "Denmark, Iceland and Norway",
+      "success": false,
+      "answer": "incorrect answer for From which countries did the N",
+      "history": [
+        {
+          "iteration": 1,
+          "thought": "Thought: I need to find information about from which countries did the norse originate?. Let me search for relevant entities.",
+          "state": "Question: From which countries did the Norse originate?\n",
+          "action": "search[From]",
+          "observation": "Found information about From. Need more information.",
+          "reward": 0
+        },
+        {
+          "iteration": 2,
+          "thought": "Thought 2: Analyzing the information. Need to gather more details.",
+          "state": "Question: From which countries did the Norse originate?\nThought 1: Thought: I need to find information about from which countries did the norse originate?. Let me search for relevant entities.\nAction 1: search[From]\nObservation 1: Found information about From. Need more information.",
+          "action": "lookup[keyword]",
+          "observation": "Observation 2: Continuing search...",
+          "reward": 0
+        },
+        {
+          "iteration": 3,
+          "thought": "Thought 3: Analyzing the information. Need to gather more details.",
+          "state": "Question: From which countries did the Norse originate?\nThought 1: Thought: I need to find information about from which countries did the norse originate?. Let me search for relevant entities.\nAction 1: search[From]\nObservation 1: Found information about From. Need more information.\nThought 2: Thought 2: Analyzing the information. Need to gather more details.\nAction 2: lookup[keyword]\nObservation 2: Observation 2: Continuing search...",
+          "action": "think[continue reasoning]",
+          "observation": "Observation 3: Continuing search...",
+          "reward": 0
+        },
+        {
+          "iteration": 4,
+          "thought": "Thought 4: Analyzing the information. Need to gather more details.",
+          "state": "Question: From which countries did the Norse originate?\nThought 1: Thought: I need to find information about from which countries did the norse originate?. Let me search for relevant entities.\nAction 1: search[From]\nObservation 1: Found information about From. Need more information.\nThought 2: Thought 2: Analyzing the information. Need to gather more details.\nAction 2: lookup[keyword]\nObservation 2: Observation 2: Continuing search...\nThought 3: Thought 3: Analyzing the information. Need to gather more details.\nAction 3: think[continue reasoning]\nObservation 3: Observation 3: Continuing search...",
+          "action": "search[entity]",
+          "observation": "Observation 4: Continuing search...",
+          "reward": 0
+        },
+        {
+          "iteration": 5,
+          "thought": "Thought 5: Analyzing the information. Need to gather more details.",
+          "state": "Question: From which countries did the Norse originate?\nThought 1: Thought: I need to find information about from which countries did the norse originate?. Let me search for relevant entities.\nAction 1: search[From]\nObservation 1: Found information about From. Need more information.\nThought 2: Thought 2: Analyzing the information. Need to gather more details.\nAction 2: lookup[keyword]\nObservation 2: Observation 2: Continuing search...\nThought 3: Thought 3: Analyzing the information. Need to gather more details.\nAction 3: think[continue reasoning]\nObservation 3: Observation 3: Continuing search...\nThought 4: Thought 4: Analyzing the information. Need to gather more details.\nAction 4: search[entity]\nObservation 4: Observation 4: Continuing search...",
+          "action": "search[entity]",
+          "observation": "Observation 5: Continuing search...",
+          "reward": 0
+        },
+        {
+          "iteration": 6,
+          "thought": "Thought 6: Analyzing the information. Need to gather more details.",
+          "state": "Question: From which countries did the Norse originate?\nThought 1: Thought: I need to find information about from which countries did the norse originate?. Let me search for relevant entities.\nAction 1: search[From]\nObservation 1: Found information about From. Need more information.\nThought 2: Thought 2: Analyzing the information. Need to gather more details.\nAction 2: lookup[keyword]\nObservation 2: Observation 2: Continuing search...\nThought 3: Thought 3: Analyzing the information. Need to gather more details.\nAction 3: think[continue reasoning]\nObservation 3: Observation 3: Continuing search...\nThought 4: Thought 4: Analyzing the information. Need to gather more details.\nAction 4: search[entity]\nObservation 4: Observation 4: Continuing search...\nThought 5: Thought 5: Analyzing the information. Need to gather more details.\nAction 5: search[entity]\nObservation 5: Observation 5: Continuing search...",
+          "action": "search[entity]",
+          "observation": "Observation 6: Continuing search...",
+          "reward": 0
+        },
+        {
+          "iteration": 6,
+          "thought": "Thought 6: Unable to find the correct answer. Providing best guess.",
+          "state": "Question: From which countries did the Norse originate?\nThought 1: Thought: I need to find information about from which countries did the norse originate?. Let me search for relevant entities.\nAction 1: search[From]\nObservation 1: Found information about From. Need more information.\nThought 2: Thought 2: Analyzing the information. Need to gather more details.\nAction 2: lookup[keyword]\nObservation 2: Observation 2: Continuing search...\nThought 3: Thought 3: Analyzing the information. Need to gather more details.\nAction 3: think[continue reasoning]\nObservation 3: Observation 3: Continuing search...\nThought 4: Thought 4: Analyzing the information. Need to gather more details.\nAction 4: search[entity]\nObservation 4: Observation 4: Continuing search...\nThought 5: Thought 5: Analyzing the information. Need to gather more details.\nAction 5: search[entity]\nObservation 5: Observation 5: Continuing search...\nThought 6: Thought 6: Analyzing the information. Need to gather more details.\nAction 6: search[entity]\nObservation 6: Observation 6: Continuing search...",
+          "action": "finish[incorrect answer for From which countries did the N]",
+          "observation": "Episode finished, reward = 0\n",
+          "reward": 0
+        },
+        {
+          "iteration": 6,
+          "status": "failed",
+          "answer": "incorrect answer for From which countries did the N",
+          "ground_truth": "Denmark, Iceland and Norway"
+        }
+      ]
+    },
+    {
+      "question": "Who was the Norse leader?",
+      "ground_truth": "Rollo",
+      "success": false,
+      "answer": "incorrect answer for Who was the Norse leader?",
+      "history": [
+        {
+          "iteration": 1,
+          "thought": "Thought: I need to find information about who was the norse leader?. Let me search for relevant entities.",
+          "state": "Question: Who was the Norse leader?\n",
+          "action": "search[Who]",
+          "observation": "Found information about Who. Need more information.",
+          "reward": 0
+        },
+        {
+          "iteration": 2,
+          "thought": "Thought 2: Analyzing the information. Need to gather more details.",
+          "state": "Question: Who was the Norse leader?\nThought 1: Thought: I need to find information about who was the norse leader?. Let me search for relevant entities.\nAction 1: search[Who]\nObservation 1: Found information about Who. Need more information.",
+          "action": "search[entity]",
+          "observation": "Observation 2: Continuing search...",
+          "reward": 0
+        },
+        {
+          "iteration": 3,
+          "thought": "Thought 3: Analyzing the information. Need to gather more details.",
+          "state": "Question: Who was the Norse leader?\nThought 1: Thought: I need to find information about who was the norse leader?. Let me search for relevant entities.\nAction 1: search[Who]\nObservation 1: Found information about Who. Need more information.\nThought 2: Thought 2: Analyzing the information. Need to gather more details.\nAction 2: search[entity]\nObservation 2: Observation 2: Continuing search...",
+          "action": "lookup[keyword]",
+          "observation": "Observation 3: Continuing search...",
+          "reward": 0
+        },
+        {
+          "iteration": 3,
+          "thought": "Thought 3: Unable to find the correct answer. Providing best guess.",
+          "state": "Question: Who was the Norse leader?\nThought 1: Thought: I need to find information about who was the norse leader?. Let me search for relevant entities.\nAction 1: search[Who]\nObservation 1: Found information about Who. Need more information.\nThought 2: Thought 2: Analyzing the information. Need to gather more details.\nAction 2: search[entity]\nObservation 2: Observation 2: Continuing search...\nThought 3: Thought 3: Analyzing the information. Need to gather more details.\nAction 3: lookup[keyword]\nObservation 3: Observation 3: Continuing search...",
+          "action": "finish[incorrect answer for Who was the Norse leader?]",
+          "observation": "Episode finished, reward = 0\n",
+          "reward": 0
+        },
+        {
+          "iteration": 3,
+          "status": "failed",
+          "answer": "incorrect answer for Who was the Norse leader?",
+          "ground_truth": "Rollo"
+        }
+      ]
+    },
+    {
+      "question": "What century did the Normans first gain their separate identity?",
+      "ground_truth": "10th century",
+      "success": false,
+      "answer": "incorrect answer for What century did the Normans f",
+      "history": [
+        {
+          "iteration": 1,
+          "thought": "Thought: I need to find information about what century did the normans first gain their separate identity?. Let me search for relevant entities.",
+          "state": "Question: What century did the Normans first gain their separate identity?\n",
+          "action": "search[What]",
+          "observation": "Found information about What. Need more information.",
+          "reward": 0
+        },
+        {
+          "iteration": 2,
+          "thought": "Thought 2: Analyzing the information. Need to gather more details.",
+          "state": "Question: What century did the Normans first gain their separate identity?\nThought 1: Thought: I need to find information about what century did the normans first gain their separate identity?. Let me search for relevant entities.\nAction 1: search[What]\nObservation 1: Found information about What. Need more information.",
+          "action": "lookup[keyword]",
+          "observation": "Observation 2: Continuing search...",
+          "reward": 0
+        },
+        {
+          "iteration": 3,
+          "thought": "Thought 3: Analyzing the information. Need to gather more details.",
+          "state": "Question: What century did the Normans first gain their separate identity?\nThought 1: Thought: I need to find information about what century did the normans first gain their separate identity?. Let me search for relevant entities.\nAction 1: search[What]\nObservation 1: Found information about What. Need more information.\nThought 2: Thought 2: Analyzing the information. Need to gather more details.\nAction 2: lookup[keyword]\nObservation 2: Observation 2: Continuing search...",
+          "action": "search[entity]",
+          "observation": "Observation 3: Continuing search...",
+          "reward": 0
+        },
+        {
+          "iteration": 3,
+          "thought": "Thought 3: Unable to find the correct answer. Providing best guess.",
+          "state": "Question: What century did the Normans first gain their separate identity?\nThought 1: Thought: I need to find information about what century did the normans first gain their separate identity?. Let me search for relevant entities.\nAction 1: search[What]\nObservation 1: Found information about What. Need more information.\nThought 2: Thought 2: Analyzing the information. Need to gather more details.\nAction 2: lookup[keyword]\nObservation 2: Observation 2: Continuing search...\nThought 3: Thought 3: Analyzing the information. Need to gather more details.\nAction 3: search[entity]\nObservation 3: Observation 3: Continuing search...",
+          "action": "finish[incorrect answer for What century did the Normans f]",
+          "observation": "Episode finished, reward = 0\n",
+          "reward": 0
+        },
+        {
+          "iteration": 3,
+          "status": "failed",
+          "answer": "incorrect answer for What century did the Normans f",
+          "ground_truth": "10th century"
+        }
+      ]
+    },
+    {
+      "question": "In what country is Normandy located?",
+      "ground_truth": "France",
+      "success": true,
+      "answer": "France",
+      "history": [
+        {
+          "iteration": 1,
+          "thought": "Thought: I need to find information about in what country is normandy located?. Let me search for relevant entities.",
+          "state": "Question: In what country is Normandy located?\n",
+          "action": "search[In]",
+          "observation": "Found information about In. The answer appears to be France.",
+          "reward": 0
+        },
+        {
+          "iteration": 2,
+          "thought": "Thought 2: Analyzing the information. Need to gather more details.",
+          "state": "Question: In what country is Normandy located?\nThought 1: Thought: I need to find information about in what country is normandy located?. Let me search for relevant entities.\nAction 1: search[In]\nObservation 1: Found information about In. The answer appears to be France.",
+          "action": "lookup[keyword]",
+          "observation": "Observation 2: Continuing search...",
+          "reward": 0
+        },
+        {
+          "iteration": 3,
+          "thought": "Thought 3: Analyzing the information. Need to gather more details.",
+          "state": "Question: In what country is Normandy located?\nThought 1: Thought: I need to find information about in what country is normandy located?. Let me search for relevant entities.\nAction 1: search[In]\nObservation 1: Found information about In. The answer appears to be France.\nThought 2: Thought 2: Analyzing the information. Need to gather more details.\nAction 2: lookup[keyword]\nObservation 2: Observation 2: Continuing search...",
+          "action": "think[continue reasoning]",
+          "observation": "Observation 3: Continuing search...",
+          "reward": 0
+        },
+        {
+          "iteration": 4,
+          "thought": "Thought: Based on the information gathered, the answer is France.",
+          "state": "Question: In what country is Normandy located?\nThought 1: Thought: I need to find information about in what country is normandy located?. Let me search for relevant entities.\nAction 1: search[In]\nObservation 1: Found information about In. The answer appears to be France.\nThought 2: Thought 2: Analyzing the information. Need to gather more details.\nAction 2: lookup[keyword]\nObservation 2: Observation 2: Continuing search...\nThought 3: Thought 3: Analyzing the information. Need to gather more details.\nAction 3: think[continue reasoning]\nObservation 3: Observation 3: Continuing search...",
+          "action": "finish[France]",
+          "observation": "Episode finished, reward = 1\n",
+          "reward": 1
+        },
+        {
+          "iteration": 4,
+          "status": "success",
+          "answer": "France"
+        }
+      ]
+    },
+    {
+      "question": "When were the Normans in Normandy?",
+      "ground_truth": "10th and 11th centuries",
+      "success": false,
+      "answer": "incorrect answer for When were the Normans in Norma",
+      "history": [
+        {
+          "iteration": 1,
+          "thought": "Thought: I need to find information about when were the normans in normandy?. Let me search for relevant entities.",
+          "state": "Question: When were the Normans in Normandy?\n",
+          "action": "search[When]",
+          "observation": "Found information about When. Need more information.",
+          "reward": 0
+        },
+        {
+          "iteration": 2,
+          "thought": "Thought 2: Analyzing the information. Need to gather more details.",
+          "state": "Question: When were the Normans in Normandy?\nThought 1: Thought: I need to find information about when were the normans in normandy?. Let me search for relevant entities.\nAction 1: search[When]\nObservation 1: Found information about When. Need more information.",
+          "action": "think[continue reasoning]",
+          "observation": "Observation 2: Continuing search...",
+          "reward": 0
+        },
+        {
+          "iteration": 3,
+          "thought": "Thought 3: Analyzing the information. Need to gather more details.",
+          "state": "Question: When were the Normans in Normandy?\nThought 1: Thought: I need to find information about when were the normans in normandy?. Let me search for relevant entities.\nAction 1: search[When]\nObservation 1: Found information about When. Need more information.\nThought 2: Thought 2: Analyzing the information. Need to gather more details.\nAction 2: think[continue reasoning]\nObservation 2: Observation 2: Continuing search...",
+          "action": "think[continue reasoning]",
+          "observation": "Observation 3: Continuing search...",
+          "reward": 0
+        },
+        {
+          "iteration": 4,
+          "thought": "Thought 4: Analyzing the information. Need to gather more details.",
+          "state": "Question: When were the Normans in Normandy?\nThought 1: Thought: I need to find information about when were the normans in normandy?. Let me search for relevant entities.\nAction 1: search[When]\nObservation 1: Found information about When. Need more information.\nThought 2: Thought 2: Analyzing the information. Need to gather more details.\nAction 2: think[continue reasoning]\nObservation 2: Observation 2: Continuing search...\nThought 3: Thought 3: Analyzing the information. Need to gather more details.\nAction 3: think[continue reasoning]\nObservation 3: Observation 3: Continuing search...",
+          "action": "search[entity]",
+          "observation": "Observation 4: Continuing search...",
+          "reward": 0
+        },
+        {
+          "iteration": 5,
+          "thought": "Thought 5: Analyzing the information. Need to gather more details.",
+          "state": "Question: When were the Normans in Normandy?\nThought 1: Thought: I need to find information about when were the normans in normandy?. Let me search for relevant entities.\nAction 1: search[When]\nObservation 1: Found information about When. Need more information.\nThought 2: Thought 2: Analyzing the information. Need to gather more details.\nAction 2: think[continue reasoning]\nObservation 2: Observation 2: Continuing search...\nThought 3: Thought 3: Analyzing the information. Need to gather more details.\nAction 3: think[continue reasoning]\nObservation 3: Observation 3: Continuing search...\nThought 4: Thought 4: Analyzing the information. Need to gather more details.\nAction 4: search[entity]\nObservation 4: Observation 4: Continuing search...",
+          "action": "search[entity]",
+          "observation": "Observation 5: Continuing search...",
+          "reward": 0
+        },
+        {
+          "iteration": 5,
+          "thought": "Thought 5: Unable to find the correct answer. Providing best guess.",
+          "state": "Question: When were the Normans in Normandy?\nThought 1: Thought: I need to find information about when were the normans in normandy?. Let me search for relevant entities.\nAction 1: search[When]\nObservation 1: Found information about When. Need more information.\nThought 2: Thought 2: Analyzing the information. Need to gather more details.\nAction 2: think[continue reasoning]\nObservation 2: Observation 2: Continuing search...\nThought 3: Thought 3: Analyzing the information. Need to gather more details.\nAction 3: think[continue reasoning]\nObservation 3: Observation 3: Continuing search...\nThought 4: Thought 4: Analyzing the information. Need to gather more details.\nAction 4: search[entity]\nObservation 4: Observation 4: Continuing search...\nThought 5: Thought 5: Analyzing the information. Need to gather more details.\nAction 5: search[entity]\nObservation 5: Observation 5: Continuing search...",
+          "action": "finish[incorrect answer for When were the Normans in Norma]",
+          "observation": "Episode finished, reward = 0\n",
+          "reward": 0
+        },
+        {
+          "iteration": 5,
+          "status": "failed",
+          "answer": "incorrect answer for When were the Normans in Norma",
+          "ground_truth": "10th and 11th centuries"
+        }
+      ]
+    },
+    {
+      "question": "From which countries did the Norse originate?",
+      "ground_truth": "Denmark, Iceland and Norway",
+      "success": false,
+      "answer": "incorrect answer for From which countries did the N",
+      "history": [
+        {
+          "iteration": 1,
+          "thought": "Thought: I need to find information about from which countries did the norse originate?. Let me search for relevant entities.",
+          "state": "Question: From which countries did the Norse originate?\n",
+          "action": "search[From]",
+          "observation": "Found information about From. Need more information.",
+          "reward": 0
+        },
+        {
+          "iteration": 2,
+          "thought": "Thought 2: Analyzing the information. Need to gather more details.",
+          "state": "Question: From which countries did the Norse originate?\nThought 1: Thought: I need to find information about from which countries did the norse originate?. Let me search for relevant entities.\nAction 1: search[From]\nObservation 1: Found information about From. Need more information.",
+          "action": "search[entity]",
+          "observation": "Observation 2: Continuing search...",
+          "reward": 0
+        },
+        {
+          "iteration": 3,
+          "thought": "Thought 3: Analyzing the information. Need to gather more details.",
+          "state": "Question: From which countries did the Norse originate?\nThought 1: Thought: I need to find information about from which countries did the norse originate?. Let me search for relevant entities.\nAction 1: search[From]\nObservation 1: Found information about From. Need more information.\nThought 2: Thought 2: Analyzing the information. Need to gather more details.\nAction 2: search[entity]\nObservation 2: Observation 2: Continuing search...",
+          "action": "think[continue reasoning]",
+          "observation": "Observation 3: Continuing search...",
+          "reward": 0
+        },
+        {
+          "iteration": 4,
+          "thought": "Thought 4: Analyzing the information. Need to gather more details.",
+          "state": "Question: From which countries did the Norse originate?\nThought 1: Thought: I need to find information about from which countries did the norse originate?. Let me search for relevant entities.\nAction 1: search[From]\nObservation 1: Found information about From. Need more information.\nThought 2: Thought 2: Analyzing the information. Need to gather more details.\nAction 2: search[entity]\nObservation 2: Observation 2: Continuing search...\nThought 3: Thought 3: Analyzing the information. Need to gather more details.\nAction 3: think[continue reasoning]\nObservation 3: Observation 3: Continuing search...",
+          "action": "search[entity]",
+          "observation": "Observation 4: Continuing search...",
+          "reward": 0
+        },
+        {
+          "iteration": 5,
+          "thought": "Thought 5: Analyzing the information. Need to gather more details.",
+          "state": "Question: From which countries did the Norse originate?\nThought 1: Thought: I need to find information about from which countries did the norse originate?. Let me search for relevant entities.\nAction 1: search[From]\nObservation 1: Found information about From. Need more information.\nThought 2: Thought 2: Analyzing the information. Need to gather more details.\nAction 2: search[entity]\nObservation 2: Observation 2: Continuing search...\nThought 3: Thought 3: Analyzing the information. Need to gather more details.\nAction 3: think[continue reasoning]\nObservation 3: Observation 3: Continuing search...\nThought 4: Thought 4: Analyzing the information. Need to gather more details.\nAction 4: search[entity]\nObservation 4: Observation 4: Continuing search...",
+          "action": "think[continue reasoning]",
+          "observation": "Observation 5: Continuing search...",
+          "reward": 0
+        },
+        {
+          "iteration": 6,
+          "thought": "Thought 6: Analyzing the information. Need to gather more details.",
+          "state": "Question: From which countries did the Norse originate?\nThought 1: Thought: I need to find information about from which countries did the norse originate?. Let me search for relevant entities.\nAction 1: search[From]\nObservation 1: Found information about From. Need more information.\nThought 2: Thought 2: Analyzing the information. Need to gather more details.\nAction 2: search[entity]\nObservation 2: Observation 2: Continuing search...\nThought 3: Thought 3: Analyzing the information. Need to gather more details.\nAction 3: think[continue reasoning]\nObservation 3: Observation 3: Continuing search...\nThought 4: Thought 4: Analyzing the information. Need to gather more details.\nAction 4: search[entity]\nObservation 4: Observation 4: Continuing search...\nThought 5: Thought 5: Analyzing the information. Need to gather more details.\nAction 5: think[continue reasoning]\nObservation 5: Observation 5: Continuing search...",
+          "action": "search[entity]",
+          "observation": "Observation 6: Continuing search...",
+          "reward": 0
+        },
+        {
+          "iteration": 6,
+          "thought": "Thought 6: Unable to find the correct answer. Providing best guess.",
+          "state": "Question: From which countries did the Norse originate?\nThought 1: Thought: I need to find information about from which countries did the norse originate?. Let me search for relevant entities.\nAction 1: search[From]\nObservation 1: Found information about From. Need more information.\nThought 2: Thought 2: Analyzing the information. Need to gather more details.\nAction 2: search[entity]\nObservation 2: Observation 2: Continuing search...\nThought 3: Thought 3: Analyzing the information. Need to gather more details.\nAction 3: think[continue reasoning]\nObservation 3: Observation 3: Continuing search...\nThought 4: Thought 4: Analyzing the information. Need to gather more details.\nAction 4: search[entity]\nObservation 4: Observation 4: Continuing search...\nThought 5: Thought 5: Analyzing the information. Need to gather more details.\nAction 5: think[continue reasoning]\nObservation 5: Observation 5: Continuing search...\nThought 6: Thought 6: Analyzing the information. Need to gather more details.\nAction 6: search[entity]\nObservation 6: Observation 6: Continuing search...",
+          "action": "finish[incorrect answer for From which countries did the N]",
+          "observation": "Episode finished, reward = 0\n",
+          "reward": 0
+        },
+        {
+          "iteration": 6,
+          "status": "failed",
+          "answer": "incorrect answer for From which countries did the N",
+          "ground_truth": "Denmark, Iceland and Norway"
+        }
+      ]
+    },
+    {
+      "question": "Who was the Norse leader?",
+      "ground_truth": "Rollo",
+      "success": false,
+      "answer": "incorrect answer for Who was the Norse leader?",
+      "history": [
+        {
+          "iteration": 1,
+          "thought": "Thought: I need to find information about who was the norse leader?. Let me search for relevant entities.",
+          "state": "Question: Who was the Norse leader?\n",
+          "action": "search[Who]",
+          "observation": "Found information about Who. Need more information.",
+          "reward": 0
+        },
+        {
+          "iteration": 2,
+          "thought": "Thought 2: Analyzing the information. Need to gather more details.",
+          "state": "Question: Who was the Norse leader?\nThought 1: Thought: I need to find information about who was the norse leader?. Let me search for relevant entities.\nAction 1: search[Who]\nObservation 1: Found information about Who. Need more information.",
+          "action": "search[entity]",
+          "observation": "Observation 2: Continuing search...",
+          "reward": 0
+        },
+        {
+          "iteration": 3,
+          "thought": "Thought 3: Analyzing the information. Need to gather more details.",
+          "state": "Question: Who was the Norse leader?\nThought 1: Thought: I need to find information about who was the norse leader?. Let me search for relevant entities.\nAction 1: search[Who]\nObservation 1: Found information about Who. Need more information.\nThought 2: Thought 2: Analyzing the information. Need to gather more details.\nAction 2: search[entity]\nObservation 2: Observation 2: Continuing search...",
+          "action": "search[entity]",
+          "observation": "Observation 3: Continuing search...",
+          "reward": 0
+        },
+        {
+          "iteration": 3,
+          "thought": "Thought 3: Unable to find the correct answer. Providing best guess.",
+          "state": "Question: Who was the Norse leader?\nThought 1: Thought: I need to find information about who was the norse leader?. Let me search for relevant entities.\nAction 1: search[Who]\nObservation 1: Found information about Who. Need more information.\nThought 2: Thought 2: Analyzing the information. Need to gather more details.\nAction 2: search[entity]\nObservation 2: Observation 2: Continuing search...\nThought 3: Thought 3: Analyzing the information. Need to gather more details.\nAction 3: search[entity]\nObservation 3: Observation 3: Continuing search...",
+          "action": "finish[incorrect answer for Who was the Norse leader?]",
+          "observation": "Episode finished, reward = 0\n",
+          "reward": 0
+        },
+        {
+          "iteration": 3,
+          "status": "failed",
+          "answer": "incorrect answer for Who was the Norse leader?",
+          "ground_truth": "Rollo"
+        }
+      ]
+    },
+    {
+      "question": "What century did the Normans first gain their separate identity?",
+      "ground_truth": "10th century",
+      "success": true,
+      "answer": "10th century",
+      "history": [
+        {
+          "iteration": 1,
+          "thought": "Thought: I need to find information about what century did the normans first gain their separate identity?. Let me search for relevant entities.",
+          "state": "Question: What century did the Normans first gain their separate identity?\n",
+          "action": "search[What]",
+          "observation": "Found information about What. The answer appears to be 10th century.",
+          "reward": 0
+        },
+        {
+          "iteration": 2,
+          "thought": "Thought: Based on the information gathered, the answer is 10th century.",
+          "state": "Question: What century did the Normans first gain their separate identity?\nThought 1: Thought: I need to find information about what century did the normans first gain their separate identity?. Let me search for relevant entities.\nAction 1: search[What]\nObservation 1: Found information about What. The answer appears to be 10th century.",
+          "action": "finish[10th century]",
+          "observation": "Episode finished, reward = 1\n",
+          "reward": 1
+        },
+        {
+          "iteration": 2,
+          "status": "success",
+          "answer": "10th century"
+        }
+      ]
+    },
+    {
+      "question": "In what country is Normandy located?",
+      "ground_truth": "France",
+      "success": true,
+      "answer": "France",
+      "history": [
+        {
+          "iteration": 1,
+          "thought": "Thought: I need to find information about in what country is normandy located?. Let me search for relevant entities.",
+          "state": "Question: In what country is Normandy located?\n",
+          "action": "search[In]",
+          "observation": "Found information about In. The answer appears to be France.",
+          "reward": 0
+        },
+        {
+          "iteration": 2,
+          "thought": "Thought 2: Analyzing the information. Need to gather more details.",
+          "state": "Question: In what country is Normandy located?\nThought 1: Thought: I need to find information about in what country is normandy located?. Let me search for relevant entities.\nAction 1: search[In]\nObservation 1: Found information about In. The answer appears to be France.",
+          "action": "search[entity]",
+          "observation": "Observation 2: Continuing search...",
+          "reward": 0
+        },
+        {
+          "iteration": 3,
+          "thought": "Thought: Based on the information gathered, the answer is France.",
+          "state": "Question: In what country is Normandy located?\nThought 1: Thought: I need to find information about in what country is normandy located?. Let me search for relevant entities.\nAction 1: search[In]\nObservation 1: Found information about In. The answer appears to be France.\nThought 2: Thought 2: Analyzing the information. Need to gather more details.\nAction 2: search[entity]\nObservation 2: Observation 2: Continuing search...",
+          "action": "finish[France]",
+          "observation": "Episode finished, reward = 1\n",
+          "reward": 1
+        },
+        {
+          "iteration": 3,
+          "status": "success",
+          "answer": "France"
+        }
+      ]
+    },
+    {
+      "question": "When were the Normans in Normandy?",
+      "ground_truth": "10th and 11th centuries",
+      "success": false,
+      "answer": "incorrect answer for When were the Normans in Norma",
+      "history": [
+        {
+          "iteration": 1,
+          "thought": "Thought: I need to find information about when were the normans in normandy?. Let me search for relevant entities.",
+          "state": "Question: When were the Normans in Normandy?\n",
+          "action": "search[When]",
+          "observation": "Found information about When. Need more information.",
+          "reward": 0
+        },
+        {
+          "iteration": 2,
+          "thought": "Thought 2: Analyzing the information. Need to gather more details.",
+          "state": "Question: When were the Normans in Normandy?\nThought 1: Thought: I need to find information about when were the normans in normandy?. Let me search for relevant entities.\nAction 1: search[When]\nObservation 1: Found information about When. Need more information.",
+          "action": "lookup[keyword]",
+          "observation": "Observation 2: Continuing search...",
+          "reward": 0
+        },
+        {
+          "iteration": 3,
+          "thought": "Thought 3: Analyzing the information. Need to gather more details.",
+          "state": "Question: When were the Normans in Normandy?\nThought 1: Thought: I need to find information about when were the normans in normandy?. Let me search for relevant entities.\nAction 1: search[When]\nObservation 1: Found information about When. Need more information.\nThought 2: Thought 2: Analyzing the information. Need to gather more details.\nAction 2: lookup[keyword]\nObservation 2: Observation 2: Continuing search...",
+          "action": "lookup[keyword]",
+          "observation": "Observation 3: Continuing search...",
+          "reward": 0
+        },
+        {
+          "iteration": 3,
+          "thought": "Thought 3: Unable to find the correct answer. Providing best guess.",
+          "state": "Question: When were the Normans in Normandy?\nThought 1: Thought: I need to find information about when were the normans in normandy?. Let me search for relevant entities.\nAction 1: search[When]\nObservation 1: Found information about When. Need more information.\nThought 2: Thought 2: Analyzing the information. Need to gather more details.\nAction 2: lookup[keyword]\nObservation 2: Observation 2: Continuing search...\nThought 3: Thought 3: Analyzing the information. Need to gather more details.\nAction 3: lookup[keyword]\nObservation 3: Observation 3: Continuing search...",
+          "action": "finish[incorrect answer for When were the Normans in Norma]",
+          "observation": "Episode finished, reward = 0\n",
+          "reward": 0
+        },
+        {
+          "iteration": 3,
+          "status": "failed",
+          "answer": "incorrect answer for When were the Normans in Norma",
+          "ground_truth": "10th and 11th centuries"
+        }
+      ]
+    },
+    {
+      "question": "From which countries did the Norse originate?",
+      "ground_truth": "Denmark, Iceland and Norway",
+      "success": false,
+      "answer": "incorrect answer for From which countries did the N",
+      "history": [
+        {
+          "iteration": 1,
+          "thought": "Thought: I need to find information about from which countries did the norse originate?. Let me search for relevant entities.",
+          "state": "Question: From which countries did the Norse originate?\n",
+          "action": "search[From]",
+          "observation": "Found information about From. Need more information.",
+          "reward": 0
+        },
+        {
+          "iteration": 2,
+          "thought": "Thought 2: Analyzing the information. Need to gather more details.",
+          "state": "Question: From which countries did the Norse originate?\nThought 1: Thought: I need to find information about from which countries did the norse originate?. Let me search for relevant entities.\nAction 1: search[From]\nObservation 1: Found information about From. Need more information.",
+          "action": "lookup[keyword]",
+          "observation": "Observation 2: Continuing search...",
+          "reward": 0
+        },
+        {
+          "iteration": 3,
+          "thought": "Thought 3: Analyzing the information. Need to gather more details.",
+          "state": "Question: From which countries did the Norse originate?\nThought 1: Thought: I need to find information about from which countries did the norse originate?. Let me search for relevant entities.\nAction 1: search[From]\nObservation 1: Found information about From. Need more information.\nThought 2: Thought 2: Analyzing the information. Need to gather more details.\nAction 2: lookup[keyword]\nObservation 2: Observation 2: Continuing search...",
+          "action": "think[continue reasoning]",
+          "observation": "Observation 3: Continuing search...",
+          "reward": 0
+        },
+        {
+          "iteration": 4,
+          "thought": "Thought 4: Analyzing the information. Need to gather more details.",
+          "state": "Question: From which countries did the Norse originate?\nThought 1: Thought: I need to find information about from which countries did the norse originate?. Let me search for relevant entities.\nAction 1: search[From]\nObservation 1: Found information about From. Need more information.\nThought 2: Thought 2: Analyzing the information. Need to gather more details.\nAction 2: lookup[keyword]\nObservation 2: Observation 2: Continuing search...\nThought 3: Thought 3: Analyzing the information. Need to gather more details.\nAction 3: think[continue reasoning]\nObservation 3: Observation 3: Continuing search...",
+          "action": "lookup[keyword]",
+          "observation": "Observation 4: Continuing search...",
+          "reward": 0
+        },
+        {
+          "iteration": 5,
+          "thought": "Thought 5: Analyzing the information. Need to gather more details.",
+          "state": "Question: From which countries did the Norse originate?\nThought 1: Thought: I need to find information about from which countries did the norse originate?. Let me search for relevant entities.\nAction 1: search[From]\nObservation 1: Found information about From. Need more information.\nThought 2: Thought 2: Analyzing the information. Need to gather more details.\nAction 2: lookup[keyword]\nObservation 2: Observation 2: Continuing search...\nThought 3: Thought 3: Analyzing the information. Need to gather more details.\nAction 3: think[continue reasoning]\nObservation 3: Observation 3: Continuing search...\nThought 4: Thought 4: Analyzing the information. Need to gather more details.\nAction 4: lookup[keyword]\nObservation 4: Observation 4: Continuing search...",
+          "action": "think[continue reasoning]",
+          "observation": "Observation 5: Continuing search...",
+          "reward": 0
+        },
+        {
+          "iteration": 5,
+          "thought": "Thought 5: Unable to find the correct answer. Providing best guess.",
+          "state": "Question: From which countries did the Norse originate?\nThought 1: Thought: I need to find information about from which countries did the norse originate?. Let me search for relevant entities.\nAction 1: search[From]\nObservation 1: Found information about From. Need more information.\nThought 2: Thought 2: Analyzing the information. Need to gather more details.\nAction 2: lookup[keyword]\nObservation 2: Observation 2: Continuing search...\nThought 3: Thought 3: Analyzing the information. Need to gather more details.\nAction 3: think[continue reasoning]\nObservation 3: Observation 3: Continuing search...\nThought 4: Thought 4: Analyzing the information. Need to gather more details.\nAction 4: lookup[keyword]\nObservation 4: Observation 4: Continuing search...\nThought 5: Thought 5: Analyzing the information. Need to gather more details.\nAction 5: think[continue reasoning]\nObservation 5: Observation 5: Continuing search...",
+          "action": "finish[incorrect answer for From which countries did the N]",
+          "observation": "Episode finished, reward = 0\n",
+          "reward": 0
+        },
+        {
+          "iteration": 5,
+          "status": "failed",
+          "answer": "incorrect answer for From which countries did the N",
+          "ground_truth": "Denmark, Iceland and Norway"
+        }
+      ]
+    },
+    {
+      "question": "Who was the Norse leader?",
+      "ground_truth": "Rollo",
+      "success": false,
+      "answer": "incorrect answer for Who was the Norse leader?",
+      "history": [
+        {
+          "iteration": 1,
+          "thought": "Thought: I need to find information about who was the norse leader?. Let me search for relevant entities.",
+          "state": "Question: Who was the Norse leader?\n",
+          "action": "search[Who]",
+          "observation": "Found information about Who. Need more information.",
+          "reward": 0
+        },
+        {
+          "iteration": 2,
+          "thought": "Thought 2: Analyzing the information. Need to gather more details.",
+          "state": "Question: Who was the Norse leader?\nThought 1: Thought: I need to find information about who was the norse leader?. Let me search for relevant entities.\nAction 1: search[Who]\nObservation 1: Found information about Who. Need more information.",
+          "action": "search[entity]",
+          "observation": "Observation 2: Continuing search...",
+          "reward": 0
+        },
+        {
+          "iteration": 3,
+          "thought": "Thought 3: Analyzing the information. Need to gather more details.",
+          "state": "Question: Who was the Norse leader?\nThought 1: Thought: I need to find information about who was the norse leader?. Let me search for relevant entities.\nAction 1: search[Who]\nObservation 1: Found information about Who. Need more information.\nThought 2: Thought 2: Analyzing the information. Need to gather more details.\nAction 2: search[entity]\nObservation 2: Observation 2: Continuing search...",
+          "action": "lookup[keyword]",
+          "observation": "Observation 3: Continuing search...",
+          "reward": 0
+        },
+        {
+          "iteration": 4,
+          "thought": "Thought 4: Analyzing the information. Need to gather more details.",
+          "state": "Question: Who was the Norse leader?\nThought 1: Thought: I need to find information about who was the norse leader?. Let me search for relevant entities.\nAction 1: search[Who]\nObservation 1: Found information about Who. Need more information.\nThought 2: Thought 2: Analyzing the information. Need to gather more details.\nAction 2: search[entity]\nObservation 2: Observation 2: Continuing search...\nThought 3: Thought 3: Analyzing the information. Need to gather more details.\nAction 3: lookup[keyword]\nObservation 3: Observation 3: Continuing search...",
+          "action": "search[entity]",
+          "observation": "Observation 4: Continuing search...",
+          "reward": 0
+        },
+        {
+          "iteration": 5,
+          "thought": "Thought 5: Analyzing the information. Need to gather more details.",
+          "state": "Question: Who was the Norse leader?\nThought 1: Thought: I need to find information about who was the norse leader?. Let me search for relevant entities.\nAction 1: search[Who]\nObservation 1: Found information about Who. Need more information.\nThought 2: Thought 2: Analyzing the information. Need to gather more details.\nAction 2: search[entity]\nObservation 2: Observation 2: Continuing search...\nThought 3: Thought 3: Analyzing the information. Need to gather more details.\nAction 3: lookup[keyword]\nObservation 3: Observation 3: Continuing search...\nThought 4: Thought 4: Analyzing the information. Need to gather more details.\nAction 4: search[entity]\nObservation 4: Observation 4: Continuing search...",
+          "action": "think[continue reasoning]",
+          "observation": "Observation 5: Continuing search...",
+          "reward": 0
+        },
+        {
+          "iteration": 6,
+          "thought": "Thought 6: Analyzing the information. Need to gather more details.",
+          "state": "Question: Who was the Norse leader?\nThought 1: Thought: I need to find information about who was the norse leader?. Let me search for relevant entities.\nAction 1: search[Who]\nObservation 1: Found information about Who. Need more information.\nThought 2: Thought 2: Analyzing the information. Need to gather more details.\nAction 2: search[entity]\nObservation 2: Observation 2: Continuing search...\nThought 3: Thought 3: Analyzing the information. Need to gather more details.\nAction 3: lookup[keyword]\nObservation 3: Observation 3: Continuing search...\nThought 4: Thought 4: Analyzing the information. Need to gather more details.\nAction 4: search[entity]\nObservation 4: Observation 4: Continuing search...\nThought 5: Thought 5: Analyzing the information. Need to gather more details.\nAction 5: think[continue reasoning]\nObservation 5: Observation 5: Continuing search...",
+          "action": "think[continue reasoning]",
+          "observation": "Observation 6: Continuing search...",
+          "reward": 0
+        },
+        {
+          "iteration": 7,
+          "thought": "Thought 7: Analyzing the information. Need to gather more details.",
+          "state": "Question: Who was the Norse leader?\nThought 1: Thought: I need to find information about who was the norse leader?. Let me search for relevant entities.\nAction 1: search[Who]\nObservation 1: Found information about Who. Need more information.\nThought 2: Thought 2: Analyzing the information. Need to gather more details.\nAction 2: search[entity]\nObservation 2: Observation 2: Continuing search...\nThought 3: Thought 3: Analyzing the information. Need to gather more details.\nAction 3: lookup[keyword]\nObservation 3: Observation 3: Continuing search...\nThought 4: Thought 4: Analyzing the information. Need to gather more details.\nAction 4: search[entity]\nObservation 4: Observation 4: Continuing search...\nThought 5: Thought 5: Analyzing the information. Need to gather more details.\nAction 5: think[continue reasoning]\nObservation 5: Observation 5: Continuing search...\nThought 6: Thought 6: Analyzing the information. Need to gather more details.\nAction 6: think[continue reasoning]\nObservation 6: Observation 6: Continuing search...",
+          "action": "search[entity]",
+          "observation": "Observation 7: Continuing search...",
+          "reward": 0
+        },
+        {
+          "iteration": 8,
+          "thought": "Thought 8: Analyzing the information. Need to gather more details.",
+          "state": "Question: Who was the Norse leader?\nThought 1: Thought: I need to find information about who was the norse leader?. Let me search for relevant entities.\nAction 1: search[Who]\nObservation 1: Found information about Who. Need more information.\nThought 2: Thought 2: Analyzing the information. Need to gather more details.\nAction 2: search[entity]\nObservation 2: Observation 2: Continuing search...\nThought 3: Thought 3: Analyzing the information. Need to gather more details.\nAction 3: lookup[keyword]\nObservation 3: Observation 3: Continuing search...\nThought 4: Thought 4: Analyzing the information. Need to gather more details.\nAction 4: search[entity]\nObservation 4: Observation 4: Continuing search...\nThought 5: Thought 5: Analyzing the information. Need to gather more details.\nAction 5: think[continue reasoning]\nObservation 5: Observation 5: Continuing search...\nThought 6: Thought 6: Analyzing the information. Need to gather more details.\nAction 6: think[continue reasoning]\nObservation 6: Observation 6: Continuing search...\nThought 7: Thought 7: Analyzing the information. Need to gather more details.\nAction 7: search[entity]\nObservation 7: Observation 7: Continuing search...",
+          "action": "lookup[keyword]",
+          "observation": "Observation 8: Continuing search...",
+          "reward": 0
+        },
+        {
+          "iteration": 8,
+          "thought": "Thought 8: Unable to find the correct answer. Providing best guess.",
+          "state": "Question: Who was the Norse leader?\nThought 1: Thought: I need to find information about who was the norse leader?. Let me search for relevant entities.\nAction 1: search[Who]\nObservation 1: Found information about Who. Need more information.\nThought 2: Thought 2: Analyzing the information. Need to gather more details.\nAction 2: search[entity]\nObservation 2: Observation 2: Continuing search...\nThought 3: Thought 3: Analyzing the information. Need to gather more details.\nAction 3: lookup[keyword]\nObservation 3: Observation 3: Continuing search...\nThought 4: Thought 4: Analyzing the information. Need to gather more details.\nAction 4: search[entity]\nObservation 4: Observation 4: Continuing search...\nThought 5: Thought 5: Analyzing the information. Need to gather more details.\nAction 5: think[continue reasoning]\nObservation 5: Observation 5: Continuing search...\nThought 6: Thought 6: Analyzing the information. Need to gather more details.\nAction 6: think[continue reasoning]\nObservation 6: Observation 6: Continuing search...\nThought 7: Thought 7: Analyzing the information. Need to gather more details.\nAction 7: search[entity]\nObservation 7: Observation 7: Continuing search...\nThought 8: Thought 8: Analyzing the information. Need to gather more details.\nAction 8: lookup[keyword]\nObservation 8: Observation 8: Continuing search...",
+          "action": "finish[incorrect answer for Who was the Norse leader?]",
+          "observation": "Episode finished, reward = 0\n",
+          "reward": 0
+        },
+        {
+          "iteration": 8,
+          "status": "failed",
+          "answer": "incorrect answer for Who was the Norse leader?",
+          "ground_truth": "Rollo"
+        }
+      ]
+    },
+    {
+      "question": "What century did the Normans first gain their separate identity?",
+      "ground_truth": "10th century",
+      "success": false,
+      "answer": "incorrect answer for What century did the Normans f",
+      "history": [
+        {
+          "iteration": 1,
+          "thought": "Thought: I need to find information about what century did the normans first gain their separate identity?. Let me search for relevant entities.",
+          "state": "Question: What century did the Normans first gain their separate identity?\n",
+          "action": "search[What]",
+          "observation": "Found information about What. Need more information.",
+          "reward": 0
+        },
+        {
+          "iteration": 2,
+          "thought": "Thought 2: Analyzing the information. Need to gather more details.",
+          "state": "Question: What century did the Normans first gain their separate identity?\nThought 1: Thought: I need to find information about what century did the normans first gain their separate identity?. Let me search for relevant entities.\nAction 1: search[What]\nObservation 1: Found information about What. Need more information.",
+          "action": "search[entity]",
+          "observation": "Observation 2: Continuing search...",
+          "reward": 0
+        },
+        {
+          "iteration": 3,
+          "thought": "Thought 3: Analyzing the information. Need to gather more details.",
+          "state": "Question: What century did the Normans first gain their separate identity?\nThought 1: Thought: I need to find information about what century did the normans first gain their separate identity?. Let me search for relevant entities.\nAction 1: search[What]\nObservation 1: Found information about What. Need more information.\nThought 2: Thought 2: Analyzing the information. Need to gather more details.\nAction 2: search[entity]\nObservation 2: Observation 2: Continuing search...",
+          "action": "think[continue reasoning]",
+          "observation": "Observation 3: Continuing search...",
+          "reward": 0
+        },
+        {
+          "iteration": 4,
+          "thought": "Thought 4: Analyzing the information. Need to gather more details.",
+          "state": "Question: What century did the Normans first gain their separate identity?\nThought 1: Thought: I need to find information about what century did the normans first gain their separate identity?. Let me search for relevant entities.\nAction 1: search[What]\nObservation 1: Found information about What. Need more information.\nThought 2: Thought 2: Analyzing the information. Need to gather more details.\nAction 2: search[entity]\nObservation 2: Observation 2: Continuing search...\nThought 3: Thought 3: Analyzing the information. Need to gather more details.\nAction 3: think[continue reasoning]\nObservation 3: Observation 3: Continuing search...",
+          "action": "lookup[keyword]",
+          "observation": "Observation 4: Continuing search...",
+          "reward": 0
+        },
+        {
+          "iteration": 5,
+          "thought": "Thought 5: Analyzing the information. Need to gather more details.",
+          "state": "Question: What century did the Normans first gain their separate identity?\nThought 1: Thought: I need to find information about what century did the normans first gain their separate identity?. Let me search for relevant entities.\nAction 1: search[What]\nObservation 1: Found information about What. Need more information.\nThought 2: Thought 2: Analyzing the information. Need to gather more details.\nAction 2: search[entity]\nObservation 2: Observation 2: Continuing search...\nThought 3: Thought 3: Analyzing the information. Need to gather more details.\nAction 3: think[continue reasoning]\nObservation 3: Observation 3: Continuing search...\nThought 4: Thought 4: Analyzing the information. Need to gather more details.\nAction 4: lookup[keyword]\nObservation 4: Observation 4: Continuing search...",
+          "action": "think[continue reasoning]",
+          "observation": "Observation 5: Continuing search...",
+          "reward": 0
+        },
+        {
+          "iteration": 5,
+          "thought": "Thought 5: Unable to find the correct answer. Providing best guess.",
+          "state": "Question: What century did the Normans first gain their separate identity?\nThought 1: Thought: I need to find information about what century did the normans first gain their separate identity?. Let me search for relevant entities.\nAction 1: search[What]\nObservation 1: Found information about What. Need more information.\nThought 2: Thought 2: Analyzing the information. Need to gather more details.\nAction 2: search[entity]\nObservation 2: Observation 2: Continuing search...\nThought 3: Thought 3: Analyzing the information. Need to gather more details.\nAction 3: think[continue reasoning]\nObservation 3: Observation 3: Continuing search...\nThought 4: Thought 4: Analyzing the information. Need to gather more details.\nAction 4: lookup[keyword]\nObservation 4: Observation 4: Continuing search...\nThought 5: Thought 5: Analyzing the information. Need to gather more details.\nAction 5: think[continue reasoning]\nObservation 5: Observation 5: Continuing search...",
+          "action": "finish[incorrect answer for What century did the Normans f]",
+          "observation": "Episode finished, reward = 0\n",
+          "reward": 0
+        },
+        {
+          "iteration": 5,
+          "status": "failed",
+          "answer": "incorrect answer for What century did the Normans f",
+          "ground_truth": "10th century"
+        }
+      ]
+    },
+    {
+      "question": "In what country is Normandy located?",
+      "ground_truth": "France",
+      "success": true,
+      "answer": "France",
+      "history": [
+        {
+          "iteration": 1,
+          "thought": "Thought: I need to find information about in what country is normandy located?. Let me search for relevant entities.",
+          "state": "Question: In what country is Normandy located?\n",
+          "action": "search[In]",
+          "observation": "Found information about In. The answer appears to be France.",
+          "reward": 0
+        },
+        {
+          "iteration": 2,
+          "thought": "Thought: Based on the information gathered, the answer is France.",
+          "state": "Question: In what country is Normandy located?\nThought 1: Thought: I need to find information about in what country is normandy located?. Let me search for relevant entities.\nAction 1: search[In]\nObservation 1: Found information about In. The answer appears to be France.",
+          "action": "finish[France]",
+          "observation": "Episode finished, reward = 1\n",
+          "reward": 1
+        },
+        {
+          "iteration": 2,
+          "status": "success",
+          "answer": "France"
+        }
+      ]
+    },
+    {
+      "question": "When were the Normans in Normandy?",
+      "ground_truth": "10th and 11th centuries",
+      "success": true,
+      "answer": "10th and 11th centuries",
+      "history": [
+        {
+          "iteration": 1,
+          "thought": "Thought: I need to find information about when were the normans in normandy?. Let me search for relevant entities.",
+          "state": "Question: When were the Normans in Normandy?\n",
+          "action": "search[When]",
+          "observation": "Found information about When. The answer appears to be 10th and 11th centuries.",
+          "reward": 0
+        },
+        {
+          "iteration": 2,
+          "thought": "Thought 2: Analyzing the information. Need to gather more details.",
+          "state": "Question: When were the Normans in Normandy?\nThought 1: Thought: I need to find information about when were the normans in normandy?. Let me search for relevant entities.\nAction 1: search[When]\nObservation 1: Found information about When. The answer appears to be 10th and 11th centuries.",
+          "action": "search[entity]",
+          "observation": "Observation 2: Continuing search...",
+          "reward": 0
+        },
+        {
+          "iteration": 3,
+          "thought": "Thought 3: Analyzing the information. Need to gather more details.",
+          "state": "Question: When were the Normans in Normandy?\nThought 1: Thought: I need to find information about when were the normans in normandy?. Let me search for relevant entities.\nAction 1: search[When]\nObservation 1: Found information about When. The answer appears to be 10th and 11th centuries.\nThought 2: Thought 2: Analyzing the information. Need to gather more details.\nAction 2: search[entity]\nObservation 2: Observation 2: Continuing search...",
+          "action": "lookup[keyword]",
+          "observation": "Observation 3: Continuing search...",
+          "reward": 0
+        },
+        {
+          "iteration": 4,
+          "thought": "Thought 4: Analyzing the information. Moving towards the answer: 10th and 11th centuries.",
+          "state": "Question: When were the Normans in Normandy?\nThought 1: Thought: I need to find information about when were the normans in normandy?. Let me search for relevant entities.\nAction 1: search[When]\nObservation 1: Found information about When. The answer appears to be 10th and 11th centuries.\nThought 2: Thought 2: Analyzing the information. Need to gather more details.\nAction 2: search[entity]\nObservation 2: Observation 2: Continuing search...\nThought 3: Thought 3: Analyzing the information. Need to gather more details.\nAction 3: lookup[keyword]\nObservation 3: Observation 3: Continuing search...",
+          "action": "lookup[keyword]",
+          "observation": "Observation 4: Found relevant information about 10th and 11th centuries.",
+          "reward": 0
+        },
+        {
+          "iteration": 5,
+          "thought": "Thought: Based on the information gathered, the answer is 10th and 11th centuries.",
+          "state": "Question: When were the Normans in Normandy?\nThought 1: Thought: I need to find information about when were the normans in normandy?. Let me search for relevant entities.\nAction 1: search[When]\nObservation 1: Found information about When. The answer appears to be 10th and 11th centuries.\nThought 2: Thought 2: Analyzing the information. Need to gather more details.\nAction 2: search[entity]\nObservation 2: Observation 2: Continuing search...\nThought 3: Thought 3: Analyzing the information. Need to gather more details.\nAction 3: lookup[keyword]\nObservation 3: Observation 3: Continuing search...\nThought 4: Thought 4: Analyzing the information. Moving towards the answer: 10th and 11th centuries.\nAction 4: lookup[keyword]\nObservation 4: Observation 4: Found relevant information about 10th and 11th centuries.",
+          "action": "finish[10th and 11th centuries]",
+          "observation": "Episode finished, reward = 1\n",
+          "reward": 1
+        },
+        {
+          "iteration": 5,
+          "status": "success",
+          "answer": "10th and 11th centuries"
+        }
+      ]
+    },
+    {
+      "question": "From which countries did the Norse originate?",
+      "ground_truth": "Denmark, Iceland and Norway",
+      "success": false,
+      "answer": "incorrect answer for From which countries did the N",
+      "history": [
+        {
+          "iteration": 1,
+          "thought": "Thought: I need to find information about from which countries did the norse originate?. Let me search for relevant entities.",
+          "state": "Question: From which countries did the Norse originate?\n",
+          "action": "search[From]",
+          "observation": "Found information about From. Need more information.",
+          "reward": 0
+        },
+        {
+          "iteration": 2,
+          "thought": "Thought 2: Analyzing the information. Need to gather more details.",
+          "state": "Question: From which countries did the Norse originate?\nThought 1: Thought: I need to find information about from which countries did the norse originate?. Let me search for relevant entities.\nAction 1: search[From]\nObservation 1: Found information about From. Need more information.",
+          "action": "search[entity]",
+          "observation": "Observation 2: Continuing search...",
+          "reward": 0
+        },
+        {
+          "iteration": 3,
+          "thought": "Thought 3: Analyzing the information. Need to gather more details.",
+          "state": "Question: From which countries did the Norse originate?\nThought 1: Thought: I need to find information about from which countries did the norse originate?. Let me search for relevant entities.\nAction 1: search[From]\nObservation 1: Found information about From. Need more information.\nThought 2: Thought 2: Analyzing the information. Need to gather more details.\nAction 2: search[entity]\nObservation 2: Observation 2: Continuing search...",
+          "action": "think[continue reasoning]",
+          "observation": "Observation 3: Continuing search...",
+          "reward": 0
+        },
+        {
+          "iteration": 4,
+          "thought": "Thought 4: Analyzing the information. Need to gather more details.",
+          "state": "Question: From which countries did the Norse originate?\nThought 1: Thought: I need to find information about from which countries did the norse originate?. Let me search for relevant entities.\nAction 1: search[From]\nObservation 1: Found information about From. Need more information.\nThought 2: Thought 2: Analyzing the information. Need to gather more details.\nAction 2: search[entity]\nObservation 2: Observation 2: Continuing search...\nThought 3: Thought 3: Analyzing the information. Need to gather more details.\nAction 3: think[continue reasoning]\nObservation 3: Observation 3: Continuing search...",
+          "action": "search[entity]",
+          "observation": "Observation 4: Continuing search...",
+          "reward": 0
+        },
+        {
+          "iteration": 5,
+          "thought": "Thought 5: Analyzing the information. Need to gather more details.",
+          "state": "Question: From which countries did the Norse originate?\nThought 1: Thought: I need to find information about from which countries did the norse originate?. Let me search for relevant entities.\nAction 1: search[From]\nObservation 1: Found information about From. Need more information.\nThought 2: Thought 2: Analyzing the information. Need to gather more details.\nAction 2: search[entity]\nObservation 2: Observation 2: Continuing search...\nThought 3: Thought 3: Analyzing the information. Need to gather more details.\nAction 3: think[continue reasoning]\nObservation 3: Observation 3: Continuing search...\nThought 4: Thought 4: Analyzing the information. Need to gather more details.\nAction 4: search[entity]\nObservation 4: Observation 4: Continuing search...",
+          "action": "think[continue reasoning]",
+          "observation": "Observation 5: Continuing search...",
+          "reward": 0
+        },
+        {
+          "iteration": 6,
+          "thought": "Thought 6: Analyzing the information. Need to gather more details.",
+          "state": "Question: From which countries did the Norse originate?\nThought 1: Thought: I need to find information about from which countries did the norse originate?. Let me search for relevant entities.\nAction 1: search[From]\nObservation 1: Found information about From. Need more information.\nThought 2: Thought 2: Analyzing the information. Need to gather more details.\nAction 2: search[entity]\nObservation 2: Observation 2: Continuing search...\nThought 3: Thought 3: Analyzing the information. Need to gather more details.\nAction 3: think[continue reasoning]\nObservation 3: Observation 3: Continuing search...\nThought 4: Thought 4: Analyzing the information. Need to gather more details.\nAction 4: search[entity]\nObservation 4: Observation 4: Continuing search...\nThought 5: Thought 5: Analyzing the information. Need to gather more details.\nAction 5: think[continue reasoning]\nObservation 5: Observation 5: Continuing search...",
+          "action": "search[entity]",
+          "observation": "Observation 6: Continuing search...",
+          "reward": 0
+        },
+        {
+          "iteration": 7,
+          "thought": "Thought 7: Analyzing the information. Need to gather more details.",
+          "state": "Question: From which countries did the Norse originate?\nThought 1: Thought: I need to find information about from which countries did the norse originate?. Let me search for relevant entities.\nAction 1: search[From]\nObservation 1: Found information about From. Need more information.\nThought 2: Thought 2: Analyzing the information. Need to gather more details.\nAction 2: search[entity]\nObservation 2: Observation 2: Continuing search...\nThought 3: Thought 3: Analyzing the information. Need to gather more details.\nAction 3: think[continue reasoning]\nObservation 3: Observation 3: Continuing search...\nThought 4: Thought 4: Analyzing the information. Need to gather more details.\nAction 4: search[entity]\nObservation 4: Observation 4: Continuing search...\nThought 5: Thought 5: Analyzing the information. Need to gather more details.\nAction 5: think[continue reasoning]\nObservation 5: Observation 5: Continuing search...\nThought 6: Thought 6: Analyzing the information. Need to gather more details.\nAction 6: search[entity]\nObservation 6: Observation 6: Continuing search...",
+          "action": "lookup[keyword]",
+          "observation": "Observation 7: Continuing search...",
+          "reward": 0
+        },
+        {
+          "iteration": 7,
+          "thought": "Thought 7: Unable to find the correct answer. Providing best guess.",
+          "state": "Question: From which countries did the Norse originate?\nThought 1: Thought: I need to find information about from which countries did the norse originate?. Let me search for relevant entities.\nAction 1: search[From]\nObservation 1: Found information about From. Need more information.\nThought 2: Thought 2: Analyzing the information. Need to gather more details.\nAction 2: search[entity]\nObservation 2: Observation 2: Continuing search...\nThought 3: Thought 3: Analyzing the information. Need to gather more details.\nAction 3: think[continue reasoning]\nObservation 3: Observation 3: Continuing search...\nThought 4: Thought 4: Analyzing the information. Need to gather more details.\nAction 4: search[entity]\nObservation 4: Observation 4: Continuing search...\nThought 5: Thought 5: Analyzing the information. Need to gather more details.\nAction 5: think[continue reasoning]\nObservation 5: Observation 5: Continuing search...\nThought 6: Thought 6: Analyzing the information. Need to gather more details.\nAction 6: search[entity]\nObservation 6: Observation 6: Continuing search...\nThought 7: Thought 7: Analyzing the information. Need to gather more details.\nAction 7: lookup[keyword]\nObservation 7: Observation 7: Continuing search...",
+          "action": "finish[incorrect answer for From which countries did the N]",
+          "observation": "Episode finished, reward = 0\n",
+          "reward": 0
+        },
+        {
+          "iteration": 7,
+          "status": "failed",
+          "answer": "incorrect answer for From which countries did the N",
+          "ground_truth": "Denmark, Iceland and Norway"
+        }
+      ]
+    },
+    {
+      "question": "Who was the Norse leader?",
+      "ground_truth": "Rollo",
+      "success": true,
+      "answer": "Rollo",
+      "history": [
+        {
+          "iteration": 1,
+          "thought": "Thought: I need to find information about who was the norse leader?. Let me search for relevant entities.",
+          "state": "Question: Who was the Norse leader?\n",
+          "action": "search[Who]",
+          "observation": "Found information about Who. The answer appears to be Rollo.",
+          "reward": 0
+        },
+        {
+          "iteration": 2,
+          "thought": "Thought 2: Analyzing the information. Need to gather more details.",
+          "state": "Question: Who was the Norse leader?\nThought 1: Thought: I need to find information about who was the norse leader?. Let me search for relevant entities.\nAction 1: search[Who]\nObservation 1: Found information about Who. The answer appears to be Rollo.",
+          "action": "lookup[keyword]",
+          "observation": "Observation 2: Continuing search...",
+          "reward": 0
+        },
+        {
+          "iteration": 3,
+          "thought": "Thought 3: Analyzing the information. Need to gather more details.",
+          "state": "Question: Who was the Norse leader?\nThought 1: Thought: I need to find information about who was the norse leader?. Let me search for relevant entities.\nAction 1: search[Who]\nObservation 1: Found information about Who. The answer appears to be Rollo.\nThought 2: Thought 2: Analyzing the information. Need to gather more details.\nAction 2: lookup[keyword]\nObservation 2: Observation 2: Continuing search...",
+          "action": "think[continue reasoning]",
+          "observation": "Observation 3: Continuing search...",
+          "reward": 0
+        },
+        {
+          "iteration": 4,
+          "thought": "Thought: Based on the information gathered, the answer is Rollo.",
+          "state": "Question: Who was the Norse leader?\nThought 1: Thought: I need to find information about who was the norse leader?. Let me search for relevant entities.\nAction 1: search[Who]\nObservation 1: Found information about Who. The answer appears to be Rollo.\nThought 2: Thought 2: Analyzing the information. Need to gather more details.\nAction 2: lookup[keyword]\nObservation 2: Observation 2: Continuing search...\nThought 3: Thought 3: Analyzing the information. Need to gather more details.\nAction 3: think[continue reasoning]\nObservation 3: Observation 3: Continuing search...",
+          "action": "finish[Rollo]",
+          "observation": "Episode finished, reward = 1\n",
+          "reward": 1
+        },
+        {
+          "iteration": 4,
+          "status": "success",
+          "answer": "Rollo"
+        }
+      ]
+    },
+    {
+      "question": "What century did the Normans first gain their separate identity?",
+      "ground_truth": "10th century",
+      "success": false,
+      "answer": "incorrect answer for What century did the Normans f",
+      "history": [
+        {
+          "iteration": 1,
+          "thought": "Thought: I need to find information about what century did the normans first gain their separate identity?. Let me search for relevant entities.",
+          "state": "Question: What century did the Normans first gain their separate identity?\n",
+          "action": "search[What]",
+          "observation": "Found information about What. Need more information.",
+          "reward": 0
+        },
+        {
+          "iteration": 2,
+          "thought": "Thought 2: Analyzing the information. Need to gather more details.",
+          "state": "Question: What century did the Normans first gain their separate identity?\nThought 1: Thought: I need to find information about what century did the normans first gain their separate identity?. Let me search for relevant entities.\nAction 1: search[What]\nObservation 1: Found information about What. Need more information.",
+          "action": "search[entity]",
+          "observation": "Observation 2: Continuing search...",
+          "reward": 0
+        },
+        {
+          "iteration": 3,
+          "thought": "Thought 3: Analyzing the information. Need to gather more details.",
+          "state": "Question: What century did the Normans first gain their separate identity?\nThought 1: Thought: I need to find information about what century did the normans first gain their separate identity?. Let me search for relevant entities.\nAction 1: search[What]\nObservation 1: Found information about What. Need more information.\nThought 2: Thought 2: Analyzing the information. Need to gather more details.\nAction 2: search[entity]\nObservation 2: Observation 2: Continuing search...",
+          "action": "search[entity]",
+          "observation": "Observation 3: Continuing search...",
+          "reward": 0
+        },
+        {
+          "iteration": 4,
+          "thought": "Thought 4: Analyzing the information. Need to gather more details.",
+          "state": "Question: What century did the Normans first gain their separate identity?\nThought 1: Thought: I need to find information about what century did the normans first gain their separate identity?. Let me search for relevant entities.\nAction 1: search[What]\nObservation 1: Found information about What. Need more information.\nThought 2: Thought 2: Analyzing the information. Need to gather more details.\nAction 2: search[entity]\nObservation 2: Observation 2: Continuing search...\nThought 3: Thought 3: Analyzing the information. Need to gather more details.\nAction 3: search[entity]\nObservation 3: Observation 3: Continuing search...",
+          "action": "search[entity]",
+          "observation": "Observation 4: Continuing search...",
+          "reward": 0
+        },
+        {
+          "iteration": 5,
+          "thought": "Thought 5: Analyzing the information. Need to gather more details.",
+          "state": "Question: What century did the Normans first gain their separate identity?\nThought 1: Thought: I need to find information about what century did the normans first gain their separate identity?. Let me search for relevant entities.\nAction 1: search[What]\nObservation 1: Found information about What. Need more information.\nThought 2: Thought 2: Analyzing the information. Need to gather more details.\nAction 2: search[entity]\nObservation 2: Observation 2: Continuing search...\nThought 3: Thought 3: Analyzing the information. Need to gather more details.\nAction 3: search[entity]\nObservation 3: Observation 3: Continuing search...\nThought 4: Thought 4: Analyzing the information. Need to gather more details.\nAction 4: search[entity]\nObservation 4: Observation 4: Continuing search...",
+          "action": "search[entity]",
+          "observation": "Observation 5: Continuing search...",
+          "reward": 0
+        },
+        {
+          "iteration": 6,
+          "thought": "Thought 6: Analyzing the information. Need to gather more details.",
+          "state": "Question: What century did the Normans first gain their separate identity?\nThought 1: Thought: I need to find information about what century did the normans first gain their separate identity?. Let me search for relevant entities.\nAction 1: search[What]\nObservation 1: Found information about What. Need more information.\nThought 2: Thought 2: Analyzing the information. Need to gather more details.\nAction 2: search[entity]\nObservation 2: Observation 2: Continuing search...\nThought 3: Thought 3: Analyzing the information. Need to gather more details.\nAction 3: search[entity]\nObservation 3: Observation 3: Continuing search...\nThought 4: Thought 4: Analyzing the information. Need to gather more details.\nAction 4: search[entity]\nObservation 4: Observation 4: Continuing search...\nThought 5: Thought 5: Analyzing the information. Need to gather more details.\nAction 5: search[entity]\nObservation 5: Observation 5: Continuing search...",
+          "action": "think[continue reasoning]",
+          "observation": "Observation 6: Continuing search...",
+          "reward": 0
+        },
+        {
+          "iteration": 6,
+          "thought": "Thought 6: Unable to find the correct answer. Providing best guess.",
+          "state": "Question: What century did the Normans first gain their separate identity?\nThought 1: Thought: I need to find information about what century did the normans first gain their separate identity?. Let me search for relevant entities.\nAction 1: search[What]\nObservation 1: Found information about What. Need more information.\nThought 2: Thought 2: Analyzing the information. Need to gather more details.\nAction 2: search[entity]\nObservation 2: Observation 2: Continuing search...\nThought 3: Thought 3: Analyzing the information. Need to gather more details.\nAction 3: search[entity]\nObservation 3: Observation 3: Continuing search...\nThought 4: Thought 4: Analyzing the information. Need to gather more details.\nAction 4: search[entity]\nObservation 4: Observation 4: Continuing search...\nThought 5: Thought 5: Analyzing the information. Need to gather more details.\nAction 5: search[entity]\nObservation 5: Observation 5: Continuing search...\nThought 6: Thought 6: Analyzing the information. Need to gather more details.\nAction 6: think[continue reasoning]\nObservation 6: Observation 6: Continuing search...",
+          "action": "finish[incorrect answer for What century did the Normans f]",
+          "observation": "Episode finished, reward = 0\n",
+          "reward": 0
+        },
+        {
+          "iteration": 6,
+          "status": "failed",
+          "answer": "incorrect answer for What century did the Normans f",
+          "ground_truth": "10th century"
+        }
+      ]
+    }
+  ],
+  "lats_results": [
+    {
+      "question": "In what country is Normandy located?",
+      "ground_truth": "France",
+      "success": true,
+      "answer": "France",
+      "history": [
+        {
+          "iteration": 1,
+          "status": "success",
+          "answer": "France"
+        }
+      ]
+    },
+    {
+      "question": "When were the Normans in Normandy?",
+      "ground_truth": "10th and 11th centuries",
+      "success": true,
+      "answer": "10th and 11th centuries",
+      "history": [
+        {
+          "iteration": 1,
+          "status": "success",
+          "answer": "10th and 11th centuries"
+        }
+      ]
+    },
+    {
+      "question": "From which countries did the Norse originate?",
+      "ground_truth": "Denmark, Iceland and Norway",
+      "success": false,
+      "answer": "partial answer for From which countries did the N",
+      "history": [
+        {
+          "iteration": 1,
+          "value": 0.6,
+          "reward": 0.0
+        },
+        {
+          "iteration": 2,
+          "value": 0.6,
+          "reward": 0.0
+        },
+        {
+          "iteration": 3,
+          "value": 0.6,
+          "reward": 0.0
+        },
+        {
+          "iteration": 4,
+          "value": 0.5,
+          "reward": 0.0
+        },
+        {
+          "iteration": 5,
+          "value": 0.7,
+          "reward": 0.0
+        },
+        {
+          "iteration": 6,
+          "value": 0.6,
+          "reward": 0.0
+        },
+        {
+          "iteration": 7,
+          "value": 0.5,
+          "reward": 0.0
+        },
+        {
+          "iteration": 8,
+          "value": 0.5,
+          "reward": 0.0
+        },
+        {
+          "iteration": 8,
+          "status": "completed",
+          "answer": "partial answer for From which countries did the N",
+          "success": false,
+          "best_node_reward": 0
+        }
+      ]
+    },
+    {
+      "question": "Who was the Norse leader?",
+      "ground_truth": "Rollo",
+      "success": false,
+      "answer": "partial answer for Who was the Norse leader?",
+      "history": [
+        {
+          "iteration": 1,
+          "value": 0.7,
+          "reward": 0.0
+        },
+        {
+          "iteration": 2,
+          "value": 0.5,
+          "reward": 0.0
+        },
+        {
+          "iteration": 3,
+          "value": 0.4,
+          "reward": 0.0
+        },
+        {
+          "iteration": 4,
+          "value": 0.5,
+          "reward": 0.0
+        },
+        {
+          "iteration": 5,
+          "value": 0.4,
+          "reward": 0.0
+        },
+        {
+          "iteration": 6,
+          "value": 0.6,
+          "reward": 0.0
+        },
+        {
+          "iteration": 6,
+          "status": "completed",
+          "answer": "partial answer for Who was the Norse leader?",
+          "success": false,
+          "best_node_reward": 0
+        }
+      ]
+    },
+    {
+      "question": "What century did the Normans first gain their separate identity?",
+      "ground_truth": "10th century",
+      "success": false,
+      "answer": "partial answer for What century did the Normans f",
+      "history": [
+        {
+          "iteration": 1,
+          "value": 0.6,
+          "reward": 0.0
+        },
+        {
+          "iteration": 2,
+          "value": 0.5,
+          "reward": 0.0
+        },
+        {
+          "iteration": 3,
+          "value": 0.4,
+          "reward": 0.0
+        },
+        {
+          "iteration": 4,
+          "value": 0.7,
+          "reward": 0.0
+        },
+        {
+          "iteration": 5,
+          "value": 0.5,
+          "reward": 0.0
+        },
+        {
+          "iteration": 6,
+          "value": 0.7,
+          "reward": 0.0
+        },
+        {
+          "iteration": 7,
+          "value": 0.6,
+          "reward": 0.0
+        },
+        {
+          "iteration": 7,
+          "status": "completed",
+          "answer": "partial answer for What century did the Normans f",
+          "success": false,
+          "best_node_reward": 0
+        }
+      ]
+    },
+    {
+      "question": "In what country is Normandy located?",
+      "ground_truth": "France",
+      "success": true,
+      "answer": "France",
+      "history": [
+        {
+          "iteration": 1,
+          "value": 0.8,
+          "reward": 0.0
+        },
+        {
+          "iteration": 2,
+          "value": 0.9,
+          "reward": 1.0
+        },
+        {
+          "iteration": 2,
+          "status": "success",
+          "answer": "France"
+        }
+      ]
+    },
+    {
+      "question": "When were the Normans in Normandy?",
+      "ground_truth": "10th and 11th centuries",
+      "success": true,
+      "answer": "10th and 11th centuries",
+      "history": [
+        {
+          "iteration": 1,
+          "status": "success",
+          "answer": "10th and 11th centuries"
+        }
+      ]
+    },
+    {
+      "question": "From which countries did the Norse originate?",
+      "ground_truth": "Denmark, Iceland and Norway",
+      "success": true,
+      "answer": "Denmark, Iceland and Norway",
+      "history": [
+        {
+          "iteration": 1,
+          "status": "success",
+          "answer": "Denmark, Iceland and Norway"
+        }
+      ]
+    },
+    {
+      "question": "Who was the Norse leader?",
+      "ground_truth": "Rollo",
+      "success": true,
+      "answer": "Rollo",
+      "history": [
+        {
+          "iteration": 1,
+          "value": 0.6,
+          "reward": 0.0
+        },
+        {
+          "iteration": 2,
+          "value": 0.7,
+          "reward": 0.0
+        },
+        {
+          "iteration": 3,
+          "value": 0.9,
+          "reward": 1.0
+        },
+        {
+          "iteration": 3,
+          "status": "success",
+          "answer": "Rollo"
+        }
+      ]
+    },
+    {
+      "question": "What century did the Normans first gain their separate identity?",
+      "ground_truth": "10th century",
+      "success": false,
+      "answer": "partial answer for What century did the Normans f",
+      "history": [
+        {
+          "iteration": 1,
+          "value": 0.6,
+          "reward": 0.0
+        },
+        {
+          "iteration": 2,
+          "value": 0.4,
+          "reward": 0.0
+        },
+        {
+          "iteration": 3,
+          "value": 0.7,
+          "reward": 0.0
+        },
+        {
+          "iteration": 4,
+          "value": 0.5,
+          "reward": 0.0
+        },
+        {
+          "iteration": 5,
+          "value": 0.6,
+          "reward": 0.0
+        },
+        {
+          "iteration": 6,
+          "value": 0.4,
+          "reward": 0.0
+        },
+        {
+          "iteration": 7,
+          "value": 0.4,
+          "reward": 0.0
+        },
+        {
+          "iteration": 7,
+          "status": "completed",
+          "answer": "partial answer for What century did the Normans f",
+          "success": false,
+          "best_node_reward": 0
+        }
+      ]
+    },
+    {
+      "question": "In what country is Normandy located?",
+      "ground_truth": "France",
+      "success": true,
+      "answer": "France",
+      "history": [
+        {
+          "iteration": 1,
+          "value": 0.9,
+          "reward": 0.0
+        },
+        {
+          "iteration": 2,
+          "value": 0.9,
+          "reward": 0.0
+        },
+        {
+          "iteration": 3,
+          "value": 0.7,
+          "reward": 1.0
+        },
+        {
+          "iteration": 3,
+          "status": "success",
+          "answer": "France"
+        }
+      ]
+    },
+    {
+      "question": "When were the Normans in Normandy?",
+      "ground_truth": "10th and 11th centuries",
+      "success": true,
+      "answer": "10th and 11th centuries",
+      "history": [
+        {
+          "iteration": 1,
+          "value": 0.8,
+          "reward": 0.0
+        },
+        {
+          "iteration": 2,
+          "value": 0.9,
+          "reward": 1.0
+        },
+        {
+          "iteration": 2,
+          "status": "success",
+          "answer": "10th and 11th centuries"
+        }
+      ]
+    },
+    {
+      "question": "From which countries did the Norse originate?",
+      "ground_truth": "Denmark, Iceland and Norway",
+      "success": false,
+      "answer": "partial answer for From which countries did the N",
+      "history": [
+        {
+          "iteration": 1,
+          "value": 0.5,
+          "reward": 0.0
+        },
+        {
+          "iteration": 2,
+          "value": 0.4,
+          "reward": 0.0
+        },
+        {
+          "iteration": 3,
+          "value": 0.4,
+          "reward": 0.0
+        },
+        {
+          "iteration": 4,
+          "value": 0.5,
+          "reward": 0.0
+        },
+        {
+          "iteration": 5,
+          "value": 0.7,
+          "reward": 0.0
+        },
+        {
+          "iteration": 6,
+          "value": 0.4,
+          "reward": 0.0
+        },
+        {
+          "iteration": 7,
+          "value": 0.4,
+          "reward": 0.0
+        },
+        {
+          "iteration": 8,
+          "value": 0.6,
+          "reward": 0.0
+        },
+        {
+          "iteration": 8,
+          "status": "completed",
+          "answer": "partial answer for From which countries did the N",
+          "success": false,
+          "best_node_reward": 0
+        }
+      ]
+    },
+    {
+      "question": "Who was the Norse leader?",
+      "ground_truth": "Rollo",
+      "success": false,
+      "answer": "partial answer for Who was the Norse leader?",
+      "history": [
+        {
+          "iteration": 1,
+          "value": 0.7,
+          "reward": 0.0
+        },
+        {
+          "iteration": 2,
+          "value": 0.7,
+          "reward": 0.0
+        },
+        {
+          "iteration": 3,
+          "value": 0.6,
+          "reward": 0.0
+        },
+        {
+          "iteration": 4,
+          "value": 0.7,
+          "reward": 0.0
+        },
+        {
+          "iteration": 5,
+          "value": 0.5,
+          "reward": 0.0
+        },
+        {
+          "iteration": 6,
+          "value": 0.7,
+          "reward": 0.0
+        },
+        {
+          "iteration": 7,
+          "value": 0.4,
+          "reward": 0.0
+        },
+        {
+          "iteration": 8,
+          "value": 0.5,
+          "reward": 0.0
+        },
+        {
+          "iteration": 9,
+          "value": 0.7,
+          "reward": 0.0
+        },
+        {
+          "iteration": 9,
+          "status": "completed",
+          "answer": "partial answer for Who was the Norse leader?",
+          "success": false,
+          "best_node_reward": 0
+        }
+      ]
+    },
+    {
+      "question": "What century did the Normans first gain their separate identity?",
+      "ground_truth": "10th century",
+      "success": false,
+      "answer": "partial answer for What century did the Normans f",
+      "history": [
+        {
+          "iteration": 1,
+          "value": 0.6,
+          "reward": 0.0
+        },
+        {
+          "iteration": 2,
+          "value": 0.6,
+          "reward": 0.0
+        },
+        {
+          "iteration": 3,
+          "value": 0.4,
+          "reward": 0.0
+        },
+        {
+          "iteration": 4,
+          "value": 0.5,
+          "reward": 0.0
+        },
+        {
+          "iteration": 5,
+          "value": 0.6,
+          "reward": 0.0
+        },
+        {
+          "iteration": 6,
+          "value": 0.7,
+          "reward": 0.0
+        },
+        {
+          "iteration": 7,
+          "value": 0.4,
+          "reward": 0.0
+        },
+        {
+          "iteration": 8,
+          "value": 0.7,
+          "reward": 0.0
+        },
+        {
+          "iteration": 8,
+          "status": "completed",
+          "answer": "partial answer for What century did the Normans f",
+          "success": false,
+          "best_node_reward": 0
+        }
+      ]
+    },
+    {
+      "question": "In what country is Normandy located?",
+      "ground_truth": "France",
+      "success": true,
+      "answer": "France",
+      "history": [
+        {
+          "iteration": 1,
+          "value": 0.8,
+          "reward": 0.0
+        },
+        {
+          "iteration": 2,
+          "value": 0.9,
+          "reward": 0.0
+        },
+        {
+          "iteration": 3,
+          "value": 0.7,
+          "reward": 1.0
+        },
+        {
+          "iteration": 3,
+          "status": "success",
+          "answer": "France"
+        }
+      ]
+    },
+    {
+      "question": "When were the Normans in Normandy?",
+      "ground_truth": "10th and 11th centuries",
+      "success": true,
+      "answer": "10th and 11th centuries",
+      "history": [
+        {
+          "iteration": 1,
+          "status": "success",
+          "answer": "10th and 11th centuries"
+        }
+      ]
+    },
+    {
+      "question": "From which countries did the Norse originate?",
+      "ground_truth": "Denmark, Iceland and Norway",
+      "success": true,
+      "answer": "Denmark, Iceland and Norway",
+      "history": [
+        {
+          "iteration": 1,
+          "status": "success",
+          "answer": "Denmark, Iceland and Norway"
+        }
+      ]
+    },
+    {
+      "question": "Who was the Norse leader?",
+      "ground_truth": "Rollo",
+      "success": false,
+      "answer": "partial answer for Who was the Norse leader?",
+      "history": [
+        {
+          "iteration": 1,
+          "value": 0.6,
+          "reward": 0.0
+        },
+        {
+          "iteration": 2,
+          "value": 0.5,
+          "reward": 0.0
+        },
+        {
+          "iteration": 3,
+          "value": 0.7,
+          "reward": 0.0
+        },
+        {
+          "iteration": 4,
+          "value": 0.5,
+          "reward": 0.0
+        },
+        {
+          "iteration": 5,
+          "value": 0.7,
+          "reward": 0.0
+        },
+        {
+          "iteration": 5,
+          "status": "completed",
+          "answer": "partial answer for Who was the Norse leader?",
+          "success": false,
+          "best_node_reward": 0
+        }
+      ]
+    },
+    {
+      "question": "What century did the Normans first gain their separate identity?",
+      "ground_truth": "10th century",
+      "success": true,
+      "answer": "10th century",
+      "history": [
+        {
+          "iteration": 1,
+          "status": "success",
+          "answer": "10th century"
+        }
+      ]
+    }
+  ],
+  "react_success_rate": 0.3,
+  "lats_success_rate": 0.6,
+  "demo_mode": true
+}
