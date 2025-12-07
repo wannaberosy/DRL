@@ -26,8 +26,8 @@
     {
       "question": "What do all member states agree takes precedence over national law?",
       "ground_truth": "EU law",
-      "success": true,
-      "answer": "France",
+      "success": false,
+      "answer": "Incorrect Answer",
       "history": [
         {
           "iteration": 1,
@@ -314,7 +314,7 @@
       ]
     }
   ],
-  "react_success_rate": 0.8,
+  "react_success_rate": 0.6,
   "lats_success_rate": 0.6666666666666666,
   "demo_mode": false
 }

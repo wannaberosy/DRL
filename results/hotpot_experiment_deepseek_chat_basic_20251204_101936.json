@@ -16,7 +16,7 @@
     "tree_n": null,
     "tree_l": null,
     "tree_k": null,
-    "tree_expand_mode": null,
+    "tree_expand_mode": "basic",
     "tree_reward_mode": null,
     "mcts_num_simulations": null,
     "mcts_use_value_function": null,

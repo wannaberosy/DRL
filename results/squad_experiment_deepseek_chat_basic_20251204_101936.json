@@ -16,7 +16,7 @@
     "tree_n": null,
     "tree_l": null,
     "tree_k": null,
-    "tree_expand_mode": null,
+    "tree_expand_mode": "basic",
     "tree_reward_mode": null,
     "mcts_num_simulations": null,
     "mcts_use_value_function": null,
@@ -105,8 +105,8 @@
     {
       "question": "When were the Normans in Normandy?",
       "ground_truth": "10th and 11th centuries",
-      "success": false,
-      "answer": "incorrect answer for When were the Normans in Norma",
+      "success": true,
+      "answer": "10th and 11th centuries",
       "history": [
         {
           "iteration": 1,
@@ -185,14 +185,22 @@
           "status": "failed",
           "answer": "incorrect answer for When were the Normans in Norma",
           "ground_truth": "10th and 11th centuries"
+        },
+        {
+          "iteration": 9,
+          "status": "success",
+          "answer": "10th and 11th centuries",
+          "thought": "Analysis complete. The answer is found.",
+          "reward": 1.0,
+          "step": "expansion_iter_9"
         }
       ]
     },
     {
       "question": "From which countries did the Norse originate?",
       "ground_truth": "Denmark, Iceland and Norway",
-      "success": false,
-      "answer": "incorrect answer for From which countries did the N",
+      "success": true,
+      "answer": "Denmark, Iceland and Norway",
       "history": [
         {
           "iteration": 1,
@@ -247,6 +255,14 @@
           "status": "failed",
           "answer": "incorrect answer for From which countries did the N",
           "ground_truth": "Denmark, Iceland and Norway"
+        },
+        {
+          "iteration": 6,
+          "status": "success",
+          "answer": "Denmark, Iceland and Norway",
+          "thought": "Analysis complete. The answer is found.",
+          "reward": 1.0,
+          "step": "expansion_iter_6"
         }
       ]
     },
@@ -790,8 +806,8 @@
     {
       "question": "From which countries did the Norse originate?",
       "ground_truth": "Denmark, Iceland and Norway",
-      "success": false,
-      "answer": "incorrect answer for From which countries did the N",
+      "success": true,
+      "answer": "Denmark, Iceland and Norway",
       "history": [
         {
           "iteration": 1,
@@ -870,14 +886,22 @@
           "status": "failed",
           "answer": "incorrect answer for From which countries did the N",
           "ground_truth": "Denmark, Iceland and Norway"
+        },
+        {
+          "iteration": 9,
+          "status": "success",
+          "answer": "Denmark, Iceland and Norway",
+          "thought": "Analysis complete. The answer is found.",
+          "reward": 1.0,
+          "step": "expansion_iter_9"
         }
       ]
     },
     {
       "question": "Who was the Norse leader?",
       "ground_truth": "Rollo",
-      "success": false,
-      "answer": "incorrect answer for Who was the Norse leader?",
+      "success": true,
+      "answer": "Rollo",
       "history": [
         {
           "iteration": 1,
@@ -948,6 +972,14 @@
           "status": "failed",
           "answer": "incorrect answer for Who was the Norse leader?",
           "ground_truth": "Rollo"
+        },
+        {
+          "iteration": 8,
+          "status": "success",
+          "answer": "Rollo",
+          "thought": "Analysis complete. The answer is found.",
+          "reward": 1.0,
+          "step": "expansion_iter_8"
         }
       ]
     },
@@ -1147,8 +1179,8 @@
     {
       "question": "From which countries did the Norse originate?",
       "ground_truth": "Denmark, Iceland and Norway",
-      "success": false,
-      "answer": "incorrect answer for From which countries did the N",
+      "success": true,
+      "answer": "Denmark, Iceland and Norway",
       "history": [
         {
           "iteration": 1,
@@ -1187,6 +1219,14 @@
           "status": "failed",
           "answer": "incorrect answer for From which countries did the N",
           "ground_truth": "Denmark, Iceland and Norway"
+        },
+        {
+          "iteration": 4,
+          "status": "success",
+          "answer": "Denmark, Iceland and Norway",
+          "thought": "Analysis complete. The answer is found.",
+          "reward": 1.0,
+          "step": "expansion_iter_4"
         }
       ]
     },
@@ -1801,8 +1841,8 @@
     {
       "question": "Who was the Norse leader?",
       "ground_truth": "Rollo",
-      "success": true,
-      "answer": "Rollo",
+      "success": false,
+      "answer": "Incorrect Answer",
       "history": [
         {
           "iteration": 1,
@@ -1815,9 +1855,10 @@
           "reward": 1.0
         },
         {
-          "iteration": 2,
-          "status": "success",
-          "answer": "Rollo"
+          "iteration": 3,
+          "status": "failed",
+          "answer": "Incorrect Answer",
+          "reward": 0.0
         }
       ]
     },
@@ -2073,7 +2114,7 @@
       ]
     }
   ],
-  "react_success_rate": 0.35,
-  "lats_success_rate": 0.5,
+  "react_success_rate": 0.6,
+  "lats_success_rate": 0.45,
   "demo_mode": true
 }

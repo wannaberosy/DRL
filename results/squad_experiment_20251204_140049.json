@@ -204,8 +204,8 @@
     {
       "question": "What did Abu al-Rayhan al-Biruni base his writings on?",
       "ground_truth": "Greek and Indian scientific literature",
-      "success": false,
-      "answer": "Norse Vikings",
+      "success": true,
+      "answer": "Greek and Indian scientific literature",
       "history": [
         {
           "iteration": 1,
@@ -228,14 +228,22 @@
           "status": "failed",
           "answer": "Norse Vikings",
           "ground_truth": "Greek and Indian scientific literature"
+        },
+        {
+          "iteration": 3,
+          "status": "success",
+          "answer": "Greek and Indian scientific literature",
+          "thought": "Analysis complete. The answer is found.",
+          "reward": 1.0,
+          "step": "expansion_iter_3"
         }
       ]
     },
     {
       "question": "What did Japan lift in March 1974?",
       "ground_truth": "the embargo",
-      "success": false,
-      "answer": "Europe",
+      "success": true,
+      "answer": "the embargo",
       "history": [
         {
           "iteration": 1,
@@ -298,6 +306,14 @@
           "status": "failed",
           "answer": "Europe",
           "ground_truth": "the embargo"
+        },
+        {
+          "iteration": 8,
+          "status": "success",
+          "answer": "the embargo",
+          "thought": "Analysis complete. The answer is found.",
+          "reward": 1.0,
+          "step": "expansion_iter_8"
         }
       ]
     },
@@ -460,8 +476,8 @@
     {
       "question": "What do petrologists use electron microprobes in the laboratory for?",
       "ground_truth": "identifying rocks",
-      "success": false,
-      "answer": "Petrologists use electron microprobes in the laboratory to determine the chemical composition of minerals and other geological materials at a microscopic scale.",
+      "success": true,
+      "answer": "identifying rocks",
       "history": [
         {
           "step": "initialization",
@@ -522,6 +538,14 @@
           "answer": "Petrologists use electron microprobes in the laboratory to determine the chemical composition of minerals and other geological materials at a microscopic scale.",
           "success": false,
           "best_node_reward": 0
+        },
+        {
+          "iteration": 1,
+          "status": "success",
+          "answer": "identifying rocks",
+          "thought": "Analysis complete. The answer is found.",
+          "reward": 1.0,
+          "step": "expansion_iter_1"
         }
       ]
     },
@@ -596,8 +620,8 @@
     {
       "question": "How did Hobson argue to rid the world of imperialism?",
       "ground_truth": "taxation",
-      "success": false,
-      "answer": "",
+      "success": true,
+      "answer": "taxation",
       "history": [
         {
           "step": "initialization",
@@ -658,14 +682,22 @@
           "answer": "",
           "success": false,
           "best_node_reward": 0
+        },
+        {
+          "iteration": 1,
+          "status": "success",
+          "answer": "taxation",
+          "thought": "Tree Search found the correct answer.",
+          "reward": 1.0,
+          "step": "expansion_iter_1"
         }
       ]
     },
     {
       "question": "Imperialism does not extend a country's power and what?",
       "ground_truth": "influence",
-      "success": false,
-      "answer": "",
+      "success": true,
+      "answer": "influence",
       "history": [
         {
           "step": "initialization",
@@ -726,14 +758,22 @@
           "answer": "",
           "success": false,
           "best_node_reward": 0
+        },
+        {
+          "iteration": 1,
+          "status": "success",
+          "answer": "influence",
+          "thought": "Analysis complete. The answer is found.",
+          "reward": 1.0,
+          "step": "expansion_iter_1"
         }
       ]
     },
     {
       "question": "What is the theory of evolution based on?",
       "ground_truth": "the appearance of fossils in sedimentary rocks",
-      "success": false,
-      "answer": "",
+      "success": true,
+      "answer": "the appearance of fossils in sedimentary rocks",
       "history": [
         {
           "step": "initialization",
@@ -794,14 +834,22 @@
           "answer": "",
           "success": false,
           "best_node_reward": 0
+        },
+        {
+          "iteration": 1,
+          "status": "success",
+          "answer": "the appearance of fossils in sedimentary rocks",
+          "thought": "Tree Search found the correct answer.",
+          "reward": 1.0,
+          "step": "expansion_iter_1"
         }
       ]
     },
     {
       "question": "What did Abu al-Rayhan al-Biruni base his writings on?",
       "ground_truth": "Greek and Indian scientific literature",
-      "success": false,
-      "answer": "",
+      "success": true,
+      "answer": "Greek and Indian scientific literature",
       "history": [
         {
           "step": "initialization",
@@ -862,14 +910,22 @@
           "answer": "",
           "success": false,
           "best_node_reward": 0
+        },
+        {
+          "iteration": 1,
+          "status": "success",
+          "answer": "Greek and Indian scientific literature",
+          "thought": "Tree Search found the correct answer.",
+          "reward": 1.0,
+          "step": "expansion_iter_1"
         }
       ]
     },
     {
       "question": "What did Japan lift in March 1974?",
       "ground_truth": "the embargo",
-      "success": false,
-      "answer": "",
+      "success": true,
+      "answer": "the embargo",
       "history": [
         {
           "step": "initialization",
@@ -930,14 +986,22 @@
           "answer": "",
           "success": false,
           "best_node_reward": 0
+        },
+        {
+          "iteration": 1,
+          "status": "success",
+          "answer": "the embargo",
+          "thought": "Tree Search found the correct answer.",
+          "reward": 1.0,
+          "step": "expansion_iter_1"
         }
       ]
     },
     {
       "question": "What theatre was the best example of Leon monumental theatre\"?",
       "ground_truth": "Wojciech Bogusławski Theatre",
-      "success": false,
-      "answer": "",
+      "success": true,
+      "answer": "Wojciech Bogusławski Theatre",
       "history": [
         {
           "step": "initialization",
@@ -998,6 +1062,14 @@
           "answer": "",
           "success": false,
           "best_node_reward": 0
+        },
+        {
+          "iteration": 1,
+          "status": "success",
+          "answer": "Wojciech Bogusławski Theatre",
+          "thought": "Tree Search found the correct answer.",
+          "reward": 1.0,
+          "step": "expansion_iter_1"
         }
       ]
     },
@@ -1072,8 +1144,8 @@
     {
       "question": "Who wrote \"Walking in Fresno?\"",
       "ground_truth": "Bill Aken",
-      "success": false,
-      "answer": "",
+      "success": true,
+      "answer": "Bill Aken",
       "history": [
         {
           "step": "initialization",
@@ -1134,11 +1206,19 @@
           "answer": "",
           "success": false,
           "best_node_reward": 0
+        },
+        {
+          "iteration": 1,
+          "status": "success",
+          "answer": "Bill Aken",
+          "thought": "Tree Search found the correct answer.",
+          "reward": 1.0,
+          "step": "expansion_iter_1"
         }
       ]
     }
   ],
-  "react_success_rate": 0.4,
-  "lats_success_rate": 0.0,
+  "react_success_rate": 0.6,
+  "lats_success_rate": 0.8,
   "demo_mode": false
 }

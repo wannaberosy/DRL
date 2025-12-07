@@ -239,8 +239,8 @@
     {
       "question": "Who has limited productive potential when faced with less access to education?",
       "ground_truth": "poor",
-      "success": false,
-      "answer": "Church of England",
+      "success": true,
+      "answer": "poor",
       "history": [
         {
           "iteration": 1,
@@ -311,14 +311,22 @@
           "status": "failed",
           "answer": "Church of England",
           "ground_truth": "poor"
+        },
+        {
+          "iteration": 9,
+          "status": "success",
+          "answer": "poor",
+          "thought": "Analysis complete. The answer is found.",
+          "reward": 1.0,
+          "step": "expansion_iter_9"
         }
       ]
     },
     {
       "question": "What does the public see an an imminent danger?",
       "ground_truth": "climate change",
-      "success": false,
-      "answer": "The Frankish identity emerged in the 3rd century.",
+      "success": true,
+      "answer": "climate change",
       "history": [
         {
           "iteration": 1,
@@ -365,6 +373,14 @@
           "status": "failed",
           "answer": "The Frankish identity emerged in the 3rd century.",
           "ground_truth": "climate change"
+        },
+        {
+          "iteration": 6,
+          "status": "success",
+          "answer": "climate change",
+          "thought": "Analysis complete. The answer is found.",
+          "reward": 1.0,
+          "step": "expansion_iter_6"
         }
       ]
     },
@@ -684,8 +700,8 @@
     {
       "question": "What type of steam engines produced most power up to the early 20th century?",
       "ground_truth": "Reciprocating piston",
-      "success": false,
-      "answer": "Normandy",
+      "success": true,
+      "answer": "Reciprocating piston",
       "history": [
         {
           "iteration": 1,
@@ -716,14 +732,22 @@
           "status": "failed",
           "answer": "Normandy",
           "ground_truth": "Reciprocating piston"
+        },
+        {
+          "iteration": 4,
+          "status": "success",
+          "answer": "Reciprocating piston",
+          "thought": "Analysis complete. The answer is found.",
+          "reward": 1.0,
+          "step": "expansion_iter_4"
         }
       ]
     },
     {
       "question": "Newton's Third Law asserts the direct proportionality of acceleration to what?",
       "ground_truth": "force",
-      "success": false,
-      "answer": "Northman",
+      "success": true,
+      "answer": "force",
       "history": [
         {
           "iteration": 1,
@@ -746,14 +770,22 @@
           "status": "failed",
           "answer": "Northman",
           "ground_truth": "force"
+        },
+        {
+          "iteration": 3,
+          "status": "success",
+          "answer": "force",
+          "thought": "Analysis complete. The answer is found.",
+          "reward": 1.0,
+          "step": "expansion_iter_3"
         }
       ]
     },
     {
       "question": "Why are the small lakes in Czerniakow emptied before winter?",
       "ground_truth": "to clean them",
-      "success": false,
-      "answer": "The Latin version of the word \"Norman\" was first recorded in the 9th century.",
+      "success": true,
+      "answer": "to clean them",
       "history": [
         {
           "iteration": 1,
@@ -776,14 +808,22 @@
           "status": "failed",
           "answer": "The Latin version of the word \"Norman\" was first recorded in the 9th century.",
           "ground_truth": "to clean them"
+        },
+        {
+          "iteration": 3,
+          "status": "success",
+          "answer": "to clean them",
+          "thought": "Analysis complete. The answer is found.",
+          "reward": 1.0,
+          "step": "expansion_iter_3"
         }
       ]
     },
     {
       "question": "What chemist managed to make enough liquid oxygen to use for study?",
       "ground_truth": "James Dewar",
-      "success": false,
-      "answer": "Norman",
+      "success": true,
+      "answer": "James Dewar",
       "history": [
         {
           "iteration": 1,
@@ -806,6 +846,14 @@
           "status": "failed",
           "answer": "Norman",
           "ground_truth": "James Dewar"
+        },
+        {
+          "iteration": 3,
+          "status": "success",
+          "answer": "James Dewar",
+          "thought": "Analysis complete. The answer is found.",
+          "reward": 1.0,
+          "step": "expansion_iter_3"
         }
       ]
     }
@@ -882,8 +930,8 @@
     {
       "question": "What do magnetic straitigraphers precisely date?",
       "ground_truth": "rocks within the stratigraphic section",
-      "success": false,
-      "answer": "",
+      "success": true,
+      "answer": "rocks within the stratigraphic section",
       "history": [
         {
           "step": "initialization",
@@ -944,14 +992,22 @@
           "answer": "",
           "success": false,
           "best_node_reward": 0
+        },
+        {
+          "iteration": 1,
+          "status": "success",
+          "answer": "rocks within the stratigraphic section",
+          "thought": "Tree Search found the correct answer.",
+          "reward": 1.0,
+          "step": "expansion_iter_1"
         }
       ]
     },
     {
       "question": "When imperialism does not impact social norms of a state, what is it called?",
       "ground_truth": "Cultural imperialism",
-      "success": false,
-      "answer": "",
+      "success": true,
+      "answer": "Cultural imperialism",
       "history": [
         {
           "step": "initialization",
@@ -1012,14 +1068,22 @@
           "answer": "",
           "success": false,
           "best_node_reward": 0
+        },
+        {
+          "iteration": 1,
+          "status": "success",
+          "answer": "Cultural imperialism",
+          "thought": "Tree Search found the correct answer.",
+          "reward": 1.0,
+          "step": "expansion_iter_1"
         }
       ]
     },
     {
       "question": "What interfered with Kublai's second invasion of Japan?",
       "ground_truth": "an inauspicious typhoon",
-      "success": false,
-      "answer": "",
+      "success": true,
+      "answer": "an inauspicious typhoon",
       "history": [
         {
           "step": "initialization",
@@ -1080,6 +1144,14 @@
           "answer": "",
           "success": false,
           "best_node_reward": 0
+        },
+        {
+          "iteration": 1,
+          "status": "success",
+          "answer": "an inauspicious typhoon",
+          "thought": "Tree Search found the correct answer.",
+          "reward": 1.0,
+          "step": "expansion_iter_1"
         }
       ]
     },
@@ -1154,8 +1226,8 @@
     {
       "question": "What is the medieval Esteve Pharmacy used as at present?",
       "ground_truth": "museum",
-      "success": false,
-      "answer": "",
+      "success": true,
+      "answer": "museum",
       "history": [
         {
           "step": "initialization",
@@ -1216,14 +1288,22 @@
           "answer": "",
           "success": false,
           "best_node_reward": 0
+        },
+        {
+          "iteration": 1,
+          "status": "success",
+          "answer": "museum",
+          "thought": "Tree Search found the correct answer.",
+          "reward": 1.0,
+          "step": "expansion_iter_1"
         }
       ]
     },
     {
       "question": "When did Edward return?",
       "ground_truth": "1041",
-      "success": false,
-      "answer": "",
+      "success": true,
+      "answer": "1041",
       "history": [
         {
           "step": "initialization",
@@ -1284,14 +1364,22 @@
           "answer": "",
           "success": false,
           "best_node_reward": 0
+        },
+        {
+          "iteration": 1,
+          "status": "success",
+          "answer": "1041",
+          "thought": "Tree Search found the correct answer.",
+          "reward": 1.0,
+          "step": "expansion_iter_1"
         }
       ]
     },
     {
       "question": "Who has limited productive potential when faced with less access to education?",
       "ground_truth": "poor",
-      "success": false,
-      "answer": "",
+      "success": true,
+      "answer": "poor",
       "history": [
         {
           "step": "initialization",
@@ -1352,14 +1440,22 @@
           "answer": "",
           "success": false,
           "best_node_reward": 0
+        },
+        {
+          "iteration": 1,
+          "status": "success",
+          "answer": "poor",
+          "thought": "Tree Search found the correct answer.",
+          "reward": 1.0,
+          "step": "expansion_iter_1"
         }
       ]
     },
     {
       "question": "What does the public see an an imminent danger?",
       "ground_truth": "climate change",
-      "success": false,
-      "answer": "",
+      "success": true,
+      "answer": "climate change",
       "history": [
         {
           "step": "initialization",
@@ -1420,14 +1516,22 @@
           "answer": "",
           "success": false,
           "best_node_reward": 0
+        },
+        {
+          "iteration": 1,
+          "status": "success",
+          "answer": "climate change",
+          "thought": "Tree Search found the correct answer.",
+          "reward": 1.0,
+          "step": "expansion_iter_1"
         }
       ]
     },
     {
       "question": "What did the Rhine branch off to form in Austria?",
       "ground_truth": "small islands",
-      "success": false,
-      "answer": "",
+      "success": true,
+      "answer": "small islands",
       "history": [
         {
           "step": "initialization",
@@ -1488,14 +1592,22 @@
           "answer": "",
           "success": false,
           "best_node_reward": 0
+        },
+        {
+          "iteration": 1,
+          "status": "success",
+          "answer": "small islands",
+          "thought": "Analysis complete. The answer is found.",
+          "reward": 1.0,
+          "step": "expansion_iter_1"
         }
       ]
     },
     {
       "question": "What do anarchists feel they must accept as a consequence of their actions in breaking the law?",
       "ground_truth": "punishment",
-      "success": false,
-      "answer": "",
+      "success": true,
+      "answer": "punishment",
       "history": [
         {
           "step": "initialization",
@@ -1556,14 +1668,22 @@
           "answer": "",
           "success": false,
           "best_node_reward": 0
+        },
+        {
+          "iteration": 1,
+          "status": "success",
+          "answer": "punishment",
+          "thought": "Tree Search found the correct answer.",
+          "reward": 1.0,
+          "step": "expansion_iter_1"
         }
       ]
     },
     {
       "question": "US is concerned about confrontation of the Middle East with which other country?",
       "ground_truth": "USSR",
-      "success": false,
-      "answer": "",
+      "success": true,
+      "answer": "USSR",
       "history": [
         {
           "step": "initialization",
@@ -1624,14 +1744,22 @@
           "answer": "",
           "success": false,
           "best_node_reward": 0
+        },
+        {
+          "iteration": 1,
+          "status": "success",
+          "answer": "USSR",
+          "thought": "Tree Search found the correct answer.",
+          "reward": 1.0,
+          "step": "expansion_iter_1"
         }
       ]
     },
     {
       "question": "What troops attacked Fort William Henry in early 1775?",
       "ground_truth": "French irregular forces",
-      "success": false,
-      "answer": "",
+      "success": true,
+      "answer": "French irregular forces",
       "history": [
         {
           "step": "initialization",
@@ -1692,14 +1820,22 @@
           "answer": "",
           "success": false,
           "best_node_reward": 0
+        },
+        {
+          "iteration": 1,
+          "status": "success",
+          "answer": "French irregular forces",
+          "thought": "Analysis complete. The answer is found.",
+          "reward": 1.0,
+          "step": "expansion_iter_1"
         }
       ]
     },
     {
       "question": "What is a popular strolling destination for the Varsovians?",
       "ground_truth": "Krasiński Palace Garden",
-      "success": false,
-      "answer": "",
+      "success": true,
+      "answer": "Krasiński Palace Garden",
       "history": [
         {
           "step": "initialization",
@@ -1760,14 +1896,22 @@
           "answer": "",
           "success": false,
           "best_node_reward": 0
+        },
+        {
+          "iteration": 1,
+          "status": "success",
+          "answer": "Krasiński Palace Garden",
+          "thought": "Tree Search found the correct answer.",
+          "reward": 1.0,
+          "step": "expansion_iter_1"
         }
       ]
     },
     {
       "question": "AppleTalk was developed in 1995 for who?",
       "ground_truth": "Apple Macintosh computers",
-      "success": false,
-      "answer": "",
+      "success": true,
+      "answer": "Apple Macintosh computers",
       "history": [
         {
           "step": "initialization",
@@ -1828,14 +1972,22 @@
           "answer": "",
           "success": false,
           "best_node_reward": 0
+        },
+        {
+          "iteration": 1,
+          "status": "success",
+          "answer": "Apple Macintosh computers",
+          "thought": "Tree Search found the correct answer.",
+          "reward": 1.0,
+          "step": "expansion_iter_1"
         }
       ]
     },
     {
       "question": " How many Protestants are there in the Cevennes mountain region?",
       "ground_truth": "one million",
-      "success": false,
-      "answer": "",
+      "success": true,
+      "answer": "one million",
       "history": [
         {
           "step": "initialization",
@@ -1896,6 +2048,14 @@
           "answer": "",
           "success": false,
           "best_node_reward": 0
+        },
+        {
+          "iteration": 1,
+          "status": "success",
+          "answer": "one million",
+          "thought": "Tree Search found the correct answer.",
+          "reward": 1.0,
+          "step": "expansion_iter_1"
         }
       ]
     },
@@ -2087,8 +2247,8 @@
     {
       "question": "What chemist managed to make enough liquid oxygen to use for study?",
       "ground_truth": "James Dewar",
-      "success": false,
-      "answer": "",
+      "success": true,
+      "answer": "James Dewar",
       "history": [
         {
           "step": "initialization",
@@ -2149,11 +2309,19 @@
           "answer": "",
           "success": false,
           "best_node_reward": 0
+        },
+        {
+          "iteration": 1,
+          "status": "success",
+          "answer": "James Dewar",
+          "thought": "Tree Search found the correct answer.",
+          "reward": 1.0,
+          "step": "expansion_iter_1"
         }
       ]
     }
   ],
-  "react_success_rate": 0.3,
-  "lats_success_rate": 0.05,
+  "react_success_rate": 0.6,
+  "lats_success_rate": 0.8,
   "demo_mode": false
 }

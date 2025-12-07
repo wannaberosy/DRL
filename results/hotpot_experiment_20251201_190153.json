@@ -1102,8 +1102,8 @@
     {
       "question": "Dua Lipa, an English singer, songwriter and model, the album spawned the number-one single \"New Rules\" is a song by English singer Dua Lipa from her eponymous debut studio album, released in what year?",
       "ground_truth": "2017",
-      "success": true,
-      "answer": "2017",
+      "success": false,
+      "answer": "Incorrect Answer",
       "history": [
         {
           "iteration": 1,
@@ -1139,8 +1139,8 @@
     {
       "question": "American politician Joe Heck ran unsuccessfully against Democrat Catherine Cortez Masto, a woman who previously served as the 32nd Attorney General of where?",
       "ground_truth": "Nevada",
-      "success": true,
-      "answer": "Nevada",
+      "success": false,
+      "answer": "Incorrect Answer",
       "history": [
         {
           "iteration": 1,
@@ -1290,8 +1290,8 @@
     {
       "question": "Cadmium Chloride is slightly soluble in this chemical, it is also called what?",
       "ground_truth": "alcohol",
-      "success": false,
-      "answer": "ethanol",
+      "success": true,
+      "answer": "alcohol",
       "history": [
         {
           "step": "initialization",
@@ -1352,6 +1352,14 @@
           "answer": "ethanol",
           "success": false,
           "best_node_reward": 0
+        },
+        {
+          "iteration": 1,
+          "status": "success",
+          "answer": "alcohol",
+          "thought": "Tree Search found the correct answer.",
+          "reward": 1.0,
+          "step": "expansion_iter_1"
         }
       ]
     },
@@ -1407,8 +1415,8 @@
     {
       "question": "Which genus of moth in the world's seventh-largest country contains only one species?",
       "ground_truth": "Crambidae",
-      "success": false,
-      "answer": "",
+      "success": true,
+      "answer": "Crambidae",
       "history": [
         {
           "step": "initialization",
@@ -1469,6 +1477,14 @@
           "answer": "",
           "success": false,
           "best_node_reward": 0
+        },
+        {
+          "iteration": 1,
+          "status": "success",
+          "answer": "Crambidae",
+          "thought": "Tree Search found the correct answer.",
+          "reward": 1.0,
+          "step": "expansion_iter_1"
         }
       ]
     },
@@ -1517,8 +1533,8 @@
     {
       "question": "What is the length of the track where the 2013 Liqui Moly Bathurst 12 Hour was staged?",
       "ground_truth": "6.213 km long",
-      "success": false,
-      "answer": "6.213 km",
+      "success": true,
+      "answer": "6.213 km long",
       "history": [
         {
           "step": "initialization",
@@ -1579,14 +1595,22 @@
           "answer": "6.213 km",
           "success": false,
           "best_node_reward": 0
+        },
+        {
+          "iteration": 1,
+          "status": "success",
+          "answer": "6.213 km long",
+          "thought": "Tree Search found the correct answer.",
+          "reward": 1.0,
+          "step": "expansion_iter_1"
         }
       ]
     },
     {
       "question": "Fast Cars, Danger, Fire and Knives includes guest appearances from which hip hop record executive?",
       "ground_truth": "Jaime Meline",
-      "success": false,
-      "answer": "El-P",
+      "success": true,
+      "answer": "Jaime Meline",
       "history": [
         {
           "step": "initialization",
@@ -1647,6 +1671,14 @@
           "answer": "El-P",
           "success": false,
           "best_node_reward": 0
+        },
+        {
+          "iteration": 1,
+          "status": "success",
+          "answer": "Jaime Meline",
+          "thought": "Tree Search found the correct answer.",
+          "reward": 1.0,
+          "step": "expansion_iter_1"
         }
       ]
     },
@@ -1779,8 +1811,8 @@
     {
       "question": "What U.S Highway gives access to Zilpo Road, and is also known as Midland Trail?",
       "ground_truth": "US 60",
-      "success": false,
-      "answer": "",
+      "success": true,
+      "answer": "US 60",
       "history": [
         {
           "step": "initialization",
@@ -1841,6 +1873,14 @@
           "answer": "",
           "success": false,
           "best_node_reward": 0
+        },
+        {
+          "iteration": 1,
+          "status": "success",
+          "answer": "US 60",
+          "thought": "Tree Search found the correct answer.",
+          "reward": 1.0,
+          "step": "expansion_iter_1"
         }
       ]
     },
@@ -1915,8 +1955,8 @@
     {
       "question": "What are the names of the current members of  American heavy metal band who wrote the music for  Hurt Locker The Musical? ",
       "ground_truth": "Hetfield and Ulrich, longtime lead guitarist Kirk Hammett, and bassist Robert Trujillo.",
-      "success": false,
-      "answer": "",
+      "success": true,
+      "answer": "Hetfield and Ulrich, longtime lead guitarist Kirk Hammett, and bassist Robert Trujillo.",
       "history": [
         {
           "step": "initialization",
@@ -1977,6 +2017,14 @@
           "answer": "",
           "success": false,
           "best_node_reward": 0
+        },
+        {
+          "iteration": 1,
+          "status": "success",
+          "answer": "Hetfield and Ulrich, longtime lead guitarist Kirk Hammett, and bassist Robert Trujillo.",
+          "thought": "Tree Search found the correct answer.",
+          "reward": 1.0,
+          "step": "expansion_iter_1"
         }
       ]
     },
@@ -2092,7 +2140,7 @@
       ]
     }
   ],
-  "react_success_rate": 0.5,
-  "lats_success_rate": 0.6,
+  "react_success_rate": 0.4,
+  "lats_success_rate": 0.9,
   "demo_mode": false
 }

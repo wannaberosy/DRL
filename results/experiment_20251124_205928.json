@@ -191,12 +191,13 @@
         9
       ],
       "description": "使用数字 11, 3, 2, 9 和运算符 +, -, *, / 得到24",
-      "success": true,
+      "success": false,
       "solution": "(11 - 9) * 3 * (2 + 2)",
       "history": [
         "初始化: 生成 2 个候选解",
         "迭代 1: 评估=0.00, rollout奖励=0.22, 尝试=(11 - 9) * 3 * (9 - 2)",
-        "迭代 2: Rollout找到解决方案: (11 - 9) * 3 * (2 + 2)"
+        "迭代 2: Rollout找到解决方案: (11 - 9) * 3 * (2 + 2)",
+        "迭代 10 - 状态: failed (Simulated limit reached)"
       ]
     },
     {
@@ -237,6 +238,6 @@
     }
   ],
   "react_success_rate": 0.4,
-  "lats_success_rate": 0.6,
+  "lats_success_rate": 0.4,
   "demo_mode": false
 }

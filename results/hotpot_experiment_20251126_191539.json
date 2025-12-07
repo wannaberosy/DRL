@@ -282,8 +282,8 @@
     {
       "question": "Which magazine was started first Arthur's Magazine or First for Women?",
       "ground_truth": "Arthur's Magazine",
-      "success": true,
-      "answer": "Arthur's Magazine",
+      "success": false,
+      "answer": "Incorrect Answer",
       "history": [
         {
           "step": "initialization",
@@ -294,9 +294,10 @@
           "status": "completed"
         },
         {
-          "step": "expansion_iter_1",
-          "status": "success",
-          "answer": "Arthur's Magazine"
+          "iteration": 1,
+          "status": "failed",
+          "answer": "Incorrect Answer",
+          "reward": 0.0
         }
       ]
     },
@@ -353,8 +354,8 @@
     {
       "question": " What nationality was James Henry Miller's wife?",
       "ground_truth": "American",
-      "success": true,
-      "answer": "American",
+      "success": false,
+      "answer": "Incorrect Answer",
       "history": [
         {
           "step": "initialization",
@@ -377,9 +378,10 @@
           "num_nodes_expanded": 8
         },
         {
-          "step": "expansion_iter_4",
-          "status": "success",
-          "answer": "American"
+          "iteration": 1,
+          "status": "failed",
+          "answer": "Incorrect Answer",
+          "reward": 0.0
         }
       ]
     },
@@ -422,6 +424,6 @@
     }
   ],
   "react_success_rate": 0.2,
-  "lats_success_rate": 1.0,
+  "lats_success_rate": 0.6,
   "demo_mode": false
 }

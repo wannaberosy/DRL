@@ -16,7 +16,7 @@
     "tree_n": null,
     "tree_l": null,
     "tree_k": null,
-    "tree_expand_mode": null,
+    "tree_expand_mode": "basic",
     "tree_reward_mode": null,
     "mcts_num_simulations": null,
     "mcts_use_value_function": null,
@@ -1186,13 +1186,14 @@
     {
       "question": "Which opera was composed first, Venus and Adonis or Saul og David?",
       "ground_truth": "Venus and Adonis",
-      "success": true,
-      "answer": "Venus and Adonis",
+      "success": false,
+      "answer": "Incorrect Answer",
       "history": [
         {
           "iteration": 1,
-          "status": "success",
-          "answer": "Venus and Adonis"
+          "status": "failed",
+          "answer": "Incorrect Answer",
+          "reward": 0.0
         }
       ]
     },
@@ -1872,6 +1873,6 @@
     }
   ],
   "react_success_rate": 0.35,
-  "lats_success_rate": 0.5,
+  "lats_success_rate": 0.45,
   "demo_mode": true
 }

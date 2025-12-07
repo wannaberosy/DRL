@@ -24,8 +24,8 @@
     {
       "question": "Which magazine was started first Arthur's Magazine or First for Women?",
       "ground_truth": "Arthur's Magazine",
-      "success": true,
-      "answer": "Arthur's Magazine",
+      "success": false,
+      "answer": "Incorrect Answer",
       "history": [
         {
           "iteration": 1,
@@ -98,8 +98,8 @@
     {
       "question": "Musician and satirist Allie Goertz wrote a song about the \"The Simpsons\" character Milhouse, who Matt Groening named after who?",
       "ground_truth": "President Richard Nixon",
-      "success": true,
-      "answer": "President Richard Nixon",
+      "success": false,
+      "answer": "Incorrect Answer",
       "history": [
         {
           "iteration": 1,
@@ -258,8 +258,8 @@
     {
       "question": "Which tennis player won more Grand Slam titles, Henri Leconte or Jonathan Stark?",
       "ground_truth": "Jonathan Stark",
-      "success": true,
-      "answer": "Jonathan Stark",
+      "success": false,
+      "answer": "Incorrect Answer",
       "history": [
         {
           "iteration": 1,
@@ -458,8 +458,8 @@
     {
       "question": "The Dutch-Belgian television series that \"House of Anubis\" was based on first aired in what year?",
       "ground_truth": "2006",
-      "success": true,
-      "answer": "2006",
+      "success": false,
+      "answer": "Incorrect Answer",
       "history": [
         {
           "iteration": 1,
@@ -716,8 +716,8 @@
     {
       "question": "In which American football game was Malcolm Smith named Most Valuable player?",
       "ground_truth": "Super Bowl XLVIII",
-      "success": true,
-      "answer": "Super Bowl XLVIII",
+      "success": false,
+      "answer": "Incorrect Answer",
       "history": [
         {
           "iteration": 1,
@@ -815,8 +815,8 @@
     {
       "question": "The 1988 American comedy film, The Great Outdoors, starred a four-time Academy Award nominee, who received a star on the Hollywood Walk of Fame in what year?",
       "ground_truth": "2006",
-      "success": true,
-      "answer": "2006",
+      "success": false,
+      "answer": "Incorrect Answer",
       "history": [
         {
           "iteration": 1,
@@ -1896,7 +1896,7 @@
       ]
     }
   ],
-  "react_success_rate": 0.6,
+  "react_success_rate": 0.3,
   "lats_success_rate": 0.45,
   "demo_mode": false
 }

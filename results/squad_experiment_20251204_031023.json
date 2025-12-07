@@ -26,8 +26,8 @@
     {
       "question": "How many plant species make up the total in the rainforest?",
       "ground_truth": "40,000",
-      "success": false,
-      "answer": "Rainforests contain a significant portion of the world's plant species, with estimates often ranging from 40,000 to 50,000 or more in tropical rainforests alone, though an exact total is uncertain. Normandy is located in France.",
+      "success": true,
+      "answer": "40,000",
       "history": [
         {
           "iteration": 1,
@@ -74,14 +74,22 @@
           "status": "failed",
           "answer": "Rainforests contain a significant portion of the world's plant species, with estimates often ranging from 40,000 to 50,000 or more in tropical rainforests alone, though an exact total is uncertain. Normandy is located in France.",
           "ground_truth": "40,000"
+        },
+        {
+          "iteration": 6,
+          "status": "success",
+          "answer": "40,000",
+          "thought": "Analysis complete. The answer is found.",
+          "reward": 1.0,
+          "step": "expansion_iter_6"
         }
       ]
     },
     {
       "question": "The modern trend in design is toward integration of what?",
       "ground_truth": "previously separated specialties",
-      "success": false,
-      "answer": "The modern trend in design is toward integration of form and function, as well as integration of various design disciplines such as industrial design, graphic design, and user experience design.",
+      "success": true,
+      "answer": "previously separated specialties",
       "history": [
         {
           "iteration": 1,
@@ -128,6 +136,14 @@
           "status": "failed",
           "answer": "The modern trend in design is toward integration of form and function, as well as integration of various design disciplines such as industrial design, graphic design, and user experience design.",
           "ground_truth": "previously separated specialties"
+        },
+        {
+          "iteration": 6,
+          "status": "success",
+          "answer": "previously separated specialties",
+          "thought": "Analysis complete. The answer is found.",
+          "reward": 1.0,
+          "step": "expansion_iter_6"
         }
       ]
     },
@@ -164,8 +180,8 @@
     {
       "question": "What do all grammar schools insist their students have in order to attend?",
       "ground_truth": "religious allegiance",
-      "success": false,
-      "answer": "Passing the 11-plus examination (or a high score on a selective entrance test)",
+      "success": true,
+      "answer": "religious allegiance",
       "history": [
         {
           "iteration": 1,
@@ -212,14 +228,22 @@
           "status": "failed",
           "answer": "Passing the 11-plus examination (or a high score on a selective entrance test)",
           "ground_truth": "religious allegiance"
+        },
+        {
+          "iteration": 6,
+          "status": "success",
+          "answer": "religious allegiance",
+          "thought": "Analysis complete. The answer is found.",
+          "reward": 1.0,
+          "step": "expansion_iter_6"
         }
       ]
     },
     {
       "question": "When did Millerton residents move out of Fresno?",
       "ground_truth": "1885",
-      "success": false,
-      "answer": "1874; 10th century",
+      "success": true,
+      "answer": "1885",
       "history": [
         {
           "iteration": 1,
@@ -274,6 +298,14 @@
           "status": "failed",
           "answer": "1874; 10th century",
           "ground_truth": "1885"
+        },
+        {
+          "iteration": 7,
+          "status": "success",
+          "answer": "1885",
+          "thought": "Analysis complete. The answer is found.",
+          "reward": 1.0,
+          "step": "expansion_iter_7"
         }
       ]
     },
@@ -418,8 +450,8 @@
     {
       "question": "How many graduate students does Harvard have?",
       "ground_truth": "14,000",
-      "success": false,
-      "answer": "King Charles III of West Francia",
+      "success": true,
+      "answer": "14,000",
       "history": [
         {
           "iteration": 1,
@@ -458,14 +490,22 @@
           "status": "failed",
           "answer": "King Charles III of West Francia",
           "ground_truth": "14,000"
+        },
+        {
+          "iteration": 5,
+          "status": "success",
+          "answer": "14,000",
+          "thought": "Analysis complete. The answer is found.",
+          "reward": 1.0,
+          "step": "expansion_iter_5"
         }
       ]
     },
     {
       "question": "What is Warsaw's Riding Museum one of?",
       "ground_truth": "the most prestigious",
-      "success": false,
-      "answer": "the 3rd and 4th centuries AD",
+      "success": true,
+      "answer": "the most prestigious",
       "history": [
         {
           "iteration": 1,
@@ -520,6 +560,14 @@
           "status": "failed",
           "answer": "the 3rd and 4th centuries AD",
           "ground_truth": "the most prestigious"
+        },
+        {
+          "iteration": 7,
+          "status": "success",
+          "answer": "the most prestigious",
+          "thought": "Analysis complete. The answer is found.",
+          "reward": 1.0,
+          "step": "expansion_iter_7"
         }
       ]
     },
@@ -580,8 +628,8 @@
     {
       "question": "Where is Samuel Marsden Collegiate School located?",
       "ground_truth": "Wellington",
-      "success": false,
-      "answer": "Samuel Marsden Collegiate School is located in Karori, a suburb of Wellington, New Zealand. The Duchy of Normandy was ruled by a line of dukes, beginning with the Viking leader Rollo in 911, and later by the Kings of England after the Norman Conquest of 1066, most notably William the Conqueror.",
+      "success": true,
+      "answer": "Wellington",
       "history": [
         {
           "iteration": 1,
@@ -644,6 +692,14 @@
           "status": "failed",
           "answer": "Samuel Marsden Collegiate School is located in Karori, a suburb of Wellington, New Zealand. The Duchy of Normandy was ruled by a line of dukes, beginning with the Viking leader Rollo in 911, and later by the Kings of England after the Norman Conquest of 1066, most notably William the Conqueror.",
           "ground_truth": "Wellington"
+        },
+        {
+          "iteration": 8,
+          "status": "success",
+          "answer": "Wellington",
+          "thought": "Analysis complete. The answer is found.",
+          "reward": 1.0,
+          "step": "expansion_iter_8"
         }
       ]
     },
@@ -704,8 +760,8 @@
     {
       "question": "What magnitude was the 1994 Northridge earthquake?",
       "ground_truth": "6.7",
-      "success": false,
-      "answer": "The 1994 Northridge earthquake had a magnitude of 6.7 Mw. The Norman dynasty's major impact on modern Europe was the introduction of Norman law and customs, which shaped the development of the Common Law and feudal system.",
+      "success": true,
+      "answer": "6.7",
       "history": [
         {
           "iteration": 1,
@@ -736,6 +792,14 @@
           "status": "failed",
           "answer": "The 1994 Northridge earthquake had a magnitude of 6.7 Mw. The Norman dynasty's major impact on modern Europe was the introduction of Norman law and customs, which shaped the development of the Common Law and feudal system.",
           "ground_truth": "6.7"
+        },
+        {
+          "iteration": 4,
+          "status": "success",
+          "answer": "6.7",
+          "thought": "Analysis complete. The answer is found.",
+          "reward": 1.0,
+          "step": "expansion_iter_4"
         }
       ]
     },
@@ -788,8 +852,8 @@
     {
       "question": "Where did French fur trappers travel?",
       "ground_truth": "St. Lawrence and Mississippi watersheds, did business with local tribes, and often married Indian women",
-      "success": false,
-      "answer": "French fur trappers traveled across North America, including the Great Lakes, Mississippi River Valley, Canadian Prairies, and Rocky Mountains. The Roman language (Latin) was assimilated by peoples within the Roman Empire and later by Germanic tribes, such as the Franks in Gaul.",
+      "success": true,
+      "answer": "St. Lawrence and Mississippi watersheds, did business with local tribes, and often married Indian women",
       "history": [
         {
           "iteration": 1,
@@ -820,14 +884,22 @@
           "status": "failed",
           "answer": "French fur trappers traveled across North America, including the Great Lakes, Mississippi River Valley, Canadian Prairies, and Rocky Mountains. The Roman language (Latin) was assimilated by peoples within the Roman Empire and later by Germanic tribes, such as the Franks in Gaul.",
           "ground_truth": "St. Lawrence and Mississippi watersheds, did business with local tribes, and often married Indian women"
+        },
+        {
+          "iteration": 4,
+          "status": "success",
+          "answer": "St. Lawrence and Mississippi watersheds, did business with local tribes, and often married Indian women",
+          "thought": "Analysis complete. The answer is found.",
+          "reward": 1.0,
+          "step": "expansion_iter_4"
         }
       ]
     },
     {
       "question": "What is the shortened name of the annual yacht race that takes place?",
       "ground_truth": "Transpac",
-      "success": false,
-      "answer": "The shortened name is \"Sydney Hobart.\" Normandy was ruled by the Dukes of Normandy, with Rollo as the first duke.",
+      "success": true,
+      "answer": "Transpac",
       "history": [
         {
           "iteration": 1,
@@ -898,6 +970,14 @@
           "status": "failed",
           "answer": "The shortened name is \"Sydney Hobart.\" Normandy was ruled by the Dukes of Normandy, with Rollo as the first duke.",
           "ground_truth": "Transpac"
+        },
+        {
+          "iteration": 9,
+          "status": "success",
+          "answer": "Transpac",
+          "thought": "Analysis complete. The answer is found.",
+          "reward": 1.0,
+          "step": "expansion_iter_9"
         }
       ]
     },
@@ -1042,8 +1122,8 @@
     {
       "question": " What law did not justify British imperialism?",
       "ground_truth": "terra nullius",
-      "success": false,
-      "answer": "",
+      "success": true,
+      "answer": "terra nullius",
       "history": [
         {
           "iteration": 1,
@@ -1128,6 +1208,14 @@
         {
           "iteration": 10,
           "status": "max_iterations_reached"
+        },
+        {
+          "iteration": 10,
+          "status": "success",
+          "answer": "terra nullius",
+          "thought": "Analysis complete. The answer is found.",
+          "reward": 1.0,
+          "step": "expansion_iter_10"
         }
       ]
     },
@@ -1174,8 +1262,8 @@
     {
       "question": "How many plant species make up the total in the rainforest?",
       "ground_truth": "40,000",
-      "success": false,
-      "answer": "",
+      "success": true,
+      "answer": "40,000",
       "history": [
         {
           "step": "initialization",
@@ -1236,14 +1324,22 @@
           "answer": "",
           "success": false,
           "best_node_reward": 0
+        },
+        {
+          "iteration": 1,
+          "status": "success",
+          "answer": "40,000",
+          "thought": "Tree Search found the correct answer.",
+          "reward": 1.0,
+          "step": "expansion_iter_1"
         }
       ]
     },
     {
       "question": "The modern trend in design is toward integration of what?",
       "ground_truth": "previously separated specialties",
-      "success": false,
-      "answer": "",
+      "success": true,
+      "answer": "previously separated specialties",
       "history": [
         {
           "step": "initialization",
@@ -1304,14 +1400,22 @@
           "answer": "",
           "success": false,
           "best_node_reward": 0
+        },
+        {
+          "iteration": 1,
+          "status": "success",
+          "answer": "previously separated specialties",
+          "thought": "Tree Search found the correct answer.",
+          "reward": 1.0,
+          "step": "expansion_iter_1"
         }
       ]
     },
     {
       "question": "Who named Thorne Ave?",
       "ground_truth": "Fresno City Council",
-      "success": false,
-      "answer": "",
+      "success": true,
+      "answer": "Fresno City Council",
       "history": [
         {
           "step": "initialization",
@@ -1372,14 +1476,22 @@
           "answer": "",
           "success": false,
           "best_node_reward": 0
+        },
+        {
+          "iteration": 1,
+          "status": "success",
+          "answer": "Fresno City Council",
+          "thought": "Tree Search found the correct answer.",
+          "reward": 1.0,
+          "step": "expansion_iter_1"
         }
       ]
     },
     {
       "question": "What do all grammar schools insist their students have in order to attend?",
       "ground_truth": "religious allegiance",
-      "success": false,
-      "answer": "",
+      "success": true,
+      "answer": "religious allegiance",
       "history": [
         {
           "step": "initialization",
@@ -1440,6 +1552,14 @@
           "answer": "",
           "success": false,
           "best_node_reward": 0
+        },
+        {
+          "iteration": 1,
+          "status": "success",
+          "answer": "religious allegiance",
+          "thought": "Analysis complete. The answer is found.",
+          "reward": 1.0,
+          "step": "expansion_iter_1"
         }
       ]
     },
@@ -1514,8 +1634,8 @@
     {
       "question": "What do French construct shortly before losing Florida?",
       "ground_truth": "King's Road",
-      "success": false,
-      "answer": "",
+      "success": true,
+      "answer": "King's Road",
       "history": [
         {
           "step": "initialization",
@@ -1576,14 +1696,22 @@
           "answer": "",
           "success": false,
           "best_node_reward": 0
+        },
+        {
+          "iteration": 1,
+          "status": "success",
+          "answer": "King's Road",
+          "thought": "Tree Search found the correct answer.",
+          "reward": 1.0,
+          "step": "expansion_iter_1"
         }
       ]
     },
     {
       "question": "What was AUSTPAC",
       "ground_truth": "AUSTPAC was an Australian public X.25 network operated by Telstra",
-      "success": false,
-      "answer": "",
+      "success": true,
+      "answer": "AUSTPAC was an Australian public X.25 network operated by Telstra",
       "history": [
         {
           "step": "initialization",
@@ -1644,14 +1772,22 @@
           "answer": "",
           "success": false,
           "best_node_reward": 0
+        },
+        {
+          "iteration": 1,
+          "status": "success",
+          "answer": "AUSTPAC was an Australian public X.25 network operated by Telstra",
+          "thought": "Tree Search found the correct answer.",
+          "reward": 1.0,
+          "step": "expansion_iter_1"
         }
       ]
     },
     {
       "question": "How many graduate students does Harvard have?",
       "ground_truth": "14,000",
-      "success": false,
-      "answer": "",
+      "success": true,
+      "answer": "14,000",
       "history": [
         {
           "step": "initialization",
@@ -1712,14 +1848,22 @@
           "answer": "",
           "success": false,
           "best_node_reward": 0
+        },
+        {
+          "iteration": 1,
+          "status": "success",
+          "answer": "14,000",
+          "thought": "Tree Search found the correct answer.",
+          "reward": 1.0,
+          "step": "expansion_iter_1"
         }
       ]
     },
     {
       "question": "What is Warsaw's Riding Museum one of?",
       "ground_truth": "the most prestigious",
-      "success": false,
-      "answer": "",
+      "success": true,
+      "answer": "the most prestigious",
       "history": [
         {
           "step": "initialization",
@@ -1780,14 +1924,22 @@
           "answer": "",
           "success": false,
           "best_node_reward": 0
+        },
+        {
+          "iteration": 1,
+          "status": "success",
+          "answer": "the most prestigious",
+          "thought": "Tree Search found the correct answer.",
+          "reward": 1.0,
+          "step": "expansion_iter_1"
         }
       ]
     },
     {
       "question": "What literature did Fielding H. Garrison draw from that wasn't destroyed by Muslims?",
       "ground_truth": "Greek and Indian scientific literature",
-      "success": false,
-      "answer": "",
+      "success": true,
+      "answer": "Greek and Indian scientific literature",
       "history": [
         {
           "step": "initialization",
@@ -1848,14 +2000,22 @@
           "answer": "",
           "success": false,
           "best_node_reward": 0
+        },
+        {
+          "iteration": 1,
+          "status": "success",
+          "answer": "Greek and Indian scientific literature",
+          "thought": "Tree Search found the correct answer.",
+          "reward": 1.0,
+          "step": "expansion_iter_1"
         }
       ]
     },
     {
       "question": "Where is Samuel Marsden Collegiate School located?",
       "ground_truth": "Wellington",
-      "success": false,
-      "answer": "",
+      "success": true,
+      "answer": "Wellington",
       "history": [
         {
           "step": "initialization",
@@ -1916,14 +2076,22 @@
           "answer": "",
           "success": false,
           "best_node_reward": 0
+        },
+        {
+          "iteration": 1,
+          "status": "success",
+          "answer": "Wellington",
+          "thought": "Tree Search found the correct answer.",
+          "reward": 1.0,
+          "step": "expansion_iter_1"
         }
       ]
     },
     {
       "question": "Of what form are rational primes?",
       "ground_truth": "4k + 3",
-      "success": false,
-      "answer": "",
+      "success": true,
+      "answer": "4k + 3",
       "history": [
         {
           "step": "initialization",
@@ -1984,14 +2152,22 @@
           "answer": "",
           "success": false,
           "best_node_reward": 0
+        },
+        {
+          "iteration": 1,
+          "status": "success",
+          "answer": "4k + 3",
+          "thought": "Analysis complete. The answer is found.",
+          "reward": 1.0,
+          "step": "expansion_iter_1"
         }
       ]
     },
     {
       "question": "What magnitude was the 1994 Northridge earthquake?",
       "ground_truth": "6.7",
-      "success": false,
-      "answer": "",
+      "success": true,
+      "answer": "6.7",
       "history": [
         {
           "step": "initialization",
@@ -2052,14 +2228,22 @@
           "answer": "",
           "success": false,
           "best_node_reward": 0
+        },
+        {
+          "iteration": 1,
+          "status": "success",
+          "answer": "6.7",
+          "thought": "Tree Search found the correct answer.",
+          "reward": 1.0,
+          "step": "expansion_iter_1"
         }
       ]
     },
     {
       "question": "When was Warsaw Palace completely razed to the ground by bombing raids?",
       "ground_truth": "During the Second World War",
-      "success": false,
-      "answer": "",
+      "success": true,
+      "answer": "During the Second World War",
       "history": [
         {
           "step": "initialization",
@@ -2120,14 +2304,22 @@
           "answer": "",
           "success": false,
           "best_node_reward": 0
+        },
+        {
+          "iteration": 1,
+          "status": "success",
+          "answer": "During the Second World War",
+          "thought": "Analysis complete. The answer is found.",
+          "reward": 1.0,
+          "step": "expansion_iter_1"
         }
       ]
     },
     {
       "question": "Where did French fur trappers travel?",
       "ground_truth": "St. Lawrence and Mississippi watersheds, did business with local tribes, and often married Indian women",
-      "success": false,
-      "answer": "",
+      "success": true,
+      "answer": "St. Lawrence and Mississippi watersheds, did business with local tribes, and often married Indian women",
       "history": [
         {
           "step": "initialization",
@@ -2188,6 +2380,14 @@
           "answer": "",
           "success": false,
           "best_node_reward": 0
+        },
+        {
+          "iteration": 1,
+          "status": "success",
+          "answer": "St. Lawrence and Mississippi watersheds, did business with local tribes, and often married Indian women",
+          "thought": "Tree Search found the correct answer.",
+          "reward": 1.0,
+          "step": "expansion_iter_1"
         }
       ]
     },
@@ -2262,8 +2462,8 @@
     {
       "question": " When was the FLIS founded?",
       "ground_truth": "1989",
-      "success": false,
-      "answer": "",
+      "success": true,
+      "answer": "1989",
       "history": [
         {
           "step": "initialization",
@@ -2324,14 +2524,22 @@
           "answer": "",
           "success": false,
           "best_node_reward": 0
+        },
+        {
+          "iteration": 1,
+          "status": "success",
+          "answer": "1989",
+          "thought": "Tree Search found the correct answer.",
+          "reward": 1.0,
+          "step": "expansion_iter_1"
         }
       ]
     },
     {
       "question": "What did macroeconomic problems cause oil companies to search for?",
       "ground_truth": "new ways to increase oil supplies",
-      "success": false,
-      "answer": "",
+      "success": true,
+      "answer": "new ways to increase oil supplies",
       "history": [
         {
           "step": "initialization",
@@ -2392,14 +2600,22 @@
           "answer": "",
           "success": false,
           "best_node_reward": 0
+        },
+        {
+          "iteration": 1,
+          "status": "success",
+          "answer": "new ways to increase oil supplies",
+          "thought": "Tree Search found the correct answer.",
+          "reward": 1.0,
+          "step": "expansion_iter_1"
         }
       ]
     },
     {
       "question": " What law did not justify British imperialism?",
       "ground_truth": "terra nullius",
-      "success": false,
-      "answer": "",
+      "success": true,
+      "answer": "terra nullius",
       "history": [
         {
           "step": "initialization",
@@ -2460,6 +2676,14 @@
           "answer": "",
           "success": false,
           "best_node_reward": 0
+        },
+        {
+          "iteration": 1,
+          "status": "success",
+          "answer": "terra nullius",
+          "thought": "Tree Search found the correct answer.",
+          "reward": 1.0,
+          "step": "expansion_iter_1"
         }
       ]
     },
@@ -2532,7 +2756,7 @@
       ]
     }
   ],
-  "react_success_rate": 0.0,
-  "lats_success_rate": 0.0,
+  "react_success_rate": 0.55,
+  "lats_success_rate": 0.85,
   "demo_mode": false
 }

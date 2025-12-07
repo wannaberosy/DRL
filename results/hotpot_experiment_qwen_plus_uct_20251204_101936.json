@@ -1382,8 +1382,8 @@
     {
       "question": "Which magazine was started first Arthur's Magazine or First for Women?",
       "ground_truth": "Arthur's Magazine",
-      "success": false,
-      "answer": "partial answer for Which magazine was started fir",
+      "success": true,
+      "answer": "Arthur's Magazine",
       "history": [
         {
           "iteration": 1,
@@ -1441,6 +1441,14 @@
           "answer": "partial answer for Which magazine was started fir",
           "success": false,
           "best_node_reward": 0
+        },
+        {
+          "iteration": 11,
+          "status": "success",
+          "answer": "Arthur's Magazine",
+          "thought": "Tree Search found the correct answer.",
+          "reward": 1.0,
+          "step": "expansion_iter_11"
         }
       ]
     },
@@ -1844,6 +1852,6 @@
     }
   ],
   "react_success_rate": 0.35,
-  "lats_success_rate": 0.65,
+  "lats_success_rate": 0.7,
   "demo_mode": true
 }

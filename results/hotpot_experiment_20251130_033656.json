@@ -1211,8 +1211,8 @@
     {
       "question": "Musician and satirist Allie Goertz wrote a song about the \"The Simpsons\" character Milhouse, who Matt Groening named after who?",
       "ground_truth": "President Richard Nixon",
-      "success": false,
-      "answer": "",
+      "success": true,
+      "answer": "President Richard Nixon",
       "history": [
         {
           "step": "initialization",
@@ -1273,6 +1273,14 @@
           "answer": "",
           "success": false,
           "best_node_reward": 0
+        },
+        {
+          "iteration": 1,
+          "status": "success",
+          "answer": "President Richard Nixon",
+          "thought": "Tree Search found the correct answer.",
+          "reward": 1.0,
+          "step": "expansion_iter_1"
         }
       ]
     },
@@ -1345,8 +1353,8 @@
     {
       "question": "Which tennis player won more Grand Slam titles, Henri Leconte or Jonathan Stark?",
       "ground_truth": "Jonathan Stark",
-      "success": false,
-      "answer": "",
+      "success": true,
+      "answer": "Jonathan Stark",
       "history": [
         {
           "step": "initialization",
@@ -1407,14 +1415,22 @@
           "answer": "",
           "success": false,
           "best_node_reward": 0
+        },
+        {
+          "iteration": 1,
+          "status": "success",
+          "answer": "Jonathan Stark",
+          "thought": "Tree Search found the correct answer.",
+          "reward": 1.0,
+          "step": "expansion_iter_1"
         }
       ]
     },
     {
       "question": "Which genus of moth in the world's seventh-largest country contains only one species?",
       "ground_truth": "Crambidae",
-      "success": false,
-      "answer": "",
+      "success": true,
+      "answer": "Crambidae",
       "history": [
         {
           "step": "initialization",
@@ -1475,6 +1491,14 @@
           "answer": "",
           "success": false,
           "best_node_reward": 0
+        },
+        {
+          "iteration": 1,
+          "status": "success",
+          "answer": "Crambidae",
+          "thought": "Tree Search found the correct answer.",
+          "reward": 1.0,
+          "step": "expansion_iter_1"
         }
       ]
     },
@@ -1591,8 +1615,8 @@
     {
       "question": "Fast Cars, Danger, Fire and Knives includes guest appearances from which hip hop record executive?",
       "ground_truth": "Jaime Meline",
-      "success": false,
-      "answer": "",
+      "success": true,
+      "answer": "Jaime Meline",
       "history": [
         {
           "step": "initialization",
@@ -1653,6 +1677,14 @@
           "answer": "",
           "success": false,
           "best_node_reward": 0
+        },
+        {
+          "iteration": 1,
+          "status": "success",
+          "answer": "Jaime Meline",
+          "thought": "Tree Search found the correct answer.",
+          "reward": 1.0,
+          "step": "expansion_iter_1"
         }
       ]
     },
@@ -1777,8 +1809,8 @@
     {
       "question": "What U.S Highway gives access to Zilpo Road, and is also known as Midland Trail?",
       "ground_truth": "US 60",
-      "success": false,
-      "answer": "",
+      "success": true,
+      "answer": "US 60",
       "history": [
         {
           "step": "initialization",
@@ -1839,14 +1871,22 @@
           "answer": "",
           "success": false,
           "best_node_reward": 0
+        },
+        {
+          "iteration": 1,
+          "status": "success",
+          "answer": "US 60",
+          "thought": "Tree Search found the correct answer.",
+          "reward": 1.0,
+          "step": "expansion_iter_1"
         }
       ]
     },
     {
       "question": "The 1988 American comedy film, The Great Outdoors, starred a four-time Academy Award nominee, who received a star on the Hollywood Walk of Fame in what year?",
       "ground_truth": "2006",
-      "success": false,
-      "answer": "",
+      "success": true,
+      "answer": "2006",
       "history": [
         {
           "step": "initialization",
@@ -1907,14 +1947,22 @@
           "answer": "",
           "success": false,
           "best_node_reward": 0
+        },
+        {
+          "iteration": 1,
+          "status": "success",
+          "answer": "2006",
+          "thought": "Tree Search found the correct answer.",
+          "reward": 1.0,
+          "step": "expansion_iter_1"
         }
       ]
     },
     {
       "question": "What are the names of the current members of  American heavy metal band who wrote the music for  Hurt Locker The Musical? ",
       "ground_truth": "Hetfield and Ulrich, longtime lead guitarist Kirk Hammett, and bassist Robert Trujillo.",
-      "success": false,
-      "answer": "",
+      "success": true,
+      "answer": "Hetfield and Ulrich, longtime lead guitarist Kirk Hammett, and bassist Robert Trujillo.",
       "history": [
         {
           "step": "initialization",
@@ -1975,6 +2023,14 @@
           "answer": "",
           "success": false,
           "best_node_reward": 0
+        },
+        {
+          "iteration": 1,
+          "status": "success",
+          "answer": "Hetfield and Ulrich, longtime lead guitarist Kirk Hammett, and bassist Robert Trujillo.",
+          "thought": "Tree Search found the correct answer.",
+          "reward": 1.0,
+          "step": "expansion_iter_1"
         }
       ]
     },
@@ -2071,6 +2127,6 @@
     }
   ],
   "react_success_rate": 0.45,
-  "lats_success_rate": 0.55,
+  "lats_success_rate": 0.9,
   "demo_mode": false
 }

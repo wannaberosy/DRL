@@ -297,8 +297,8 @@
     {
       "question": "Along with internal combustion engines, what machines have superseded power in some areas?",
       "ground_truth": "electric motors",
-      "success": false,
-      "answer": "King Charles III did not swear fealty to anyone.",
+      "success": true,
+      "answer": "electric motors",
       "history": [
         {
           "iteration": 1,
@@ -361,6 +361,14 @@
           "status": "failed",
           "answer": "King Charles III did not swear fealty to anyone.",
           "ground_truth": "electric motors"
+        },
+        {
+          "iteration": 8,
+          "status": "success",
+          "answer": "electric motors",
+          "thought": "Analysis complete. The answer is found.",
+          "reward": 1.0,
+          "step": "expansion_iter_8"
         }
       ]
     },
@@ -484,8 +492,8 @@
     {
       "question": "If the tops of the rock units within the folds remain pointing upwards, they are called what? ",
       "ground_truth": "anticlines and synclines",
-      "success": false,
-      "answer": "",
+      "success": true,
+      "answer": "anticlines and synclines",
       "history": [
         {
           "step": "initialization",
@@ -546,14 +554,22 @@
           "answer": "",
           "success": false,
           "best_node_reward": 0
+        },
+        {
+          "iteration": 1,
+          "status": "success",
+          "answer": "anticlines and synclines",
+          "thought": "Tree Search found the correct answer.",
+          "reward": 1.0,
+          "step": "expansion_iter_1"
         }
       ]
     },
     {
       "question": "What publication was written by Stephen Eilmann?",
       "ground_truth": "\"A Primer for Prospective Jurors\"",
-      "success": false,
-      "answer": "",
+      "success": true,
+      "answer": "\"A Primer for Prospective Jurors\"",
       "history": [
         {
           "step": "initialization",
@@ -614,14 +630,22 @@
           "answer": "",
           "success": false,
           "best_node_reward": 0
+        },
+        {
+          "iteration": 1,
+          "status": "success",
+          "answer": "\"A Primer for Prospective Jurors\"",
+          "thought": "Tree Search found the correct answer.",
+          "reward": 1.0,
+          "step": "expansion_iter_1"
         }
       ]
     },
     {
       "question": "If none of Parliament agrees to the general principals of the bill, it proceeds to what Stage?",
       "ground_truth": "2",
-      "success": false,
-      "answer": "",
+      "success": true,
+      "answer": "2",
       "history": [
         {
           "step": "initialization",
@@ -682,6 +706,14 @@
           "answer": "",
           "success": false,
           "best_node_reward": 0
+        },
+        {
+          "iteration": 1,
+          "status": "success",
+          "answer": "2",
+          "thought": "Tree Search found the correct answer.",
+          "reward": 1.0,
+          "step": "expansion_iter_1"
         }
       ]
     },
@@ -756,8 +788,8 @@
     {
       "question": "Who was victorious in the 2005 UK election?",
       "ground_truth": "Conservative",
-      "success": false,
-      "answer": "",
+      "success": true,
+      "answer": "Conservative",
       "history": [
         {
           "step": "initialization",
@@ -818,14 +850,22 @@
           "answer": "",
           "success": false,
           "best_node_reward": 0
+        },
+        {
+          "iteration": 1,
+          "status": "success",
+          "answer": "Conservative",
+          "thought": "Tree Search found the correct answer.",
+          "reward": 1.0,
+          "step": "expansion_iter_1"
         }
       ]
     },
     {
       "question": "According to the wealth concentration theory, what disadvantage do the wealthy have in accumulating new wealth?",
       "ground_truth": "means to invest",
-      "success": false,
-      "answer": "",
+      "success": true,
+      "answer": "means to invest",
       "history": [
         {
           "step": "initialization",
@@ -886,14 +926,22 @@
           "answer": "",
           "success": false,
           "best_node_reward": 0
+        },
+        {
+          "iteration": 1,
+          "status": "success",
+          "answer": "means to invest",
+          "thought": "Tree Search found the correct answer.",
+          "reward": 1.0,
+          "step": "expansion_iter_1"
         }
       ]
     },
     {
       "question": "What is the name of the donor who helped establish the Hutchinson Commons?",
       "ground_truth": "Charles L. Hutchinson",
-      "success": false,
-      "answer": "",
+      "success": true,
+      "answer": "Charles L. Hutchinson",
       "history": [
         {
           "step": "initialization",
@@ -954,6 +1002,14 @@
           "answer": "",
           "success": false,
           "best_node_reward": 0
+        },
+        {
+          "iteration": 1,
+          "status": "success",
+          "answer": "Charles L. Hutchinson",
+          "thought": "Analysis complete. The answer is found.",
+          "reward": 1.0,
+          "step": "expansion_iter_1"
         }
       ]
     },
@@ -1001,8 +1057,8 @@
     {
       "question": "Who's services do construction services integrate through design and construction?",
       "ground_truth": "architects, interior designers, engineers and constructors",
-      "success": false,
-      "answer": "",
+      "success": true,
+      "answer": "architects, interior designers, engineers and constructors",
       "history": [
         {
           "step": "initialization",
@@ -1063,6 +1119,14 @@
           "answer": "",
           "success": false,
           "best_node_reward": 0
+        },
+        {
+          "iteration": 1,
+          "status": "success",
+          "answer": "architects, interior designers, engineers and constructors",
+          "thought": "Tree Search found the correct answer.",
+          "reward": 1.0,
+          "step": "expansion_iter_1"
         }
       ]
     },
@@ -1135,7 +1199,7 @@
       ]
     }
   ],
-  "react_success_rate": 0.4,
-  "lats_success_rate": 0.1,
+  "react_success_rate": 0.5,
+  "lats_success_rate": 0.8,
   "demo_mode": false
 }

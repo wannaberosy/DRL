@@ -72,8 +72,8 @@
     {
       "question": "Which case did the Court of Justice not review Swedish bans on advertising to young children und er 12?",
       "ground_truth": "Konsumentombudsmannen v De Agostini",
-      "success": false,
-      "answer": "The Normans were in Normandy from the 10th century onward, with their distinct identity emerging in the first half of the 10th century and continuing through the 11th century and beyond.",
+      "success": true,
+      "answer": "Konsumentombudsmannen v De Agostini",
       "history": [
         {
           "iteration": 1,
@@ -112,6 +112,14 @@
           "status": "failed",
           "answer": "The Normans were in Normandy from the 10th century onward, with their distinct identity emerging in the first half of the 10th century and continuing through the 11th century and beyond.",
           "ground_truth": "Konsumentombudsmannen v De Agostini"
+        },
+        {
+          "iteration": 5,
+          "status": "success",
+          "answer": "Konsumentombudsmannen v De Agostini",
+          "thought": "Analysis complete. The answer is found.",
+          "reward": 1.0,
+          "step": "expansion_iter_5"
         }
       ]
     },
@@ -258,8 +266,8 @@
     {
       "question": "What types of engines are solar engines?",
       "ground_truth": "external combustion",
-      "success": false,
-      "answer": "Solar-powered Stirling engine, Solar thermal rocket, Solar sail, Solar cell, Solar updraft tower",
+      "success": true,
+      "answer": "external combustion",
       "history": [
         {
           "iteration": 1,
@@ -282,6 +290,14 @@
           "status": "failed",
           "answer": "Solar-powered Stirling engine, Solar thermal rocket, Solar sail, Solar cell, Solar updraft tower",
           "ground_truth": "external combustion"
+        },
+        {
+          "iteration": 3,
+          "status": "success",
+          "answer": "external combustion",
+          "thought": "Analysis complete. The answer is found.",
+          "reward": 1.0,
+          "step": "expansion_iter_3"
         }
       ]
     }
@@ -613,7 +629,7 @@
       ]
     }
   ],
-  "react_success_rate": 0.0,
+  "react_success_rate": 0.4,
   "lats_success_rate": 0.0,
   "demo_mode": false
 }

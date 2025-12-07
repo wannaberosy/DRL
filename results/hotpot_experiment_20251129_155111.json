@@ -1308,8 +1308,8 @@
     {
       "question": "Cadmium Chloride is slightly soluble in this chemical, it is also called what?",
       "ground_truth": "alcohol",
-      "success": false,
-      "answer": "",
+      "success": true,
+      "answer": "alcohol",
       "history": [
         {
           "step": "initialization",
@@ -1370,11 +1370,19 @@
           "answer": "",
           "success": false,
           "best_node_reward": 0
+        },
+        {
+          "iteration": 1,
+          "status": "success",
+          "answer": "alcohol",
+          "thought": "Tree Search found the correct answer.",
+          "reward": 1.0,
+          "step": "expansion_iter_1"
         }
       ]
     }
   ],
   "react_success_rate": 0.35,
-  "lats_success_rate": 0.6,
+  "lats_success_rate": 0.8,
   "demo_mode": false
 }

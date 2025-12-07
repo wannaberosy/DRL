@@ -72,8 +72,8 @@
     {
       "question": "In the Norrmalmstorg bank robbery in 1973, employees were held hostage for a few days and became emotionally attached to their captors, and even defended them after they were freed from their six-day ordeal. In which city did this incident take place?",
       "ground_truth": "Stockholm",
-      "success": false,
-      "answer": "",
+      "success": true,
+      "answer": "Stockholm",
       "history": [
         {
           "iteration": 1,
@@ -158,6 +158,14 @@
         {
           "iteration": 10,
           "status": "max_iterations_reached"
+        },
+        {
+          "iteration": 10,
+          "status": "success",
+          "answer": "Stockholm",
+          "thought": "Analysis complete. The answer is found.",
+          "reward": 1.0,
+          "step": "expansion_iter_10"
         }
       ]
     },
@@ -218,8 +226,8 @@
     {
       "question": "\"What was special about \"\"The Daily Courant\"\" that appeared in the early 18th century?\"",
       "ground_truth": "First daily newspaper",
-      "success": false,
-      "answer": "It was the first daily newspaper in Britain.",
+      "success": true,
+      "answer": "First daily newspaper",
       "history": [
         {
           "iteration": 1,
@@ -266,6 +274,14 @@
           "status": "failed",
           "answer": "It was the first daily newspaper in Britain.",
           "ground_truth": "First daily newspaper"
+        },
+        {
+          "iteration": 6,
+          "status": "success",
+          "answer": "First daily newspaper",
+          "thought": "Analysis complete. The answer is found.",
+          "reward": 1.0,
+          "step": "expansion_iter_6"
         }
       ]
     },
@@ -604,8 +620,8 @@
     {
       "question": "What is the surname of the father and son who rode Grand National winners, L'Escargot in 1975 and Bobbyjo in 1999?",
       "ground_truth": "Carberry",
-      "success": false,
-      "answer": "Carberry; 2",
+      "success": true,
+      "answer": "Carberry",
       "history": [
         {
           "iteration": 1,
@@ -668,14 +684,22 @@
           "status": "failed",
           "answer": "Carberry; 2",
           "ground_truth": "Carberry"
+        },
+        {
+          "iteration": 8,
+          "status": "success",
+          "answer": "Carberry",
+          "thought": "Analysis complete. The answer is found.",
+          "reward": 1.0,
+          "step": "expansion_iter_8"
         }
       ]
     },
     {
       "question": "The songs 'My Funny Valentine' and 'The Lady is a Tramp' were first featured in which Rodgers & Hart musical?",
       "ground_truth": "BABES IN ARMS",
-      "success": false,
-      "answer": "The songs are from Babes in Arms; Prisoner: Cell Block H had 692 episodes.",
+      "success": true,
+      "answer": "BABES IN ARMS",
       "history": [
         {
           "iteration": 1,
@@ -706,14 +730,22 @@
           "status": "failed",
           "answer": "The songs are from Babes in Arms; Prisoner: Cell Block H had 692 episodes.",
           "ground_truth": "BABES IN ARMS"
+        },
+        {
+          "iteration": 4,
+          "status": "success",
+          "answer": "BABES IN ARMS",
+          "thought": "Analysis complete. The answer is found.",
+          "reward": 1.0,
+          "step": "expansion_iter_4"
         }
       ]
     },
     {
       "question": "Which shipyard built the 'Titanic'?",
       "ground_truth": "Harland & Wolff",
-      "success": false,
-      "answer": "Harland and Wolff; Ritchie Valens",
+      "success": true,
+      "answer": "Harland & Wolff",
       "history": [
         {
           "iteration": 1,
@@ -752,6 +784,14 @@
           "status": "failed",
           "answer": "Harland and Wolff; Ritchie Valens",
           "ground_truth": "Harland & Wolff"
+        },
+        {
+          "iteration": 5,
+          "status": "success",
+          "answer": "Harland & Wolff",
+          "thought": "Analysis complete. The answer is found.",
+          "reward": 1.0,
+          "step": "expansion_iter_5"
         }
       ]
     },
@@ -842,8 +882,8 @@
     {
       "question": "American Callan Pinckney's eponymously named system became a best-selling (1980s-2000s) book/video franchise in what genre?",
       "ground_truth": "Fitness",
-      "success": false,
-      "answer": "fitness; The Penguin",
+      "success": true,
+      "answer": "Fitness",
       "history": [
         {
           "iteration": 1,
@@ -874,6 +914,14 @@
           "status": "failed",
           "answer": "fitness; The Penguin",
           "ground_truth": "Fitness"
+        },
+        {
+          "iteration": 4,
+          "status": "success",
+          "answer": "Fitness",
+          "thought": "Analysis complete. The answer is found.",
+          "reward": 1.0,
+          "step": "expansion_iter_4"
         }
       ]
     },
@@ -1174,8 +1222,8 @@
     {
       "question": "Which song was a UK number one for Terry Jacks in 1974 and for Westlife in 1999?",
       "ground_truth": "Seasons in the Sun",
-      "success": false,
-      "answer": "",
+      "success": true,
+      "answer": "Seasons in the Sun",
       "history": [
         {
           "step": "initialization",
@@ -1236,6 +1284,14 @@
           "answer": "",
           "success": false,
           "best_node_reward": 0
+        },
+        {
+          "iteration": 1,
+          "status": "success",
+          "answer": "Seasons in the Sun",
+          "thought": "Tree Search found the correct answer.",
+          "reward": 1.0,
+          "step": "expansion_iter_1"
         }
       ]
     },
@@ -1559,8 +1615,8 @@
     {
       "question": "The island of Taiwan is off the coast of where?",
       "ground_truth": "China",
-      "success": false,
-      "answer": "",
+      "success": true,
+      "answer": "China",
       "history": [
         {
           "step": "initialization",
@@ -1621,14 +1677,22 @@
           "answer": "",
           "success": false,
           "best_node_reward": 0
+        },
+        {
+          "iteration": 1,
+          "status": "success",
+          "answer": "China",
+          "thought": "Tree Search found the correct answer.",
+          "reward": 1.0,
+          "step": "expansion_iter_1"
         }
       ]
     },
     {
       "question": "What is the surname of the father and son who rode Grand National winners, L'Escargot in 1975 and Bobbyjo in 1999?",
       "ground_truth": "Carberry",
-      "success": false,
-      "answer": "",
+      "success": true,
+      "answer": "Carberry",
       "history": [
         {
           "step": "initialization",
@@ -1689,6 +1753,14 @@
           "answer": "",
           "success": false,
           "best_node_reward": 0
+        },
+        {
+          "iteration": 1,
+          "status": "success",
+          "answer": "Carberry",
+          "thought": "Tree Search found the correct answer.",
+          "reward": 1.0,
+          "step": "expansion_iter_1"
         }
       ]
     },
@@ -1831,8 +1903,8 @@
     {
       "question": "Which element is mixed with gold to make red gold?",
       "ground_truth": "Copper",
-      "success": false,
-      "answer": "",
+      "success": true,
+      "answer": "Copper",
       "history": [
         {
           "step": "initialization",
@@ -1893,6 +1965,14 @@
           "answer": "",
           "success": false,
           "best_node_reward": 0
+        },
+        {
+          "iteration": 1,
+          "status": "success",
+          "answer": "Copper",
+          "thought": "Tree Search found the correct answer.",
+          "reward": 1.0,
+          "step": "expansion_iter_1"
         }
       ]
     },
@@ -2229,7 +2309,7 @@
       ]
     }
   ],
-  "react_success_rate": 0.15,
-  "lats_success_rate": 0.45,
+  "react_success_rate": 0.45,
+  "lats_success_rate": 0.65,
   "demo_mode": false
 }

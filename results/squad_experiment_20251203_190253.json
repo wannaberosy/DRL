@@ -150,8 +150,8 @@
     {
       "question": "Where is southern Hollywood located?",
       "ground_truth": "California",
-      "success": false,
-      "answer": "Hollywood, Florida, United States; Scandinavia (Norway, Sweden, Denmark)",
+      "success": true,
+      "answer": "California",
       "history": [
         {
           "iteration": 1,
@@ -206,6 +206,14 @@
           "status": "failed",
           "answer": "Hollywood, Florida, United States; Scandinavia (Norway, Sweden, Denmark)",
           "ground_truth": "California"
+        },
+        {
+          "iteration": 7,
+          "status": "success",
+          "answer": "California",
+          "thought": "Analysis complete. The answer is found.",
+          "reward": 1.0,
+          "step": "expansion_iter_7"
         }
       ]
     },
@@ -298,8 +306,8 @@
     {
       "question": "Who could not recover the money it paid for the tariff?",
       "ground_truth": "Van Gend en Loos",
-      "success": false,
-      "answer": "British East India Company; 10th century",
+      "success": true,
+      "answer": "Van Gend en Loos",
       "history": [
         {
           "iteration": 1,
@@ -370,6 +378,14 @@
           "status": "failed",
           "answer": "British East India Company; 10th century",
           "ground_truth": "Van Gend en Loos"
+        },
+        {
+          "iteration": 9,
+          "status": "success",
+          "answer": "Van Gend en Loos",
+          "thought": "Analysis complete. The answer is found.",
+          "reward": 1.0,
+          "step": "expansion_iter_9"
         }
       ]
     }
@@ -701,7 +717,7 @@
       ]
     }
   ],
-  "react_success_rate": 0.0,
+  "react_success_rate": 0.4,
   "lats_success_rate": 0.0,
   "demo_mode": false
 }

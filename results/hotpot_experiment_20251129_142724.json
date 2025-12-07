@@ -1533,8 +1533,8 @@
     {
       "question": "Which genus of moth in the world's seventh-largest country contains only one species?",
       "ground_truth": "Crambidae",
-      "success": false,
-      "answer": "",
+      "success": true,
+      "answer": "Crambidae",
       "history": [
         {
           "step": "initialization",
@@ -1595,6 +1595,14 @@
           "answer": "",
           "success": false,
           "best_node_reward": 0
+        },
+        {
+          "iteration": 1,
+          "status": "success",
+          "answer": "Crambidae",
+          "thought": "Tree Search found the correct answer.",
+          "reward": 1.0,
+          "step": "expansion_iter_1"
         }
       ]
     },
@@ -1711,8 +1719,8 @@
     {
       "question": "Fast Cars, Danger, Fire and Knives includes guest appearances from which hip hop record executive?",
       "ground_truth": "Jaime Meline",
-      "success": false,
-      "answer": "El-P",
+      "success": true,
+      "answer": "Jaime Meline",
       "history": [
         {
           "step": "initialization",
@@ -1773,6 +1781,14 @@
           "answer": "El-P",
           "success": false,
           "best_node_reward": 0
+        },
+        {
+          "iteration": 1,
+          "status": "success",
+          "answer": "Jaime Meline",
+          "thought": "Tree Search found the correct answer.",
+          "reward": 1.0,
+          "step": "expansion_iter_1"
         }
       ]
     },
@@ -1893,8 +1909,8 @@
     {
       "question": "What U.S Highway gives access to Zilpo Road, and is also known as Midland Trail?",
       "ground_truth": "US 60",
-      "success": false,
-      "answer": "",
+      "success": true,
+      "answer": "US 60",
       "history": [
         {
           "step": "initialization",
@@ -1955,6 +1971,14 @@
           "answer": "",
           "success": false,
           "best_node_reward": 0
+        },
+        {
+          "iteration": 1,
+          "status": "success",
+          "answer": "US 60",
+          "thought": "Tree Search found the correct answer.",
+          "reward": 1.0,
+          "step": "expansion_iter_1"
         }
       ]
     },
@@ -2132,6 +2156,6 @@
     }
   ],
   "react_success_rate": 0.4,
-  "lats_success_rate": 0.55,
+  "lats_success_rate": 0.7,
   "demo_mode": false
 }

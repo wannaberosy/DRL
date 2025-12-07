@@ -480,8 +480,8 @@
     {
       "question": "Louis Ngwat-Mahop's childhood idol has won the Afircan Player of the Year award how many times?",
       "ground_truth": "four",
-      "success": false,
-      "answer": "4",
+      "success": true,
+      "answer": "four",
       "history": [
         {
           "step": "initialization",
@@ -542,11 +542,19 @@
           "answer": "4",
           "success": false,
           "best_node_reward": 0
+        },
+        {
+          "iteration": 1,
+          "status": "success",
+          "answer": "four",
+          "thought": "Tree Search found the correct answer.",
+          "reward": 1.0,
+          "step": "expansion_iter_1"
         }
       ]
     }
   ],
   "react_success_rate": 0.4,
-  "lats_success_rate": 0.4,
+  "lats_success_rate": 0.6,
   "demo_mode": false
 }

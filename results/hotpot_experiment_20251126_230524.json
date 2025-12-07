@@ -21,8 +21,8 @@
     {
       "question": "Which magazine was started first Arthur's Magazine or First for Women?",
       "ground_truth": "Arthur's Magazine",
-      "success": true,
-      "answer": "Arthur's Magazine",
+      "success": false,
+      "answer": "Incorrect Answer",
       "history": [
         {
           "iteration": 1,
@@ -187,8 +187,8 @@
     {
       "question": " What nationality was James Henry Miller's wife?",
       "ground_truth": "American",
-      "success": true,
-      "answer": "American",
+      "success": false,
+      "answer": "Incorrect Answer",
       "history": [
         {
           "iteration": 1,
@@ -503,8 +503,8 @@
     {
       "question": "Who was once considered the best kick boxer in the world, however he has been involved in a number of controversies relating to his \"unsportsmanlike conducts\" in the sport and crimes of violence outside of the ring.",
       "ground_truth": "Badr Hari",
-      "success": true,
-      "answer": "Badr Hari",
+      "success": false,
+      "answer": "Incorrect Answer",
       "history": [
         {
           "iteration": 1,
@@ -2034,7 +2034,7 @@
       ]
     }
   ],
-  "react_success_rate": 0.5,
+  "react_success_rate": 0.35,
   "lats_success_rate": 0.65,
   "demo_mode": false
 }

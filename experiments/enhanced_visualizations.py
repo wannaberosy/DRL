@@ -24,6 +24,8 @@ def infer_dataset(file_path, cfg):
         return 'SQuAD', 'squad'
     if name.startswith('triviaqa_'):
         return 'TriviaQA', 'triviaqa'
+    if name.startswith('experiment_'):
+        return 'Game24', 'game24'
     return 'Unknown', 'unknown'
 
 def load_results(results_dir):
@@ -63,13 +65,20 @@ def mean(values):
     vals = [v for v in values if isinstance(v, (int, float))]
     return sum(vals) / len(vals) if vals else None
 
-def aggregate_heatmap(items, key):
+def aggregate_heatmap(items, key, col_key_func=None):
     datasets = sorted({it['dataset_name'] for it in items})
-    models = sorted({it['model'] for it in items})
+    if col_key_func:
+        models = sorted({col_key_func(it) for it in items})
+    else:
+        models = sorted({it['model'] for it in items})
+    
     grid = [[None for _ in models] for _ in datasets]
     for di, d in enumerate(datasets):
         for mi, m in enumerate(models):
-            rates = [it[key] for it in items if it['dataset_name'] == d and it['model'] == m]
+            if col_key_func:
+                rates = [it[key] for it in items if it['dataset_name'] == d and col_key_func(it) == m]
+            else:
+                rates = [it[key] for it in items if it['dataset_name'] == d and it['model'] == m]
             grid[di][mi] = mean(rates)
     return datasets, models, grid
 
@@ -363,13 +372,26 @@ def main():
     os.makedirs(args.output_dir, exist_ok=True)
     items = load_results(args.results_dir)
     ds, ms, grid_r = aggregate_heatmap(items, 'react_success_rate')
-    ds2, ms2, grid_l = aggregate_heatmap(items, 'lats_success_rate')
+    
+    def lats_col_key(item):
+        model = item['model']
+        use_tree = item['use_tree']
+        mode = item.get('mode', 'none')
+        
+        if not use_tree or mode == 'none' or mode == 'basic':
+            suffix = "No-Tree"
+        else:
+            suffix = mode.upper() if mode else "Unknown"
+        return f"{model} ({suffix})"
+
+    ds2, ms2, grid_l = aggregate_heatmap(items, 'lats_success_rate', col_key_func=lats_col_key)
+    
     if ds and ms:
         out_react = os.path.join(args.output_dir, f'summary_heatmap_react_{ts}.png')
         draw_heatmap(ds, ms, grid_r, '模型-数据集成功率热力图 (ReAct)', out_react)
     if ds2 and ms2:
         out_lats = os.path.join(args.output_dir, f'summary_heatmap_lats_{ts}.png')
-        draw_heatmap(ds2, ms2, grid_l, '模型-数据集成功率热力图 (LATS)', out_lats)
+        draw_heatmap(ds2, ms2, grid_l, '模型-数据集成功率热力图 (LATS - 模式细分)', out_lats)
     modes = aggregate_modes(items)
     for d, rates in modes.items():
         out_file = os.path.join(args.output_dir, f"{(d.lower() if d else 'dataset')}_mode_comparison_{ts}.png")

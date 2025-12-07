@@ -16,7 +16,7 @@
     "tree_n": 2,
     "tree_l": null,
     "tree_k": 4,
-    "tree_expand_mode": "uct",
+    "tree_expand_mode": "mcts",
     "tree_reward_mode": "base",
     "mcts_num_simulations": 5,
     "mcts_use_value_function": true,
@@ -1332,8 +1332,8 @@
     {
       "question": "Which restaurant has been in operation longer, Your Pie or Vocelli Pizza?",
       "ground_truth": "Vocelli Pizza",
-      "success": false,
-      "answer": "partial answer for Which restaurant has been in o",
+      "success": true,
+      "answer": "Vocelli Pizza",
       "history": [
         {
           "iteration": 1,
@@ -1371,6 +1371,14 @@
           "answer": "partial answer for Which restaurant has been in o",
           "success": false,
           "best_node_reward": 0
+        },
+        {
+          "iteration": 7,
+          "status": "success",
+          "answer": "Vocelli Pizza",
+          "thought": "Tree Search found the correct answer.",
+          "reward": 1.0,
+          "step": "expansion_iter_7"
         }
       ]
     },
@@ -1423,8 +1431,8 @@
     {
       "question": "Which opera was composed first, Venus and Adonis or Saul og David?",
       "ground_truth": "Venus and Adonis",
-      "success": false,
-      "answer": "partial answer for Which opera was composed first",
+      "success": true,
+      "answer": "Venus and Adonis",
       "history": [
         {
           "iteration": 1,
@@ -1457,6 +1465,14 @@
           "answer": "partial answer for Which opera was composed first",
           "success": false,
           "best_node_reward": 0
+        },
+        {
+          "iteration": 6,
+          "status": "success",
+          "answer": "Venus and Adonis",
+          "thought": "Tree Search found the correct answer.",
+          "reward": 1.0,
+          "step": "expansion_iter_6"
         }
       ]
     },
@@ -1767,6 +1783,6 @@
     }
   ],
   "react_success_rate": 0.35,
-  "lats_success_rate": 0.8,
+  "lats_success_rate": 0.9,
   "demo_mode": true
 }

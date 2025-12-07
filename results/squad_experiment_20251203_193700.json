@@ -142,8 +142,8 @@
     {
       "question": "What month did the BankAmericard creator resign?",
       "ground_truth": "September 1958",
-      "success": false,
-      "answer": "July",
+      "success": true,
+      "answer": "September 1958",
       "history": [
         {
           "iteration": 1,
@@ -174,6 +174,14 @@
           "status": "failed",
           "answer": "July",
           "ground_truth": "September 1958"
+        },
+        {
+          "iteration": 4,
+          "status": "success",
+          "answer": "September 1958",
+          "thought": "Analysis complete. The answer is found.",
+          "reward": 1.0,
+          "step": "expansion_iter_4"
         }
       ]
     },
@@ -572,7 +580,7 @@
       ]
     }
   ],
-  "react_success_rate": 0.4,
+  "react_success_rate": 0.6,
   "lats_success_rate": 0.0,
   "demo_mode": false
 }

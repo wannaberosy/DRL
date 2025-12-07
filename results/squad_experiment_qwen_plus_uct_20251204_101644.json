@@ -357,8 +357,8 @@
     {
       "question": "When were the Normans in Normandy?",
       "ground_truth": "10th and 11th centuries",
-      "success": false,
-      "answer": "incorrect answer for When were the Normans in Norma",
+      "success": true,
+      "answer": "10th and 11th centuries",
       "history": [
         {
           "iteration": 1,
@@ -397,6 +397,14 @@
           "status": "failed",
           "answer": "incorrect answer for When were the Normans in Norma",
           "ground_truth": "10th and 11th centuries"
+        },
+        {
+          "iteration": 4,
+          "status": "success",
+          "answer": "10th and 11th centuries",
+          "thought": "Analysis complete. The answer is found.",
+          "reward": 1.0,
+          "step": "expansion_iter_4"
         }
       ]
     },
@@ -457,8 +465,8 @@
     {
       "question": "Who was the Norse leader?",
       "ground_truth": "Rollo",
-      "success": false,
-      "answer": "incorrect answer for Who was the Norse leader?",
+      "success": true,
+      "answer": "Rollo",
       "history": [
         {
           "iteration": 1,
@@ -537,6 +545,14 @@
           "status": "failed",
           "answer": "incorrect answer for Who was the Norse leader?",
           "ground_truth": "Rollo"
+        },
+        {
+          "iteration": 9,
+          "status": "success",
+          "answer": "Rollo",
+          "thought": "Analysis complete. The answer is found.",
+          "reward": 1.0,
+          "step": "expansion_iter_9"
         }
       ]
     },
@@ -613,8 +629,8 @@
     {
       "question": "In what country is Normandy located?",
       "ground_truth": "France",
-      "success": false,
-      "answer": "incorrect answer for In what country is Normandy lo",
+      "success": true,
+      "answer": "France",
       "history": [
         {
           "iteration": 1,
@@ -669,6 +685,14 @@
           "status": "failed",
           "answer": "incorrect answer for In what country is Normandy lo",
           "ground_truth": "France"
+        },
+        {
+          "iteration": 6,
+          "status": "success",
+          "answer": "France",
+          "thought": "Analysis complete. The answer is found.",
+          "reward": 1.0,
+          "step": "expansion_iter_6"
         }
       ]
     },
@@ -704,8 +728,8 @@
     {
       "question": "From which countries did the Norse originate?",
       "ground_truth": "Denmark, Iceland and Norway",
-      "success": false,
-      "answer": "incorrect answer for From which countries did the N",
+      "success": true,
+      "answer": "Denmark, Iceland and Norway",
       "history": [
         {
           "iteration": 1,
@@ -768,6 +792,14 @@
           "status": "failed",
           "answer": "incorrect answer for From which countries did the N",
           "ground_truth": "Denmark, Iceland and Norway"
+        },
+        {
+          "iteration": 7,
+          "status": "success",
+          "answer": "Denmark, Iceland and Norway",
+          "thought": "Analysis complete. The answer is found.",
+          "reward": 1.0,
+          "step": "expansion_iter_7"
         }
       ]
     },
@@ -893,8 +925,8 @@
     {
       "question": "When were the Normans in Normandy?",
       "ground_truth": "10th and 11th centuries",
-      "success": false,
-      "answer": "incorrect answer for When were the Normans in Norma",
+      "success": true,
+      "answer": "10th and 11th centuries",
       "history": [
         {
           "iteration": 1,
@@ -933,6 +965,14 @@
           "status": "failed",
           "answer": "incorrect answer for When were the Normans in Norma",
           "ground_truth": "10th and 11th centuries"
+        },
+        {
+          "iteration": 4,
+          "status": "success",
+          "answer": "10th and 11th centuries",
+          "thought": "Analysis complete. The answer is found.",
+          "reward": 1.0,
+          "step": "expansion_iter_4"
         }
       ]
     },
@@ -1366,8 +1406,8 @@
     {
       "question": "What century did the Normans first gain their separate identity?",
       "ground_truth": "10th century",
-      "success": false,
-      "answer": "partial answer for What century did the Normans f",
+      "success": true,
+      "answer": "10th century",
       "history": [
         {
           "iteration": 1,
@@ -1410,6 +1450,14 @@
           "answer": "partial answer for What century did the Normans f",
           "success": false,
           "best_node_reward": 0
+        },
+        {
+          "iteration": 8,
+          "status": "success",
+          "answer": "10th century",
+          "thought": "Analysis complete. The answer is found.",
+          "reward": 1.0,
+          "step": "expansion_iter_8"
         }
       ]
     },
@@ -1439,8 +1487,8 @@
     {
       "question": "When were the Normans in Normandy?",
       "ground_truth": "10th and 11th centuries",
-      "success": false,
-      "answer": "partial answer for When were the Normans in Norma",
+      "success": true,
+      "answer": "10th and 11th centuries",
       "history": [
         {
           "iteration": 1,
@@ -1483,14 +1531,22 @@
           "answer": "partial answer for When were the Normans in Norma",
           "success": false,
           "best_node_reward": 0
+        },
+        {
+          "iteration": 8,
+          "status": "success",
+          "answer": "10th and 11th centuries",
+          "thought": "Tree Search found the correct answer.",
+          "reward": 1.0,
+          "step": "expansion_iter_8"
         }
       ]
     },
     {
       "question": "From which countries did the Norse originate?",
       "ground_truth": "Denmark, Iceland and Norway",
-      "success": false,
-      "answer": "partial answer for From which countries did the N",
+      "success": true,
+      "answer": "Denmark, Iceland and Norway",
       "history": [
         {
           "iteration": 1,
@@ -1523,6 +1579,14 @@
           "answer": "partial answer for From which countries did the N",
           "success": false,
           "best_node_reward": 0
+        },
+        {
+          "iteration": 6,
+          "status": "success",
+          "answer": "Denmark, Iceland and Norway",
+          "thought": "Analysis complete. The answer is found.",
+          "reward": 1.0,
+          "step": "expansion_iter_6"
         }
       ]
     },
@@ -1636,8 +1700,8 @@
     {
       "question": "From which countries did the Norse originate?",
       "ground_truth": "Denmark, Iceland and Norway",
-      "success": false,
-      "answer": "partial answer for From which countries did the N",
+      "success": true,
+      "answer": "Denmark, Iceland and Norway",
       "history": [
         {
           "iteration": 1,
@@ -1695,6 +1759,14 @@
           "answer": "partial answer for From which countries did the N",
           "success": false,
           "best_node_reward": 0
+        },
+        {
+          "iteration": 10,
+          "status": "success",
+          "answer": "Denmark, Iceland and Norway",
+          "thought": "Analysis complete. The answer is found.",
+          "reward": 1.0,
+          "step": "expansion_iter_10"
         }
       ]
     },
@@ -1777,7 +1849,7 @@
       ]
     }
   ],
-  "react_success_rate": 0.35,
-  "lats_success_rate": 0.65,
+  "react_success_rate": 0.6,
+  "lats_success_rate": 0.85,
   "demo_mode": true
 }

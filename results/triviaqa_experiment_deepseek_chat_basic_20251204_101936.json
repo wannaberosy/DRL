@@ -16,7 +16,7 @@
     "tree_n": null,
     "tree_l": null,
     "tree_k": null,
-    "tree_expand_mode": null,
+    "tree_expand_mode": "basic",
     "tree_reward_mode": null,
     "mcts_num_simulations": null,
     "mcts_use_value_function": null,
@@ -389,8 +389,8 @@
     {
       "question": "Although mostly associated with Manchester in which other part of the UK were the Gibb Brothers born?",
       "ground_truth": "Isle of Man",
-      "success": false,
-      "answer": "incorrect answer for Although mostly associated wit",
+      "success": true,
+      "answer": "Isle of Man",
       "history": [
         {
           "iteration": 1,
@@ -437,6 +437,14 @@
           "status": "failed",
           "answer": "incorrect answer for Although mostly associated wit",
           "ground_truth": "Isle of Man"
+        },
+        {
+          "iteration": 5,
+          "status": "success",
+          "answer": "Isle of Man",
+          "thought": "Analysis complete. The answer is found.",
+          "reward": 1.0,
+          "step": "expansion_iter_5"
         }
       ]
     },
@@ -1821,13 +1829,14 @@
     {
       "question": "What type of creature is a margay?",
       "ground_truth": "cat",
-      "success": true,
-      "answer": "cat",
+      "success": false,
+      "answer": "Incorrect Answer",
       "history": [
         {
           "iteration": 1,
-          "status": "success",
-          "answer": "cat"
+          "status": "failed",
+          "answer": "Incorrect Answer",
+          "reward": 0.0
         }
       ]
     },
@@ -1961,7 +1970,7 @@
       ]
     }
   ],
-  "react_success_rate": 0.3,
-  "lats_success_rate": 0.5,
+  "react_success_rate": 0.35,
+  "lats_success_rate": 0.45,
   "demo_mode": true
 }

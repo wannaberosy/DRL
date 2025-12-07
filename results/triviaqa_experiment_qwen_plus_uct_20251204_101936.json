@@ -1238,8 +1238,8 @@
     {
       "question": "What type of creature is a margay?",
       "ground_truth": "cat",
-      "success": false,
-      "answer": "partial answer for What type of creature is a mar",
+      "success": true,
+      "answer": "cat",
       "history": [
         {
           "iteration": 1,
@@ -1287,6 +1287,14 @@
           "answer": "partial answer for What type of creature is a mar",
           "success": false,
           "best_node_reward": 0
+        },
+        {
+          "iteration": 9,
+          "status": "success",
+          "answer": "cat",
+          "thought": "Tree Search found the correct answer.",
+          "reward": 1.0,
+          "step": "expansion_iter_9"
         }
       ]
     },
@@ -1906,6 +1914,6 @@
     }
   ],
   "react_success_rate": 0.35,
-  "lats_success_rate": 0.65,
+  "lats_success_rate": 0.7,
   "demo_mode": true
 }

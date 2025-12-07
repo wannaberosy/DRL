@@ -16,7 +16,7 @@
     "tree_n": 2,
     "tree_l": null,
     "tree_k": 4,
-    "tree_expand_mode": "uct",
+    "tree_expand_mode": "mcts",
     "tree_reward_mode": "base",
     "mcts_num_simulations": 5,
     "mcts_use_value_function": true,
@@ -1351,8 +1351,8 @@
     {
       "question": "What is the name of the river that flows through the city of Paris?",
       "ground_truth": "Seine",
-      "success": false,
-      "answer": "partial answer for What is the name of the river ",
+      "success": true,
+      "answer": "Seine",
       "history": [
         {
           "iteration": 1,
@@ -1400,6 +1400,14 @@
           "answer": "partial answer for What is the name of the river ",
           "success": false,
           "best_node_reward": 0
+        },
+        {
+          "iteration": 9,
+          "status": "success",
+          "answer": "Seine",
+          "thought": "Tree Search found the correct answer.",
+          "reward": 1.0,
+          "step": "expansion_iter_9"
         }
       ]
     },
@@ -1814,6 +1822,6 @@
     }
   ],
   "react_success_rate": 0.35,
-  "lats_success_rate": 0.8,
+  "lats_success_rate": 0.85,
   "demo_mode": true
 }

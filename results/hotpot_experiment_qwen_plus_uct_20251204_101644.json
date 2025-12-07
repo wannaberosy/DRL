@@ -1416,8 +1416,8 @@
     {
       "question": "Nolan North is the voice of Superboy in a animated tv series that airs on what network?",
       "ground_truth": "Cartoon Network",
-      "success": false,
-      "answer": "partial answer for Nolan North is the voice of Su",
+      "success": true,
+      "answer": "Cartoon Network",
       "history": [
         {
           "iteration": 1,
@@ -1475,6 +1475,14 @@
           "answer": "partial answer for Nolan North is the voice of Su",
           "success": false,
           "best_node_reward": 0
+        },
+        {
+          "iteration": 11,
+          "status": "success",
+          "answer": "Cartoon Network",
+          "thought": "Tree Search found the correct answer.",
+          "reward": 1.0,
+          "step": "expansion_iter_11"
         }
       ]
     },
@@ -1922,6 +1930,6 @@
     }
   ],
   "react_success_rate": 0.35,
-  "lats_success_rate": 0.65,
+  "lats_success_rate": 0.7,
   "demo_mode": true
 }

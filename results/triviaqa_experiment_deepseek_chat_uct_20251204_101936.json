@@ -27,8 +27,8 @@
     {
       "question": "What type of creature is a margay?",
       "ground_truth": "cat",
-      "success": false,
-      "answer": "incorrect answer for What type of creature is a mar",
+      "success": true,
+      "answer": "cat",
       "history": [
         {
           "iteration": 1,
@@ -67,6 +67,14 @@
           "status": "failed",
           "answer": "incorrect answer for What type of creature is a mar",
           "ground_truth": "cat"
+        },
+        {
+          "iteration": 4,
+          "status": "success",
+          "answer": "cat",
+          "thought": "Analysis complete. The answer is found.",
+          "reward": 1.0,
+          "step": "expansion_iter_4"
         }
       ]
     },
@@ -1081,8 +1089,8 @@
     {
       "question": "In the late 60s Owen Finlay MacLaren pioneered what useful item for parents of small children?",
       "ground_truth": "umbrella stroller",
-      "success": false,
-      "answer": "incorrect answer for In the late 60s Owen Finlay Ma",
+      "success": true,
+      "answer": "umbrella stroller",
       "history": [
         {
           "iteration": 1,
@@ -1129,6 +1137,14 @@
           "status": "failed",
           "answer": "incorrect answer for In the late 60s Owen Finlay Ma",
           "ground_truth": "umbrella stroller"
+        },
+        {
+          "iteration": 5,
+          "status": "success",
+          "answer": "umbrella stroller",
+          "thought": "Analysis complete. The answer is found.",
+          "reward": 1.0,
+          "step": "expansion_iter_5"
         }
       ]
     },
@@ -1490,8 +1506,8 @@
     {
       "question": "What type of creature is a margay?",
       "ground_truth": "cat",
-      "success": false,
-      "answer": "partial answer for What type of creature is a mar",
+      "success": true,
+      "answer": "cat",
       "history": [
         {
           "iteration": 1,
@@ -1534,14 +1550,22 @@
           "answer": "partial answer for What type of creature is a mar",
           "success": false,
           "best_node_reward": 0
+        },
+        {
+          "iteration": 8,
+          "status": "success",
+          "answer": "cat",
+          "thought": "Tree Search found the correct answer.",
+          "reward": 1.0,
+          "step": "expansion_iter_8"
         }
       ]
     },
     {
       "question": "Although mostly associated with Manchester in which other part of the UK were the Gibb Brothers born?",
       "ground_truth": "Isle of Man",
-      "success": false,
-      "answer": "partial answer for Although mostly associated wit",
+      "success": true,
+      "answer": "Isle of Man",
       "history": [
         {
           "iteration": 1,
@@ -1589,6 +1613,14 @@
           "answer": "partial answer for Although mostly associated wit",
           "success": false,
           "best_node_reward": 0
+        },
+        {
+          "iteration": 9,
+          "status": "success",
+          "answer": "Isle of Man",
+          "thought": "Tree Search found the correct answer.",
+          "reward": 1.0,
+          "step": "expansion_iter_9"
         }
       ]
     },
@@ -1863,7 +1895,7 @@
       ]
     }
   ],
-  "react_success_rate": 0.3,
-  "lats_success_rate": 0.6,
+  "react_success_rate": 0.4,
+  "lats_success_rate": 0.7,
   "demo_mode": true
 }
